@@ -1,10 +1,10 @@
 namespace aspose_snippets.net
 {
-	public static partial class Merger
-	{
-                public static void pdf_to_bmp()
-                {
-
-                }
-	}	
+    public static partial class Merger
+    {
+        public static void pdf_to_bmp()
+        {
+            //call method
+        }
+    }
 }
