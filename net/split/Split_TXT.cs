@@ -4,7 +4,7 @@ namespace aspose_snippets.net
     {
         public static void TXT()
         {
-            var pathSource = @"..\..\test.{inputExt}";
+            var pathSource = @"..\..\test.txt";
             using (var fs = new FileStream(pathSource, FileMode.Open, FileAccess.Read))
             {
                 //call method

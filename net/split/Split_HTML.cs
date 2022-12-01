@@ -4,7 +4,7 @@ namespace aspose_snippets.net
     {
         public static void HTML()
         {
-            var pathSource = @"..\..\test.{inputExt}";
+            var pathSource = @"..\..\test.html";
             using (var fs = new FileStream(pathSource, FileMode.Open, FileAccess.Read))
             {
                 //call method

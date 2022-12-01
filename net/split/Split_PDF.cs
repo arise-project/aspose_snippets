@@ -4,7 +4,7 @@ namespace aspose_snippets.net
     {
         public static void PDF()
         {
-            var pathSource = @"..\..\test.{inputExt}";
+            var pathSource = @"..\..\test.pdf";
             using (var fs = new FileStream(pathSource, FileMode.Open, FileAccess.Read))
             {
                 //call method
