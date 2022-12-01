@@ -1,3 +1,5 @@
+using Aspose.Pdf.Facades;
+
 namespace aspose_snippets.net
 {
     public static partial class Split
@@ -5,10 +7,8 @@ namespace aspose_snippets.net
         public static void HTML()
         {
             var pathSource = @"..\..\test.html";
-            using (var fs = new FileStream(pathSource, FileMode.Open, FileAccess.Read))
-            {
-                //call method
-            }
+            var pdfEditor = new PdfFileEditor();
+            pdfEditor.SplitFromFirst(pathSource, 1, "./first.html");
         }
     }
 }
