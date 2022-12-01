@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace aspose_snippets.net.watermark
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //call method
+        }
+    }
+}
