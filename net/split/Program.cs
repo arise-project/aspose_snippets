@@ -4,6 +4,8 @@ namespace aspose_snippets.net.split
     {
         static void Main(string[] args)
         {
+            LicenseProvider.License();
+            
             // Split.PDF();
             // Split.DOC();
             // Split.DOCX();

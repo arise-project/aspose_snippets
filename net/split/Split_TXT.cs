@@ -10,14 +10,13 @@ namespace aspose_snippets.net
         {
             var pathSource = @"..\..\TestData\test.txt";
             var pdfEditor = new PdfFileEditor();
-            int beg = 1, end = 1;
-
+            
             using (var doc = new Document(pathSource, new TxtLoadOptions()))
             {
-                end = doc.Pages.Count;
+                doc.Save("test.pdf", SaveFormat.Pdf);
             }
 
-            MemoryStream [] pages = pdfEditor.SplitToPages(pathSource);
+            MemoryStream [] pages = pdfEditor.SplitToPages("test.pdf");
             int index = 1;
             foreach(var ms in pages)
             {
@@ -30,6 +29,7 @@ namespace aspose_snippets.net
                     index++;
                 }
             }
+            File.Delete("test.pdf");
         }
     }
 }
