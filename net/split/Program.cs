@@ -6,7 +6,7 @@ namespace aspose_snippets.net.split
         {
             LicenseProvider.License();
 
-            // Split.PDF();
+            Split.PDF();
             // Split.DOC();
             // Split.DOCX();
             //Split.HTML();
