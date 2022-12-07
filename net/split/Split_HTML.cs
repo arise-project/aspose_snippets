@@ -6,7 +6,7 @@ namespace aspose_snippets.net
     {
         public static void HTML()
         {
-            var pathSource = @"..\..\test.html";
+            var pathSource = @"..\..\TestData\test.html";
             var pdfEditor = new PdfFileEditor();
             pdfEditor.SplitFromFirst(pathSource, 1, "./first.html");
         }

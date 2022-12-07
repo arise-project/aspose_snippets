@@ -7,7 +7,7 @@ namespace aspose_snippets.net
     {
         public static void PDF()
         {
-            var pathSource = @"..\..\test.pdf";
+            var pathSource = @"..\..\TestData\test.pdf";
             var pdfEditor = new PdfFileEditor();
             int beg = 1, end = 1;
 

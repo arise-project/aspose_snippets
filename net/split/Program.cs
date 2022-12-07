@@ -4,12 +4,11 @@ namespace aspose_snippets.net.split
     {
         static void Main(string[] args)
         {
-            Split.PDF();
-            Split.DOC();
-            Split.DOCX();
-            Split.HTML();
+            // Split.PDF();
+            // Split.DOC();
+            // Split.DOCX();
+            // Split.HTML();
             Split.TXT();
-            Split.WORD();
         }
     }
 }

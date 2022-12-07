@@ -1,4 +1,4 @@
-using Aspose.Words;
+//using Aspose.Words;
 
 namespace aspose_snippets.net
 {
@@ -6,7 +6,7 @@ namespace aspose_snippets.net
     {
         public static void DOC()
         {
-            // var pathSource = @"..\..\test.doc";
+            // var pathSource = @"..\..\TestData\test.doc";
             // using (var fs = new FileStream(pathSource, FileMode.Open, FileAccess.Read))
             // {
             //     var doc = new Document(fs);
