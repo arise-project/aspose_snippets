@@ -19,7 +19,7 @@ namespace aspose_snippets.net
 
             foreach (var fs in streams)
             {
-                var page = doc.Pages.Add();
+                Page page = doc.Pages.Add();
                 page.SetPageSize(PageSize.A4.Width, PageSize.A4.Height);
 
                 using (Aspose.Imaging.Image image = Aspose.Imaging.Image.Load(fs))
