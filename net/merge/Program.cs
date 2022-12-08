@@ -5,7 +5,7 @@ namespace aspose_snippets.net.merger
         static void Main(string[] args)
         {
             LicenseProvider.License();
-            // Merger.jpg_to_pdf();
+            // + Merger.jpg_to_pdf();
             // Merger.jpg_to_docx  ();
             // Merger.pdf_to_doc();
             // Merger.pdf_to_docx();
@@ -33,11 +33,11 @@ namespace aspose_snippets.net.merger
             // Merger.ps_to_pdf();
             // Merger.eps_to_pdf();
             // Merger.md_to_pdf();
-            //Merger.bmp_to_pdf();
-            // Merger.png_to_pdf();
+            // + Merger.bmp_to_pdf();
+            // + Merger.png_to_pdf();
             // Merger.tiff_to_pdf();
             // Merger.epub_to_pdf();
-            // Merger.cgm_to_pdf();
+            Merger.cgm_to_pdf();
         }
     }
 }
