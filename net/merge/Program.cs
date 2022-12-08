@@ -6,9 +6,9 @@ namespace aspose_snippets.net.merger
         {
             LicenseProvider.License();
             // + Merger.jpg_to_pdf();
-             Merger.jpg_to_docx();
-            // Merger.pdf_to_doc();
-            // Merger.pdf_to_docx();
+            // + Merger.jpg_to_docx();
+            // + Merger.pdf_to_doc();
+            Merger.pdf_to_docx();
             // Merger.pdf_to_html();
             // Merger.pdf_to_xps();
             // Merger.pdf_to_tex();
