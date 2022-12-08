@@ -10,8 +10,8 @@ namespace aspose_snippets.net.merger
             // + Merger.pdf_to_doc();
             // + Merger.pdf_to_docx();
             // + Merger.pdf_to_html();
-            Merger.pdf_to_xps();
-            // Merger.pdf_to_tex();
+            // + Merger.pdf_to_xps();
+            Merger.pdf_to_tex();
             // Merger.pdf_to_svg();
             // Merger.pdf_to_xls();
             // Merger.pdf_to_epub();
