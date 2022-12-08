@@ -25,7 +25,7 @@ namespace aspose_snippets.net
                 outputDoc.Pages.Add(page);
             }
 
-            outputDoc.Save("test.pdf", SaveFormat.P);
+            outputDoc.Convert("test.pdf", PdfFormat.PDF_A_3U, ConvertErrorAction.Delete);
         }
     }
 }
