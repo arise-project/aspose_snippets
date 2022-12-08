@@ -30,8 +30,8 @@ namespace aspose_snippets.net.merger
             // + Merger.tex_to_pdf();
             // Merger.svg_to_pdf();
             // + Merger.mht_to_pdf();
-            Merger.ps_to_pdf();
-            // Merger.eps_to_pdf();
+            // + Merger.ps_to_pdf();
+            Merger.eps_to_pdf();
             // Merger.md_to_pdf();
             // + Merger.bmp_to_pdf();
             // + Merger.png_to_pdf();
