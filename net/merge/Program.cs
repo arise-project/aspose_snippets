@@ -21,7 +21,7 @@ namespace aspose_snippets.net.merger
             // Merger.pdf_to_jpeg();
             // Merger.pdf_to_png();
             // Merger.pdf_to_tiff();
-            // Merger.pdf_to_pdfa();
+            Merger.pdf_to_pdfa();
             // + Merger.pdf_to_text();
             // + Merger.epub_to_pdf();
             // + Merger.html_to_pdf();
@@ -31,7 +31,7 @@ namespace aspose_snippets.net.merger
             // Merger.svg_to_pdf();
             // + Merger.mht_to_pdf();
             // + Merger.ps_to_pdf();
-            Merger.eps_to_pdf();
+            // + Merger.eps_to_pdf();
             // Merger.md_to_pdf();
             // + Merger.bmp_to_pdf();
             // + Merger.png_to_pdf();
