@@ -22,9 +22,9 @@ namespace aspose_snippets.net.merger
             // Merger.pdf_to_png();
             // Merger.pdf_to_tiff();
             // Merger.pdf_to_pdfa();
-            // Merger.pdf_to_text();
+            Merger.pdf_to_text();
             // + Merger.epub_to_pdf();
-            Merger.html_to_pdf();
+            // + Merger.html_to_pdf();
             // Merger.xps_to_pdf();
             // Merger.pcl_to_pdf();
             // Merger.tex_to_pdf();
