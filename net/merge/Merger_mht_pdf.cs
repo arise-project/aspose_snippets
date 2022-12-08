@@ -4,7 +4,7 @@ namespace aspose_snippets.net
     {
         public static void mht_to_pdf()
         {
-            //call method
+            
         }
     }
 }

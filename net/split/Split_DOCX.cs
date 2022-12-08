@@ -9,7 +9,7 @@ namespace aspose_snippets.net
             var pathSource = @"..\..\TestData\test.docx";
             using (var fs = new FileStream(pathSource, FileMode.Open, FileAccess.Read))
             {
-                //call method
+                
             }
         }
     }
