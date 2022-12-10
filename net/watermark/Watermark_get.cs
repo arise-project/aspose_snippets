@@ -1,6 +1,3 @@
-using Aspose.Pdf;
-using Aspose.Pdf.Annotations;
-
 namespace aspose_snippets.net
 {
     public static partial class Watermark
@@ -10,7 +7,7 @@ namespace aspose_snippets.net
             var pathSource = @"..\..\TestData\test_with_watermark.pdf";
             var doc = new Aspose.Pdf.Document(pathSource);
 
-            if(doc.Pages[1].Artifacts[1].Subtype == Artifact.ArtifactSubtype.Watermark)
+            if(doc.Pages[1].Artifacts[1].Subtype == Aspose.Pdf.Artifact.ArtifactSubtype.Watermark)
             {
                 using(var fs = new FileStream("test.jpg",FileMode.Create))
                 {

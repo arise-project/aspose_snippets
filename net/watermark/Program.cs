@@ -6,8 +6,8 @@ namespace aspose_snippets.net.watermark
         {
             LicenseProvider.License();
             //Watermark.add();
-            Watermark.get();
-            //Watermark.remove();
+            //Watermark.get();
+            Watermark.remove();
         }
     }
 }
