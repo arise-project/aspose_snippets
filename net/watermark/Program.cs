@@ -4,9 +4,10 @@ namespace aspose_snippets.net.watermark
     {
         static void Main(string[] args)
         {
+            LicenseProvider.License();
             Watermark.add();
-            Watermark.get();
-            Watermark.remove();
+            //Watermark.get();
+            //Watermark.remove();
         }
     }
 }
