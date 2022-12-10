@@ -7,16 +7,13 @@ namespace aspose_snippets.net
     {
         public static void get()
         {
-            var pathSource = @"..\..\test.pdf";
-            Document document = new Document(pathSource);
-            var WatermarkAnnotations = document.Pages[1].Annotations
-                .Where(a => a.AnnotationType == AnnotationType.Watermark)
-                .Cast<WatermarkAnnotation>();
-            
-            Console.WriteLine("Watermarkes:");
-            foreach (var ca in WatermarkAnnotations)
+            var pathSource = @"..\..\TestData\test_with_watermark.pdf";
+            var doc = new Aspose.Pdf.Document(pathSource);
+
+            using(var fs = new FileStream("test.jpg",FileMode.Create))
             {
-                Console.WriteLine(ca.Contents);
+                doc.Pages[1].Artifacts[1].Image.Save(fs);
+                fs.Flush();
             }
         }
     }
