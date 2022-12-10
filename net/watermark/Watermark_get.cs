@@ -10,10 +10,13 @@ namespace aspose_snippets.net
             var pathSource = @"..\..\TestData\test_with_watermark.pdf";
             var doc = new Aspose.Pdf.Document(pathSource);
 
-            using(var fs = new FileStream("test.jpg",FileMode.Create))
+            if(doc.Pages[1].Artifacts[1].Subtype == Artifact.ArtifactSubtype.Watermark)
             {
-                doc.Pages[1].Artifacts[1].Image.Save(fs);
-                fs.Flush();
+                using(var fs = new FileStream("test.jpg",FileMode.Create))
+                {
+                    doc.Pages[1].Artifacts[1].Image.Save(fs);
+                    fs.Flush();
+                }
             }
         }
     }
