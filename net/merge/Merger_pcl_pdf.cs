@@ -4,8 +4,8 @@ namespace aspose_snippets.net
     {
         public static void pcl_to_pdf()
         {
-            var pathSource1 = @"..\..\TestData\test.cgm";
-            var pathSource2 = @"..\..\TestData\Second\test.cgm";
+            var pathSource1 = @"..\..\TestData\test.pcl";
+            var pathSource2 = @"..\..\TestData\Second\test.pcl";
 
             var firstDoc = new Aspose.Pdf.Document(pathSource1, new Aspose.Pdf.PclLoadOptions() { SupressErrors = true });
             var secondDoc = new Aspose.Pdf.Document(pathSource2, new Aspose.Pdf.PclLoadOptions()  { SupressErrors = true });
