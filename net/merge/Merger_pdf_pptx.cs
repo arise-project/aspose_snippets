@@ -29,7 +29,7 @@ namespace aspose_snippets.net
 
             outputDoc.Save("test.pptx",
                             new PptxSaveOptions
-                            { 
+                            {
                                 SlidesAsImages = true
                             });
         }
