@@ -35,7 +35,7 @@ namespace aspose_snippets.net.merger
             // Merger.md_to_pdf();
             // + Merger.bmp_to_pdf();
             // + Merger.png_to_pdf();
-            // Merger.tiff_to_pdf();
+            Merger.tiff_to_pdf();
             // + Merger.epub_to_pdf();
             // + Merger.cgm_to_pdf();
         }
