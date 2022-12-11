@@ -1,5 +1,3 @@
-using Aspose.Pdf;
-
 namespace aspose_snippets.net
 {
     public static partial class Merger
@@ -9,10 +7,10 @@ namespace aspose_snippets.net
             var pathSource1 = @"..\..\TestData\test.pdf";
             var pathSource2 = @"..\..\TestData\Second\test.pdf";
 
-            var firstDoc = new Document(pathSource1);
-            var secondDoc = new Document(pathSource2);
+            var firstDoc = new Aspose.Pdf.Document(pathSource1);
+            var secondDoc = new Aspose.Pdf.Document(pathSource2);
 
-            var outputDoc = new Document();
+            var outputDoc = new Aspose.Pdf.Document();
             outputDoc.EnableObjectUnload = true;
 
             foreach (var page in firstDoc.Pages)
@@ -26,11 +24,11 @@ namespace aspose_snippets.net
             }
 
             outputDoc.Save("test.html",
-                            new HtmlSaveOptions 
+                            new Aspose.Pdf.HtmlSaveOptions
                             { 
-                                PartsEmbeddingMode = HtmlSaveOptions.PartsEmbeddingModes.EmbedAllIntoHtml,
-                                RasterImagesSavingMode = HtmlSaveOptions.RasterImagesSavingModes.AsEmbeddedPartsOfPngPageBackground,
-                                AntialiasingProcessing = HtmlSaveOptions.AntialiasingProcessingType.TryCorrectResultHtml,
+                                PartsEmbeddingMode = Aspose.Pdf.HtmlSaveOptions.PartsEmbeddingModes.EmbedAllIntoHtml,
+                                RasterImagesSavingMode = Aspose.Pdf.HtmlSaveOptions.RasterImagesSavingModes.AsEmbeddedPartsOfPngPageBackground,
+                                AntialiasingProcessing = Aspose.Pdf.HtmlSaveOptions.AntialiasingProcessingType.TryCorrectResultHtml,
                                 FixedLayout = true
                             });
         }

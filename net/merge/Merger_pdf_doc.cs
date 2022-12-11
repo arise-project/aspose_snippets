@@ -1,5 +1,3 @@
-using Aspose.Pdf;
-
 namespace aspose_snippets.net
 {
     public static partial class Merger
@@ -9,10 +7,10 @@ namespace aspose_snippets.net
             var pathSource1 = @"..\..\TestData\test.pdf";
             var pathSource2 = @"..\..\TestData\Second\test.pdf";
 
-            var firstDoc = new Document(pathSource1);
-            var secondDoc = new Document(pathSource2);
+            var firstDoc = new Aspose.Pdf.Document(pathSource1);
+            var secondDoc = new Aspose.Pdf.Document(pathSource2);
 
-            var outputDoc = new Document();
+            var outputDoc = new Aspose.Pdf.Document();
             outputDoc.EnableObjectUnload = true;
 
             foreach (var page in firstDoc.Pages)
@@ -26,10 +24,10 @@ namespace aspose_snippets.net
             }
 
             outputDoc.Save("test.doc", 
-                            new DocSaveOptions
+                            new Aspose.Pdf.DocSaveOptions
                             { 
-                                Format = DocSaveOptions.DocFormat.Doc, 
-                                Mode = DocSaveOptions.RecognitionMode.Textbox 
+                                Format = Aspose.Pdf.DocSaveOptions.DocFormat.Doc, 
+                                Mode = Aspose.Pdf.DocSaveOptions.RecognitionMode.Textbox 
                             });
         }
     }

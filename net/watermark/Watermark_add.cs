@@ -4,7 +4,21 @@ namespace aspose_snippets.net
     {
         public static void add()
         {
-            //call method
+            var pathSource = @"..\..\TestData\test.pdf";
+            var watermarkSource = @"..\..\TestData\test.jpg";
+            var doc = new Aspose.Pdf.Document(pathSource);
+
+            var artifact = new Aspose.Pdf.WatermarkArtifact();
+            artifact.SetImage(new FileStream(watermarkSource, FileMode.Open));
+
+            artifact.ArtifactHorizontalAlignment = Aspose.Pdf.HorizontalAlignment.Center;
+            artifact.ArtifactVerticalAlignment = Aspose.Pdf.VerticalAlignment.Center;
+            artifact.Rotation = 15;
+            artifact.Opacity = 1;
+            artifact.IsBackground = true;
+            doc.Pages[1].Artifacts.Add(artifact);
+
+            doc.Save("test.pdf");
         }
     }
 }

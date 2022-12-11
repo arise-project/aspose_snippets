@@ -1,5 +1,3 @@
-using Aspose.Pdf;
-
 namespace aspose_snippets.net
 {
     public static partial class Merger
@@ -9,21 +7,21 @@ namespace aspose_snippets.net
             var pathSource1 = @"..\..\TestData\test.html";
             var pathSource2 = @"..\..\TestData\Second\test.html";
 
-            var firstDoc = new Document(pathSource1,
-                new HtmlLoadOptions
+            var firstDoc = new Aspose.Pdf.Document(pathSource1,
+                new Aspose.Pdf.HtmlLoadOptions
                 { 
                     InputEncoding = "UTF-8",
                     IsRenderToSinglePage = true
                 });
 
-            var secondDoc = new Document(pathSource2,
-                new HtmlLoadOptions
+            var secondDoc = new Aspose.Pdf.Document(pathSource2,
+                new Aspose.Pdf.HtmlLoadOptions
                 { 
                     InputEncoding = "UTF-8",
                     IsRenderToSinglePage = false
                 });
 
-            var outputDoc = new Document();
+            var outputDoc = new Aspose.Pdf.Document();
             outputDoc.EnableObjectUnload = true;
 
             foreach (var page in firstDoc.Pages)
@@ -36,7 +34,7 @@ namespace aspose_snippets.net
                 outputDoc.Pages.Add(page);
             }
 
-            outputDoc.Save("test.pdf", SaveFormat.Pdf);
+            outputDoc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
         }
     }
 }

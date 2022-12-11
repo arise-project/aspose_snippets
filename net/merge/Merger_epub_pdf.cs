@@ -1,5 +1,3 @@
-using Aspose.Pdf;
-
 namespace aspose_snippets.net
 {
     public static partial class Merger
@@ -9,21 +7,21 @@ namespace aspose_snippets.net
             var pathSource1 = @"..\..\TestData\test.epub";
             var pathSource2 = @"..\..\TestData\Second\test.epub";
 
-            var firstDoc = new Document(pathSource1,
-                new EpubLoadOptions
+            var firstDoc = new Aspose.Pdf.Document(pathSource1,
+                new Aspose.Pdf.EpubLoadOptions
                 { 
-                    PageSizeAdjustmentMode = LoadOptions.PageSizeAdjustmentModes.EnlargeRequiredViewportWidthAndDoConversionAgain,
-                    MarginsAreaUsageMode = LoadOptions.MarginsAreaUsageModes.PutContentOnMarginAreaIfNecessary
+                    PageSizeAdjustmentMode = Aspose.Pdf.LoadOptions.PageSizeAdjustmentModes.EnlargeRequiredViewportWidthAndDoConversionAgain,
+                    MarginsAreaUsageMode = Aspose.Pdf.LoadOptions.MarginsAreaUsageModes.PutContentOnMarginAreaIfNecessary
                 });
 
-            var secondDoc = new Document(pathSource2,
-                new EpubLoadOptions
+            var secondDoc = new Aspose.Pdf.Document(pathSource2,
+                new Aspose.Pdf.EpubLoadOptions
                 { 
-                    PageSizeAdjustmentMode = LoadOptions.PageSizeAdjustmentModes.EnlargeRequiredViewportWidthAndDoConversionAgain,
-                    MarginsAreaUsageMode = LoadOptions.MarginsAreaUsageModes.PutContentOnMarginAreaIfNecessary
+                    PageSizeAdjustmentMode = Aspose.Pdf.LoadOptions.PageSizeAdjustmentModes.EnlargeRequiredViewportWidthAndDoConversionAgain,
+                    MarginsAreaUsageMode = Aspose.Pdf.LoadOptions.MarginsAreaUsageModes.PutContentOnMarginAreaIfNecessary
                 });
 
-            var outputDoc = new Document();
+            var outputDoc = new Aspose.Pdf.Document();
             outputDoc.EnableObjectUnload = true;
 
             foreach (var page in firstDoc.Pages)
@@ -36,7 +34,7 @@ namespace aspose_snippets.net
                 outputDoc.Pages.Add(page);
             }
 
-            outputDoc.Save("test.pdf", SaveFormat.Pdf);
+            outputDoc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
         }
     }
 }
