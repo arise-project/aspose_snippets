@@ -16,10 +16,10 @@ namespace aspose_snippets.net.merger
             // + Merger.pdf_to_xls();
             // + Merger.pdf_to_epub();
             // + Merger.pdf_to_pptx();
-            Merger.pdf_to_bmp();
+            // + Merger.pdf_to_bmp();
             // Merger.pdf_to_emf();
             // + Merger.pdf_to_jpeg();
-            // Merger.pdf_to_png();
+            // + Merger.pdf_to_png();
             // Merger.pdf_to_tiff();
             // + Merger.pdf_to_pdfa();
             // + Merger.pdf_to_text();
