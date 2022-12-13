@@ -1,6 +1,6 @@
 package aspose_snippets.java;
 
-public class get {
+public class Watermark_remove {
     public static void Execute() {
 
     }
