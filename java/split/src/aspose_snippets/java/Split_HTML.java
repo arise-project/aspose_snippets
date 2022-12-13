@@ -1,6 +1,6 @@
 package aspose_snippets.java;
 
-public class WORD {
+public class Split_HTML {
     public static void Execute() {
 
     }

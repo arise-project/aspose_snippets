@@ -1,6 +1,6 @@
 package aspose_snippets.java;
 
-public class DOC {
+public class Split_TXT {
     public static void Execute() {
 
     }
