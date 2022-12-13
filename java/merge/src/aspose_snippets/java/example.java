@@ -1,3 +1,5 @@
+package aspose_snippets.java;
+
 public class example {
     public static void Execute() {
         String testID = "com/aspose/pdf/examples/AsposePdf/Annotations/deleteallannotations/";
