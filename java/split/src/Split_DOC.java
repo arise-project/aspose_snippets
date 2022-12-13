@@ -1,7 +1,7 @@
 package aspose_snippets.java;
 
-public class Split {
-    public static void DOC() {
+public class DOC {
+    public static void Execute() {
 
     }
 }

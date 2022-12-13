@@ -1,6 +1,6 @@
 package aspose_snippets.java;
 
-public class DOCX {
+public class Merger_pdf_tex {
     public static void Execute() {
 
     }

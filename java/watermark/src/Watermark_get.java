@@ -1,7 +1,7 @@
 package aspose_snippets.java;
 
-public class Watermark {
-    public static void get() {
+public class get {
+    public static void Execute() {
 
     }
 }

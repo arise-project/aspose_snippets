@@ -1,7 +1,7 @@
 package aspose_snippets.java;
 
-public class Watermark {
-    public static void remove() {
+public class remove {
+    public static void Execute() {
 
     }
 }

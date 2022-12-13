@@ -1,7 +1,7 @@
 package aspose_snippets.java;
 
-public class Split {
-    public static void TXT() {
+public class TXT {
+    public static void Execute() {
 
     }
 }

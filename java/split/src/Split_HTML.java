@@ -1,7 +1,7 @@
 package aspose_snippets.java;
 
-public class Split {
-    public static void HTML() {
+public class HTML {
+    public static void Execute() {
 
     }
 }
