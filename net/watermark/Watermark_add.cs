@@ -18,7 +18,8 @@ namespace aspose_snippets.net
             artifact.IsBackground = true;
             doc.Pages[1].Artifacts.Add(artifact);
 
-            doc.Save("test.pdf");
+            //save result pdf to file
+            doc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
         }
     }
 }

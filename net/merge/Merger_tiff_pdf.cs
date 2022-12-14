@@ -46,6 +46,8 @@ namespace aspose_snippets.net
                     page.Paragraphs.Add(image);
                 }
             }
+
+            //save result pdf to file
             outputDoc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
         }
     }

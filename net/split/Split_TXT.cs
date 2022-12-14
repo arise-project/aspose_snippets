@@ -13,6 +13,7 @@ namespace aspose_snippets.net
             
             using (var doc = new Document(pathSource, new TxtLoadOptions()))
             {
+                //save input text to pdf to file
                 doc.Save("test.pdf", SaveFormat.Pdf);
             }
 

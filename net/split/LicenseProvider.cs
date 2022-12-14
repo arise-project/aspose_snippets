@@ -22,6 +22,8 @@
                 using(var memoryStream = new MemoryStream())
                 {
                     fileStream.CopyTo(memoryStream);
+
+                    //reset stream to read from begin for next step
                     memoryStream.Seek(0, SeekOrigin.Begin);
                     new Aspose.Pdf.License().SetLicense(memoryStream);
                 }

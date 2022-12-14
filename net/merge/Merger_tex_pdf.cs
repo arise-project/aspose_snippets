@@ -38,6 +38,7 @@ namespace aspose_snippets.net
                 outputDoc.Pages.Add(page);
             }
 
+            //save result pdf to file
             outputDoc.Save("test.pdf", SaveFormat.Pdf);
         }
     }

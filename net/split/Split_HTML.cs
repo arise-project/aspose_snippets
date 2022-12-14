@@ -10,6 +10,7 @@ namespace aspose_snippets.net
             var pathSource = @"..\..\TestData\test.html";
             using (var doc = new Document(pathSource, new HtmlLoadOptions()))
             {
+                //save input html to pdf to file
                 doc.Save("test.pdf", SaveFormat.Pdf);
             }
             

@@ -37,16 +37,14 @@ namespace aspose_snippets.net
                     rect = new Aspose.Pdf.Rectangle(0, 0, image.Width - 1, image.Height - 1);
                 }
 
+                //reset stream to read from begin for next step
                 fs.Seek(0, SeekOrigin.Begin);
-            
+
+                //add image to new pdf page
                 page.AddImage(fs, rect);
             }
 
             doc.Save("test.docx", Aspose.Pdf.SaveFormat.DocX);
-            foreach(var fs in streams)
-            {
-                fs.Dispose();
-            }
         }
     }
 }

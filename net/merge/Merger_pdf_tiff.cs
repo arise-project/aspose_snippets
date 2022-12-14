@@ -15,6 +15,8 @@ namespace aspose_snippets.net
                 var outPath = "test_"+pageCount+".jpg";
                 using var ms = new System.IO.MemoryStream();
                 imageDevice.Process(doc.Pages[pageCount], outPath);
+
+                //reset stream to read from begin for next step
                 ms.Seek(0, SeekOrigin.Begin);
                 images[pageCount - 1] = Aspose.Imaging.Image.Load(outPath);
             }

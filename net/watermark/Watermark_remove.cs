@@ -12,7 +12,8 @@ namespace aspose_snippets.net
                 doc.Pages[1].Artifacts.Delete(doc.Pages[1].Artifacts[1]);
             }
 
-            doc.Save("test.pdf");
+            //save result pdf to file
+            doc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
         }
     }
 }
