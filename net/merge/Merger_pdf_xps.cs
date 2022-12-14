@@ -29,9 +29,11 @@ namespace aspose_snippets.net
                 outputDoc.Pages.Add(page);
             }
 
+            //save xps document
             outputDoc.Save("test.xps",
                             new Aspose.Pdf.XpsSaveOptions
                             { 
+                                //do not save transparent text to output file
                                 SaveTransparentTexts = false
                             });
         }

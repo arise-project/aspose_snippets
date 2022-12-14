@@ -13,6 +13,7 @@ namespace aspose_snippets.net
             var firstDoc = new Document(pathSource1);
             var secondDoc = new Document(pathSource2);
 
+            //create empty pdf document
             var outputDoc = new Document();
 
             //set less memory usage with unload instead of fast performance
@@ -30,9 +31,11 @@ namespace aspose_snippets.net
                 outputDoc.Pages.Add(page);
             }
 
+            //save Excel document
             outputDoc.Save("test.xls",
                             new ExcelSaveOptions()
                             {
+                                //set Microsoft document type
                                 Format = ExcelSaveOptions.ExcelFormat.XMLSpreadSheet2003
                             });
         }

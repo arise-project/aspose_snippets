@@ -13,6 +13,7 @@ namespace aspose_snippets.net
             var firstDoc = new Document(pathSource1, new PsLoadOptions());
             var secondDoc = new Document(pathSource2,  new PsLoadOptions());
 
+            //create empty pdf document
             var outputDoc = new Document();
 
             //set less memory usage with unload instead of fast performance
