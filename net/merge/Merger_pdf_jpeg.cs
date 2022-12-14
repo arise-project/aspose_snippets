@@ -51,7 +51,7 @@ namespace aspose_snippets.net
                 Quality = 100 //the best quality for jpg
             };
 
-            //create empty image with calculated with and hight
+            //create empty image with calculated width and hight
             using (var newImage = (Aspose.Imaging.FileFormats.Jpeg.JpegImage)Aspose.Imaging.Image.Create(options, newWidth, newHeight))
             {
                 int stitchedWidth = 0;

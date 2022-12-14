@@ -52,7 +52,7 @@ namespace aspose_snippets.net
 
             var options = new Aspose.Imaging.ImageOptions.PngOptions() { Source = fileSource };
 
-            //create empty image with calculated with and hight
+            //create empty image with calculated width and hight
             using (var newImage = (Aspose.Imaging.FileFormats.Png.PngImage)Aspose.Imaging.Image.Create(options, newWidth, newHeight))
             {
                 int stitchedWidth = 0;

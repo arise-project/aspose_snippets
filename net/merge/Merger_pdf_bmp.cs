@@ -56,7 +56,7 @@ namespace aspose_snippets.net
                     Source = fileSource 
                 };
 
-            //create empty image with calculated with and hight
+            //create empty image with calculated witdh and hight
             using (var newImage = (Aspose.Imaging.FileFormats.Bmp.BmpImage)Aspose.Imaging.Image.Create(options, newWidth, newHeight))
             {
                 int stitchedWidth = 0;
