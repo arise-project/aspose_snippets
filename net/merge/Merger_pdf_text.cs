@@ -14,6 +14,7 @@ namespace aspose_snippets.net
             var firstDoc = new Document(pathSource1);
             var secondDoc = new Document(pathSource2);
 
+            //create empty pdf document
             var outputDoc = new Document();
 
             //set less memory usage with unload instead of fast performance
@@ -31,9 +32,12 @@ namespace aspose_snippets.net
                 outputDoc.Pages.Add(page);
             }
 
+            //create text absorber for extract text
             var textAbsorber = new TextAbsorber();
             outputDoc.Pages.Accept(textAbsorber);
             string extractedText = textAbsorber.Text;
+
+            //save content to text file
             File.WriteAllText("test.txt", extractedText);
         }
     }

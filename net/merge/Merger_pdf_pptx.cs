@@ -15,7 +15,8 @@ namespace aspose_snippets.net
 
             var outputDoc = new Document
             {
-                EnableObjectUnload = true //set less memory usage with unload instead of fast performance
+                //set less memory usage with unload instead of fast performance
+                EnableObjectUnload = true
             };
 
             foreach (var page in firstDoc.Pages)
@@ -33,6 +34,7 @@ namespace aspose_snippets.net
             outputDoc.Save("test.pptx",
                             new PptxSaveOptions
                             {
+                                //save all content on page as single image
                                 SlidesAsImages = true
                             });
         }

@@ -32,6 +32,7 @@ namespace aspose_snippets.net
             outputDoc.Save("test.svg",
                             new Aspose.Pdf.SvgSaveOptions
                             {
+                                //scale the output document from typographic points to pixels
                                 ScaleToPixels = true
                             });
         }

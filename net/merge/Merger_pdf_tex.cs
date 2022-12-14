@@ -32,6 +32,7 @@ namespace aspose_snippets.net
             outputDoc.Save("test.tex",
                             new Aspose.Pdf.TeXSaveOptions
                             {
+                                //save parsed artifacts, for example images to a directory
                                 OutDirectoryPath = "./test"
                             });
         }
