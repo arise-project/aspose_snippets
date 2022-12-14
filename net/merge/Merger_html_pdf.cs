@@ -11,14 +11,18 @@ namespace aspose_snippets.net
             var firstDoc = new Aspose.Pdf.Document(pathSource1,
                 new Aspose.Pdf.HtmlLoadOptions
                 { 
+                    //set html encodyng
                     InputEncoding = "UTF-8",
+                    //render all html to single large pdf page
                     IsRenderToSinglePage = true
                 });
 
             var secondDoc = new Aspose.Pdf.Document(pathSource2,
                 new Aspose.Pdf.HtmlLoadOptions
                 { 
+                    //set html encodyng
                     InputEncoding = "UTF-8",
+                    //split html content to pdf pages
                     IsRenderToSinglePage = false
                 });
 

@@ -8,6 +8,7 @@ namespace aspose_snippets.net
 
             //read pdf file to Aspose Document
             var doc = new Aspose.Pdf.Document(pathSource);
+            
             List<string> images = new List<string>();
             for (int pageCount = 1; pageCount <= doc.Pages.Count; pageCount++)
             {
@@ -25,7 +26,7 @@ namespace aspose_snippets.net
                 {
                     imageSizes.Add(image.Size);
                 }
-            }            
+            }
 
             int newWidth = imageSizes.Sum(size => size.Width);
             int newHeight = imageSizes.Max(size => size.Height);

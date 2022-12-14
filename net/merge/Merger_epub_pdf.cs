@@ -11,14 +11,18 @@ namespace aspose_snippets.net
             var firstDoc = new Aspose.Pdf.Document(pathSource1,
                 new Aspose.Pdf.EpubLoadOptions
                 { 
+                    //use algorithm to prevent content to be truncated
                     PageSizeAdjustmentMode = Aspose.Pdf.LoadOptions.PageSizeAdjustmentModes.EnlargeRequiredViewportWidthAndDoConversionAgain,
+                    //usage of margins area during conversion 
                     MarginsAreaUsageMode = Aspose.Pdf.LoadOptions.MarginsAreaUsageModes.PutContentOnMarginAreaIfNecessary
                 });
 
             var secondDoc = new Aspose.Pdf.Document(pathSource2,
                 new Aspose.Pdf.EpubLoadOptions
                 { 
+                    //use algorithm to prevent content to be truncated
                     PageSizeAdjustmentMode = Aspose.Pdf.LoadOptions.PageSizeAdjustmentModes.EnlargeRequiredViewportWidthAndDoConversionAgain,
+                    //usage of margins area during conversion 
                     MarginsAreaUsageMode = Aspose.Pdf.LoadOptions.MarginsAreaUsageModes.PutContentOnMarginAreaIfNecessary
                 });
 

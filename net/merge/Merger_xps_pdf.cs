@@ -9,8 +9,8 @@ namespace aspose_snippets.net
             var pathSource1 = @"..\..\TestData\test.xps";
             var pathSource2 = @"..\..\TestData\Second\test.xps";
 
+            //xps files can be parsed and loaded as Aspose Document
             var firstDoc = new Document(pathSource1, new XpsLoadOptions());
-
             var secondDoc = new Document(pathSource2, new XpsLoadOptions());
 
             var outputDoc = new Document();

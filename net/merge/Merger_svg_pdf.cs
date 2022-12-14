@@ -7,8 +7,13 @@ namespace aspose_snippets.net
             var pathSource1 = @"..\..\TestData\test.svg";
             var pathSource2 = @"..\..\TestData\Second\test.svg";
 
-            var firstDoc = new Aspose.Pdf.Document(pathSource1, new Aspose.Pdf.SvgLoadOptions { AdjustPageSize = true});
-            var secondDoc = new Aspose.Pdf.Document(pathSource2,  new Aspose.Pdf.SvgLoadOptions { AdjustPageSize = false });
+            //SVG files can be parsed and loaded as Aspose Document
+            var firstDoc = new Aspose.Pdf.Document(pathSource1, 
+                //Adust pdf page size to svg size
+                new Aspose.Pdf.SvgLoadOptions { AdjustPageSize = true});
+            var secondDoc = new Aspose.Pdf.Document(pathSource2,  
+                //Use default pdf page size
+                new Aspose.Pdf.SvgLoadOptions { AdjustPageSize = false });
 
             //create empty pdf document
             var outputDoc = new Aspose.Pdf.Document();

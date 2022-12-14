@@ -9,19 +9,26 @@ namespace aspose_snippets.net
             var pathSource1 = @"..\..\TestData\test.tex";
             var pathSource2 = @"..\..\TestData\Second\test.tex";
 
+            //TeX files can be parsed and loaded as Aspose Document
             var firstDoc = new Document(pathSource1,
                 new TeXLoadOptions
                 { 
+                    //Cancels ligatures in all fonts
                     NoLigatures = false,
+                    //Rasterize scientific formulas to images 
                     RasterizeFormulas = true,
+                    //Print parsing steps details to console output
                     ShowTerminalOutput = true
                 });
 
             var secondDoc = new Document(pathSource2,
                 new TeXLoadOptions
                 { 
+                    //Set ligatures in all fonts
                     NoLigatures = false,
+                    //Rasterize scientific formulas to images 
                     RasterizeFormulas = true,
+                    //Print parsing steps details to console output
                     ShowTerminalOutput = true
                 });
 

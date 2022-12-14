@@ -8,8 +8,12 @@ namespace aspose_snippets.net
             var pathSource2 = @"..\..\TestData\Second\test.pcl";
 
             //pcl files can be parsed and loaded as Aspose Document
-            var firstDoc = new Aspose.Pdf.Document(pathSource1, new Aspose.Pdf.PclLoadOptions() { SupressErrors = true });
-            var secondDoc = new Aspose.Pdf.Document(pathSource2, new Aspose.Pdf.PclLoadOptions()  { SupressErrors = true });
+            var firstDoc = new Aspose.Pdf.Document(pathSource1, 
+                //suspend not critical errors
+                new Aspose.Pdf.PclLoadOptions() { SupressErrors = true }); 
+            var secondDoc = new Aspose.Pdf.Document(pathSource2, 
+                //suspend not critical errors
+                new Aspose.Pdf.PclLoadOptions()  { SupressErrors = true });
 
             //create empty pdf document
             var outputDoc = new Aspose.Pdf.Document();

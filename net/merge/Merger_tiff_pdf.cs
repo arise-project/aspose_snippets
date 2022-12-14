@@ -7,8 +7,10 @@ namespace aspose_snippets.net
             var pathSource1 = @"..\..\TestData\test.tiff";
             var pathSource2 = @"..\..\TestData\Second\test.tiff";
             
-            var multiImage1 = (Aspose.Imaging.FileFormats.Tiff.TiffImage)Aspose.Imaging.Image.Load(File.Open(pathSource1, FileMode.Open));
-            var multiImage2 = (Aspose.Imaging.FileFormats.Tiff.TiffImage)Aspose.Imaging.Image.Load(File.Open(pathSource2, FileMode.Open));
+            var multiImage1 = (Aspose.Imaging.FileFormats.Tiff.TiffImage)Aspose.Imaging.Image.Load(
+                    File.Open(pathSource1, FileMode.Open));
+            var multiImage2 = (Aspose.Imaging.FileFormats.Tiff.TiffImage)Aspose.Imaging.Image.Load(
+                    File.Open(pathSource2, FileMode.Open));
 
             var images = new Aspose.Imaging.FileFormats.Tiff.TiffImage[] {multiImage1, multiImage2};
 
