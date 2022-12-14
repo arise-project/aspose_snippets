@@ -32,9 +32,13 @@ namespace aspose_snippets.net
             outputDoc.Save("test.html",
                             new Aspose.Pdf.HtmlSaveOptions
                             { 
+                                //embedd css into a page
                                 PartsEmbeddingMode = Aspose.Pdf.HtmlSaveOptions.PartsEmbeddingModes.EmbedAllIntoHtml,
+                                //embedd images into a page
                                 RasterImagesSavingMode = Aspose.Pdf.HtmlSaveOptions.RasterImagesSavingModes.AsEmbeddedPartsOfPngPageBackground,
+                                //enhance conversion of documents with backgrounds
                                 AntialiasingProcessing = Aspose.Pdf.HtmlSaveOptions.AntialiasingProcessingType.TryCorrectResultHtml,
+                                //use fixed layout render
                                 FixedLayout = true
                             });
         }

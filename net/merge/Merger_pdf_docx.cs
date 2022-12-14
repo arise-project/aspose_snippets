@@ -32,7 +32,9 @@ namespace aspose_snippets.net
             outputDoc.Save("test.docx", 
                             new Aspose.Pdf.DocSaveOptions
                             { 
+                                //use docx format
                                 Format = Aspose.Pdf.DocSaveOptions.DocFormat.DocX, 
+                                //make document editable flow and recognize of tables
                                 Mode = Aspose.Pdf.DocSaveOptions.RecognitionMode.EnhancedFlow 
                             });
         }

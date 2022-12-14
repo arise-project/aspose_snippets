@@ -32,6 +32,7 @@ namespace aspose_snippets.net
             outputDoc.Save("test.epub",
                             new Aspose.Pdf.EpubSaveOptions
                             {
+                                //keep the logical structure of transformed document 
                                 ContentRecognitionMode = Aspose.Pdf.EpubSaveOptions.RecognitionMode.PdfFlow
                             });
         }

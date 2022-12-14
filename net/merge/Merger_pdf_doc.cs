@@ -32,7 +32,9 @@ namespace aspose_snippets.net
             outputDoc.Save("test.doc", 
                             new Aspose.Pdf.DocSaveOptions
                             { 
+                                //use doc format
                                 Format = Aspose.Pdf.DocSaveOptions.DocFormat.Doc, 
+                                //This mode is fast and good for maximally preserving original look 
                                 Mode = Aspose.Pdf.DocSaveOptions.RecognitionMode.Textbox 
                             });
         }
