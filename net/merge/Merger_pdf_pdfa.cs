@@ -13,6 +13,7 @@ namespace aspose_snippets.net
             var firstDoc = new Document(pathSource1);
             var secondDoc = new Document(pathSource2);
 
+            //create empty pdf document
             var outputDoc = new Document();
 
             //set less memory usage with unload instead of fast performance
@@ -30,7 +31,12 @@ namespace aspose_snippets.net
                 outputDoc.Pages.Add(page);
             }
 
-            outputDoc.Convert("test.pdf", PdfFormat.PDF_A_3U, ConvertErrorAction.Delete);
+            //save document as specific pdf standard PDFA 3Y
+            outputDoc.Convert(
+                "test.pdf", 
+                PdfFormat.PDF_A_3U, 
+                //delete objects that impossible to convert
+                ConvertErrorAction.Delete);
         }
     }
 }

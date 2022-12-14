@@ -46,7 +46,7 @@ namespace aspose_snippets.net
             int newWidth = imageSizes.Sum(size => size.Width);
             int newHeight = imageSizes.Max(size => size.Height);
 
-            //use file system as cournce for save image
+            //use file system as source for save image
             Aspose.Imaging.Source fileSource = new Aspose.Imaging.Sources.FileCreateSource(
                 "./test.bmp", 
                 isTemporal: false); //preserve image on the disk
@@ -56,7 +56,7 @@ namespace aspose_snippets.net
                     Source = fileSource 
                 };
 
-            //create empty image with calculated with adn hight
+            //create empty image with calculated with and hight
             using (var newImage = (Aspose.Imaging.FileFormats.Bmp.BmpImage)Aspose.Imaging.Image.Create(options, newWidth, newHeight))
             {
                 int stitchedWidth = 0;
