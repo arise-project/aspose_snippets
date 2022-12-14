@@ -7,18 +7,29 @@ namespace aspose_snippets.net
             var pathSource1 = @"..\..\TestData\test.png";
             var pathSource2 = @"..\..\TestData\Second\test.png";
 
+            //create empty pdf document    
             using var doc = new Aspose.Pdf.Document();
             doc.EnableObjectUnload = true;
 
             Aspose.Pdf.Rectangle rect;
             double width, height;
 
-            var streams = new List<Stream>() { File.Open(pathSource1, FileMode.Open), File.Open(pathSource2, FileMode.Open) };
+            //make list of file streams with documents to merge
+            var streams = new List<Stream>() 
+            { 
+                File.Open(pathSource1, FileMode.Open), 
+                File.Open(pathSource2, FileMode.Open) 
+            };
 
             foreach (var fs in streams)
             {
+                //add new page to pdf
                 Aspose.Pdf.Page page = doc.Pages.Add();
-                page.SetPageSize(Aspose.Pdf.PageSize.A4.Width, Aspose.Pdf.PageSize.A4.Height);
+
+                //setup page size to be A4
+                page.SetPageSize(
+                    Aspose.Pdf.PageSize.A4.Width, 
+                    Aspose.Pdf.PageSize.A4.Height);
 
                 using (Aspose.Imaging.Image image = Aspose.Imaging.Image.Load(fs))
                 {

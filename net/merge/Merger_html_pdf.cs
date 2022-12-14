@@ -21,6 +21,7 @@ namespace aspose_snippets.net
                     IsRenderToSinglePage = false
                 });
 
+            //create empty pdf document
             var outputDoc = new Aspose.Pdf.Document();
             outputDoc.EnableObjectUnload = true;
 

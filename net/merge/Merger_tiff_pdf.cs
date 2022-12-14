@@ -12,6 +12,7 @@ namespace aspose_snippets.net
 
             var images = new Aspose.Imaging.FileFormats.Tiff.TiffImage[] {multiImage1, multiImage2};
 
+            //create empty pdf document
             var outputDoc = new Aspose.Pdf.Document();
             foreach (var multiImage in images)
             {

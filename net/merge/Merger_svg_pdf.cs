@@ -10,6 +10,7 @@ namespace aspose_snippets.net
             var firstDoc = new Aspose.Pdf.Document(pathSource1, new Aspose.Pdf.SvgLoadOptions { AdjustPageSize = true});
             var secondDoc = new Aspose.Pdf.Document(pathSource2,  new Aspose.Pdf.SvgLoadOptions { AdjustPageSize = false });
 
+            //create empty pdf document
             var outputDoc = new Aspose.Pdf.Document();
             outputDoc.EnableObjectUnload = true;
 

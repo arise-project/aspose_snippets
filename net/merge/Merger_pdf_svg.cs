@@ -10,6 +10,7 @@ namespace aspose_snippets.net
             var firstDoc = new Aspose.Pdf.Document(pathSource1);
             var secondDoc = new Aspose.Pdf.Document(pathSource2);
 
+            //create empty pdf document
             var outputDoc = new Aspose.Pdf.Document();
             outputDoc.EnableObjectUnload = true;
 
