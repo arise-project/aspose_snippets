@@ -6,6 +6,7 @@ namespace aspose_snippets.net
         {
             var pathSource = @"..\..\TestData\test.pdf";
 
+            //read pdf file to Aspose Document
             var doc = new Aspose.Pdf.Document(pathSource);
             List<string> images = new List<string>();
             for (int pageCount = 1; pageCount <= doc.Pages.Count; pageCount++)

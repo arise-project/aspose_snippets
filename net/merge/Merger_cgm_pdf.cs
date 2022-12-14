@@ -25,6 +25,7 @@ namespace aspose_snippets.net
 
             foreach (var page in secondDoc.Pages)
             {
+                //add page from one document to another directly
                 outputDoc.Pages.Add(page);
             }
             

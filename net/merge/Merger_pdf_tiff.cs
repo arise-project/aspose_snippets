@@ -6,8 +6,10 @@ namespace aspose_snippets.net
         {
             var pathSource1 = @"..\..\TestData\test.pdf";
 
+            //read pdf file to Aspose Document
             var doc = new Aspose.Pdf.Document(pathSource1);
             var images = new Aspose.Imaging.Image[doc.Pages.Count];
+            
             for (int pageCount = 1; pageCount <= doc.Pages.Count; pageCount++)
             {
                 var resolution = new Aspose.Pdf.Devices.Resolution(72);

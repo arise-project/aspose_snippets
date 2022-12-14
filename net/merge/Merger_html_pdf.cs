@@ -7,6 +7,7 @@ namespace aspose_snippets.net
             var pathSource1 = @"..\..\TestData\test.html";
             var pathSource2 = @"..\..\TestData\Second\test.html";
 
+            //html files can be parsed and loaded as Aspose Document
             var firstDoc = new Aspose.Pdf.Document(pathSource1,
                 new Aspose.Pdf.HtmlLoadOptions
                 { 
@@ -29,11 +30,13 @@ namespace aspose_snippets.net
 
             foreach (var page in firstDoc.Pages)
             {
+                //add page from one document to another directly
                 outputDoc.Pages.Add(page);
             }
 
             foreach (var page in secondDoc.Pages)
             {
+                //add page from one document to another directly
                 outputDoc.Pages.Add(page);
             }
 
