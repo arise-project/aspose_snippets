@@ -11,8 +11,7 @@ namespace aspose_snippets.net
             using var doc = new Aspose.Pdf.Document();
 
             Aspose.Pdf.Rectangle rect;
-            double width, height;
-
+            
             //make list of file streams with documents to merge with documents to merge
             var streams = new List<Stream>() 
             { 
@@ -30,11 +29,11 @@ namespace aspose_snippets.net
                     Aspose.Pdf.PageSize.A4.Width, 
                     Aspose.Pdf.PageSize.A4.Height);
 
+                //load image from stream, it suport a lot of formats
                 using (Aspose.Imaging.Image image = Aspose.Imaging.Image.Load(fs))
                 {
+                    //read image dimensions to pdf page rectangle
                     rect = new Aspose.Pdf.Rectangle(0, 0, image.Width - 1, image.Height - 1);
-                    width = image.Width;
-                    height = image.Height;
                 }
 
                 fs.Seek(0, SeekOrigin.Begin);
