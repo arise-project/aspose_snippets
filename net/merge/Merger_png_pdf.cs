@@ -9,6 +9,8 @@ namespace aspose_snippets.net
 
             //create empty pdf document    
             using var doc = new Aspose.Pdf.Document();
+
+            //set less memory usage with unload instead of fast performance
             doc.EnableObjectUnload = true;
 
             //make list of file streams with documents to merge

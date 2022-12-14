@@ -12,6 +12,8 @@ namespace aspose_snippets.net
 
             //create empty pdf document
             var outputDoc = new Aspose.Pdf.Document();
+
+            //set less memory usage with unload instead of fast performance
             outputDoc.EnableObjectUnload = true;
 
             foreach (var page in firstDoc.Pages)

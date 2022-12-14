@@ -26,15 +26,19 @@ namespace aspose_snippets.net
                 });
 
             var outputDoc = new Document();
+
+            //set less memory usage with unload instead of fast performance
             outputDoc.EnableObjectUnload = true;
 
             foreach (var page in firstDoc.Pages)
             {
+                //add page from one document to another directly
                 outputDoc.Pages.Add(page);
             }
 
             foreach (var page in secondDoc.Pages)
             {
+                //add page from one document to another directly
                 outputDoc.Pages.Add(page);
             }
 
