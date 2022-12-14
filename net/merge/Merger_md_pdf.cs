@@ -8,8 +8,10 @@ namespace aspose_snippets.net
             var pathSource2 = @"..\..\TestData\Second\test.md";
 
             //Markdown files can be parsed and loaded as Aspose Document
-            var firstDoc = new Aspose.Pdf.Document(pathSource1, new Aspose.Pdf.MdLoadOptions());
-            var secondDoc = new Aspose.Pdf.Document(pathSource2, new Aspose.Pdf.MdLoadOptions());
+            var firstDoc = new Aspose.Pdf.Document(pathSource1,
+                new Aspose.Pdf.MdLoadOptions());
+            var secondDoc = new Aspose.Pdf.Document(pathSource2,
+                new Aspose.Pdf.MdLoadOptions());
 
             //create empty pdf document
             var outputDoc = new Aspose.Pdf.Document();
