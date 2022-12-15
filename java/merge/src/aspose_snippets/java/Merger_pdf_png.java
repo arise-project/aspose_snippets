@@ -73,7 +73,7 @@ public class Merger_pdf_png {
                 //combining images into new one
                 newImage.saveArgb32Pixels(
                         bounds, //where to insert image
-                        image.loadArgb32Pixels(image.getBounds()))); //convert image chunk to 32bit Argb
+                        image.loadArgb32Pixels(image.getBounds())); //convert image chunk to 32bit Argb
                 stitchedWidth += image.getWidth();
             }
         }
