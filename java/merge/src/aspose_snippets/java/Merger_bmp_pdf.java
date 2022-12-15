@@ -12,7 +12,7 @@ public class Merger_bmp_pdf {
         //create empty pdf document
         com.aspose.pdf.Document doc = new com.aspose.pdf.Document();
 
-        //make list of file streams with documents to merge
+        //make list of files with images to merge
         List<String> images = Arrays.asList(new String[]{ pathSource1, pathSource2 });
 
         for(String fs : images)
@@ -27,7 +27,7 @@ public class Merger_bmp_pdf {
 
             com.aspose.pdf.Rectangle rect;
 
-            //load image from stream, it suport a lot of formats
+            //load image from stream, it supports a lot of formats
             com.aspose.imaging.Image image = com.aspose.imaging.Image.load(fs);
             //read image dimensions to pdf page rectangle
             rect = new com.aspose.pdf.Rectangle(0, 0, image.getWidth() - 1, image.getHeight() - 1);
