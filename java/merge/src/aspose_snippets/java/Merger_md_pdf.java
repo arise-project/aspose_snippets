@@ -17,14 +17,12 @@ public class Merger_md_pdf {
         //set less memory usage with unload instead of fast performance
         outputDoc.setEnableObjectUnload(true);
 
-        for (com.aspose.pdf.Page page : firstDoc.getPages())
-        {
+        for (com.aspose.pdf.Page page : firstDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
 
-        for (com.aspose.pdf.Page page : secondDoc.getPages())
-        {
+        for (com.aspose.pdf.Page page : secondDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
