@@ -2,8 +2,6 @@ package aspose_snippets.java;
 
 import java.util.ArrayList;
 
-package aspose_snippets.java;
-
 public class Merger_pdf_bmp {
     public static void Execute() {
         String pathSource = "../../TestData/test.pdf";
