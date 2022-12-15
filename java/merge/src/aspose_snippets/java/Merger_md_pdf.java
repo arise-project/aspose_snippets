@@ -2,8 +2,8 @@ package aspose_snippets.java;
 
 public class Merger_md_pdf {
     public static void Execute() {
-        String pathSource1 = "../../TestData/test.md";
-        String pathSource2 = "../../TestData/Second/test.md";
+        String pathSource1 = "../../../../TestData/test.md";
+        String pathSource2 = "../../../../TestData/Second/test.md";
 
         //Markdown files can be parsed and loaded as Aspose Document
         com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1,

@@ -4,8 +4,8 @@ import com.aspose.pdf.SaveFormat;
 
 public class Merger_eps_pdf {
     public static void Execute() {
-        String pathSource1 = "../../TestData/test.eps";
-        String pathSource2 = "../../TestData/Second/test.eps";
+        String pathSource1 = "../../../../TestData/test.eps";
+        String pathSource2 = "../../../../TestData/Second/test.eps";
 
         //eps files can be parsed and loaded as Aspose Document
         com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, new com.aspose.pdf.PsLoadOptions());

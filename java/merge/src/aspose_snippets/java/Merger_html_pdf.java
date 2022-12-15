@@ -2,8 +2,8 @@ package aspose_snippets.java;
 
 public class Merger_html_pdf {
     public static void Execute() {
-        String pathSource1 = "../../TestData/test.html";
-        String pathSource2 = "../../TestData/Second/test.html";
+        String pathSource1 = "../../../../TestData/test.html";
+        String pathSource2 = "../../../../TestData/Second/test.html";
 
         com.aspose.pdf.HtmlLoadOptions opt1 = new com.aspose.pdf.HtmlLoadOptions();
 
