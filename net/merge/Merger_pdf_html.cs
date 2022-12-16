@@ -29,6 +29,7 @@ namespace aspose_snippets.net
                 outputDoc.Pages.Add(page);
             }
 
+            //save pdf to html page
             outputDoc.Save("test.html",
                             new Aspose.Pdf.HtmlSaveOptions
                             { 

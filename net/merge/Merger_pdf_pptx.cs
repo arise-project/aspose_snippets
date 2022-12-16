@@ -1,5 +1,3 @@
-using Aspose.Pdf;
-
 namespace aspose_snippets.net
 {
     public static partial class Merger
@@ -10,10 +8,10 @@ namespace aspose_snippets.net
             var pathSource2 = @"..\..\TestData\Second\test.pdf";
 
             //read pdf file to Aspose Document
-            var firstDoc = new Document(pathSource1);
-            var secondDoc = new Document(pathSource2);
+            var firstDoc = new Aspose.Pdf.Document(pathSource1);
+            var secondDoc = new Aspose.Pdf.Document(pathSource2);
 
-            var outputDoc = new Document
+            var outputDoc = new Aspose.Pdf.Document
             {
                 //set less memory usage with unload instead of fast performance
                 EnableObjectUnload = true
@@ -31,8 +29,9 @@ namespace aspose_snippets.net
                 outputDoc.Pages.Add(page);
             }
 
+            //save pdf to Microsoft PowerPoint
             outputDoc.Save("test.pptx",
-                            new PptxSaveOptions
+                            new Aspose.Pdf.PptxSaveOptions
                             {
                                 //save all content on page as single image
                                 SlidesAsImages = true

@@ -1,5 +1,3 @@
-using Aspose.Pdf;
-
 namespace aspose_snippets.net
 {
     public static partial class Merger
@@ -10,11 +8,11 @@ namespace aspose_snippets.net
             var pathSource2 = @"..\..\TestData\Second\test.pdf";
 
             //read pdf file to Aspose Document
-            var firstDoc = new Document(pathSource1);
-            var secondDoc = new Document(pathSource2);
+            var firstDoc = new Aspose.Pdf.Document(pathSource1);
+            var secondDoc = new Aspose.Pdf.Document(pathSource2);
 
             //create empty pdf document
-            var outputDoc = new Document();
+            var outputDoc = new Aspose.Pdf.Document();
 
             //set less memory usage with unload instead of fast performance
             outputDoc.EnableObjectUnload = true;
@@ -33,10 +31,10 @@ namespace aspose_snippets.net
 
             //save document as specific pdf standard PDFA 3Y
             outputDoc.Convert(
-                "test.pdf", 
-                PdfFormat.PDF_A_3U, 
+                "test.pdf",
+                Aspose.Pdf.PdfFormat.PDF_A_3U,
                 //delete objects that impossible to convert
-                ConvertErrorAction.Delete);
+                Aspose.Pdf.ConvertErrorAction.Delete);
         }
     }
 }

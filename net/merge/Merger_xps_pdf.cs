@@ -1,5 +1,3 @@
-using Aspose.Pdf;
-
 namespace aspose_snippets.net
 {
     public static partial class Merger
@@ -10,11 +8,11 @@ namespace aspose_snippets.net
             var pathSource2 = @"..\..\TestData\Second\test.xps";
 
             //xps files can be parsed and loaded as Aspose Document
-            var firstDoc = new Document(pathSource1, new XpsLoadOptions());
-            var secondDoc = new Document(pathSource2, new XpsLoadOptions());
+            var firstDoc = new Aspose.Pdf.Document(pathSource1, new Aspose.Pdf.XpsLoadOptions());
+            var secondDoc = new Aspose.Pdf.Document(pathSource2, new Aspose.Pdf.XpsLoadOptions());
 
             //create empty pdf document
-            var outputDoc = new Document();
+            var outputDoc = new Aspose.Pdf.Document();
 
             //set less memory usage with unload instead of fast performance
             outputDoc.EnableObjectUnload = true;
@@ -32,7 +30,7 @@ namespace aspose_snippets.net
             }
 
             //save result pdf to file
-            outputDoc.Save("test.pdf", SaveFormat.Pdf);
+            outputDoc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
         }
     }
 }

@@ -29,6 +29,7 @@ namespace aspose_snippets.net
                 outputDoc.Pages.Add(page);
             }
 
+            //save pdf to Microsoft Word docx format
             outputDoc.Save("test.docx", 
                             new Aspose.Pdf.DocSaveOptions
                             { 

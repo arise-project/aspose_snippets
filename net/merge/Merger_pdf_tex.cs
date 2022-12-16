@@ -29,6 +29,7 @@ namespace aspose_snippets.net
                 outputDoc.Pages.Add(page);
             }
 
+            //save pdf to TeX document
             outputDoc.Save("test.tex",
                             new Aspose.Pdf.TeXSaveOptions
                             {

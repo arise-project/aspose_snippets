@@ -29,6 +29,7 @@ namespace aspose_snippets.net
                 outputDoc.Pages.Add(page);
             }
 
+            //save pdf to svg
             outputDoc.Save("test.svg",
                             new Aspose.Pdf.SvgSaveOptions
                             {
