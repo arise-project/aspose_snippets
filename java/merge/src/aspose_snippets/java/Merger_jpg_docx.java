@@ -3,7 +3,7 @@ package aspose_snippets.java;
 import java.util.Arrays;
 import java.util.List;
 
-public class Merger_jpg_docx   {
+public class Merger_jpg_docx {
     public static void Execute() {
         String pathSource1 = "../../../../TestData/test.jpg";
         String pathSource2 = "../../../../TestData/Second/test.jpg";
@@ -15,10 +15,9 @@ public class Merger_jpg_docx   {
         doc.setEnableObjectUnload(true);
 
         //make list of files with images to merge
-        List<String> images = Arrays.asList(new String[]{ pathSource1, pathSource2 });
+        List<String> images = Arrays.asList(new String[]{pathSource1, pathSource2});
 
-        for (String fs : images)
-        {
+        for (String fs : images) {
             //add new page to pdf
             com.aspose.pdf.Page page = doc.getPages().add();
 

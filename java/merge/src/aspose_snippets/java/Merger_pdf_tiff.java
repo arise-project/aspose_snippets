@@ -11,17 +11,16 @@ public class Merger_pdf_tiff {
         var images = new com.aspose.imaging.Image[doc.getPages().size()];
 
         //pdf document count pages from 1 to n
-        for (int pageCount = 1; pageCount <= doc.getPages().size(); pageCount++)
-        {
+        for (int pageCount = 1; pageCount <= doc.getPages().size(); pageCount++) {
             //setup default resolution to pdf documents 72dpi
             var resolution = new com.aspose.pdf.devices.Resolution(72);
 
             //create image device to save document as image with page dimensions and resolution
             var imageDevice = new com.aspose.pdf.devices.JpegDevice(
-                    (int)doc.getPages().get_Item(pageCount).getPageInfo().getWidth(),
-                    (int)doc.getPages().get_Item(pageCount).getPageInfo().getHeight(), resolution);
+                    (int) doc.getPages().get_Item(pageCount).getPageInfo().getWidth(),
+                    (int) doc.getPages().get_Item(pageCount).getPageInfo().getHeight(), resolution);
 
-            var outPath = "test_"+pageCount+".jpg";
+            var outPath = "test_" + pageCount + ".jpg";
 
             //process document page to image
             imageDevice.process(doc.getPages().get_Item(pageCount), outPath);
@@ -43,7 +42,7 @@ public class Merger_pdf_tiff {
         //type of image compression Lzw
         createOptions.setCompression(com.aspose.imaging.fileformats.tiff.enums.TiffCompressions.Lzw);
         //Pits per pixel
-        createOptions.setBitsPerSample(new int[] { 8, 8, 8 });
+        createOptions.setBitsPerSample(new int[]{8, 8, 8});
         //Photometric RGB interpolation
         createOptions.setPhotometric(com.aspose.imaging.fileformats.tiff.enums.TiffPhotometrics.Rgb);
         createOptions.setSource(fileSource);

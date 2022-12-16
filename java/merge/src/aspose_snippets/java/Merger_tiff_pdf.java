@@ -9,20 +9,18 @@ public class Merger_tiff_pdf {
         var pathSource2 = "../../TestData/Second/test.tiff";
 
         //Load tiff to Aspose image
-        var multiImage1 = (com.aspose.imaging.fileformats.tiff.TiffImage)com.aspose.imaging.Image.load(pathSource1);
-        var multiImage2 = (com.aspose.imaging.fileformats.tiff.TiffImage)com.aspose.imaging.Image.load(pathSource2);
+        var multiImage1 = (com.aspose.imaging.fileformats.tiff.TiffImage) com.aspose.imaging.Image.load(pathSource1);
+        var multiImage2 = (com.aspose.imaging.fileformats.tiff.TiffImage) com.aspose.imaging.Image.load(pathSource2);
 
         //make list of tiff images to merge
-        var images = new com.aspose.imaging.fileformats.tiff.TiffImage[] {multiImage1, multiImage2};
+        var images = new com.aspose.imaging.fileformats.tiff.TiffImage[]{multiImage1, multiImage2};
 
         //create empty pdf document
         var outputDoc = new com.aspose.pdf.Document();
 
-        for (var multiImage : images)
-        {
+        for (var multiImage : images) {
             //iterate througn tiff frames
-            for (var tiffFrame : multiImage.getFrames())
-            {
+            for (var tiffFrame : multiImage.getFrames()) {
                 //set active frame to work with
                 multiImage.setActiveFrame(tiffFrame);
 

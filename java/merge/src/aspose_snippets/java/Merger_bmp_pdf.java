@@ -13,10 +13,9 @@ public class Merger_bmp_pdf {
         com.aspose.pdf.Document doc = new com.aspose.pdf.Document();
 
         //make list of files with images to merge
-        List<String> images = Arrays.asList(new String[]{ pathSource1, pathSource2 });
+        List<String> images = Arrays.asList(new String[]{pathSource1, pathSource2});
 
-        for(String fs : images)
-        {
+        for (String fs : images) {
             //add new page to pdf
             com.aspose.pdf.Page page = doc.getPages().add();
 

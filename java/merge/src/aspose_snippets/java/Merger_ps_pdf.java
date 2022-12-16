@@ -7,7 +7,7 @@ public class Merger_ps_pdf {
 
         //PostScript files can be parsed and loaded as Aspose Document
         var firstDoc = new com.aspose.pdf.Document(pathSource1, new com.aspose.pdf.PsLoadOptions());
-        var secondDoc = new com.aspose.pdf.Document(pathSource2,  new com.aspose.pdf.PsLoadOptions());
+        var secondDoc = new com.aspose.pdf.Document(pathSource2, new com.aspose.pdf.PsLoadOptions());
 
         //create empty pdf document
         var outputDoc = new com.aspose.pdf.Document();
@@ -15,14 +15,12 @@ public class Merger_ps_pdf {
         //set less memory usage with unload instead of fast performance
         outputDoc.setEnableObjectUnload(true);
 
-        for (var page : firstDoc.getPages())
-        {
+        for (var page : firstDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
 
-        for (var page : secondDoc.getPages())
-        {
+        for (var page : secondDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }

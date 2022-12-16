@@ -13,14 +13,13 @@ public class Merger_pdf_jpeg {
         ArrayList<String> images = new ArrayList<>();
 
         //pages in pdf counted from 1 to n
-        for (int pageCount = 1; pageCount <= doc.getPages().size(); pageCount++)
-        {
+        for (int pageCount = 1; pageCount <= doc.getPages().size(); pageCount++) {
             //setup default resolution to pdf documents 72dpi
             com.aspose.pdf.devices.Resolution resolution = new com.aspose.pdf.devices.Resolution(72);
 
             //create image device to save document as image with page dimensions and resolution
-            com.aspose.pdf.devices.JpegDevice imageDevice = new com.aspose.pdf.devices.JpegDevice((int)doc.getPages().get_Item(pageCount).getPageInfo().getWidth(), (int)doc.getPages().get_Item(pageCount).getPageInfo().getHeight(), resolution);
-            String outPath = "test_"+pageCount+".jpg";
+            com.aspose.pdf.devices.JpegDevice imageDevice = new com.aspose.pdf.devices.JpegDevice((int) doc.getPages().get_Item(pageCount).getPageInfo().getWidth(), (int) doc.getPages().get_Item(pageCount).getPageInfo().getHeight(), resolution);
+            String outPath = "test_" + pageCount + ".jpg";
 
             //process document page to image
             imageDevice.process(doc.getPages().get_Item(pageCount), outPath);
@@ -29,10 +28,9 @@ public class Merger_pdf_jpeg {
 
         //make list pf parsed image sizes
         ArrayList<com.aspose.imaging.Size> imageSizes = new ArrayList<>();
-        for(var path : images)
-        {
+        for (var path : images) {
             //load image from file, it supports a lot of formats
-            com.aspose.imaging.RasterImage image = (com.aspose.imaging.RasterImage)com.aspose.imaging.Image.load(path);
+            com.aspose.imaging.RasterImage image = (com.aspose.imaging.RasterImage) com.aspose.imaging.Image.load(path);
             imageSizes.add(image.getSize());
         }
 
@@ -54,11 +52,10 @@ public class Merger_pdf_jpeg {
         options.setQuality(100);
 
         //create empty image with calculated width and hight
-        com.aspose.imaging.fileformats.jpeg.JpegImage newImage = (com.aspose.imaging.fileformats.jpeg.JpegImage)com.aspose.imaging.Image.create(options, newWidth, newHeight);
+        com.aspose.imaging.fileformats.jpeg.JpegImage newImage = (com.aspose.imaging.fileformats.jpeg.JpegImage) com.aspose.imaging.Image.create(options, newWidth, newHeight);
         int stitchedWidth = 0;
-        for (String imagePath : images)
-        {
-            var image = (com.aspose.imaging.RasterImage)com.aspose.imaging.Image.load(imagePath);
+        for (String imagePath : images) {
+            var image = (com.aspose.imaging.RasterImage) com.aspose.imaging.Image.load(imagePath);
             //create bounds to insert small image into large
             com.aspose.imaging.Rectangle bounds = new com.aspose.imaging.Rectangle(
                     stitchedWidth,

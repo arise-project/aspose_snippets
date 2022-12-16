@@ -15,14 +15,12 @@ public class Merger_pdf_doc {
         //set less memory usage with unload instead of fast performance
         outputDoc.setEnableObjectUnload(true);
 
-        for(var page : firstDoc.getPages())
-        {
+        for (var page : firstDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
 
-        for(var page : secondDoc.getPages())
-        {
+        for (var page : secondDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
@@ -30,7 +28,7 @@ public class Merger_pdf_doc {
         var opt1 = new com.aspose.pdf.DocSaveOptions();
         //use doc format
         opt1.setFormat(com.aspose.pdf.DocSaveOptions.DocFormat.Doc);
-                //This mode is fast and good for maximally preserving original look
+        //This mode is fast and good for maximally preserving original look
         opt1.setMode(com.aspose.pdf.DocSaveOptions.RecognitionMode.Textbox);
         outputDoc.save("test.doc", opt1);
     }

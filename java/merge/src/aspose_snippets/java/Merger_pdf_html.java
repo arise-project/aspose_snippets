@@ -15,14 +15,12 @@ public class Merger_pdf_html {
         //set less memory usage with unload instead of fast performance
         outputDoc.setEnableObjectUnload(true);
 
-        for(var page : firstDoc.getPages())
-        {
+        for (var page : firstDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
 
-        for(var page : secondDoc.getPages())
-        {
+        for (var page : secondDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
@@ -36,6 +34,6 @@ public class Merger_pdf_html {
         opt1.setAntialiasingProcessing(com.aspose.pdf.HtmlSaveOptions.AntialiasingProcessingType.TryCorrectResultHtml);
         //use fixed layout render
         opt1.setFixedLayout(true);
-        outputDoc.save("test.html",opt1);
+        outputDoc.save("test.html", opt1);
     }
 }

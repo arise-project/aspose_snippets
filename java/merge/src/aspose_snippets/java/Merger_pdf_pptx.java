@@ -13,14 +13,12 @@ public class Merger_pdf_pptx {
         //set less memory usage with unload instead of fast performance
         outputDoc.setEnableObjectUnload(true);
 
-        for (var page : firstDoc.getPages())
-        {
+        for (var page : firstDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
 
-        for (var page : secondDoc.getPages())
-        {
+        for (var page : secondDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
@@ -28,6 +26,6 @@ public class Merger_pdf_pptx {
         var opt1 = new com.aspose.pdf.PptxSaveOptions();
         //save all content on page as single image
         opt1.setSlidesAsImages(true);
-        outputDoc.save("test.pptx",opt1);
+        outputDoc.save("test.pptx", opt1);
     }
 }

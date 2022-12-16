@@ -15,14 +15,12 @@ public class Merger_pdf_epub {
         //set less memory usage with unload instead of fast performance
         outputDoc.setEnableObjectUnload(true);
 
-        for(var page : firstDoc.getPages())
-        {
+        for (var page : firstDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
 
-        for(var page : secondDoc.getPages())
-        {
+        for (var page : secondDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
@@ -30,6 +28,6 @@ public class Merger_pdf_epub {
         com.aspose.pdf.EpubSaveOptions opt1 = new com.aspose.pdf.EpubSaveOptions();
         //keep the logical structure of transformed document
         opt1.setContentRecognitionMode(com.aspose.pdf.EpubSaveOptions.RecognitionMode.PdfFlow);
-        outputDoc.save("test.epub",opt1);
+        outputDoc.save("test.epub", opt1);
     }
 }

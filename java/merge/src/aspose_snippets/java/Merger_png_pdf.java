@@ -15,10 +15,9 @@ public class Merger_png_pdf {
         doc.setEnableObjectUnload(true);
 
         //make list of files with images to merge
-        List<String> images = Arrays.asList(new String[]{ pathSource1, pathSource2 });
+        List<String> images = Arrays.asList(new String[]{pathSource1, pathSource2});
 
-        for (var fs : images)
-        {
+        for (var fs : images) {
             //add new page to pdf
             com.aspose.pdf.Page page = doc.getPages().add();
 
