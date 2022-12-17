@@ -32,7 +32,7 @@ namespace aspose_snippets.net
 
                 Aspose.Pdf.Rectangle rect;
 
-                //load image from stream, it suport a lot of formats
+                //load image from stream, it supports a lot of formats
                 using (Aspose.Imaging.Image image = Aspose.Imaging.Image.Load(fs))
                 {
                     //read image dimensions to pdf page rectangle

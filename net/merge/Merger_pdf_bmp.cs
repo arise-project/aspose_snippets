@@ -35,7 +35,7 @@ namespace aspose_snippets.net
             var imageSizes = new List<Aspose.Imaging.Size>();
             foreach(var path in images)
             {
-                //load image from file, it suport a lot of formats
+                //load image from file, it supports a lot of formats
                 using (Aspose.Imaging.RasterImage image = 
                             (Aspose.Imaging.RasterImage)Aspose.Imaging.Image.Load(path))
                 {
@@ -65,7 +65,7 @@ namespace aspose_snippets.net
                 int stitchedWidth = 0;
                 foreach (string imagePath in images)
                 {
-                    //load image from file, it suport a lot of formats
+                    //load image from file, it supports a lot of formats
                     using (var image = (Aspose.Imaging.RasterImage)Aspose.Imaging.Image.Load(imagePath))
                     {
                         //create bounds to insert small image into large

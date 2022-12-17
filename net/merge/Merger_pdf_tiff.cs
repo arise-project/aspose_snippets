@@ -32,7 +32,7 @@ namespace aspose_snippets.net
                 //reset stream to read from begin for next step
                 ms.Seek(0, SeekOrigin.Begin);
                 
-                //load image from file, it suport a lot of formats
+                //load image from file, it supports a lot of formats
                 images[pageCount - 1] = Aspose.Imaging.Image.Load(outPath);
             }
 
