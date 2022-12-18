@@ -1,22 +1,19 @@
-using Aspose.Pdf;
-using Aspose.Pdf.Annotations;
-
 namespace aspose_snippets.net
 {
     public static partial class Watermark
     {
         public static void get()
         {
-            var pathSource = @"..\..\test.pdf";
-            Document document = new Document(pathSource);
-            var WatermarkAnnotations = document.Pages[1].Annotations
-                .Where(a => a.AnnotationType == AnnotationType.Watermark)
-                .Cast<WatermarkAnnotation>();
-            
-            Console.WriteLine("Watermarkes:");
-            foreach (var ca in WatermarkAnnotations)
+            var pathSource = @"..\..\TestData\test_with_watermark.pdf";
+            var doc = new Aspose.Pdf.Document(pathSource);
+
+            if(doc.Pages[1].Artifacts[1].Subtype == Aspose.Pdf.Artifact.ArtifactSubtype.Watermark)
             {
-                Console.WriteLine(ca.Contents);
+                using(var fs = new FileStream("test.jpg",FileMode.Create))
+                {
+                    doc.Pages[1].Artifacts[1].Image.Save(fs);
+                    fs.Flush();
+                }
             }
         }
     }
