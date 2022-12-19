@@ -5,7 +5,7 @@ aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
 from System import TimeSpan
 from Aspose.Pdf import Document
 
-class Split(object):
+class HTML(object):
     def __init__(self,licence_path):
         self.dataDir = "../../TestData"
         if licence_path:
