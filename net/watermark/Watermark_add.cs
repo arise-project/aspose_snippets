@@ -4,8 +4,8 @@ namespace aspose_snippets.net
     {
         public static void add()
         {
-            var pathSource = @"..\..\TestData\test.pdf";
-            var watermarkSource = @"..\..\TestData\test.jpg";
+            var pathSource = "../../TestData/test.pdf";
+            var watermarkSource = "../../TestData/test.jpg";
             var doc = new Aspose.Pdf.Document(pathSource);
 
             var artifact = new Aspose.Pdf.WatermarkArtifact();

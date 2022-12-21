@@ -4,8 +4,8 @@ namespace aspose_snippets.net
     {
         public static void html_to_pdf()
         {
-            var pathSource1 = @"..\..\TestData\test.html";
-            var pathSource2 = @"..\..\TestData\Second\test.html";
+            var pathSource1 = "../../TestData/test.html";
+            var pathSource2 = "../../TestData/Second/test.html";
 
             //html files can be parsed and loaded as Aspose Document
             var firstDoc = new Aspose.Pdf.Document(pathSource1,

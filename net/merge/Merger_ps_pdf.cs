@@ -4,8 +4,8 @@ namespace aspose_snippets.net
     {
         public static void ps_to_pdf()
         {
-            var pathSource1 = @"..\..\TestData\test.ps";
-            var pathSource2 = @"..\..\TestData\Second\test.ps";
+            var pathSource1 = "../../TestData/test.ps";
+            var pathSource2 = "../../TestData/Second/test.ps";
 
            //PostScript files can be parsed and loaded as Aspose Document
             var firstDoc = new Aspose.Pdf.Document(pathSource1, new Aspose.Pdf.PsLoadOptions());

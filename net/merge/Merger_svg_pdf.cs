@@ -4,8 +4,8 @@ namespace aspose_snippets.net
     {
         public static void svg_to_pdf()
         {
-            var pathSource1 = @"..\..\TestData\test.svg";
-            var pathSource2 = @"..\..\TestData\Second\test.svg";
+            var pathSource1 = "../../TestData/test.svg";
+            var pathSource2 = "../../TestData/Second/test.svg";
 
             //SVG files can be parsed and loaded as Aspose Document
             var firstDoc = new Aspose.Pdf.Document(pathSource1,

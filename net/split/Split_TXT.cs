@@ -8,7 +8,7 @@ namespace aspose_snippets.net
     {
         public static void TXT()
         {
-            var pathSource = @"..\..\TestData\test.txt";
+            var pathSource = "../../TestData/test.txt";
             var pdfEditor = new PdfFileEditor();
             
             using (var doc = new Document(pathSource, new TxtLoadOptions()))

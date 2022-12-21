@@ -4,7 +4,7 @@ namespace aspose_snippets.net
     {
         public static void pdf_to_bmp()
         {
-            var pathSource = @"..\..\TestData\test.pdf";
+            var pathSource = "../../TestData/test.pdf";
 
             //read pdf file to Aspose Document
             var doc = new Aspose.Pdf.Document(pathSource);

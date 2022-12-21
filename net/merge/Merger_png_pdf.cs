@@ -4,8 +4,8 @@ namespace aspose_snippets.net
     {
         public static void png_to_pdf()
         {
-            var pathSource1 = @"..\..\TestData\test.png";
-            var pathSource2 = @"..\..\TestData\Second\test.png";
+            var pathSource1 = "../../TestData/test.png";
+            var pathSource2 = "../../TestData/Second/test.png";
 
             //create empty pdf document    
             using var doc = new Aspose.Pdf.Document();

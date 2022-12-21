@@ -4,8 +4,8 @@ namespace aspose_snippets.net
     {
         public static void jpg_to_docx()
         {
-            var pathSource1 = @"..\..\TestData\test.jpg";
-            var pathSource2 = @"..\..\TestData\Second\test.jpg";
+            var pathSource1 = "../../TestData/test.jpg";
+            var pathSource2 = "../../TestData/Second/test.jpg";
 
             //create empty pdf document
             using var doc = new Aspose.Pdf.Document();

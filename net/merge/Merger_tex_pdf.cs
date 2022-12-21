@@ -4,8 +4,8 @@ namespace aspose_snippets.net
     {
         public static void tex_to_pdf()
         {
-            var pathSource1 = @"..\..\TestData\test.tex";
-            var pathSource2 = @"..\..\TestData\Second\test.tex";
+            var pathSource1 = "../../TestData/test.tex";
+            var pathSource2 = "../../TestData/Second/test.tex";
 
             //TeX files can be parsed and loaded as Aspose Document
             var firstDoc = new Aspose.Pdf.Document(pathSource1,

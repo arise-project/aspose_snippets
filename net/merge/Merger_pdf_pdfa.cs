@@ -4,8 +4,8 @@ namespace aspose_snippets.net
     {
         public static void pdf_to_pdfa()
         {
-            var pathSource1 = @"..\..\TestData\test.pdf";
-            var pathSource2 = @"..\..\TestData\Second\test.pdf";
+            var pathSource1 = "../../TestData/test.pdf";
+            var pathSource2 = "../../TestData/Second/test.pdf";
 
             //read pdf file to Aspose Document
             var firstDoc = new Aspose.Pdf.Document(pathSource1);

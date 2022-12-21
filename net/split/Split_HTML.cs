@@ -7,7 +7,7 @@ namespace aspose_snippets.net
     {
         public static void HTML()
         {
-            var pathSource = @"..\..\TestData\test.html";
+            var pathSource = "../../TestData/test.html";
             using (var doc = new Document(pathSource, new HtmlLoadOptions()))
             {
                 //save input html to pdf to file

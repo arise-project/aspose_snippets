@@ -4,8 +4,8 @@ namespace aspose_snippets.net
     {
         public static void tiff_to_pdf()
         {
-            var pathSource1 = @"..\..\TestData\test.tiff";
-            var pathSource2 = @"..\..\TestData\Second\test.tiff";
+            var pathSource1 = "../../TestData/test.tiff";
+            var pathSource2 = "../../TestData/Second/test.tiff";
             
             //Load tiff to Aspose image
             var multiImage1 = (Aspose.Imaging.FileFormats.Tiff.TiffImage)Aspose.Imaging.Image.Load(

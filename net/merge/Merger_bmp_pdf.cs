@@ -4,8 +4,8 @@ namespace aspose_snippets.net
     {
         public static void bmp_to_pdf()
         {
-            var pathSource1 = @"..\..\TestData\test.bmp";
-            var pathSource2 = @"..\..\TestData\Second\test.bmp";
+            var pathSource1 = "../../TestData/test.bmp";
+            var pathSource2 = "../../TestData/Second/test.bmp";
 
             //create empty pdf document
             using var doc = new Aspose.Pdf.Document();

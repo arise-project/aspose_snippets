@@ -4,8 +4,8 @@ namespace aspose_snippets.net
 	{
         public static void eps_to_pdf()
         {
-            var pathSource1 = @"..\..\TestData\test.eps";
-            var pathSource2 = @"..\..\TestData\Second\test.eps";
+            var pathSource1 = "../../TestData/test.eps";
+            var pathSource2 = "../../TestData/Second/test.eps";
 
             //eps files can be parsed and loaded as Aspose Document
             var firstDoc = new Aspose.Pdf.Document(pathSource1, new Aspose.Pdf.PsLoadOptions());
