@@ -28,7 +28,7 @@ class md_to_pdf(object):
         outputDoc = Document()
 
         # set less memory usage with unload instead of fast performance
-        outputDoc.EnableObjectUnload = true
+        outputDoc.EnableObjectUnload = True
 
         for page in firstDoc.Pages:
             # add page from one document to another directly

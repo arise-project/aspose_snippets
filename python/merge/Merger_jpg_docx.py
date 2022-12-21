@@ -27,7 +27,7 @@ class jpg_to_docx  (object):
         doc = Document
 
         # set less memory usage with unload instead of fast performance
-        doc.EnableObjectUnload = true
+        doc.EnableObjectUnload = True
 
         # make list of files with images to merge
         images = [pathSource1, pathSource2]

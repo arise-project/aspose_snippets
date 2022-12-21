@@ -24,7 +24,7 @@ class html_to_pdf(object):
         # set html encodyng
         opt1.InputEncoding = "UTF-8",
         # render all html to single large pdf page
-        opt1.IsRenderToSinglePage = true
+        opt1.IsRenderToSinglePage = True
 
         # html files can be parsed and loaded as Aspose Document
         firstDoc = Document(pathSource1, opt1)
@@ -33,7 +33,7 @@ class html_to_pdf(object):
         # set html encodyng
         opt2.InputEncoding = "UTF-8",
         # split html content to pdf pages
-        opt2.IsRenderToSinglePage = false
+        opt2.IsRenderToSinglePage = False
 
         secondDoc = Document(pathSource2, opt2)
 
@@ -41,7 +41,7 @@ class html_to_pdf(object):
         outputDoc = Document()
 
         # set less memory usage with unload instead of fast performance
-        outputDoc.EnableObjectUnload = true
+        outputDoc.EnableObjectUnload = True
 
         for page in firstDoc.Pages:
             # add page from one document to another directly
