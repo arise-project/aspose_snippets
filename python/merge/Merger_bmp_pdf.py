@@ -1,9 +1,14 @@
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
+aspose_imaging = clr.AddReference("../../lib/Aspose.Imaging.dll")
 
 from System import TimeSpan
 from Aspose.Pdf import Document
+from Aspose.Pdf import Rectangle
+from Aspose.Pdf import PageSize
+from Aspose.Pdf import SaveFormat
+from Aspose.Imaging import Image
 
 class bmp_to_pdf(object):
     def __init__(self,licence_path):
@@ -15,4 +20,31 @@ class bmp_to_pdf(object):
 
     def exec(self):
 
-        
+        pathSource1 = "../../TestData/test.bmp";
+        pathSource2 = "../../TestData/Second/test.bmp";
+
+        #create empty pdf document
+        doc = Document
+
+        rect = Rectangle
+            
+        #make list of files with images to merge
+        images = [pathSource1, pathSource2]
+
+        for fs in images:
+            #add new page to pdf
+            page = doc.Pages.Add()
+
+            #setup page size to be A4
+            page.SetPageSize(PageSize.A4.Width,PageSize.A4.Height)
+
+            #load image from stream, it supports a lot of formats
+            image = Image.Load(fs)
+            #read image dimensions to pdf page rectangle
+            rect = Rectangle(0, 0, image.Width - 1, image.Height - 1)
+
+            #add image to new pdf page
+            page.AddImage(fs, rect)
+
+        #save result pdf to file
+        doc.Save("test.pdf", SaveFormat.Pdf)
