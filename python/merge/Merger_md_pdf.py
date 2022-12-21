@@ -1,14 +1,14 @@
+from Aspose.Pdf import SaveFormat
+from Aspose.Pdf import MdLoadOptions
+from Aspose.Pdf import Document
+from System import TimeSpan
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
 
-from System import TimeSpan
-from Aspose.Pdf import Document
-from Aspose.Pdf import MdLoadOptions
-from Aspose.Pdf import SaveFormat
 
 class md_to_pdf(object):
-    def __init__(self,licence_path):
+    def __init__(self, licence_path):
         self.dataDir = "../../TestData"
         if licence_path:
             self.licence_path = licence_path
@@ -20,23 +20,23 @@ class md_to_pdf(object):
         pathSource1 = "../../TestData/test.md"
         pathSource2 = "../../TestData/Second/test.md"
 
-        #Markdown files can be parsed and loaded as Aspose Document
+        # Markdown files can be parsed and loaded as Aspose Document
         firstDoc = Document(pathSource1, MdLoadOptions)
         secondDoc = Document(pathSource2, MdLoadOptions)
 
-        #create empty pdf document
-        outputDoc = Document();
+        # create empty pdf document
+        outputDoc = Document()
 
-        #set less memory usage with unload instead of fast performance
+        # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = true
 
         for page in firstDoc.Pages:
-            #add page from one document to another directly
+            # add page from one document to another directly
             outputDoc.Pages.Add(page)
 
         for page in secondDoc.Pages:
-            #add page from one document to another directly
+            # add page from one document to another directly
             outputDoc.Pages.Add(page)
 
-        #save result pdf to file
+        # save result pdf to file
         outputDoc.Save("test.pdf", SaveFormat.Pdf)
