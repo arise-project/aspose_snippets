@@ -3,7 +3,6 @@ from Aspose.Pdf.HtmlSaveOptions import RasterImagesSavingModes
 from Aspose.Pdf.HtmlSaveOptions import PartsEmbeddingModes
 from Aspose.Pdf import HtmlSaveOptions
 from Aspose.Pdf import Document
-from System import TimeSpan
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")

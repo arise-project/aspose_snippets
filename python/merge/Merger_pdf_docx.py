@@ -2,7 +2,6 @@ from Aspose.Pdf.DocSaveOptions import RecognitionMode
 from Aspose.Pdf.DocSaveOptions import DocFormat
 from Aspose.Pdf import DocSaveOptions
 from Aspose.Pdf import Document
-from System import TimeSpan
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")

@@ -2,7 +2,6 @@ import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
 
-from System import TimeSpan
 from Aspose.Pdf import Document
 
 class pdf_to_png(object):

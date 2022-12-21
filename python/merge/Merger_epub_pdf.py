@@ -3,7 +3,6 @@ from Aspose.Pdf.LoadOptions import MarginsAreaUsageModes
 from Aspose.Pdf.LoadOptions import PageSizeAdjustmentModes
 from Aspose.Pdf import EpubLoadOptions
 from Aspose.Pdf import Document
-from System import TimeSpan
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")

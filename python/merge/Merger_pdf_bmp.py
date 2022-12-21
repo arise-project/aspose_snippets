@@ -9,7 +9,6 @@ from Aspose.Imaging import Image
 from Aspose.Pdf.Devices import BmpDevice
 from Aspose.Pdf.Devices import Resolution
 from Aspose.Pdf import Document
-from System import TimeSpan
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")

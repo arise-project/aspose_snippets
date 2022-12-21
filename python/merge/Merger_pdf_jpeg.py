@@ -1,7 +1,6 @@
 from Aspose.Pdf import ConvertErrorAction
 from Aspose.Pdf import PdfFormat
 from Aspose.Pdf import Document
-from System import TimeSpan
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")

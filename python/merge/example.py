@@ -2,8 +2,6 @@ import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
 
-from System import TimeSpan
-
 from Aspose.Pdf import Document, Color, License, BorderInfo, BorderSide, Rectangle, HorizontalAlignment
 from Aspose.Pdf import Table, MarginInfo
 from Aspose.Pdf.Text import TextFragment, Position, TextBuilder,FontRepository
