@@ -1,11 +1,13 @@
+from Aspose.Pdf import SaveFormat
+from Aspose.Pdf import XpsLoadOptions
+from Aspose.Pdf import Document
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
 
-from Aspose.Pdf import Document
 
 class xps_to_pdf(object):
-    def __init__(self,licence_path):
+    def __init__(self, licence_path):
         self.dataDir = "../../TestData"
         if licence_path:
             self.licence_path = licence_path
@@ -14,30 +16,26 @@ class xps_to_pdf(object):
 
     def exec(self):
 
-        var pathSource1 = "../../TestData/test.xps";
-            var pathSource2 = "../../TestData/Second/test.xps";
+        pathSource1 = "../../TestData/test.xps"
+        pathSource2 = "../../TestData/Second/test.xps"
 
-            //xps files can be parsed and loaded as Aspose Document
-            var firstDoc = new Aspose.Pdf.Document(pathSource1, new Aspose.Pdf.XpsLoadOptions());
-            var secondDoc = new Aspose.Pdf.Document(pathSource2, new Aspose.Pdf.XpsLoadOptions());
+        # xps files can be parsed and loaded as Aspose Document
+        firstDoc = Document(pathSource1, XpsLoadOptions)
+        secondDoc = Document(pathSource2, XpsLoadOptions)
 
-            //create empty pdf document
-            var outputDoc = new Aspose.Pdf.Document();
+        # create empty pdf document
+        outputDoc = Document
 
-            //set less memory usage with unload instead of fast performance
-            outputDoc.EnableObjectUnload = true;
+        # set less memory usage with unload instead of fast performance
+        outputDoc.EnableObjectUnload = True
 
-            foreach (var page in firstDoc.Pages)
-            {
-                //add page from one document to another directly
-                outputDoc.Pages.Add(page);
-            }
+        for page in firstDoc.Pages:
+            # add page from one document to another directly
+            outputDoc.Pages.Add(page)
 
-            foreach (var page in secondDoc.Pages)
-            {
-                //add page from one document to another directly
-                outputDoc.Pages.Add(page);
-            }
+        for page in secondDoc.Pages:
+            # add page from one document to another directly
+            outputDoc.Pages.Add(page)
 
-            //save result pdf to file
-            outputDoc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
+        # save result pdf to file
+        outputDoc.Save("test.pdf", SaveFormat.Pdf)
