@@ -54,12 +54,12 @@ void epub_to_pdf()
 
         for (com.aspose.pdf.Page page : firstDoc.getPages()) {
             //add page from one document to another directly
-            outputDoc.getPages().add(page);
+            outputDoc->get_Pages()->Add(page);
         }
 
         for (com.aspose.pdf.Page page : secondDoc.getPages()) {
             //add page from one document to another directly
-            outputDoc.getPages().add(page);
+            outputDoc->get_Pages()->Add(page);
         }
 
         //save result pdf to file

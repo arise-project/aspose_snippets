@@ -41,12 +41,12 @@ void pdf_to_epub()
 
         for (var page : firstDoc.getPages()) {
             //add page from one document to another directly
-            outputDoc.getPages().add(page);
+            outputDoc->get_Pages()->Add(page);
         }
 
         for (var page : secondDoc.getPages()) {
             //add page from one document to another directly
-            outputDoc.getPages().add(page);
+            outputDoc->get_Pages()->Add(page);
         }
 
         com.aspose.pdf.EpubSaveOptions opt1 = new com.aspose.pdf.EpubSaveOptions();

@@ -41,12 +41,12 @@ void pdf_to_pdfa()
 
         for (var page : firstDoc.getPages()) {
             //add page from one document to another directly
-            outputDoc.getPages().add(page);
+            outputDoc->get_Pages()->Add(page);
         }
 
         for (var page : secondDoc.getPages()) {
             //add page from one document to another directly
-            outputDoc.getPages().add(page);
+            outputDoc->get_Pages()->Add(page);
         }
 
         //save document as specific pdf standard PDFA 3Y

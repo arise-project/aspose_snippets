@@ -58,12 +58,12 @@ void tex_to_pdf()
 
         for (var page : firstDoc.getPages()) {
             //add page from one document to another directly
-            outputDoc.getPages().add(page);
+            outputDoc->get_Pages()->Add(page);
         }
 
         for (var page : secondDoc.getPages()) {
             //add page from one document to another directly
-            outputDoc.getPages().add(page);
+            outputDoc->get_Pages()->Add(page);
         }
 
         //save result pdf to file
