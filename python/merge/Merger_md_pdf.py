@@ -24,7 +24,7 @@ class md_to_pdf(object):
         secondDoc = Document(pathSource2, MdLoadOptions)
 
         # create empty pdf document
-        outputDoc = Document()
+        outputDoc = Document
 
         # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = True

@@ -18,7 +18,7 @@ class Merger_bmp_pdf(object):
     def exec(self):
 
         # Initialize document object
-        document = Document()
+        document = Document
         # Add page
         page = document.Pages.Add()
         # Add text to new page

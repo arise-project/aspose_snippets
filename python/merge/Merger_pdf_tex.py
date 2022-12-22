@@ -23,7 +23,7 @@ class pdf_to_tex(object):
         secondDoc = Document(pathSource2)
 
         # create empty pdf document
-        outputDoc = Document()
+        outputDoc = Document
 
         # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = True

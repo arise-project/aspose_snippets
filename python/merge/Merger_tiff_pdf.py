@@ -33,7 +33,7 @@ class tiff_to_pdf(object):
         images = [multiImage1, multiImage2]
 
         # create empty pdf document
-        outputDoc = Document()
+        outputDoc = Document
 
         index = 1
         for multiImage in images:
