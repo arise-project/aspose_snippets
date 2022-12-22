@@ -41,12 +41,14 @@ void cgm_to_pdf()
         //set less memory usage with unload instead of fast performance
         outputDoc->EnableObjectUnload = true;
 
-        for (com.aspose.pdf.Page page : firstDoc.getPages()) {
+        for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++) {
+            auto page = firstDoc->get_Pages()->get_Item(i);
             //add page from one document to another directly
             outputDoc->get_Pages()->Add(page);
         }
 
-        for (com.aspose.pdf.Page page : secondDoc.getPages()) {
+        for (int i = 0; i < secondDoc->get_Pages()->get_Count(); i++) {
+            auto page = secondDoc->get_Pages()->get_Item(i);
             //add page from one document to another directly
             outputDoc->get_Pages()->Add(page);
         }
