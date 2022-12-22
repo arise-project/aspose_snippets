@@ -30,8 +30,8 @@ void mht_to_pdf()
         auto pathSource2 = u"../../../../TestData/Second/test.mht";
 
         //mht files can be parsed and loaded as Aspose Document
-        com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, new com.aspose.pdf.MhtLoadOptions());
-        com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2, new com.aspose.pdf.MhtLoadOptions());
+        auto firstDoc = MakeObject<Document>(pathSource1, MakeObject<MhtLoadOptions>());
+        auto secondDoc = MakeObject<Document>(pathSource2, MakeObject<MhtLoadOptions>());
 
         //create empty pdf document
         auto outputDoc = MakeObject<Document>();

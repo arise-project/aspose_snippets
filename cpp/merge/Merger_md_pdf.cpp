@@ -30,10 +30,8 @@ void md_to_pdf()
         auto pathSource2 = u"../../../../TestData/Second/test.md";
 
         //Markdown files can be parsed and loaded as Aspose Document
-        com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1,
-                new com.aspose.pdf.MdLoadOptions());
-        com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2,
-                new com.aspose.pdf.MdLoadOptions());
+        auto firstDoc = MakeObject<Document>(pathSource1, MakeObject<MdLoadOptions>());
+        auto secondDoc = MakeObject<Document>(pathSource2, MakeObject<MdLoadOptions>());
 
         //create empty pdf document
         auto outputDoc = MakeObject<Document>();

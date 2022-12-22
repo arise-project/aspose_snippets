@@ -30,10 +30,8 @@ void cgm_to_pdf()
         auto pathSource2 = "../../../../TestData/Second/test.cgm";
 
         //cgm files can be parsed and loaded as Aspose Document
-        com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1,
-                new com.aspose.pdf.CgmLoadOptions());
-        com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2,
-                new com.aspose.pdf.CgmLoadOptions());
+        auto firstDoc = MakeObject<Document>(pathSource1, MakeObject<CgmLoadOptions>());
+        auto secondDoc = MakeObject<Document>(pathSource2, MakeObject<CgmLoadOptions>());
 
         //create empty pdf document
         auto outputDoc = MakeObject<Document>();

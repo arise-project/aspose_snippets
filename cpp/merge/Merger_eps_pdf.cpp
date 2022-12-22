@@ -30,8 +30,9 @@ void eps_to_pdf()
         auto pathSource2 = u"../../../../TestData/Second/test.eps";
 
         //eps files can be parsed and loaded as Aspose Document
-        com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, new com.aspose.pdf.PsLoadOptions());
-        com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2, new com.aspose.pdf.PsLoadOptions());
+        auto firstDoc = MakeObject<Document>(pathSource1, MakeObject<PsLoadOptions>());
+        auto secondDoc = MakeObject<Document>(pathSource2, MakeObject<PsLoadOptions>());
+
 
         //create empty pdf document
         auto outputDoc = MakeObject<Document>();
