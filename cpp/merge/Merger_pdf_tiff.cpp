@@ -26,7 +26,7 @@ using namespace Aspose::Pdf;
 
 void pdf_to_tiff()
 {
-    var pathSource1 = "../../TestData/test.pdf";
+        auto pathSource1 = u"../../TestData/test.pdf";
 
         //read pdf file to Aspose Document
         var doc = new com.aspose.pdf.Document(pathSource1);

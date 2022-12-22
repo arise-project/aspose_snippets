@@ -26,8 +26,8 @@ using namespace Aspose::Pdf;
 
 void tiff_to_pdf()
 {
-    var pathSource1 = "../../TestData/test.tiff";
-        var pathSource2 = "../../TestData/Second/test.tiff";
+        auto pathSource1 = u"../../TestData/test.tiff";
+        auto pathSource2 = u"../../TestData/Second/test.tiff";
 
         //Load tiff to Aspose image
         var multiImage1 = (com.aspose.imaging.fileformats.tiff.TiffImage) com.aspose.imaging.Image.load(pathSource1);

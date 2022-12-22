@@ -26,8 +26,8 @@ using namespace Aspose::Pdf;
 
 void pdf_to_pptx()
 {
-    var pathSource1 = "../../TestData/test.pdf";
-        var pathSource2 = "../../TestData/Second/test.pdf";
+        auto pathSource1 = u"../../TestData/test.pdf";
+        auto pathSource2 = u"../../TestData/Second/test.pdf";
 
         //read pdf file to Aspose Document
         auto firstDoc = MakeObject<Document>(pathSource1);

@@ -26,8 +26,8 @@ using namespace Aspose::Pdf;
 
 void html_to_pdf()
 {
-    String pathSource1 = "../../../../TestData/test.html";
-        String pathSource2 = "../../../../TestData/Second/test.html";
+        auto pathSource1 = u"../../../../TestData/test.html";
+        auto pathSource2 = u"../../../../TestData/Second/test.html";
 
         com.aspose.pdf.HtmlLoadOptions opt1 = new com.aspose.pdf.HtmlLoadOptions();
 

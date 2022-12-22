@@ -26,8 +26,8 @@ using namespace Aspose::Pdf;
 
 void md_to_pdf()
 {
-    String pathSource1 = "../../../../TestData/test.md";
-        String pathSource2 = "../../../../TestData/Second/test.md";
+        auto pathSource1 = u"../../../../TestData/test.md";
+        auto pathSource2 = u"../../../../TestData/Second/test.md";
 
         //Markdown files can be parsed and loaded as Aspose Document
         com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1,

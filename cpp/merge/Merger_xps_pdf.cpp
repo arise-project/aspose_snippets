@@ -26,8 +26,8 @@ using namespace Aspose::Pdf;
 
 void xps_to_pdf()
 {
-    var pathSource1 = "../../TestData/test.xps";
-        var pathSource2 = "../../TestData/Second/test.xps";
+        auto pathSource1 = u"../../TestData/test.xps";
+        auto pathSource2 = u"../../TestData/Second/test.xps";
 
         //xps files can be parsed and loaded as Aspose Document
         var firstDoc = new com.aspose.pdf.Document(pathSource1, new com.aspose.pdf.XpsLoadOptions());

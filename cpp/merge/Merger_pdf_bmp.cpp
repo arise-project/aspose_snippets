@@ -26,7 +26,7 @@ using namespace Aspose::Pdf;
 
 void pdf_to_bmp()
 {
-    String pathSource = "../../TestData/test.pdf";
+        auto pathSource = u"../../TestData/test.pdf";
 
         //read pdf file to Aspose Document
         auto doc = MakeObject<Document>(inputFilename);

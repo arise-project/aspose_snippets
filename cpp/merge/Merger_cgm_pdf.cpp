@@ -26,8 +26,8 @@ using namespace Aspose::Pdf;
 
 void cgm_to_pdf()
 {
-    String pathSource1 = "../../../../TestData/test.cgm";
-        String pathSource2 = "../../../../TestData/Second/test.cgm";
+        auto pathSource1 = "../../../../TestData/test.cgm";
+        auto pathSource2 = "../../../../TestData/Second/test.cgm";
 
         //cgm files can be parsed and loaded as Aspose Document
         com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1,

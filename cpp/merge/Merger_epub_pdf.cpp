@@ -26,8 +26,8 @@ using namespace Aspose::Pdf;
 
 void epub_to_pdf()
 {
-    String pathSource1 = "../../../../TestData/test.epub";
-        String pathSource2 = "../../../../TestData/Second/test.epub";
+        auto pathSource1 = u"../../../../TestData/test.epub";
+        auto pathSource2 = u"../../../../TestData/Second/test.epub";
 
         com.aspose.pdf.EpubLoadOptions opt1 = new com.aspose.pdf.EpubLoadOptions();
         //use algorithm to prevent content to be truncated

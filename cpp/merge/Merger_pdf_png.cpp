@@ -26,7 +26,7 @@ using namespace Aspose::Pdf;
 
 void pdf_to_png()
 {
-    var pathSource = "../../TestData/test.pdf";
+        auto pathSource = u"../../TestData/test.pdf";
 
         //read pdf file to Aspose Document
         auto doc = MakeObject<Document>(inputFilename);

@@ -26,8 +26,8 @@ using namespace Aspose::Pdf;
 
 void jpg_to_docx  ()
 {
-    String pathSource1 = "../../../../TestData/test.jpg";
-        String pathSource2 = "../../../../TestData/Second/test.jpg";
+        auto pathSource1 = u"../../../../TestData/test.jpg";
+        auto pathSource2 = u"../../../../TestData/Second/test.jpg";
 
         //create empty pdf document
         com.aspose.pdf.Document doc = new com.aspose.pdf.Document();

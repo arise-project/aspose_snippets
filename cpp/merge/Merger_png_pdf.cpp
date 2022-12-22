@@ -26,8 +26,8 @@ using namespace Aspose::Pdf;
 
 void png_to_pdf()
 {
-    var pathSource1 = "../../TestData/test.png";
-        var pathSource2 = "../../TestData/Second/test.png";
+        auto pathSource1 = u"../../TestData/test.png";
+        auto pathSource2 = u"../../TestData/Second/test.png";
 
         //create empty pdf document
         var doc = new com.aspose.pdf.Document();

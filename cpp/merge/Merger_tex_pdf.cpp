@@ -26,8 +26,8 @@ using namespace Aspose::Pdf;
 
 void tex_to_pdf()
 {
-    var pathSource1 = "../../TestData/test.tex";
-        var pathSource2 = "../../TestData/Second/test.tex";
+        auto pathSource1 = u"../../TestData/test.tex";
+        auto pathSource2 = u"../../TestData/Second/test.tex";
 
         var opt1 = new com.aspose.pdf.TeXLoadOptions();
 

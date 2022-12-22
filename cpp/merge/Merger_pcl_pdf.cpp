@@ -26,8 +26,8 @@ using namespace Aspose::Pdf;
 
 void pcl_to_pdf()
 {
-    String pathSource1 = "../../../../TestData/test.pcl";
-        String pathSource2 = "../../../../TestData/Second/test.pcl";
+        auto pathSource1 = u"../../../../TestData/test.pcl";
+        auto pathSource2 = u"../../../../TestData/Second/test.pcl";
 
         com.aspose.pdf.PclLoadOptions opt1 = new com.aspose.pdf.PclLoadOptions();
         //suspend not critical errors

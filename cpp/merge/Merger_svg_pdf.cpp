@@ -26,8 +26,8 @@ using namespace Aspose::Pdf;
 
 void svg_to_pdf()
 {
-    var pathSource1 = "../../TestData/test.svg";
-        var pathSource2 = "../../TestData/Second/test.svg";
+        auto pathSource1 = u"../../TestData/test.svg";
+        auto pathSource2 = u"../../TestData/Second/test.svg";
 
         //Adust pdf page size to svg size
         var opt1 = new com.aspose.pdf.SvgLoadOptions();

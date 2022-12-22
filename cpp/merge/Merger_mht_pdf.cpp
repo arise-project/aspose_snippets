@@ -26,8 +26,8 @@ using namespace Aspose::Pdf;
 
 void mht_to_pdf()
 {
-    String pathSource1 = "../../../../TestData/test.mht";
-        String pathSource2 = "../../../../TestData/Second/test.mht";
+        auto pathSource1 = u"../../../../TestData/test.mht";
+        auto pathSource2 = u"../../../../TestData/Second/test.mht";
 
         //mht files can be parsed and loaded as Aspose Document
         com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, new com.aspose.pdf.MhtLoadOptions());

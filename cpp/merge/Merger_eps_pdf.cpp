@@ -26,8 +26,8 @@ using namespace Aspose::Pdf;
 
 void eps_to_pdf()
 {
-    String pathSource1 = "../../../../TestData/test.eps";
-        String pathSource2 = "../../../../TestData/Second/test.eps";
+        auto pathSource1 = u"../../../../TestData/test.eps";
+        auto pathSource2 = u"../../../../TestData/Second/test.eps";
 
         //eps files can be parsed and loaded as Aspose Document
         com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, new com.aspose.pdf.PsLoadOptions());
