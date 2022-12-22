@@ -47,7 +47,7 @@ class pdf_to_html(object):
         imageSizes = []
         for path in images:
             # load image from file, it supports a lot of formats
-            image = Load(path)
+            image = Image.Load(path)
             imageSizes.Add(image.Size)
 
         newWidth = 0
