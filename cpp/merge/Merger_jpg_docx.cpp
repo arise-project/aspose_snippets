@@ -5,6 +5,7 @@
 #include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
+#include "Aspose.PDF.Cpp/PageSize.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/Devices/BmpDevice.h"
 #include "Aspose.PDF.Cpp/Devices/EmfDevice.h"
@@ -43,9 +44,7 @@ void jpg_to_docx  ()
             auto page = document->get_Pages()->Add();
 
             //setup page size to be A4
-            page.setPageSize(
-                    com.aspose.pdf.PageSize.getA4().getWidth(),
-                    com.aspose.pdf.PageSize.getA4().getHeight());
+            page->SetPageSize(PageSize.get_A4().get_Width(), PageSize.get_A4().get_Height());
 
             com.aspose.pdf.Rectangle rect;
 
