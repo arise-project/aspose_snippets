@@ -1,11 +1,19 @@
+from System.IO import FileStream
+from System.IO import MemoryStream
+from Aspose.Imaging.ImageOptions import JpegOptions
+from Aspose.Imaging.Sources import FileCreateSource
+from Aspose.Imaging import Image
+from Aspose.Pdf import SaveFormat
+from Aspose.Pdf import PdfImage
+from Aspose.Pdf import Document
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
+aspose_imaging = clr.AddReference("../../lib/Aspose.Imaging.dll")
 
-from Aspose.Pdf import Document
 
 class tiff_to_pdf(object):
-    def __init__(self,licence_path):
+    def __init__(self, licence_path):
         self.dataDir = "../../TestData"
         if licence_path:
             self.licence_path = licence_path
@@ -14,69 +22,61 @@ class tiff_to_pdf(object):
 
     def exec(self):
 
-        var pathSource1 = "../../TestData/test.tiff";
-            var pathSource2 = "../../TestData/Second/test.tiff";
-            
-            //Load tiff to Aspose image
-            var multiImage1 = (Aspose.Imaging.FileFormats.Tiff.TiffImage)Aspose.Imaging.Image.Load(
-                    File.Open(pathSource1, FileMode.Open));
-            var multiImage2 = (Aspose.Imaging.FileFormats.Tiff.TiffImage)Aspose.Imaging.Image.Load(
-                    File.Open(pathSource2, FileMode.Open));
+        pathSource1 = "../../TestData/test.tiff"
+        pathSource2 = "../../TestData/Second/test.tiff"
 
-            //make list of tiff images to merge
-            var images = new Aspose.Imaging.FileFormats.Tiff.TiffImage[] {multiImage1, multiImage2};
+        # Load tiff to Aspose image
+        multiImage1 = Image.Load(pathSource1)
+        multiImage2 = Image.Load(pathSource2)
 
-            //create empty pdf document
-            var outputDoc = new Aspose.Pdf.Document();
+        # make list of tiff images to merge
+        images = [multiImage1, multiImage2]
 
-            foreach (var multiImage in images)
-            {
-                //iterate througn tiff frames
-                foreach (var tiffFrame in multiImage.Frames)
-                {
-                    //set active frame to work with
-                    multiImage.ActiveFrame = tiffFrame;
+        # create empty pdf document
+        outputDoc = Document()
 
-                    //load bitmap from a frame
-                    var pixels = multiImage.LoadPixels(tiffFrame.Bounds);
+        index = 1
+        for multiImage in images:
+            # iterate througn tiff frames
+            for tiffFrame in multiImage.Frames:
+                # set active frame to work with
+                multiImage.ActiveFrame = tiffFrame
 
-                    var ms = new MemoryStream();
+                # load bitmap from a frame
+                pixels = multiImage.LoadPixels(tiffFrame.Bounds)
 
-                    //create image savesource to a stream
-                    using var createOptions = new Aspose.Imaging.ImageOptions.JpegOptions
-                    {
-                        Source = new Aspose.Imaging.Sources.StreamSource(ms)
-                    };
+                # preserve image on the disk
+                ms = FileCreateSource(index + "temp.tiff", False)
 
-                    //create empty image with width and hight
-                    using (var tiffImage = (Aspose.Imaging.FileFormats.Jpeg.JpegImage)
-                        Aspose.Imaging.Image.Create(createOptions, tiffFrame.Width, tiffFrame.Height))
-                    {
-                        //set frame bounds to save to bitmap
-                        tiffImage.SavePixels(tiffFrame.Bounds, pixels);
-                        //save frame bitmap to stream
-                        tiffImage.Save();
-                    }
+                # create image savesource to a stream
+                createOptions = JpegOptions
+                createOptions.Source = ms
 
-                    //add new page to document
-                    Aspose.Pdf.Page page = outputDoc.Pages.Add();
+                # create empty image with width and hight
+                tiffImage = Image.Create(
+                    createOptions, tiffFrame.Width, tiffFrame.Height)
+                # set frame bounds to save to bitmap
+                tiffImage.SavePixels(tiffFrame.Bounds, pixels)
+                # save frame bitmap to stream
+                tiffImage.Save()
 
-                    page.PageInfo.Margin.Bottom = 0;
-                    page.PageInfo.Margin.Top = 0;
-                    page.PageInfo.Margin.Left = 0;
-                    page.PageInfo.Margin.Right = 0;
-                    page.PageInfo.Width = tiffFrame.Width;
-                    page.PageInfo.Height = tiffFrame.Height;
+                # add new page to document
+                page = outputDoc.Pages.Add()
 
-                    //create new image into document
-                    var image = new Aspose.Pdf.Image();
-                    //set image source to memeory stream
-                    image.ImageStream = ms;
+                page.PageInfo.Margin.Bottom = 0
+                page.PageInfo.Margin.Top = 0
+                page.PageInfo.Margin.Left = 0
+                page.PageInfo.Margin.Right = 0
+                page.PageInfo.Width = tiffFrame.Width
+                page.PageInfo.Height = tiffFrame.Height
 
-                    //add document image to specific page
-                    page.Paragraphs.Add(image);
-                }
-            }
+                # create new image into document
+                image = PdfImage
+                # set image source to memeory stream
+                image.ImageStream = FileStream(index.toString() + "temp.tiff")
 
-            //save result pdf to file
-            outputDoc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
+                # add document image to specific page
+                page.Paragraphs.Add(image)
+
+        # save result pdf to file
+        outputDoc.Save("test.pdf", SaveFormat.Pdf)

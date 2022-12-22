@@ -18,6 +18,7 @@ public class Merger_tiff_pdf {
         //create empty pdf document
         var outputDoc = new com.aspose.pdf.Document();
 
+		int index = 1;
         for (var multiImage : images) {
             //iterate througn tiff frames
             for (var tiffFrame : multiImage.getFrames()) {
@@ -28,7 +29,7 @@ public class Merger_tiff_pdf {
                 var pixels = multiImage.loadPixels(tiffFrame.getBounds());
 
                 com.aspose.imaging.Source ms = new com.aspose.imaging.sources.FileCreateSource(
-                        "./temp.tiff",
+                        index.toString() + "temp.tiff",
                         false); //preserve image on the disk
 
                 //create image savesource to a stream
@@ -56,7 +57,7 @@ public class Merger_tiff_pdf {
                 //create new image into document
                 var image = new com.aspose.pdf.Image();
                 //set image source to memeory stream
-                image.setImageStream(new FileInputStream("temp.tiff"));
+                image.setImageStream(new FileInputStream(index.toString() + "temp.tiff"));
 
                 //add document image to specific page
                 page.getParagraphs().add(image);
