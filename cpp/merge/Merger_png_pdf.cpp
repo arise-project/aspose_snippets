@@ -40,7 +40,7 @@ void png_to_pdf()
 
         for (var fs : images) {
             //add new page to pdf
-            com.aspose.pdf.Page page = doc.getPages().add();
+            auto page = document->get_Pages()->Add();
 
             //setup page size to be A4
             page.setPageSize(
