@@ -37,7 +37,7 @@ void png_to_pdf()
         doc.setEnableObjectUnload(true);
 
         //make list of files with images to merge
-        List<String> images = Arrays.asList(new String[]{pathSource1, pathSource2});
+        auto images[] = {pathSource1, pathSource2};
 
         for (var fs : images) {
             //add new page to pdf
