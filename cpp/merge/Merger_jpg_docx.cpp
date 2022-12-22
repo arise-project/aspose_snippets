@@ -24,7 +24,7 @@
 using namespace System;
 using namespace Aspose::Pdf;
 
-void jpg_to_pdf()
+void jpg_to_docx  ()
 {
     String pathSource1 = "../../../../TestData/test.jpg";
         String pathSource2 = "../../../../TestData/Second/test.jpg";
@@ -51,13 +51,14 @@ void jpg_to_pdf()
 
             //load image from stream, it supports a lot of formats
             com.aspose.imaging.Image image = com.aspose.imaging.Image.load(fs);
-            //read image dimensions to pdf page rectangle
-            rect = new com.aspose.pdf.Rectangle(0, 0, image.getWidth() - 1, image.getHeight() - 1);
+            {
+                //read image dimensions to pdf page rectangle
+                rect = new com.aspose.pdf.Rectangle(0, 0, image.getWidth() - 1, image.getHeight() - 1);
+            }
 
             //add image to new pdf page
             page.addImage(fs, rect);
         }
 
-        //save result pdf to file
-        doc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
+        doc.save("test.docx", com.aspose.pdf.SaveFormat.DocX);
 }
