@@ -26,5 +26,5 @@ using namespace Aspose::Pdf;
 
 void bmp_to_pdf()
 {
-
+    
 }

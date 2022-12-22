@@ -33,6 +33,57 @@
 using namespace System;
 using namespace Aspose::Pdf;
 
+void interested()
+{
+    auto document = MakeObject<Document>();
+
+    auto page = document->get_Pages()->Add();
+    paragraps->Add(MakeObject<Aspose::Pdf::Text::TextFragment>(u"Hello World!"));
+    document->Save(filename);
+
+    auto document = MakeObject<Document>(inputFilename);
+    document->Save(outputFilename, SaveFormat::Pptx);
+
+    auto converter = MakeObject<Facades::PdfConverter>(document);
+    converter->SaveAsTIFF(outputFilename);
+
+    int counter = 0;
+    while (converter->HasNextImage())
+        converter->GetNextImage(String::Format(u"{0}.page_{1}.bmp", inputFilename, ++counter), System::Drawing::Imaging::ImageFormat::get_Bmp());
+
+    auto document = MakeObject<Document>(inputFilename);
+    auto device = MakeObject<Devices::BmpDevice>();
+
+    int counter = 0;
+    for (auto page : document->get_Pages())
+    {
+        auto stream = System::IO::File::Create(String::Format(u"{0}.method2.page_{1}.bmp", inputFilename, ++counter));
+        device->Process(page, stream);
+    }
+
+
+    int counter = 0;
+    while (converter->HasNextImage())
+        converter->GetNextImage(String::Format(u"{0}.page_{1}.png", inputFilename, ++counter), System::Drawing::Imaging::ImageFormat::get_Png());
+    
+    int counter = 0;
+    for (auto page : document->get_Pages())
+    {
+        auto stream = System::IO::File::Create(String::Format(u"{0}.page_{1}.jpeg", inputFilename, ++counter));
+        device->Process(page, stream);
+    }
+
+    auto document = MakeObject<Document>(inputFilename);
+    auto options = MakeObject<PdfFormatConversionOptions>(PdfFormat::PDF_A_1B);
+    document->Convert(options);
+    document->Save(outputFilename);
+
+    auto document = MakeObject<Document>(inputFilename);
+    auto textAbsorber = MakeObject<Aspose::Pdf::Text::TextAbsorber>();
+    document->get_Pages()->Accept(textAbsorber);
+    System::IO::File::WriteAllText(outputFilename, textAbsorber->get_Text());
+}
+
 bool create_pdf(String filename)
 {
     try
