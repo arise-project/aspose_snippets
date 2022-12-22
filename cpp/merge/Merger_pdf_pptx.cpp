@@ -50,5 +50,5 @@ void pdf_to_pptx()
         var opt1 = new com.aspose.pdf.PptxSaveOptions();
         //save all content on page as single image
         opt1.setSlidesAsImages(true);
-        outputDoc.save("test.pptx", opt1);
+        outputDoc->Save("test.pptx", opt1);
 }

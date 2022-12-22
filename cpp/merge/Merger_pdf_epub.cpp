@@ -52,5 +52,5 @@ void pdf_to_epub()
         com.aspose.pdf.EpubSaveOptions opt1 = new com.aspose.pdf.EpubSaveOptions();
         //keep the logical structure of transformed document
         opt1.setContentRecognitionMode(com.aspose.pdf.EpubSaveOptions.RecognitionMode.PdfFlow);
-        outputDoc.save("test.epub", opt1);
+        outputDoc->Save("test.epub", opt1);
 }

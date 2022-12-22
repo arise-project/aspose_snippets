@@ -58,5 +58,5 @@ void pdf_to_html()
         opt1.setAntialiasingProcessing(com.aspose.pdf.HtmlSaveOptions.AntialiasingProcessingType.TryCorrectResultHtml);
         //use fixed layout render
         opt1.setFixedLayout(true);
-        outputDoc.save("test.html", opt1);
+        outputDoc->Save("test.html", opt1);
 }

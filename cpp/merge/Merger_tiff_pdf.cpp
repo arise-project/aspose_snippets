@@ -86,5 +86,5 @@ void tiff_to_pdf()
         }
 
         //save result pdf to file
-        outputDoc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
+        outputDoc->Save("test.pdf", SaveFormat::Pdf);
 }

@@ -56,5 +56,5 @@ void bmp_to_pdf()
         }
 
         //save result pdf to file
-        doc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
+        doc->Save("test.pdf", SaveFormat::Pdf);
 }

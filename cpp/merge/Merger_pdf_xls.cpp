@@ -54,5 +54,5 @@ void pdf_to_xls()
         //set Microsoft document type
         opt1.setFormat(com.aspose.pdf.ExcelSaveOptions.ExcelFormat.XMLSpreadSheet2003);
         //save Excel document
-        outputDoc.save("test.xls", opt1);
+        outputDoc->Save("test.xls", opt1);
 }

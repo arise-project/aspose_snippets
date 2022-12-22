@@ -55,5 +55,5 @@ void pdf_to_docx()
         //make document editable flow and recognize of tables
         opt1.setMode(com.aspose.pdf.DocSaveOptions.RecognitionMode.EnhancedFlow);
 
-        outputDoc.save("test.docx", opt1);
+        outputDoc->Save("test.docx", opt1);
 }

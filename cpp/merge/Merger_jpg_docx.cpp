@@ -60,5 +60,5 @@ void jpg_to_docx  ()
             page.addImage(fs, rect);
         }
 
-        doc.save("test.docx", com.aspose.pdf.SaveFormat.DocX);
+        doc->Save("test.docx", SaveFormat::DocX);
 }
