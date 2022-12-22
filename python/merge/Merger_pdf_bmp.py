@@ -14,7 +14,6 @@ import clr
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
 aspose_imaging = clr.AddReference("../../lib/Aspose.Imaging.dll")
 
-
 class pdf_to_bmp(object):
     def __init__(self, licence_path):
         self.dataDir = "../../TestData"
@@ -24,7 +23,6 @@ class pdf_to_bmp(object):
             self.aspose_license.SetLicense(self.licence_path)
 
     def exec(self):
-
         pathSource = "../../TestData/test.pdf"
 
         # read pdf file to Aspose Document

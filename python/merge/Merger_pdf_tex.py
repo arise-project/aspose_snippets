@@ -4,7 +4,6 @@ import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
 
-
 class pdf_to_tex(object):
     def __init__(self, licence_path):
         self.dataDir = "../../TestData"
@@ -14,7 +13,6 @@ class pdf_to_tex(object):
             self.aspose_license.SetLicense(self.licence_path)
 
     def exec(self):
-
         pathSource1 = "../../TestData/test.pdf"
         pathSource2 = "../../TestData/Second/test.pdf"
 

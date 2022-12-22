@@ -5,7 +5,6 @@ import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
 
-
 class eps_to_pdf(object):
     def __init__(self, licence_path):
         self.dataDir = "../../TestData"
@@ -15,7 +14,6 @@ class eps_to_pdf(object):
             self.aspose_license.SetLicense(self.licence_path)
 
     def exec(self):
-
         pathSource1 = "../../TestData/test.eps"
         pathSource2 = "../../TestData/Second/test.eps"
 

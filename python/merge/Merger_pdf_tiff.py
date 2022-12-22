@@ -12,7 +12,6 @@ import clr
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
 aspose_imaging = clr.AddReference("../../lib/Aspose.Imaging.dll")
 
-
 class pdf_to_tiff(object):
     def __init__(self, licence_path):
         self.dataDir = "../../TestData"
