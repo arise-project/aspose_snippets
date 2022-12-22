@@ -77,6 +77,8 @@ void pdf_to_jpeg()
         com.aspose.imaging.fileformats.jpeg.JpegImage newImage = (com.aspose.imaging.fileformats.jpeg.JpegImage) com.aspose.imaging.Image.create(options, newWidth, newHeight);
         int stitchedWidth = 0;
         for (String imagePath : images) {
+
+            //TODO: read image size
             var image = (com.aspose.imaging.RasterImage) com.aspose.imaging.Image.load(imagePath);
             //create bounds to insert small image into large
             com.aspose.imaging.Rectangle bounds = new com.aspose.imaging.Rectangle(

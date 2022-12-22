@@ -77,11 +77,16 @@ void pdf_to_png()
 
         //create empty image with calculated width and hight
         var newImage = (com.aspose.imaging.fileformats.png.PngImage) com.aspose.imaging.Image.create(options, newWidth, newHeight);
+
         int stitchedWidth = 0;
-        for (String imagePath : images) {
+
+        for (int i = 0; i < sizeof(images); i++) {
+            auto fs = images[i];
 
             var image = (com.aspose.imaging.RasterImage) com.aspose.imaging.Image.load(imagePath);
             {
+                //TODO: read image size
+                
                 //create bounds to nsert small image into large
                 com.aspose.imaging.Rectangle bounds = new com.aspose.imaging.Rectangle(
                         stitchedWidth,

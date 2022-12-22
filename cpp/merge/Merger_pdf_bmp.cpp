@@ -78,8 +78,14 @@ void pdf_to_bmp()
 
         //create empty image with calculated witdh and hight
         com.aspose.imaging.fileformats.bmp.BmpImage newImage = (com.aspose.imaging.fileformats.bmp.BmpImage) com.aspose.imaging.Image.create(options, newWidth, newHeight);
+        
         int stitchedWidth = 0;
-        for (String imagePath : images) {
+
+        for (int i = 0; i < sizeof(images); i++) {
+            auto fs = images[i];
+
+            //TODO: read image size
+
             //load image from file, it supports a lot of formats
             com.aspose.imaging.RasterImage image = (com.aspose.imaging.RasterImage) com.aspose.imaging.Image.load(imagePath);
             //create bounds to insert small image into large

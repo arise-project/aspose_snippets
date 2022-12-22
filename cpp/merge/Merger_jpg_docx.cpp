@@ -47,6 +47,7 @@ void jpg_to_docx  ()
             //setup page size to be A4
             page->SetPageSize(PageSize::get_A4()->get_Width(), PageSize::get_A4()->get_Height());
 
+            //TODO: read image size
             com.aspose.pdf.Rectangle rect;
 
             //load image from stream, it supports a lot of formats
