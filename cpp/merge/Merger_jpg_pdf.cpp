@@ -45,7 +45,7 @@ void jpg_to_pdf()
 
             //setup page size to be A4
             page->SetPageSize(PageSize.get_A4().get_Width(), PageSize.get_A4().get_Height());
-            
+
             com.aspose.pdf.Rectangle rect;
 
             //load image from stream, it supports a lot of formats
@@ -54,7 +54,7 @@ void jpg_to_pdf()
             rect = new com.aspose.pdf.Rectangle(0, 0, image.getWidth() - 1, image.getHeight() - 1);
 
             //add image to new pdf page
-            page.addImage(fs, rect);
+             page->AddImage(fs, rect);
         }
 
         //save result pdf to file

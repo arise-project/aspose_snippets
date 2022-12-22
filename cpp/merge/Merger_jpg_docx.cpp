@@ -56,7 +56,7 @@ void jpg_to_docx  ()
             }
 
             //add image to new pdf page
-            page.addImage(fs, rect);
+             page->AddImage(fs, rect);
         }
 
         doc->Save("test.docx", SaveFormat::DocX);
