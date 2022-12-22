@@ -41,7 +41,7 @@ void svg_to_pdf()
         var secondDoc = new com.aspose.pdf.Document(pathSource2, opt2);
 
         //create empty pdf document
-        var outputDoc = new com.aspose.pdf.Document();
+        auto outputDoc = MakeObject<Document>();
 
         //set less memory usage with unload instead of fast performance
         outputDoc.setEnableObjectUnload(true);

@@ -33,7 +33,7 @@ void pdf_to_pptx()
         auto firstDoc = MakeObject<Document>(pathSource1);
         auto secondDoc = MakeObject<Document>(pathSource2);
 
-        com.aspose.pdf.Document outputDoc = new com.aspose.pdf.Document();
+        auto outputDoc = MakeObject<Document>();
         //set less memory usage with unload instead of fast performance
         outputDoc.setEnableObjectUnload(true);
 

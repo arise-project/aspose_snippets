@@ -37,7 +37,7 @@ void tiff_to_pdf()
         var images = new com.aspose.imaging.fileformats.tiff.TiffImage[]{multiImage1, multiImage2};
 
         //create empty pdf document
-        var outputDoc = new com.aspose.pdf.Document();
+        auto outputDoc = MakeObject<Document>();
 
 		int index = 1;
         for (var multiImage : images) {

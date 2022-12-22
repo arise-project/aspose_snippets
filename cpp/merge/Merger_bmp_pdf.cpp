@@ -30,7 +30,7 @@ void bmp_to_pdf()
         auto pathSource2 = u"../../../../TestData/Second/test.bmp";
 
         //create empty pdf document
-        com.aspose.pdf.Document doc = new com.aspose.pdf.Document();
+        auto doc = MakeObject<Document>();
 
         //make list of files with images to merge
         List<String> images = Arrays.asList(new String[]{pathSource1, pathSource2});

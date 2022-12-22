@@ -34,7 +34,7 @@ void pdf_to_epub()
         auto secondDoc = MakeObject<Document>(pathSource2);
 
         //create empty pdf document
-        com.aspose.pdf.Document outputDoc = new com.aspose.pdf.Document();
+        auto outputDoc = MakeObject<Document>();
 
         //set less memory usage with unload instead of fast performance
         outputDoc.setEnableObjectUnload(true);

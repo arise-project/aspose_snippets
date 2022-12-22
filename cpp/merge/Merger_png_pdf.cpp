@@ -30,7 +30,7 @@ void png_to_pdf()
         auto pathSource2 = u"../../TestData/Second/test.png";
 
         //create empty pdf document
-        var doc = new com.aspose.pdf.Document();
+        auto outputDoc = MakeObject<Document>();
 
         //set less memory usage with unload instead of fast performance
         doc.setEnableObjectUnload(true);

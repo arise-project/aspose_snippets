@@ -36,7 +36,7 @@ void md_to_pdf()
                 new com.aspose.pdf.MdLoadOptions());
 
         //create empty pdf document
-        com.aspose.pdf.Document outputDoc = new com.aspose.pdf.Document();
+        auto outputDoc = MakeObject<Document>();
 
         //set less memory usage with unload instead of fast performance
         outputDoc.setEnableObjectUnload(true);
