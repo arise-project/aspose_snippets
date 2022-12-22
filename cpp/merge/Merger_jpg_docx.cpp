@@ -44,7 +44,7 @@ void jpg_to_docx  ()
             auto page = document->get_Pages()->Add();
 
             //setup page size to be A4
-            page->SetPageSize(PageSize.get_A4().get_Width(), PageSize.get_A4().get_Height());
+            page->SetPageSize(PageSize::get_A4()->get_Width(), PageSize::get_A4()->get_Height());
 
             com.aspose.pdf.Rectangle rect;
 
