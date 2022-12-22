@@ -26,12 +26,12 @@ using namespace Aspose::Pdf;
 
 void pdf_to_doc()
 {
-    String pathSource1 = "../../TestData/test.pdf";
+        String pathSource1 = "../../TestData/test.pdf";
         String pathSource2 = "../../TestData/Second/test.pdf";
 
         //read pdf file to Aspose Document
-        com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1);
-        com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2);
+        auto firstDoc = MakeObject<Document>(pathSource1);
+        auto secondDoc = MakeObject<Document>(pathSource2);
 
         //create empty pdf document
         com.aspose.pdf.Document outputDoc = new com.aspose.pdf.Document();

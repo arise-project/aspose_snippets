@@ -29,7 +29,7 @@ void pdf_to_bmp()
     String pathSource = "../../TestData/test.pdf";
 
         //read pdf file to Aspose Document
-        com.aspose.pdf.Document doc = new com.aspose.pdf.Document(pathSource);
+        auto doc = MakeObject<Document>(inputFilename);
 
         //make list of path to temporary images
         ArrayList<String> images = new ArrayList<>();

@@ -82,6 +82,14 @@ void interested()
     auto textAbsorber = MakeObject<Aspose::Pdf::Text::TextAbsorber>();
     document->get_Pages()->Accept(textAbsorber);
     System::IO::File::WriteAllText(outputFilename, textAbsorber->get_Text());
+
+    int counter = 0;
+    for (auto page : document->get_Pages())
+    {
+        auto stream = System::IO::File::Create(String::Format(u"{0}.method2.page_{1}.bmp", inputFilename, ++counter));
+        device->Process(page, stream);
+    }
+    
 }
 
 bool create_pdf(String filename)

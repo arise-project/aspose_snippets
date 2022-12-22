@@ -30,8 +30,8 @@ void pdf_to_text()
         var pathSource2 = "../../TestData/Second/test.pdf";
 
         //read pdf file to Aspose Document
-        var firstDoc = new com.aspose.pdf.Document(pathSource1);
-        var secondDoc = new com.aspose.pdf.Document(pathSource2);
+        auto firstDoc = MakeObject<Document>(pathSource1);
+        auto secondDoc = MakeObject<Document>(pathSource2);
 
         //create empty pdf document
         var outputDoc = new com.aspose.pdf.Document();
