@@ -53,7 +53,7 @@ void bmp_to_pdf()
             rect = new com.aspose.pdf.Rectangle(0, 0, image.getWidth() - 1, image.getHeight() - 1);
 
             //add image to new pdf page
-             page->AddImage(fs, rect);
+            page->AddImage(fs, rect);
         }
 
         //save result pdf to file

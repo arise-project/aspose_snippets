@@ -34,7 +34,7 @@ void jpg_to_docx  ()
         auto outputDoc = MakeObject<Document>();
 
         //set less memory usage with unload instead of fast performance
-        doc.setEnableObjectUnload(true);
+        doc->EnableObjectUnload = true;
 
         //make list of files with images to merge
         auto images[] = {pathSource1, pathSource2};

@@ -37,7 +37,7 @@ void mht_to_pdf()
         auto outputDoc = MakeObject<Document>();
 
         //set less memory usage with unload instead of fast performance
-        outputDoc.setEnableObjectUnload(true);
+        outputDoc->EnableObjectUnload = true;
 
         for (com.aspose.pdf.Page page : firstDoc.getPages()) {
             //add page from one document to another directly
