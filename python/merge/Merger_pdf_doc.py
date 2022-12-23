@@ -38,7 +38,7 @@ class pdf_to_doc(object):
             # add page from one document to another directly
             outputDoc.Pages.Add(page)
 
-        opt1 = DocSaveOptions
+        opt1 = DocSaveOptions()
         # use doc format
         opt1.Format = DocFormat.Doc,
         # This mode is fast and good for maximally preserving original look

@@ -21,7 +21,7 @@ class pdf_to_xls(object):
         secondDoc = Document(pathSource2)
 
         # create empty pdf document
-        outputDoc = Document
+        outputDoc = Document()
 
         # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = True
@@ -34,7 +34,7 @@ class pdf_to_xls(object):
             # add page from one document to another directly
             outputDoc.Pages.Add(page)
 
-        opt1 = ExcelSaveOptions
+        opt1 = ExcelSaveOptions()
         # set Microsoft document type
         opt1.Format = ExcelFormat.XMLSpreadSheet2003
 

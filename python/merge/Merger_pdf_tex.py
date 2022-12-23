@@ -20,7 +20,7 @@ class pdf_to_tex(object):
         secondDoc = Document(pathSource2)
 
         # create empty pdf document
-        outputDoc = Document
+        outputDoc = Document()
 
         # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = True
@@ -33,7 +33,7 @@ class pdf_to_tex(object):
             # add page from one document to another directly
             outputDoc.Pages.Add(page)
 
-        opt1 = TeXSaveOptions
+        opt1 = TeXSaveOptions()
         # save parsed artifacts, for example images to a directory
         opt1.OutDirectoryPath = "./test"
 

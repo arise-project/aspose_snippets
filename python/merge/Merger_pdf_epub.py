@@ -26,7 +26,7 @@ class pdf_to_epub(object):
         secondDoc = Document(pathSource2)
 
         # create empty pdf document
-        outputDoc = Document
+        outputDoc = Document()
 
         # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = True
@@ -39,7 +39,7 @@ class pdf_to_epub(object):
             # add page from one document to another directly
             outputDoc.Pages.Add(page)
 
-        opt1 = HtmlSaveOptions
+        opt1 = HtmlSaveOptions()
         # embedd css into a page
         opt1.PartsEmbeddingMode = PartsEmbeddingModes.EmbedAllIntoHtml
         # embedd images into a page

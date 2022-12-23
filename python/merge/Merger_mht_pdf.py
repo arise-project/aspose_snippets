@@ -21,7 +21,7 @@ class mht_to_pdf(object):
         secondDoc = Document(pathSource2,  MhtLoadOptions)
 
         # create empty pdf document
-        outputDoc = Document
+        outputDoc = Document()
 
         # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = True

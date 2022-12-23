@@ -17,7 +17,7 @@ class pcl_to_pdf(object):
         pathSource2 = "../../TestData/Second/test.pcl"
 
         # suspend not critical errors
-        opt1 = PclLoadOptions
+        opt1 = PclLoadOptions()
         opt1.SupressErrors = True
 
         # pcl files can be parsed and loaded as Aspose Document
@@ -29,7 +29,7 @@ class pcl_to_pdf(object):
         secondDoc = Document(pathSource2, opt2)
 
         # create empty pdf document
-        outputDoc = Document
+        outputDoc = Document()
 
         # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = True

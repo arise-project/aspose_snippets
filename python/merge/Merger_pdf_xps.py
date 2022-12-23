@@ -20,7 +20,7 @@ class pdf_to_xps(object):
         secondDoc = Document(pathSource2)
 
         # create empty pdf document
-        outputDoc = Document
+        outputDoc = Document()
 
         # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = true
@@ -33,7 +33,7 @@ class pdf_to_xps(object):
             # add page from one document to another directly
             outputDoc.Pages.Add(page)
 
-        opt1 = XpsSaveOptions
+        opt1 = XpsSaveOptions()
         # do not save transparent text to output file
         opt1.SaveTransparentTexts = False
 

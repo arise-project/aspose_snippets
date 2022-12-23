@@ -20,7 +20,7 @@ class pdf_to_svg(object):
         secondDoc = Document(pathSource2)
 
         # create empty pdf document
-        outputDoc = Document
+        outputDoc = Document()
 
         # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = True
@@ -33,7 +33,7 @@ class pdf_to_svg(object):
             # add page from one document to another directly
             outputDoc.Pages.Add(page)
 
-        opt1 = SvgSaveOptions
+        opt1 = SvgSaveOptions()
         # scale the output document from typographic points to pixels
         opt1.ScaleToPixels = True
 

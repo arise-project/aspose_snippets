@@ -22,7 +22,7 @@ class pdf_to_emf(object):
         secondDoc = Document(pathSource2)
 
         # create empty pdf document
-        outputDoc = Document
+        outputDoc = Document()
 
         # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = True
@@ -35,7 +35,7 @@ class pdf_to_emf(object):
             # add page from one document to another directly
             outputDoc.Pages.Add(page)
 
-        opt1 = EpubSaveOptions
+        opt1 = EpubSaveOptions()
         # keep the logical structure of transformed document
         opt1.ContentRecognitionMode = RecognitionMode.PdfFlow
 

@@ -19,7 +19,7 @@ class pdf_to_text(object):
         secondDoc = Document(pathSource2)
 
         # create empty pdf document
-        outputDoc = Document
+        outputDoc = Document()
 
         # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = True
@@ -33,7 +33,7 @@ class pdf_to_text(object):
             outputDoc.Pages.Add(page)
 
         # create text absorber for extract text
-        textAbsorber = TextAbsorber
+        textAbsorber = TextAbsorber()
         outputDoc.Pages.Accept(textAbsorber)
         extractedText = textAbsorber.Text
 

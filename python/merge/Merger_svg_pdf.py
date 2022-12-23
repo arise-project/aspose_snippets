@@ -16,21 +16,21 @@ class svg_to_pdf(object):
         pathSource1 = "../../TestData/test.svg"
         pathSource2 = "../../TestData/Second/test.svg"
 
-        opt1 = SvgLoadOptions
+        opt1 = SvgLoadOptions()
         # Adust pdf page size to svg size
         opt1.AdjustPageSize = True
 
         # SVG files can be parsed and loaded as Aspose Document
         firstDoc = Document(pathSource1, opt1)
 
-        opt2 = SvgLoadOptions
+        opt2 = SvgLoadOptions()
         # Use default pdf page size
         opt2.AdjustPageSize = False
 
         secondDoc = Document(pathSource2, opt2)
 
         # create empty pdf document
-        outputDoc = Document
+        outputDoc = Document()
 
         # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = True

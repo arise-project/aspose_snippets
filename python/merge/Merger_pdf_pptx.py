@@ -19,7 +19,7 @@ class pdf_to_pptx(object):
         firstDoc = Document(pathSource1)
         secondDoc = Document(pathSource2)
 
-        outputDoc = Document
+        outputDoc = Document()
         # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = True
 
@@ -31,7 +31,7 @@ class pdf_to_pptx(object):
             # add page from one document to another directly
             outputDoc.Pages.Add(page)
 
-        opt1 = PptxSaveOptions
+        opt1 = PptxSaveOptions()
         # save all content on page as single image
         opt1.SlidesAsImages = True
 

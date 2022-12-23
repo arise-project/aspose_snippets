@@ -23,7 +23,7 @@ class pdf_to_docx(object):
         secondDoc = Document(pathSource2)
 
         # create empty pdf document
-        outputDoc = Document
+        outputDoc = Document()
 
         # set less memory usage with unload instead of fast performance
         outputDoc.EnableObjectUnload = True
@@ -36,7 +36,7 @@ class pdf_to_docx(object):
             # add page from one document to another directly
             outputDoc.Pages.Add(page)
 
-        opt1 = DocSaveOptions
+        opt1 = DocSaveOptions()
         # use docx format
         opt1.Format = DocFormat.DocX,
         # make document editable flow and recognize of tables
