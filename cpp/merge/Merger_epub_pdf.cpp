@@ -6,6 +6,9 @@
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
+#include "Aspose.PDF.Cpp/EpubLoadOptions.h"
+#include "Aspose.PDF.Cpp/LoadOptions/PageSizeAdjustmentModes.h"
+#include "Aspose.PDF.Cpp/LoadOptions/MarginsAreaUsageModes.h"
 #include "Aspose.PDF.Cpp/Devices/BmpDevice.h"
 #include "Aspose.PDF.Cpp/Devices/EmfDevice.h"
 #include "Aspose.PDF.Cpp/Devices/JpegDevice.h"
@@ -29,20 +32,20 @@ void epub_to_pdf()
     auto pathSource1 = u"../../../../TestData/test.epub";
     auto pathSource2 = u"../../../../TestData/Second/test.epub";
 
-    com.aspose.pdf.EpubLoadOptions opt1 = new com.aspose.pdf.EpubLoadOptions();
+    auto opt1 = MakeObject<EpubLoadOptions>();
     // use algorithm to prevent content to be truncated
-    opt1.setPageSizeAdjustmentMode(com.aspose.pdf.LoadOptions.PageSizeAdjustmentModes.EnlargeRequiredViewportWidthAndDoConversionAgain);
+    opt1->PageSizeAdjustmentMode = EnlargeRequiredViewportWidthAndDoConversionAgain;
     // usage of margins area during conversion
-    opt1.setMarginsAreaUsageMode(com.aspose.pdf.LoadOptions.MarginsAreaUsageModes.PutContentOnMarginAreaIfNecessary);
+    opt1->MarginsAreaUsageMode = PutContentOnMarginAreaIfNecessary;
 
     // epub files can be parsed and loaded as Aspose Document
-    com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, opt1);
+    auto firstDoc = MakeObject<Document>(pathSource1, opt1);
 
-    com.aspose.pdf.EpubLoadOptions opt2 = new com.aspose.pdf.EpubLoadOptions();
+    auto opt2 = MakeObject<EpubLoadOptions>();
     // use algorithm to prevent content to be truncated
-    opt2.setPageSizeAdjustmentMode(com.aspose.pdf.LoadOptions.PageSizeAdjustmentModes.EnlargeRequiredViewportWidthAndDoConversionAgain);
+    opt2->PageSizeAdjustmentMode = EnlargeRequiredViewportWidthAndDoConversionAgain;
     // usage of margins area during conversion
-    opt2.setMarginsAreaUsageMode(com.aspose.pdf.LoadOptions.MarginsAreaUsageModes.PutContentOnMarginAreaIfNecessary);
+    opt2->MarginsAreaUsageMode = PutContentOnMarginAreaIfNecessary;
 
     com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2, opt2);
 
@@ -50,7 +53,7 @@ void epub_to_pdf()
     auto outputDoc = MakeObject<Document>();
 
     // set less memory usage with unload instead of fast performance
-    outputDoc.setEnableObjectUnload(true);
+    outputDoc->EnableObjectUnload = true;
 
     for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++)
     {
