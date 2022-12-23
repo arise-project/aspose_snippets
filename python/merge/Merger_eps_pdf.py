@@ -1,38 +1,30 @@
 from Aspose.Pdf import (
-  SaveFormat,
-  PsLoadOptions,
-  Document
-) 
+    SaveFormat,
+    PsLoadOptions,
+    Document
+)
 
-class eps_to_pdf(object):
-    def __init__(self, licence_path):
-        self.dataDir = "../../TestData"
-        if licence_path:
-            self.licence_path = licence_path
-            self.aspose_license = License()
-            self.aspose_license.SetLicense(self.licence_path)
+def eps_to_pdf(self):
+    pathSource1 = "../../TestData/test.eps"
+    pathSource2 = "../../TestData/Second/test.eps"
 
-    def exec(self):
-        pathSource1 = "../../TestData/test.eps"
-        pathSource2 = "../../TestData/Second/test.eps"
+    # eps files can be parsed and loaded as Aspose Document
+    firstDoc = Document(pathSource1, PsLoadOptions)
+    secondDoc = Document(pathSource2, PsLoadOptions)
 
-        # eps files can be parsed and loaded as Aspose Document
-        firstDoc = Document(pathSource1, PsLoadOptions)
-        secondDoc = Document(pathSource2, PsLoadOptions)
+     # create empty pdf document
+    outputDoc = Document()
 
-        # create empty pdf document
-        outputDoc = Document()
+    # set less memory usage with unload instead of fast performance
+    outputDoc.EnableObjectUnload = True
 
-        # set less memory usage with unload instead of fast performance
-        outputDoc.EnableObjectUnload = True
+    for page in firstDoc.Pages:
+        # add page from one document to another directly
+        outputDoc.Pages.Add(page)
 
-        for page in firstDoc.Pages:
-            # add page from one document to another directly
-            outputDoc.Pages.Add(page)
+    for page in secondDoc.Pages:
+        # add page from one document to another directly
+        outputDoc.Pages.Add(page)
 
-        for page in secondDoc.Pages:
-            # add page from one document to another directly
-            outputDoc.Pages.Add(page)
-
-        # save result pdf to file
-        outputDoc.Save("test.pdf", SaveFormat.Pdf)
+    # save result pdf to file
+    outputDoc.Save("test.pdf", SaveFormat.Pdf)
