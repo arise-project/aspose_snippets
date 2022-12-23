@@ -5,6 +5,7 @@
 #include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
+#include "Aspose.PDF.Cpp/PclLoadOptions.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/Devices/BmpDevice.h"
 #include "Aspose.PDF.Cpp/Devices/EmfDevice.h"
@@ -29,16 +30,17 @@ void pcl_to_pdf()
     auto pathSource1 = u"../../../../TestData/test.pcl";
     auto pathSource2 = u"../../../../TestData/Second/test.pcl";
 
-    com.aspose.pdf.PclLoadOptions opt1 = new com.aspose.pdf.PclLoadOptions();
+    auto opt1 = MakeObject<PclLoadOptions>();
     // suspend not critical errors
-    opt1.setSupressErrors(true);
+    opt1->SupressErrors = true;
+    
     // pcl files can be parsed and loaded as Aspose Document
-    com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, opt1);
+    auto firstDoc = MakeObject<Document>(pathSource1, opt1);
 
-    com.aspose.pdf.PclLoadOptions opt2 = new com.aspose.pdf.PclLoadOptions();
+    auto opt2 = MakeObject<PclLoadOptions>();
     // suspend not critical errors
-    opt2.setSupressErrors(true);
-    com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2, opt2);
+    opt2->SupressErrors = true;
+    auto secondDoc = MakeObject<Document>(pathSource2, opt2);
 
     // create empty pdf document
     auto outputDoc = MakeObject<Document>();

@@ -6,6 +6,7 @@
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
+#include "Aspose.PDF.Cpp/MhtLoadOptions.h"
 #include "Aspose.PDF.Cpp/Devices/BmpDevice.h"
 #include "Aspose.PDF.Cpp/Devices/EmfDevice.h"
 #include "Aspose.PDF.Cpp/Devices/JpegDevice.h"
