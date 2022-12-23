@@ -27,8 +27,8 @@ using namespace Aspose::Pdf;
 
 void jpg_to_docx()
 {
-    auto pathSource1 = u"../../../../TestData/test.jpg";
-    auto pathSource2 = u"../../../../TestData/Second/test.jpg";
+    auto pathSource1 = u"../../TestData/test.jpg";
+    auto pathSource2 = u"../../TestData/Second/test.jpg";
 
     // create empty pdf document
     auto outputDoc = MakeObject<Document>();

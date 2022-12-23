@@ -27,8 +27,8 @@ using namespace Aspose::Pdf;
 
 void bmp_to_pdf()
 {
-    auto pathSource1 = u"../../../../TestData/test.bmp";
-    auto pathSource2 = u"../../../../TestData/Second/test.bmp";
+    auto pathSource1 = u"../../TestData/test.bmp";
+    auto pathSource2 = u"../../TestData/Second/test.bmp";
 
     // create empty pdf document
     auto doc = MakeObject<Document>();

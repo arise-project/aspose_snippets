@@ -5,6 +5,7 @@
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
+#include "Aspose.PDF.Cpp/XpsSaveOptions.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
 
 #include "system/string.h"
@@ -41,9 +42,9 @@ void pdf_to_xps()
         outputDoc->get_Pages()->Add(page);
     }
 
-    var opt1 = new com.aspose.pdf.XpsSaveOptions();
+    var opt1 = MakeObject<XpsSaveOptions>();
     // do not save transparent text to output file
-    opt1.setSaveTransparentTexts(false);
+    opt1->SaveTransparentTexts = false;
     // save xps document
     outputDoc->Save("test.xps", opt1);
 }

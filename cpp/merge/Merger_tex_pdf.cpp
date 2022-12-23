@@ -3,6 +3,7 @@
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
+#include "Aspose.PDF.Cpp/TeXLoadOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
@@ -17,27 +18,27 @@ void tex_to_pdf()
     auto pathSource1 = u"../../TestData/test.tex";
     auto pathSource2 = u"../../TestData/Second/test.tex";
 
-    var opt1 = new com.aspose.pdf.TeXLoadOptions();
+    var opt1 = MakeObject<TeXLoadOptions>();
 
     // Cancels ligatures in all fonts
-    opt1.setNoLigatures(false);
+    opt1->NoLigatures = false;
     // Rasterize scientific formulas to images
-    opt1.setRasterizeFormulas(true);
+    opt1->RasterizeFormulas = true;
     // Print parsing steps details to console output
-    opt1.setShowTerminalOutput(true);
+    opt1->ShowTerminalOutput =true;
 
     // TeX files can be parsed and loaded as Aspose Document
-    var firstDoc = new com.aspose.pdf.Document(pathSource1, opt1);
+    var firstDoc = MakeObject<Document>(pathSource1, opt1);
 
-    var opt2 = new com.aspose.pdf.TeXLoadOptions();
+    var opt2 = new MakeObject<TeXLoadOptions>();
 
     // Set ligatures in all fonts
-    opt2.setNoLigatures(false);
+    opt2->NoLigatures = false;
     // Rasterize scientific formulas to images
-    opt2.setRasterizeFormulas(true);
+    opt2->RasterizeFormulas = true;
     // Print parsing steps details to console output
-    opt2.setShowTerminalOutput(true);
-    var secondDoc = new com.aspose.pdf.Document(pathSource2, opt2);
+    opt2->tShowTerminalOutput = true;
+    var secondDoc = MakeObject<Document>(pathSource2, opt2);
 
     auto outputDoc = MakeObject<Document>();
 

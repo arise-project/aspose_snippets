@@ -3,6 +3,7 @@
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
+#include "Aspose.PDF.Cpp/TeXSaveOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
@@ -41,8 +42,8 @@ void pdf_to_tex()
         outputDoc->get_Pages()->Add(page);
     }
 
-    var opt1 = new com.aspose.pdf.TeXSaveOptions();
+    var opt1 = MakeObject<TeXSaveOptions>();
     // save parsed artifacts, for example images to a directory
-    opt1.setOutDirectoryPath("./test");
+    opt1->OutDirectoryPath = u"./test";
     outputDoc->Save("test.tex", opt1);
 }

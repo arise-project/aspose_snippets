@@ -1,7 +1,6 @@
 #include <iostream>
 
 #include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PclLoadOptions.h"
@@ -15,8 +14,8 @@ using namespace Aspose::Pdf;
 
 void pcl_to_pdf()
 {
-    auto pathSource1 = u"../../../../TestData/test.pcl";
-    auto pathSource2 = u"../../../../TestData/Second/test.pcl";
+    auto pathSource1 = u"../../TestData/test.pcl";
+    auto pathSource2 = u"../../TestData/Second/test.pcl";
 
     auto opt1 = MakeObject<PclLoadOptions>();
     // suspend not critical errors

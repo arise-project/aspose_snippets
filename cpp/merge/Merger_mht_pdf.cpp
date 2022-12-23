@@ -1,7 +1,6 @@
 #include <iostream>
 
 #include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
@@ -15,8 +14,8 @@ using namespace Aspose::Pdf;
 
 void mht_to_pdf()
 {
-    auto pathSource1 = u"../../../../TestData/test.mht";
-    auto pathSource2 = u"../../../../TestData/Second/test.mht";
+    auto pathSource1 = u"../../TestData/test.mht";
+    auto pathSource2 = u"../../TestData/Second/test.mht";
 
     // mht files can be parsed and loaded as Aspose Document
     auto firstDoc = MakeObject<Document>(pathSource1, MakeObject<MhtLoadOptions>());

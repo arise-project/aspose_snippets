@@ -1,7 +1,6 @@
 #include <iostream>
 
 #include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/HtmlSaveOptions.h"
 #include "Aspose.PDF.Cpp/HtmlSaveOptions/PartsEmbeddingModes.h"

@@ -6,6 +6,9 @@
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
+#include "Aspose.PDF.Cpp/Text/TextAbsorber.h"
+#include "Aspose.PDF.Cpp/Text/TextFragment.h"
+#include "system/io/file.h"
 
 #include "system/string.h"
 
@@ -42,7 +45,9 @@ void pdf_to_text()
     }
 
     // create text absorber for extract text
-    var textAbsorber = new com.aspose.pdf.TextAbsorber();
-    outputDoc.getPages().accept(textAbsorber);
-    String extractedText = textAbsorber.getText();
+    var textAbsorber = MakeObject<TextAbsorber>();
+    outputDoc->get_Pages()->Accept(textAbsorber);
+    auto extractedText = textAbsorber->get_Text();
+
+    File::WriteAllText("text.txt", extractedText);
 }

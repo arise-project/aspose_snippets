@@ -1,7 +1,6 @@
 #include <iostream>
 
 #include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/HtmlLoadOptions.h"
@@ -15,8 +14,8 @@ using namespace Aspose::Pdf;
 
 void html_to_pdf()
 {
-    auto pathSource1 = u"../../../../TestData/test.html";
-    auto pathSource2 = u"../../../../TestData/Second/test.html";
+    auto pathSource1 = u"../../TestData/test.html";
+    auto pathSource2 = u"../../TestData/Second/test.html";
 
     auto opt1 = MakeObject<HtmlLoadOptions>();
 

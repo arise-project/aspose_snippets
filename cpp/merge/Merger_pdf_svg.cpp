@@ -3,6 +3,7 @@
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
+#include "Aspose.PDF.Cpp/SvgSaveOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
@@ -41,8 +42,8 @@ void pdf_to_svg()
         outputDoc->get_Pages()->Add(page);
     }
 
-    var opt1 = new com.aspose.pdf.SvgSaveOptions();
+    var opt1 = MakeObject<SvgSaveOptions>();
     // scale the output document from typographic points to pixels
-    opt1.setScaleToPixels(true);
+    opt1->ScaleToPixels = true;
     outputDoc->Save("test.svg", opt1);
 }

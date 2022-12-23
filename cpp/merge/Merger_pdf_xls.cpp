@@ -5,7 +5,9 @@
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
+#include "Aspose.PDF.Cpp/ExcelSaveOptions.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
+#include "Aspose.PDF.Cpp/ExcelSaveOptions/ExcelFormat.h"
 
 #include "system/string.h"
 
@@ -41,10 +43,10 @@ void pdf_to_xls()
         outputDoc->get_Pages()->Add(page);
     }
 
-    var opt1 = new com.aspose.pdf.ExcelSaveOptions();
+    var opt1 = MakeObject<ExcelSaveOptions>();
 
     // set Microsoft document type
-    opt1.setFormat(com.aspose.pdf.ExcelSaveOptions.ExcelFormat.XMLSpreadSheet2003);
+    opt1->Format = ExcelFormat->XMLSpreadSheet2003;
     // save Excel document
     outputDoc->Save("test.xls", opt1);
 }

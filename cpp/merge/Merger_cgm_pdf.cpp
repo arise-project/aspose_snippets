@@ -1,7 +1,6 @@
 #include <iostream>
 
 #include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
@@ -14,8 +13,8 @@ using namespace Aspose::Pdf;
 
 void cgm_to_pdf()
 {
-    auto pathSource1 = "../../../../TestData/test.cgm";
-    auto pathSource2 = "../../../../TestData/Second/test.cgm";
+    auto pathSource1 = "../../TestData/test.cgm";
+    auto pathSource2 = "../../TestData/Second/test.cgm";
 
     // cgm files can be parsed and loaded as Aspose Document
     auto firstDoc = MakeObject<Document>(pathSource1, MakeObject<CgmLoadOptions>());

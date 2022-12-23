@@ -3,6 +3,7 @@
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
+#include "Aspose.PDF.Cpp/PptxSaveOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
@@ -39,8 +40,8 @@ void pdf_to_pptx()
         outputDoc->get_Pages()->Add(page);
     }
 
-    var opt1 = new com.aspose.pdf.PptxSaveOptions();
+    var opt1 = MakeObject<PptxSaveOptions>();
     // save all content on page as single image
-    opt1.setSlidesAsImages(true);
+    opt1->SlidesAsImages = true;
     outputDoc->Save("test.pptx", opt1);
 }
