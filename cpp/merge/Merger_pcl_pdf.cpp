@@ -26,38 +26,40 @@ using namespace Aspose::Pdf;
 
 void pcl_to_pdf()
 {
-        auto pathSource1 = u"../../../../TestData/test.pcl";
-        auto pathSource2 = u"../../../../TestData/Second/test.pcl";
+    auto pathSource1 = u"../../../../TestData/test.pcl";
+    auto pathSource2 = u"../../../../TestData/Second/test.pcl";
 
-        com.aspose.pdf.PclLoadOptions opt1 = new com.aspose.pdf.PclLoadOptions();
-        //suspend not critical errors
-        opt1.setSupressErrors(true);
-        //pcl files can be parsed and loaded as Aspose Document
-        com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, opt1);
+    com.aspose.pdf.PclLoadOptions opt1 = new com.aspose.pdf.PclLoadOptions();
+    // suspend not critical errors
+    opt1.setSupressErrors(true);
+    // pcl files can be parsed and loaded as Aspose Document
+    com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, opt1);
 
-        com.aspose.pdf.PclLoadOptions opt2 = new com.aspose.pdf.PclLoadOptions();
-        //suspend not critical errors
-        opt2.setSupressErrors(true);
-        com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2, opt2);
+    com.aspose.pdf.PclLoadOptions opt2 = new com.aspose.pdf.PclLoadOptions();
+    // suspend not critical errors
+    opt2.setSupressErrors(true);
+    com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2, opt2);
 
-        //create empty pdf document
-        auto outputDoc = MakeObject<Document>();
+    // create empty pdf document
+    auto outputDoc = MakeObject<Document>();
 
-        //set less memory usage with unload instead of fast performance
-        outputDoc->EnableObjectUnload = true;
+    // set less memory usage with unload instead of fast performance
+    outputDoc->EnableObjectUnload = true;
 
-        for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++) {
-			auto page = firstDoc->get_Pages()->get_Item(i);
-            //add page from one document to another directly
-            outputDoc->get_Pages()->Add(page);
-        }
+    for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++)
+    {
+        auto page = firstDoc->get_Pages()->get_Item(i);
+        // add page from one document to another directly
+        outputDoc->get_Pages()->Add(page);
+    }
 
-        for (int i = 0; i < secondDoc->get_Pages()->get_Count(); i++) {
-            auto page = secondDoc->get_Pages()->get_Item(i);
-            //add page from one document to another directly
-            outputDoc->get_Pages()->Add(page);
-        }
+    for (int i = 0; i < secondDoc->get_Pages()->get_Count(); i++)
+    {
+        auto page = secondDoc->get_Pages()->get_Item(i);
+        // add page from one document to another directly
+        outputDoc->get_Pages()->Add(page);
+    }
 
-        //save result pdf to file
-        outputDoc->Save("test.pdf", SaveFormat::Pdf);
+    // save result pdf to file
+    outputDoc->Save("test.pdf", SaveFormat::Pdf);
 }

@@ -26,44 +26,46 @@ using namespace Aspose::Pdf;
 
 void epub_to_pdf()
 {
-        auto pathSource1 = u"../../../../TestData/test.epub";
-        auto pathSource2 = u"../../../../TestData/Second/test.epub";
+    auto pathSource1 = u"../../../../TestData/test.epub";
+    auto pathSource2 = u"../../../../TestData/Second/test.epub";
 
-        com.aspose.pdf.EpubLoadOptions opt1 = new com.aspose.pdf.EpubLoadOptions();
-        //use algorithm to prevent content to be truncated
-        opt1.setPageSizeAdjustmentMode(com.aspose.pdf.LoadOptions.PageSizeAdjustmentModes.EnlargeRequiredViewportWidthAndDoConversionAgain);
-        //usage of margins area during conversion
-        opt1.setMarginsAreaUsageMode(com.aspose.pdf.LoadOptions.MarginsAreaUsageModes.PutContentOnMarginAreaIfNecessary);
+    com.aspose.pdf.EpubLoadOptions opt1 = new com.aspose.pdf.EpubLoadOptions();
+    // use algorithm to prevent content to be truncated
+    opt1.setPageSizeAdjustmentMode(com.aspose.pdf.LoadOptions.PageSizeAdjustmentModes.EnlargeRequiredViewportWidthAndDoConversionAgain);
+    // usage of margins area during conversion
+    opt1.setMarginsAreaUsageMode(com.aspose.pdf.LoadOptions.MarginsAreaUsageModes.PutContentOnMarginAreaIfNecessary);
 
-        //epub files can be parsed and loaded as Aspose Document
-        com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, opt1);
+    // epub files can be parsed and loaded as Aspose Document
+    com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, opt1);
 
-        com.aspose.pdf.EpubLoadOptions opt2 = new com.aspose.pdf.EpubLoadOptions();
-        //use algorithm to prevent content to be truncated
-        opt2.setPageSizeAdjustmentMode(com.aspose.pdf.LoadOptions.PageSizeAdjustmentModes.EnlargeRequiredViewportWidthAndDoConversionAgain);
-        //usage of margins area during conversion
-        opt2.setMarginsAreaUsageMode(com.aspose.pdf.LoadOptions.MarginsAreaUsageModes.PutContentOnMarginAreaIfNecessary);
+    com.aspose.pdf.EpubLoadOptions opt2 = new com.aspose.pdf.EpubLoadOptions();
+    // use algorithm to prevent content to be truncated
+    opt2.setPageSizeAdjustmentMode(com.aspose.pdf.LoadOptions.PageSizeAdjustmentModes.EnlargeRequiredViewportWidthAndDoConversionAgain);
+    // usage of margins area during conversion
+    opt2.setMarginsAreaUsageMode(com.aspose.pdf.LoadOptions.MarginsAreaUsageModes.PutContentOnMarginAreaIfNecessary);
 
-        com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2, opt2);
+    com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2, opt2);
 
-        //create empty pdf document
-        auto outputDoc = MakeObject<Document>();
+    // create empty pdf document
+    auto outputDoc = MakeObject<Document>();
 
-        //set less memory usage with unload instead of fast performance
-        outputDoc.setEnableObjectUnload(true);
+    // set less memory usage with unload instead of fast performance
+    outputDoc.setEnableObjectUnload(true);
 
-        for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++) {
-			auto page = firstDoc->get_Pages()->get_Item(i);
-            //add page from one document to another directly
-            outputDoc->get_Pages()->Add(page);
-        }
+    for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++)
+    {
+        auto page = firstDoc->get_Pages()->get_Item(i);
+        // add page from one document to another directly
+        outputDoc->get_Pages()->Add(page);
+    }
 
-        for (int i = 0; i < secondDoc->get_Pages()->get_Count(); i++) {
-            auto page = secondDoc->get_Pages()->get_Item(i);
-            //add page from one document to another directly
-            outputDoc->get_Pages()->Add(page);
-        }
+    for (int i = 0; i < secondDoc->get_Pages()->get_Count(); i++)
+    {
+        auto page = secondDoc->get_Pages()->get_Item(i);
+        // add page from one document to another directly
+        outputDoc->get_Pages()->Add(page);
+    }
 
-        //save result pdf to file
-        outputDoc->Save("test.pdf", SaveFormat::Pdf);
+    // save result pdf to file
+    outputDoc->Save("test.pdf", SaveFormat::Pdf);
 }

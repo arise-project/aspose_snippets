@@ -26,36 +26,38 @@ using namespace Aspose::Pdf;
 
 void pdf_to_pdfa()
 {
-        auto pathSource1 = u"../../TestData/test.pdf";
-        auto pathSource2 = u"../../TestData/Second/test.pdf";
+    auto pathSource1 = u"../../TestData/test.pdf";
+    auto pathSource2 = u"../../TestData/Second/test.pdf";
 
-        //read pdf file to Aspose Document
-        auto firstDoc = MakeObject<Document>(pathSource1);
-        auto secondDoc = MakeObject<Document>(pathSource2);
+    // read pdf file to Aspose Document
+    auto firstDoc = MakeObject<Document>(pathSource1);
+    auto secondDoc = MakeObject<Document>(pathSource2);
 
-        //create empty pdf document
-        auto outputDoc = MakeObject<Document>();
+    // create empty pdf document
+    auto outputDoc = MakeObject<Document>();
 
-        //set less memory usage with unload instead of fast performance
-        outputDoc->EnableObjectUnload = true;
+    // set less memory usage with unload instead of fast performance
+    outputDoc->EnableObjectUnload = true;
 
-        for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++) {
-			auto page = firstDoc->get_Pages()->get_Item(i);
-            //add page from one document to another directly
-            outputDoc->get_Pages()->Add(page);
-        }
-
-        for (int i = 0; i < secondDoc->get_Pages()->get_Count(); i++) {
-            auto page = secondDoc->get_Pages()->get_Item(i);
-            //add page from one document to another directly
-            outputDoc->get_Pages()->Add(page);
-        }
-
-        //save document as specific pdf standard PDFA 3Y
-        outputDoc.convert(
-                "test.pdf",
-                com.aspose.pdf.PdfFormat.PDF_A_3U,
-                //delete objects that impossible to convert
-                com.aspose.pdf.ConvertErrorAction.Delete);
+    for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++)
+    {
+        auto page = firstDoc->get_Pages()->get_Item(i);
+        // add page from one document to another directly
+        outputDoc->get_Pages()->Add(page);
     }
+
+    for (int i = 0; i < secondDoc->get_Pages()->get_Count(); i++)
+    {
+        auto page = secondDoc->get_Pages()->get_Item(i);
+        // add page from one document to another directly
+        outputDoc->get_Pages()->Add(page);
+    }
+
+    // save document as specific pdf standard PDFA 3Y
+    outputDoc.convert(
+        "test.pdf",
+        com.aspose.pdf.PdfFormat.PDF_A_3U,
+        // delete objects that impossible to convert
+        com.aspose.pdf.ConvertErrorAction.Delete);
+}
 }

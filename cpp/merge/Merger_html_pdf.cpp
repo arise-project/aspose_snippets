@@ -26,45 +26,47 @@ using namespace Aspose::Pdf;
 
 void html_to_pdf()
 {
-        auto pathSource1 = u"../../../../TestData/test.html";
-        auto pathSource2 = u"../../../../TestData/Second/test.html";
+    auto pathSource1 = u"../../../../TestData/test.html";
+    auto pathSource2 = u"../../../../TestData/Second/test.html";
 
-        com.aspose.pdf.HtmlLoadOptions opt1 = new com.aspose.pdf.HtmlLoadOptions();
+    com.aspose.pdf.HtmlLoadOptions opt1 = new com.aspose.pdf.HtmlLoadOptions();
 
-        //set html encodyng
-        opt1.setInputEncoding("UTF-8");
-        //render all html to single large pdf page
-        opt1.setRenderToSinglePage(true);
+    // set html encodyng
+    opt1.setInputEncoding("UTF-8");
+    // render all html to single large pdf page
+    opt1.setRenderToSinglePage(true);
 
-        //html files can be parsed and loaded as Aspose Document
-        com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, opt1);
+    // html files can be parsed and loaded as Aspose Document
+    com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, opt1);
 
-        com.aspose.pdf.HtmlLoadOptions opt2 = new com.aspose.pdf.HtmlLoadOptions();
-        //set html encodyng
-        opt2.setInputEncoding("UTF-8");
-        //split html content to pdf pages
-        opt2.setRenderToSinglePage(false);
+    com.aspose.pdf.HtmlLoadOptions opt2 = new com.aspose.pdf.HtmlLoadOptions();
+    // set html encodyng
+    opt2.setInputEncoding("UTF-8");
+    // split html content to pdf pages
+    opt2.setRenderToSinglePage(false);
 
-        com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2, opt2);
+    com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2, opt2);
 
-        //create empty pdf document
-        auto outputDoc = MakeObject<Document>();
+    // create empty pdf document
+    auto outputDoc = MakeObject<Document>();
 
-        //set less memory usage with unload instead of fast performance
-        outputDoc->EnableObjectUnload = true;
+    // set less memory usage with unload instead of fast performance
+    outputDoc->EnableObjectUnload = true;
 
-        for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++) {
-			auto page = firstDoc->get_Pages()->get_Item(i);
-            //add page from one document to another directly
-            outputDoc->get_Pages()->Add(page);
-        }
+    for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++)
+    {
+        auto page = firstDoc->get_Pages()->get_Item(i);
+        // add page from one document to another directly
+        outputDoc->get_Pages()->Add(page);
+    }
 
-        for (int i = 0; i < secondDoc->get_Pages()->get_Count(); i++) {
-            auto page = secondDoc->get_Pages()->get_Item(i);
-            //add page from one document to another directly
-            outputDoc->get_Pages()->Add(page);
-        }
+    for (int i = 0; i < secondDoc->get_Pages()->get_Count(); i++)
+    {
+        auto page = secondDoc->get_Pages()->get_Item(i);
+        // add page from one document to another directly
+        outputDoc->get_Pages()->Add(page);
+    }
 
-        //save result pdf to file
-        outputDoc->Save("test.pdf", SaveFormat::Pdf);
+    // save result pdf to file
+    outputDoc->Save("test.pdf", SaveFormat::Pdf);
 }

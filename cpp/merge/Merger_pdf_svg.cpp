@@ -26,33 +26,35 @@ using namespace Aspose::Pdf;
 
 void pdf_to_svg()
 {
-        auto pathSource1 = u"../../TestData/test.pdf";
-        auto pathSource2 = u"../../TestData/Second/test.pdf";
+    auto pathSource1 = u"../../TestData/test.pdf";
+    auto pathSource2 = u"../../TestData/Second/test.pdf";
 
-        //read pdf file to Aspose Document
-        auto firstDoc = MakeObject<Document>(pathSource1);
-        auto secondDoc = MakeObject<Document>(pathSource2);
+    // read pdf file to Aspose Document
+    auto firstDoc = MakeObject<Document>(pathSource1);
+    auto secondDoc = MakeObject<Document>(pathSource2);
 
-        //create empty pdf document
-        auto outputDoc = MakeObject<Document>();
+    // create empty pdf document
+    auto outputDoc = MakeObject<Document>();
 
-        //set less memory usage with unload instead of fast performance
-        outputDoc->EnableObjectUnload = true;
+    // set less memory usage with unload instead of fast performance
+    outputDoc->EnableObjectUnload = true;
 
-        for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++) {
-			auto page = firstDoc->get_Pages()->get_Item(i);
-            //add page from one document to another directly
-            outputDoc->get_Pages()->Add(page);
-        }
+    for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++)
+    {
+        auto page = firstDoc->get_Pages()->get_Item(i);
+        // add page from one document to another directly
+        outputDoc->get_Pages()->Add(page);
+    }
 
-        for (int i = 0; i < secondDoc->get_Pages()->get_Count(); i++) {
-            auto page = secondDoc->get_Pages()->get_Item(i);
-            //add page from one document to another directly
-            outputDoc->get_Pages()->Add(page);
-        }
+    for (int i = 0; i < secondDoc->get_Pages()->get_Count(); i++)
+    {
+        auto page = secondDoc->get_Pages()->get_Item(i);
+        // add page from one document to another directly
+        outputDoc->get_Pages()->Add(page);
+    }
 
-        var opt1 = new com.aspose.pdf.SvgSaveOptions();
-        //scale the output document from typographic points to pixels
-        opt1.setScaleToPixels(true);
-        outputDoc->Save("test.svg", opt1);
+    var opt1 = new com.aspose.pdf.SvgSaveOptions();
+    // scale the output document from typographic points to pixels
+    opt1.setScaleToPixels(true);
+    outputDoc->Save("test.svg", opt1);
 }

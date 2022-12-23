@@ -28,82 +28,86 @@ void pdf_to_bmp()
 {
         auto pathSource = u"../../TestData/test.pdf";
 
-        //read pdf file to Aspose Document
+        // read pdf file to Aspose Document
         auto doc = MakeObject<Document>(inputFilename);
 
-        //make list of path to temporary images
+        // make list of path to temporary images
         ArrayList<String> images = new ArrayList<>();
 
-        //pages in pdf counted from 1 to n
-        for (int pageCount = 1; pageCount <= doc.getPages().size(); pageCount++) {
-            //setup default resolution to pdf documents 72dpi
-            com.aspose.pdf.devices.Resolution resolution = new com.aspose.pdf.devices.Resolution(72);
+        // pages in pdf counted from 1 to n
+        for (int pageCount = 1; pageCount <= doc.getPages().size(); pageCount++)
+        {
+                // setup default resolution to pdf documents 72dpi
+                com.aspose.pdf.devices.Resolution resolution = new com.aspose.pdf.devices.Resolution(72);
 
-            //create image device to save document as image with page dimensions and resolution
-            com.aspose.pdf.devices.BmpDevice imageDevice = new com.aspose.pdf.devices.BmpDevice(
-                    (int) doc.getPages().get_Item(pageCount).getPageInfo().getWidth(),
-                    (int) doc.getPages().get_Item(pageCount).getPageInfo().getHeight(),
+                // create image device to save document as image with page dimensions and resolution
+                com.aspose.pdf.devices.BmpDevice imageDevice = new com.aspose.pdf.devices.BmpDevice(
+                    (int)doc.getPages().get_Item(pageCount).getPageInfo().getWidth(),
+                    (int)doc.getPages().get_Item(pageCount).getPageInfo().getHeight(),
                     resolution);
 
-            String outPath = "test_" + pageCount + ".bmp";
+                String outPath = "test_" + pageCount + ".bmp";
 
-            //process document page to image
-            imageDevice.process(doc.getPages().get_Item(pageCount), outPath);
-            images.add(outPath);
+                // process document page to image
+                imageDevice.process(doc.getPages().get_Item(pageCount), outPath);
+                images.add(outPath);
         }
 
-        //make list pf parsed image sizes
+        // make list pf parsed image sizes
         ArrayList<com.aspose.imaging.Size> imageSizes = new ArrayList<>();
-        for (String path : images) {
-            //load image from file, it supports a lot of formats
-            com.aspose.imaging.RasterImage image =
-                    (com.aspose.imaging.RasterImage) com.aspose.imaging.Image.load(path);
-            imageSizes.add(image.getSize());
+        for (String path : images)
+        {
+                // load image from file, it supports a lot of formats
+                com.aspose.imaging.RasterImage image =
+                    (com.aspose.imaging.RasterImage)com.aspose.imaging.Image.load(path);
+                imageSizes.add(image.getSize());
         }
 
         int newWidth = 0;
         int newHeight = 0;
-        for (com.aspose.imaging.Size s : imageSizes) {
-            newWidth += s.getWidth();
-            newHeight = newHeight < s.getHeight() ? s.getHeight() : newHeight;
+        for (com.aspose.imaging.Size s : imageSizes)
+        {
+                newWidth += s.getWidth();
+                newHeight = newHeight < s.getHeight() ? s.getHeight() : newHeight;
         }
 
-        //use file system as source for save image
+        // use file system as source for save image
         com.aspose.imaging.Source fileSource = new com.aspose.imaging.sources.FileCreateSource(
-                "./test.bmp",
-                false); //preserve image on the disk
+            "./test.bmp",
+            false); // preserve image on the disk
 
         com.aspose.imaging.imageoptions.BmpOptions options = new com.aspose.imaging.imageoptions.BmpOptions();
         options.setSource(fileSource);
 
-        //create empty image with calculated witdh and hight
-        com.aspose.imaging.fileformats.bmp.BmpImage newImage = (com.aspose.imaging.fileformats.bmp.BmpImage) com.aspose.imaging.Image.create(options, newWidth, newHeight);
-        
+        // create empty image with calculated witdh and hight
+        com.aspose.imaging.fileformats.bmp.BmpImage newImage = (com.aspose.imaging.fileformats.bmp.BmpImage)com.aspose.imaging.Image.create(options, newWidth, newHeight);
+
         int stitchedWidth = 0;
 
-        for (int i = 0; i < sizeof(images); i++) {
-            auto fs = images[i];
+        for (int i = 0; i < sizeof(images); i++)
+        {
+                auto fs = images[i];
 
-            //TODO: read image size
+                // TODO: read image size
 
-            //load image from file, it supports a lot of formats
-            com.aspose.imaging.RasterImage image = (com.aspose.imaging.RasterImage) com.aspose.imaging.Image.load(imagePath);
-            //create bounds to insert small image into large
-            com.aspose.imaging.Rectangle bounds = new com.aspose.imaging.Rectangle(
+                // load image from file, it supports a lot of formats
+                com.aspose.imaging.RasterImage image = (com.aspose.imaging.RasterImage)com.aspose.imaging.Image.load(imagePath);
+                // create bounds to insert small image into large
+                com.aspose.imaging.Rectangle bounds = new com.aspose.imaging.Rectangle(
                     stitchedWidth,
                     0,
                     image.getWidth(),
                     image.getHeight());
 
-            //combining images into new one
-            newImage.saveArgb32Pixels(
-                    //where to insert image
+                // combining images into new one
+                newImage.saveArgb32Pixels(
+                    // where to insert image
                     bounds,
-                    //convert image chunk to 32bit Argb
+                    // convert image chunk to 32bit Argb
                     image.loadArgb32Pixels(image.getBounds()));
-            stitchedWidth += image.getWidth();
+                stitchedWidth += image.getWidth();
         }
 
-        //save created image to disk
+        // save created image to disk
         newImage.save();
 }
