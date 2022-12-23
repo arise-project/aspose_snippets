@@ -1,8 +1,7 @@
-from Aspose.Pdf import XpsSaveOptions
-from Aspose.Pdf import Document
-import clr
-
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
+from Aspose.Pdf import (
+    XpsSaveOptions,
+    Document
+)
 
 class pdf_to_xps(object):
     def __init__(self, licence_path):

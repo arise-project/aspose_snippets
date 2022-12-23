@@ -1,9 +1,8 @@
-from Aspose.Pdf import ConvertErrorAction
-from Aspose.Pdf import PdfFormat
-from Aspose.Pdf import Document
-import clr
-
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
+from Aspose.Pdf import (
+    ConvertErrorAction,
+    PdfFormat,
+    Document
+)
 
 class pdf_to_pdfa(object):
     def __init__(self, licence_path):

@@ -1,10 +1,10 @@
-from Aspose.Pdf.DocSaveOptions import RecognitionMode
-from Aspose.Pdf.DocSaveOptions import DocFormat
-from Aspose.Pdf import DocSaveOptions
 from Aspose.Pdf import Document
-import clr
 
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
+from Aspose.Pdf.DocSaveOptions import (
+    RecognitionMode,
+    DocFormat,
+    DocSaveOptions
+)
 
 class pdf_to_docx(object):
     def __init__(self, licence_path):

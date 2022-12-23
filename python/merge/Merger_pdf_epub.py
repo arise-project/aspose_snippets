@@ -1,11 +1,13 @@
-from Aspose.Pdf.HtmlSaveOptions import AntialiasingProcessingType
-from Aspose.Pdf.HtmlSaveOptions import RasterImagesSavingModes
-from Aspose.Pdf.HtmlSaveOptions import PartsEmbeddingModes
-from Aspose.Pdf import HtmlSaveOptions
-from Aspose.Pdf import Document
-import clr
+from Aspose.Pdf.HtmlSaveOptions import (
+    AntialiasingProcessingType,
+    RasterImagesSavingModes,
+    PartsEmbeddingModes
+)
 
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
+from Aspose.Pdf import (
+    HtmlSaveOptions,
+    Document
+)
 
 class pdf_to_epub(object):
     def __init__(self, licence_path):

@@ -1,9 +1,8 @@
-from Aspose.Pdf import SaveFormat
-from Aspose.Pdf import SvgLoadOptions
-from Aspose.Pdf import Document
-import clr
-
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
+from Aspose.Pdf import (
+    SaveFormat,
+    SvgLoadOptions,
+    Document
+)
 
 class svg_to_pdf(object):
     def __init__(self, licence_path):

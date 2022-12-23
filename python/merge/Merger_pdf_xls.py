@@ -1,9 +1,8 @@
 from Aspose.Pdf.ExcelSaveOptions import ExcelFormat
-from Aspose.Pdf import ExcelSaveOptions
-from Aspose.Pdf import Document
-import clr
-
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
+from Aspose.Pdf import (
+    ExcelSaveOptions,
+    Document
+)
 
 class pdf_to_xls(object):
     def __init__(self, licence_path):

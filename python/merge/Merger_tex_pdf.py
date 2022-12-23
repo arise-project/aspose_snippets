@@ -1,9 +1,8 @@
-from Aspose.Pdf import SaveFormat
-from Aspose.Pdf import TeXLoadOptions
-from Aspose.Pdf import Document
-import clr
-
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
+from Aspose.Pdf import (
+    SaveFormat,
+    TeXLoadOptions,
+    Document
+)
 
 class tex_to_pdf(object):
     def __init__(self, licence_path):

@@ -1,9 +1,8 @@
-from Aspose.Pdf import SaveFormat
-from Aspose.Pdf import MhtLoadOptions
-from Aspose.Pdf import Document
-import clr
-
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
+from Aspose.Pdf import (
+    SaveFormat,
+    MhtLoadOptions,
+    Document
+)
 
 class mht_to_pdf(object):
     def __init__(self, licence_path):

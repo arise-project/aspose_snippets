@@ -1,9 +1,6 @@
 from System.IO import File
 from Aspose.Pdf.Text import TextAbsorber
 from Aspose.Pdf import Document
-import clr
-
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
 
 class pdf_to_text(object):
     def __init__(self, licence_path):

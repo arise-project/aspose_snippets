@@ -1,9 +1,9 @@
-from Aspose.Pdf.EpubSaveOptions import RecognitionMode
-from Aspose.Pdf import EpubSaveOptions
-from Aspose.Pdf import Document
-import clr
+from Aspose.Pdf import (
+    EpubSaveOptions,
+    Document
+)
 
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
+from Aspose.Pdf.EpubSaveOptions import RecognitionMode
 
 class pdf_to_emf(object):
     def __init__(self, licence_path):

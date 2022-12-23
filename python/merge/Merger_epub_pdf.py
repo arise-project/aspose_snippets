@@ -1,11 +1,12 @@
-from Aspose.Pdf import SaveFormat
-from Aspose.Pdf.LoadOptions import MarginsAreaUsageModes
-from Aspose.Pdf.LoadOptions import PageSizeAdjustmentModes
-from Aspose.Pdf import EpubLoadOptions
-from Aspose.Pdf import Document
-import clr
-
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
+from Aspose.Pdf import (
+    SaveFormat,
+    EpubLoadOptions,
+    Document
+)
+from Aspose.Pdf.LoadOptions import (
+    MarginsAreaUsageModes,
+    PageSizeAdjustmentModes
+)
 
 class epub_to_pdf(object):
     def __init__(self, licence_path):
