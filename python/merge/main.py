@@ -1,11 +1,18 @@
-import example_get_started
+from Aspose.Pdf import (
+    License
+)
+
 
 def main():
+    set_license()
 
-    example = example_get_started.HelloWorld("<license_path>")
-    example.run_simple()
-    example.run_complex()
+def set_license():
+    """Sets license to fully work with Aspose.PDF"""
 
+    license_file = "../../test.lic"
+
+    license = License()
+    license.SetLicense(license_file)
 
 if __name__ == '__main__':
     main()
