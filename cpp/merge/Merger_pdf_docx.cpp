@@ -6,6 +6,8 @@
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
+#include "Aspose.PDF.Cpp/DocSaveOptions/DocFormat.h"
+#include "Aspose.PDF.Cpp/DocSaveOptions/RecognitionMode.h"
 #include "Aspose.PDF.Cpp/Devices/BmpDevice.h"
 #include "Aspose.PDF.Cpp/Devices/EmfDevice.h"
 #include "Aspose.PDF.Cpp/Devices/JpegDevice.h"
@@ -53,11 +55,11 @@ void pdf_to_docx()
         outputDoc->get_Pages()->Add(page);
     }
 
-    var opt1 = new com.aspose.pdf.DocSaveOptions();
+    var opt1 = MakeObject<DocSaveOptions>();
     // use docx format
-    opt1.setFormat(com.aspose.pdf.DocSaveOptions.DocFormat.DocX);
+    opt1->Format = DocFormat::DocX;
     // make document editable flow and recognize of tables
-    opt1.setMode(com.aspose.pdf.DocSaveOptions.RecognitionMode.EnhancedFlow);
+    opt1->Mode = RecognitionMode::EnhancedFlow;
 
     outputDoc->Save("test.docx", opt1);
 }

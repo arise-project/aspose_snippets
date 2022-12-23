@@ -55,11 +55,11 @@ void pdf_to_doc()
         outputDoc->get_Pages()->Add(page);
     }
 
-    var opt1 = new com.aspose.pdf.DocSaveOptions();
+    var opt1 = MakeObject<DocSaveOptions>();
     // use doc format
     opt1->Format = DocFormat::Doc;
     // This mode is fast and good for maximally preserving original look
     opt1->Mode = RecognitionMode::Textbox;
-    
+
     outputDoc->Save("test.doc", opt1);
 }

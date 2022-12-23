@@ -47,7 +47,7 @@ void epub_to_pdf()
     // usage of margins area during conversion
     opt2->MarginsAreaUsageMode = MarginsAreaUsageModes::PutContentOnMarginAreaIfNecessary;
 
-    com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2, opt2);
+    com.aspose.pdf.Document secondDoc =MakeObject<Document>(pathSource2, opt2);
 
     // create empty pdf document
     auto outputDoc = MakeObject<Document>();
