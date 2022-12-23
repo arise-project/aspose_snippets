@@ -5,6 +5,8 @@
 #include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
+#include "Aspose.PDF.Cpp/DocSaveOptions/DocFormat.h"
+#include "Aspose.PDF.Cpp/DocSaveOptions/RecognitionMode.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/Devices/BmpDevice.h"
 #include "Aspose.PDF.Cpp/Devices/EmfDevice.h"
@@ -55,8 +57,9 @@ void pdf_to_doc()
 
     var opt1 = new com.aspose.pdf.DocSaveOptions();
     // use doc format
-    opt1.setFormat(com.aspose.pdf.DocSaveOptions.DocFormat.Doc);
+    opt1->Format = DocFormat::Doc;
     // This mode is fast and good for maximally preserving original look
-    opt1.setMode(com.aspose.pdf.DocSaveOptions.RecognitionMode.Textbox);
+    opt1->Mode = RecognitionMode::Textbox;
+    
     outputDoc->Save("test.doc", opt1);
 }

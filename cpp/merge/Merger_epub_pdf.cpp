@@ -34,18 +34,18 @@ void epub_to_pdf()
 
     auto opt1 = MakeObject<EpubLoadOptions>();
     // use algorithm to prevent content to be truncated
-    opt1->PageSizeAdjustmentMode = EnlargeRequiredViewportWidthAndDoConversionAgain;
+    opt1->PageSizeAdjustmentMode = PageSizeAdjustmentModes::EnlargeRequiredViewportWidthAndDoConversionAgain;
     // usage of margins area during conversion
-    opt1->MarginsAreaUsageMode = PutContentOnMarginAreaIfNecessary;
+    opt1->MarginsAreaUsageMode = MarginsAreaUsageModes::PutContentOnMarginAreaIfNecessary;
 
     // epub files can be parsed and loaded as Aspose Document
     auto firstDoc = MakeObject<Document>(pathSource1, opt1);
 
     auto opt2 = MakeObject<EpubLoadOptions>();
     // use algorithm to prevent content to be truncated
-    opt2->PageSizeAdjustmentMode = EnlargeRequiredViewportWidthAndDoConversionAgain;
+    opt2->PageSizeAdjustmentMode = PageSizeAdjustmentModes::EnlargeRequiredViewportWidthAndDoConversionAgain;
     // usage of margins area during conversion
-    opt2->MarginsAreaUsageMode = PutContentOnMarginAreaIfNecessary;
+    opt2->MarginsAreaUsageMode = MarginsAreaUsageModes::PutContentOnMarginAreaIfNecessary;
 
     com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2, opt2);
 
