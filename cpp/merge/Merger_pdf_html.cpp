@@ -4,6 +4,10 @@
 #include "Aspose.PDF.Cpp/PdfLicense.h"
 #include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
+#include "Aspose.PDF.Cpp/HtmlSaveOptions.h"
+#include "Aspose.PDF.Cpp/HtmlSaveOptions/PartsEmbeddingModes.h"
+#include "Aspose.PDF.Cpp/HtmlSaveOptions/RasterImagesSavingModes.h"
+#include "Aspose.PDF.Cpp/HtmlSaveOptions/AntialiasingProcessingType.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/Devices/BmpDevice.h"
@@ -53,14 +57,14 @@ void pdf_to_html()
         outputDoc->get_Pages()->Add(page);
     }
 
-    var opt1 = new com.aspose.pdf.HtmlSaveOptions();
+    var opt1 = MakeObject<HtmlSaveOptions>();
     // embedd css into a page
-    opt1.setPartsEmbeddingMode(com.aspose.pdf.HtmlSaveOptions.PartsEmbeddingModes.EmbedAllIntoHtml);
+    opt1->PartsEmbeddingMode = PartsEmbeddingModes::EmbedAllIntoHtml;
     // embedd images into a page
-    opt1.setRasterImagesSavingMode(com.aspose.pdf.HtmlSaveOptions.RasterImagesSavingModes.AsEmbeddedPartsOfPngPageBackground);
+    opt1->RasterImagesSavingMode = RasterImagesSavingModes::AsEmbeddedPartsOfPngPageBackground;
     // enhance conversion of documents with backgrounds
-    opt1.setAntialiasingProcessing(com.aspose.pdf.HtmlSaveOptions.AntialiasingProcessingType.TryCorrectResultHtml);
+    opt1->AntialiasingProcessing = AntialiasingProcessingType::TryCorrectResultHtml;
     // use fixed layout render
-    opt1.setFixedLayout(true);
+    opt1->FixedLayout = true;
     outputDoc->Save("test.html", opt1);
 }

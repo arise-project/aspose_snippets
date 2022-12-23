@@ -4,6 +4,8 @@
 #include "Aspose.PDF.Cpp/PdfLicense.h"
 #include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
 #include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
+#include "Aspose.PDF.Cpp/EpubSaveOptions.h"
+#include "Aspose.PDF.Cpp/EpubSaveOptions/RecognitionMode.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/Devices/BmpDevice.h"
@@ -53,8 +55,8 @@ void pdf_to_epub()
         outputDoc->get_Pages()->Add(page);
     }
 
-    com.aspose.pdf.EpubSaveOptions opt1 = new com.aspose.pdf.EpubSaveOptions();
+    auto opt1 = MakeObject<EpubSaveOptions>();
     // keep the logical structure of transformed document
-    opt1.setContentRecognitionMode(com.aspose.pdf.EpubSaveOptions.RecognitionMode.PdfFlow);
+    opt1->ContentRecognitionMode = RecognitionMode::PdfFlow;
     outputDoc->Save("test.epub", opt1);
 }
