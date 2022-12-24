@@ -3,10 +3,7 @@ from aspose.pdf import (
     Document
 )
 
-from aspose.pdf.DocSaveOptions import (
-    RecognitionMode,
-    DocFormat
-)
+import aspose.pdf.DocSaveOptions as DocSaveOptions
 
 def pdf_to_doc(self):
     pathSource1 = "../../TestData/test.pdf"
@@ -32,9 +29,9 @@ def pdf_to_doc(self):
 
     opt1 = DocSaveOptions()
     # use doc format
-    opt1.Format = DocFormat.Doc,
+    opt1.Format = DocSaveOptions.DocFormat.Doc,
     # This mode is fast and good for maximally preserving original look
-    opt1.Mode = RecognitionMode.Textbox
+    opt1.Mode = DocSaveOptions.RecognitionMode.Textbox
 
     # save pdf to Microsoft Word doc format
     outputDoc.Save("test.doc", opt1)

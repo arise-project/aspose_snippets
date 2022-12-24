@@ -1,8 +1,4 @@
-from aspose.pdf.HtmlSaveOptions import (
-    AntialiasingProcessingType,
-    RasterImagesSavingModes,
-    PartsEmbeddingModes
-)
+import aspose.pdf.HtmlSaveOptions as HtmlSaveOptions
 
 from aspose.pdf import (
     HtmlSaveOptions,
@@ -33,11 +29,11 @@ def pdf_to_epub(self):
 
     opt1 = HtmlSaveOptions()
     # embedd css into a page
-    opt1.parts_embedding_mode = PartsEmbeddingModes.EMBED_ALL_INTO_HTML
+    opt1.parts_embedding_mode = HtmlSaveOptions.PartsEmbeddingModes.EMBED_ALL_INTO_HTML
     # embedd images into a page
-    opt1.raster_images_saving_mode = RasterImagesSavingModes.AS_EMBEDDED_PARTS_OF_PNG_PAGE_BACKGROUND
+    opt1.raster_images_saving_mode = HtmlSaveOptions.RasterImagesSavingModes.AS_EMBEDDED_PARTS_OF_PNG_PAGE_BACKGROUND
     # enhance conversion of documents with backgrounds
-    opt1.antialiasing_processing = AntialiasingProcessingType.TRY_CORRECT_RESULT_HTML
+    opt1.antialiasing_processing = HtmlSaveOptions.AntialiasingProcessingType.TRY_CORRECT_RESULT_HTML
     # use fixed layout render
     opt1.fixed_layout = True
 

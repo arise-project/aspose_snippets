@@ -1,10 +1,6 @@
 from aspose.pdf import Document
 
-from aspose.pdf.DocSaveOptions import (
-    RecognitionMode,
-    DocFormat,
-    DocSaveOptions
-)
+import aspose.pdf.DocSaveOptions as DocSaveOptions
 
 def pdf_to_docx(self):
     pathSource1 = "../../TestData/test.pdf"
@@ -30,9 +26,9 @@ def pdf_to_docx(self):
 
     opt1 = DocSaveOptions()
     # use docx format
-    opt1.Format = DocFormat.DOC_X,
+    opt1.Format = DocSaveOptions.DocFormat.DOC_X,
     # make document editable flow and recognize of tables
-    opt1.Mode = RecognitionMode.ENHANCED_FLOW
+    opt1.Mode = DocSaveOptions.RecognitionMode.ENHANCED_FLOW
 
     # save pdf to Microsoft Word docx format
     outputDoc.Save("test.docx", opt1)

@@ -3,7 +3,7 @@ from aspose.pdf import (
     Document
 )
 
-from aspose.pdf.EpubSaveOptions import RecognitionMode
+import aspose.pdf.EpubSaveOptions as EpubSaveOptions
 
 def pdf_to_emf(self):
     pathSource1 = "../../TestData/test.pdf"
@@ -29,7 +29,7 @@ def pdf_to_emf(self):
 
     opt1 = EpubSaveOptions()
     # keep the logical structure of transformed document
-    opt1.content_recognition_mode = RecognitionMode.PDF_FLOW
+    opt1.content_recognition_mode = EpubSaveOptions.RecognitionMode.PDF_FLOW
 
     # save pdf to epub
     outputDoc.Save("test.epub", opt1)

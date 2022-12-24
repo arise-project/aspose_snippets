@@ -15,7 +15,7 @@ def pdf_to_xps(self):
     outputDoc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.enable_object_unload = true
+    outputDoc.enable_object_unload = True
 
     for page in firstDoc.Pages:
         # add page from one document to another directly

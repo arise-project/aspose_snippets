@@ -1,5 +1,5 @@
 from System.IO import File
-from aspose.pdf.Text import TextAbsorber
+import aspose.pdf.Text import TextAbsorber
 from aspose.pdf import Document
 
 def pdf_to_text(self):

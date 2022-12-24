@@ -1,4 +1,4 @@
-from aspose.pdf.ExcelSaveOptions import ExcelFormat
+import aspose.pdf.ExcelSaveOptions as ExcelSaveOptions
 from aspose.pdf import (
     ExcelSaveOptions,
     Document
@@ -28,7 +28,7 @@ def pdf_to_xls(self):
 
     opt1 = ExcelSaveOptions()
     # set Microsoft document type
-    opt1.Format = ExcelFormat.XMLSpreadSheet2003
+    opt1.Format = ExcelSaveOptions.ExcelFormat.XMLSpreadSheet2003
 
     # save Excel document
     outputDoc.Save("test.xls", opt1)
