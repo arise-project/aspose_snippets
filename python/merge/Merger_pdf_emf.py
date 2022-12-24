@@ -1,9 +1,9 @@
-from Aspose.Pdf import (
+from aspose.pdf import (
     EpubSaveOptions,
     Document
 )
 
-from Aspose.Pdf.EpubSaveOptions import RecognitionMode
+from aspose.pdf.EpubSaveOptions import RecognitionMode
 
 def pdf_to_emf(self):
     pathSource1 = "../../TestData/test.pdf"

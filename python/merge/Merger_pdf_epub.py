@@ -1,10 +1,10 @@
-from Aspose.Pdf.HtmlSaveOptions import (
+from aspose.pdf.HtmlSaveOptions import (
     AntialiasingProcessingType,
     RasterImagesSavingModes,
     PartsEmbeddingModes
 )
 
-from Aspose.Pdf import (
+from aspose.pdf import (
     HtmlSaveOptions,
     Document
 )

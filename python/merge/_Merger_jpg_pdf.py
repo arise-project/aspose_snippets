@@ -1,8 +1,8 @@
 from Aspose.Imaging import Image
-from Aspose.Pdf import SaveFormat
-from Aspose.Pdf import Rectangle
-from Aspose.Pdf import PageSize
-from Aspose.Pdf import Document
+from aspose.pdf import SaveFormat
+from aspose.pdf import Rectangle
+from aspose.pdf import PageSize
+from aspose.pdf import Document
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")

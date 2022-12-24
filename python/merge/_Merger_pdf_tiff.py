@@ -4,9 +4,9 @@ from Aspose.Imaging.FileFormats.Tiff.Enums import TiffCompressions
 from Aspose.Imaging.FileFormats.Tiff.Enums import TiffExpectedFormat
 from Aspose.Imaging.ImageOptions import TiffOptions
 from Aspose.Imaging.Sources import FileCreateSource
-from Aspose.Pdf.Devices import JpegDevice
-from Aspose.Pdf.Devices import Resolution
-from Aspose.Pdf import Document
+from aspose.pdf.Devices import JpegDevice
+from aspose.pdf.Devices import Resolution
+from aspose.pdf import Document
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")

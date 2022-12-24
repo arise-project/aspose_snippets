@@ -6,9 +6,9 @@ from Aspose.Imaging import Source
 from Aspose.Imaging import RasterImage
 from Aspose.Imaging import Size
 from Aspose.Imaging import Image
-from Aspose.Pdf.Devices import BmpDevice
-from Aspose.Pdf.Devices import Resolution
-from Aspose.Pdf import Document
+from aspose.pdf.Devices import BmpDevice
+from aspose.pdf.Devices import Resolution
+from aspose.pdf import Document
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")

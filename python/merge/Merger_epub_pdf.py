@@ -1,10 +1,10 @@
-from Aspose.Pdf import (
+from aspose.pdf import (
     SaveFormat,
     EpubLoadOptions,
     Document
 )
 
-from Aspose.Pdf.LoadOptions import (
+from aspose.pdf.LoadOptions import (
     MarginsAreaUsageModes,
     PageSizeAdjustmentModes
 )

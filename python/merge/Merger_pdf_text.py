@@ -1,6 +1,6 @@
 from System.IO import File
-from Aspose.Pdf.Text import TextAbsorber
-from Aspose.Pdf import Document
+from aspose.pdf.Text import TextAbsorber
+from aspose.pdf import Document
 
 def pdf_to_text(self):
     pathSource1 = "../../TestData/test.pdf"

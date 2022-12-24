@@ -3,9 +3,9 @@ from System.IO import MemoryStream
 from Aspose.Imaging.ImageOptions import JpegOptions
 from Aspose.Imaging.Sources import FileCreateSource
 from Aspose.Imaging import Image
-from Aspose.Pdf import SaveFormat
-from Aspose.Pdf import PdfImage
-from Aspose.Pdf import Document
+from aspose.pdf import SaveFormat
+from aspose.pdf import PdfImage
+from aspose.pdf import Document
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")

@@ -1,6 +1,6 @@
-from Aspose.Pdf import Document
+from aspose.pdf import Document
 
-from Aspose.Pdf.DocSaveOptions import (
+from aspose.pdf.DocSaveOptions import (
     RecognitionMode,
     DocFormat,
     DocSaveOptions

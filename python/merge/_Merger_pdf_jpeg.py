@@ -1,6 +1,6 @@
-from Aspose.Pdf import ConvertErrorAction
-from Aspose.Pdf import PdfFormat
-from Aspose.Pdf import Document
+from aspose.pdf import ConvertErrorAction
+from aspose.pdf import PdfFormat
+from aspose.pdf import Document
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")

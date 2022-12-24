@@ -1,5 +1,5 @@
-from Aspose.Pdf.ExcelSaveOptions import ExcelFormat
-from Aspose.Pdf import (
+from aspose.pdf.ExcelSaveOptions import ExcelFormat
+from aspose.pdf import (
     ExcelSaveOptions,
     Document
 )

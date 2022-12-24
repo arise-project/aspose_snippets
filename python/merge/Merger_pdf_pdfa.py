@@ -1,4 +1,4 @@
-from Aspose.Pdf import (
+from aspose.pdf import (
     ConvertErrorAction,
     PdfFormat,
     Document

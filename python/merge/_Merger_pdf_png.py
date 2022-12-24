@@ -2,9 +2,9 @@ from Aspose.Imaging import Rectangle
 from Aspose.Imaging.ImageOptions import PngOptions
 from Aspose.Imaging.Sources import FileCreateSource
 from Aspose.Imaging import Image
-from Aspose.Pdf.Devices import PngDevice
-from Aspose.Pdf.Devices import Resolution
-from Aspose.Pdf import Document
+from aspose.pdf.Devices import PngDevice
+from aspose.pdf.Devices import Resolution
+from aspose.pdf import Document
 import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
