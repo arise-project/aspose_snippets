@@ -4,7 +4,7 @@ namespace aspose_snippets.net
     {
         public static void pdf_to_png()
         {
-            var pathSource = "../../TestData/test.pdf";
+            const string pathSource = "../../TestData/test.pdf";
 
             //read pdf file to Aspose Document
             var doc = new Aspose.Pdf.Document(pathSource);
@@ -20,8 +20,8 @@ namespace aspose_snippets.net
 
                 //create image device to save document as image with page dimensions and resolution
                 var imageDevice = new Aspose.Pdf.Devices.PngDevice(
-                    (int)doc.Pages[pageCount].PageInfo.Width, 
-                    (int)doc.Pages[pageCount].PageInfo.Height, 
+                    (int)doc.Pages[pageCount].PageInfo.Width,
+                    (int)doc.Pages[pageCount].PageInfo.Height,
                     resolution);
 
                 var outPath = "test_"+pageCount+".png";
@@ -40,14 +40,14 @@ namespace aspose_snippets.net
                 {
                     imageSizes.Add(image.Size);
                 }
-            }            
+            }
 
             int newWidth = imageSizes.Sum(size => size.Width);
             int newHeight = imageSizes.Max(size => size.Height);
 
             //use file system as source for save image
             Aspose.Imaging.Source fileSource = new Aspose.Imaging.Sources.FileCreateSource(
-                "./test.png", 
+                "./test.png",
                 isTemporal: false); //preserve image on the disk
 
             var options = new Aspose.Imaging.ImageOptions.PngOptions() { Source = fileSource };
@@ -58,16 +58,15 @@ namespace aspose_snippets.net
                 int stitchedWidth = 0;
                 foreach (string imagePath in images)
                 {
-                    
                     using (var image = (Aspose.Imaging.RasterImage)Aspose.Imaging.Image.Load(imagePath))
                     {
                         //create bounds to nsert small image into large
-                        Aspose.Imaging.Rectangle bounds = new Aspose.Imaging.Rectangle(
-                            stitchedWidth, 
-                            0, 
-                            image.Width, 
+                        var bounds = new Aspose.Imaging.Rectangle(
+                            stitchedWidth,
+                            0,
+                            image.Width,
                             image.Height);
-                        
+
                         //combining images into new one
                         newImage.SaveArgb32Pixels(
                             bounds, //where to insert image

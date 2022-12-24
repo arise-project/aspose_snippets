@@ -4,18 +4,19 @@ namespace aspose_snippets.net
 	{
         public static void eps_to_pdf()
         {
-            var pathSource1 = "../../TestData/test.eps";
-            var pathSource2 = "../../TestData/Second/test.eps";
+            const string pathSource1 = "../../TestData/test.eps";
+            const string pathSource2 = "../../TestData/Second/test.eps";
 
             //eps files can be parsed and loaded as Aspose Document
             var firstDoc = new Aspose.Pdf.Document(pathSource1, new Aspose.Pdf.PsLoadOptions());
             var secondDoc = new Aspose.Pdf.Document(pathSource2,  new Aspose.Pdf.PsLoadOptions());
 
             //create empty pdf document
-            var outputDoc = new Aspose.Pdf.Document();
-
-            //set less memory usage with unload instead of fast performance
-            outputDoc.EnableObjectUnload = true;
+            var outputDoc = new Aspose.Pdf.Document
+            {
+                //set less memory usage with unload instead of fast performance
+                EnableObjectUnload = true
+            };
 
             foreach (var page in firstDoc.Pages)
             {
@@ -32,5 +33,5 @@ namespace aspose_snippets.net
             //save result pdf to file
             outputDoc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
         }
-	}	
+	}
 }

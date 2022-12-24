@@ -9,7 +9,7 @@
         ///     The license path if is a file and located on disk.
         /// </summary>
         public static string LicensePath => "../../test.lic";
-        
+
 
         /// <summary>
         ///     Get the license stream.

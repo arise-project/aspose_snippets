@@ -1,8 +1,8 @@
 namespace aspose_snippets.net.merger
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             LicenseProvider.License();
             // + Merger.jpg_to_pdf();

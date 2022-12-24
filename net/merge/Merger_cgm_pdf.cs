@@ -4,20 +4,21 @@ namespace aspose_snippets.net
     {
         public static void cgm_to_pdf()
         {
-            var pathSource1 = "../../TestData/test.cgm";
-            var pathSource2 = "../../TestData/Second/test.cgm";
+            const string pathSource1 = "../../TestData/test.cgm";
+            const string pathSource2 = "../../TestData/Second/test.cgm";
 
             //cgm files can be parsed and loaded as Aspose Document
-            var firstDoc = new Aspose.Pdf.Document(pathSource1, 
+            var firstDoc = new Aspose.Pdf.Document(pathSource1,
                 new Aspose.Pdf.CgmLoadOptions());
-            var secondDoc = new Aspose.Pdf.Document(pathSource2, 
+            var secondDoc = new Aspose.Pdf.Document(pathSource2,
                 new Aspose.Pdf.CgmLoadOptions());
-            
-            //create empty pdf document
-            var outputDoc = new Aspose.Pdf.Document();
 
-            //set less memory usage with unload instead of fast performance
-            outputDoc.EnableObjectUnload = true;
+            //create empty pdf document
+            var outputDoc = new Aspose.Pdf.Document
+            {
+                //set less memory usage with unload instead of fast performance
+                EnableObjectUnload = true
+            };
 
             foreach (var page in firstDoc.Pages)
             {
@@ -30,7 +31,7 @@ namespace aspose_snippets.net
                 //add page from one document to another directly
                 outputDoc.Pages.Add(page);
             }
-            
+
             //save result pdf to file
             outputDoc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
         }

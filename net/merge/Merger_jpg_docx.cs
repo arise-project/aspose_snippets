@@ -4,8 +4,8 @@ namespace aspose_snippets.net
     {
         public static void jpg_to_docx()
         {
-            var pathSource1 = "../../TestData/test.jpg";
-            var pathSource2 = "../../TestData/Second/test.jpg";
+            const string pathSource1 = "../../TestData/test.jpg";
+            const string pathSource2 = "../../TestData/Second/test.jpg";
 
             //create empty pdf document
             using var doc = new Aspose.Pdf.Document();
@@ -14,10 +14,10 @@ namespace aspose_snippets.net
             doc.EnableObjectUnload = true;
 
             //make list of file streams with documents to merge
-            var streams = new List<Stream>() 
-            { 
-                File.Open(pathSource1, FileMode.Open), 
-                File.Open(pathSource2, FileMode.Open) 
+            var streams = new List<Stream>()
+            {
+                File.Open(pathSource1, FileMode.Open),
+                File.Open(pathSource2, FileMode.Open)
             };
 
             foreach (var fs in streams)
@@ -27,7 +27,7 @@ namespace aspose_snippets.net
 
                 //setup page size to be A4
                 page.SetPageSize(
-                    Aspose.Pdf.PageSize.A4.Width, 
+                    Aspose.Pdf.PageSize.A4.Width,
                     Aspose.Pdf.PageSize.A4.Height);
 
                 Aspose.Pdf.Rectangle rect;

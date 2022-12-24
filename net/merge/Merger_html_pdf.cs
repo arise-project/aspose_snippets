@@ -4,13 +4,13 @@ namespace aspose_snippets.net
     {
         public static void html_to_pdf()
         {
-            var pathSource1 = "../../TestData/test.html";
-            var pathSource2 = "../../TestData/Second/test.html";
+            const string pathSource1 = "../../TestData/test.html";
+            const string pathSource2 = "../../TestData/Second/test.html";
 
             //html files can be parsed and loaded as Aspose Document
             var firstDoc = new Aspose.Pdf.Document(pathSource1,
                 new Aspose.Pdf.HtmlLoadOptions
-                { 
+                {
                     //set html encodyng
                     InputEncoding = "UTF-8",
                     //render all html to single large pdf page
@@ -19,7 +19,7 @@ namespace aspose_snippets.net
 
             var secondDoc = new Aspose.Pdf.Document(pathSource2,
                 new Aspose.Pdf.HtmlLoadOptions
-                { 
+                {
                     //set html encodyng
                     InputEncoding = "UTF-8",
                     //split html content to pdf pages
@@ -27,10 +27,11 @@ namespace aspose_snippets.net
                 });
 
             //create empty pdf document
-            var outputDoc = new Aspose.Pdf.Document();
-
-            //set less memory usage with unload instead of fast performance
-            outputDoc.EnableObjectUnload = true;
+            var outputDoc = new Aspose.Pdf.Document
+            {
+                //set less memory usage with unload instead of fast performance
+                EnableObjectUnload = true
+            };
 
             foreach (var page in firstDoc.Pages)
             {

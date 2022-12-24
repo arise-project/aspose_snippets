@@ -4,19 +4,19 @@ namespace aspose_snippets.net
     {
         public static void bmp_to_pdf()
         {
-            var pathSource1 = "../../TestData/test.bmp";
-            var pathSource2 = "../../TestData/Second/test.bmp";
+            const string pathSource1 = "../../TestData/test.bmp";
+            const string pathSource2 = "../../TestData/Second/test.bmp";
 
             //create empty pdf document
             using var doc = new Aspose.Pdf.Document();
 
             Aspose.Pdf.Rectangle rect;
-            
+
             //make list of file streams with documents to merge with documents to merge
-            var streams = new List<Stream>() 
-            { 
-                File.Open(pathSource1, FileMode.Open), 
-                File.Open(pathSource2, FileMode.Open) 
+            var streams = new List<Stream>()
+            {
+                File.Open(pathSource1, FileMode.Open),
+                File.Open(pathSource2, FileMode.Open)
             };
 
             foreach (var fs in streams)
@@ -26,7 +26,7 @@ namespace aspose_snippets.net
 
                 //setup page size to be A4
                 page.SetPageSize(
-                    Aspose.Pdf.PageSize.A4.Width, 
+                    Aspose.Pdf.PageSize.A4.Width,
                     Aspose.Pdf.PageSize.A4.Height);
 
                 //load image from stream, it supports a lot of formats

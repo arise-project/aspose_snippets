@@ -1,8 +1,8 @@
 namespace aspose_snippets.net.watermark
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             LicenseProvider.License();
             //Watermark.add();

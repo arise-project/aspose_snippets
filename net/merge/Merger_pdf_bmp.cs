@@ -4,7 +4,7 @@ namespace aspose_snippets.net
     {
         public static void pdf_to_bmp()
         {
-            var pathSource = "../../TestData/test.pdf";
+            const string pathSource = "../../TestData/test.pdf";
 
             //read pdf file to Aspose Document
             var doc = new Aspose.Pdf.Document(pathSource);
@@ -20,8 +20,8 @@ namespace aspose_snippets.net
 
                 //create image device to save document as image with page dimensions and resolution
                 var imageDevice = new Aspose.Pdf.Devices.BmpDevice(
-                        (int)doc.Pages[pageCount].PageInfo.Width, 
-                        (int)doc.Pages[pageCount].PageInfo.Height, 
+                        (int)doc.Pages[pageCount].PageInfo.Width,
+                        (int)doc.Pages[pageCount].PageInfo.Height,
                         resolution);
 
                 var outPath = "test_"+pageCount+".bmp";
@@ -36,7 +36,7 @@ namespace aspose_snippets.net
             foreach(var path in images)
             {
                 //load image from file, it supports a lot of formats
-                using (Aspose.Imaging.RasterImage image = 
+                using (Aspose.Imaging.RasterImage image =
                             (Aspose.Imaging.RasterImage)Aspose.Imaging.Image.Load(path))
                 {
                     imageSizes.Add(image.Size);
@@ -48,18 +48,18 @@ namespace aspose_snippets.net
 
             //use file system as source for save image
             Aspose.Imaging.Source fileSource = new Aspose.Imaging.Sources.FileCreateSource(
-                "./test.bmp", 
+                "./test.bmp",
                 isTemporal: false); //preserve image on the disk
 
-            var options = new Aspose.Imaging.ImageOptions.BmpOptions() 
-                { 
-                    Source = fileSource 
+            var options = new Aspose.Imaging.ImageOptions.BmpOptions()
+                {
+                    Source = fileSource
                 };
 
             //create empty image with calculated witdh and hight
             using (var newImage = (Aspose.Imaging.FileFormats.Bmp.BmpImage)Aspose.Imaging.Image.Create(
-                options, 
-                newWidth, 
+                options,
+                newWidth,
                 newHeight))
             {
                 int stitchedWidth = 0;
@@ -69,10 +69,10 @@ namespace aspose_snippets.net
                     using (var image = (Aspose.Imaging.RasterImage)Aspose.Imaging.Image.Load(imagePath))
                     {
                         //create bounds to insert small image into large
-                        Aspose.Imaging.Rectangle bounds = new Aspose.Imaging.Rectangle(
-                            stitchedWidth, 
-                            0, 
-                            image.Width, 
+                        var bounds = new Aspose.Imaging.Rectangle(
+                            stitchedWidth,
+                            0,
+                            image.Width,
                             image.Height);
 
                         //combining images into new one

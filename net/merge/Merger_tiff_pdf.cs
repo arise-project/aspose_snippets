@@ -4,9 +4,9 @@ namespace aspose_snippets.net
     {
         public static void tiff_to_pdf()
         {
-            var pathSource1 = "../../TestData/test.tiff";
-            var pathSource2 = "../../TestData/Second/test.tiff";
-            
+            const string pathSource1 = "../../TestData/test.tiff";
+            const string pathSource2 = "../../TestData/Second/test.tiff";
+
             //Load tiff to Aspose image
             var multiImage1 = (Aspose.Imaging.FileFormats.Tiff.TiffImage)Aspose.Imaging.Image.Load(
                     File.Open(pathSource1, FileMode.Open));
@@ -59,9 +59,11 @@ namespace aspose_snippets.net
                     page.PageInfo.Height = tiffFrame.Height;
 
                     //create new image into document
-                    var image = new Aspose.Pdf.Image();
-                    //set image source to memeory stream
-                    image.ImageStream = ms;
+                    var image = new Aspose.Pdf.Image
+                    {
+                        //set image source to memeory stream
+                        ImageStream = ms
+                    };
 
                     //add document image to specific page
                     page.Paragraphs.Add(image);

@@ -8,9 +8,9 @@ namespace aspose_snippets.net
     {
         public static void TXT()
         {
-            var pathSource = "../../TestData/test.txt";
+            const string pathSource = "../../TestData/test.txt";
             var pdfEditor = new PdfFileEditor();
-            
+
             using (var doc = new Document(pathSource, new TxtLoadOptions()))
             {
                 //save input text to pdf to file

@@ -4,8 +4,8 @@ namespace aspose_snippets.net
     {
         public static void md_to_pdf()
         {
-            var pathSource1 = "../../TestData/test.md";
-            var pathSource2 = "../../TestData/Second/test.md";
+            const string pathSource1 = "../../TestData/test.md";
+            const string pathSource2 = "../../TestData/Second/test.md";
 
             //Markdown files can be parsed and loaded as Aspose Document
             var firstDoc = new Aspose.Pdf.Document(pathSource1,
@@ -14,10 +14,11 @@ namespace aspose_snippets.net
                 new Aspose.Pdf.MdLoadOptions());
 
             //create empty pdf document
-            var outputDoc = new Aspose.Pdf.Document();
-
-            //set less memory usage with unload instead of fast performance
-            outputDoc.EnableObjectUnload = true;
+            var outputDoc = new Aspose.Pdf.Document
+            {
+                //set less memory usage with unload instead of fast performance
+                EnableObjectUnload = true
+            };
 
             foreach (var page in firstDoc.Pages)
             {

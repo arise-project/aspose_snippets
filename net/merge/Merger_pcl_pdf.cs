@@ -4,23 +4,24 @@ namespace aspose_snippets.net
     {
         public static void pcl_to_pdf()
         {
-            var pathSource1 = "../../TestData/test.pcl";
-            var pathSource2 = "../../TestData/Second/test.pcl";
+            const string pathSource1 = "../../TestData/test.pcl";
+            const string pathSource2 = "../../TestData/Second/test.pcl";
 
             //pcl files can be parsed and loaded as Aspose Document
             var firstDoc = new Aspose.Pdf.Document(pathSource1,
                 //suspend not critical errors
                 new Aspose.Pdf.PclLoadOptions() { SupressErrors = true });
-                
+
             var secondDoc = new Aspose.Pdf.Document(pathSource2,
                 //suspend not critical errors
                 new Aspose.Pdf.PclLoadOptions()  { SupressErrors = true });
 
             //create empty pdf document
-            var outputDoc = new Aspose.Pdf.Document();
-
-            //set less memory usage with unload instead of fast performance
-            outputDoc.EnableObjectUnload = true;
+            var outputDoc = new Aspose.Pdf.Document
+            {
+                //set less memory usage with unload instead of fast performance
+                EnableObjectUnload = true
+            };
 
             foreach (var page in firstDoc.Pages)
             {

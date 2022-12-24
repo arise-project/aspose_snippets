@@ -4,7 +4,7 @@ namespace aspose_snippets.net
     {
         public static void remove()
         {
-            var pathSource = "../../TestData/test_with_watermark.pdf";
+            const string pathSource = "../../TestData/test_with_watermark.pdf";
             var doc = new Aspose.Pdf.Document(pathSource);
 
             if(doc.Pages[1].Artifacts[1].Subtype == Aspose.Pdf.Artifact.ArtifactSubtype.Watermark)
