@@ -24,7 +24,7 @@ class jpg_to_docx  (object):
         doc = Document
 
         # set less memory usage with unload instead of fast performance
-        doc.EnableObjectUnload = True
+        doc.enable_object_unload = True
 
         # make list of files with images to merge
         images = [pathSource1, pathSource2]
@@ -46,4 +46,4 @@ class jpg_to_docx  (object):
             # add image to new pdf page
             page.AddImage(fs, rect)
 
-        doc.Save("test.docx", SaveFormat.DocX)
+        doc.Save("test.docx", SaveFormat.DOC_X)

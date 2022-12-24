@@ -10,21 +10,21 @@ def pcl_to_pdf(self):
 
     # suspend not critical errors
     opt1 = PclLoadOptions()
-    opt1.SupressErrors = True
+    opt1.supress_errors = True
 
     # pcl files can be parsed and loaded as Aspose Document
     firstDoc = Document(pathSource1, opt1)
 
     # suspend not critical errors
     opt2 = PclLoadOptions
-    opt2.SupressErrors = True
+    opt2.supress_errors = True
     secondDoc = Document(pathSource2, opt2)
 
     # create empty pdf document
     outputDoc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.EnableObjectUnload = True
+    outputDoc.enable_object_unload = True
 
     for page in firstDoc.Pages:
         # add page from one document to another directly

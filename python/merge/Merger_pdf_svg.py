@@ -15,7 +15,7 @@ def pdf_to_svg(self):
     outputDoc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.EnableObjectUnload = True
+    outputDoc.enable_object_unload = True
 
     for page in firstDoc.Pages:
         # add page from one document to another directly
@@ -27,7 +27,7 @@ def pdf_to_svg(self):
 
     opt1 = SvgSaveOptions()
     # scale the output document from typographic points to pixels
-    opt1.ScaleToPixels = True
+    opt1.scale_to_pixels = True
 
     # save pdf to svg
     outputDoc.Save("test.svg", opt1)

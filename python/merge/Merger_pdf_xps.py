@@ -15,7 +15,7 @@ def pdf_to_xps(self):
     outputDoc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.EnableObjectUnload = true
+    outputDoc.enable_object_unload = true
 
     for page in firstDoc.Pages:
         # add page from one document to another directly
@@ -27,7 +27,7 @@ def pdf_to_xps(self):
 
     opt1 = XpsSaveOptions()
     # do not save transparent text to output file
-    opt1.SaveTransparentTexts = False
+    opt1.save_transparent_texts = False
 
     # save xps document
     outputDoc.Save("test.xps", opt1)

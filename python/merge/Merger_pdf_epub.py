@@ -21,7 +21,7 @@ def pdf_to_epub(self):
     outputDoc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.EnableObjectUnload = True
+    outputDoc.enable_object_unload = True
 
     for page in firstDoc.Pages:
         # add page from one document to another directly
@@ -33,13 +33,13 @@ def pdf_to_epub(self):
 
     opt1 = HtmlSaveOptions()
     # embedd css into a page
-    opt1.PartsEmbeddingMode = PartsEmbeddingModes.EmbedAllIntoHtml
+    opt1.parts_embedding_mode = PartsEmbeddingModes.EMBED_ALL_INTO_HTML
     # embedd images into a page
-    opt1.RasterImagesSavingMode = RasterImagesSavingModes.AsEmbeddedPartsOfPngPageBackground
+    opt1.raster_images_saving_mode = RasterImagesSavingModes.AS_EMBEDDED_PARTS_OF_PNG_PAGE_BACKGROUND
     # enhance conversion of documents with backgrounds
-    opt1.AntialiasingProcessing = AntialiasingProcessingType.TryCorrectResultHtml
+    opt1.antialiasing_processing = AntialiasingProcessingType.TRY_CORRECT_RESULT_HTML
     # use fixed layout render
-    opt1.FixedLayout = True
+    opt1.fixed_layout = True
 
     # save pdf to html page
     outputDoc.Save("test.html", opt1)

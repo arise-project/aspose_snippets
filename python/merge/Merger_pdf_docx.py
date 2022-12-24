@@ -18,7 +18,7 @@ def pdf_to_docx(self):
     outputDoc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.EnableObjectUnload = True
+    outputDoc.enable_object_unload = True
 
     for page in firstDoc.Pages:
         # add page from one document to another directly
@@ -30,9 +30,9 @@ def pdf_to_docx(self):
 
     opt1 = DocSaveOptions()
     # use docx format
-    opt1.Format = DocFormat.DocX,
+    opt1.Format = DocFormat.DOC_X,
     # make document editable flow and recognize of tables
-    opt1.Mode = RecognitionMode.EnhancedFlow
+    opt1.Mode = RecognitionMode.ENHANCED_FLOW
 
     # save pdf to Microsoft Word docx format
     outputDoc.Save("test.docx", opt1)

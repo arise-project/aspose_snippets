@@ -61,17 +61,17 @@ class tiff_to_pdf(object):
                 # add new page to document
                 page = outputDoc.Pages.Add()
 
-                page.PageInfo.Margin.Bottom = 0
-                page.PageInfo.Margin.Top = 0
-                page.PageInfo.Margin.Left = 0
-                page.PageInfo.Margin.Right = 0
-                page.PageInfo.Width = tiffFrame.Width
-                page.PageInfo.Height = tiffFrame.Height
+                page.page_info.Margin.Bottom = 0
+                page.page_info.Margin.Top = 0
+                page.page_info.Margin.Left = 0
+                page.page_info.Margin.Right = 0
+                page.page_info.Width = tiffFrame.Width
+                page.page_info.Height = tiffFrame.Height
 
                 # create new image into document
                 image = PdfImage
                 # set image source to memeory stream
-                image.ImageStream = FileStream(index.toString() + "temp.tiff")
+                image.image_stream = FileStream(index.toString() + "temp.tiff")
 
                 # add document image to specific page
                 page.Paragraphs.Add(image)

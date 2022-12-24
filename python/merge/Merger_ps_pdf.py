@@ -16,7 +16,7 @@ def ps_to_pdf(self):
     outputDoc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.EnableObjectUnload = True
+    outputDoc.enable_object_unload = True
 
     for page in firstDoc.Pages:
         # add page from one document to another directly

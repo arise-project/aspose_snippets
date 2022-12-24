@@ -13,7 +13,7 @@ def pdf_to_pptx(self):
 
     outputDoc = Document()
     # set less memory usage with unload instead of fast performance
-    outputDoc.EnableObjectUnload = True
+    outputDoc.enable_object_unload = True
 
     for page in firstDoc.Pages:
         # add page from one document to another directly
@@ -25,7 +25,7 @@ def pdf_to_pptx(self):
 
     opt1 = PptxSaveOptions()
     # save all content on page as single image
-    opt1.SlidesAsImages = True
+    opt1.slides_as_images = True
 
     # save pdf to Microsoft PowerPoint
     outputDoc.Save("test.pptx", opt1)

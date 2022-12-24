@@ -15,25 +15,25 @@ def epub_to_pdf(self):
 
     opt1 = EpubLoadOptions()
     # use algorithm to prevent content to be truncated
-    opt1.PageSizeAdjustmentMode = PageSizeAdjustmentModes.EnlargeRequiredViewportWidthAndDoConversionAgain
+    opt1.page_size_adjustment_mode = PageSizeAdjustmentModes.ENLARGE_REQUIRED_VIEWPORT_WIDTH_AND_DO_CONVERSION_AGAIN
     # usage of margins area during conversion
-    opt1.MarginsAreaUsageMode = MarginsAreaUsageModes.PutContentOnMarginAreaIfNecessary
+    opt1.margins_area_usage_mode = MarginsAreaUsageModes.PUT_CONTENT_ON_MARGIN_AREA_IF_NECESSARY
 
     # epub files can be parsed and loaded as Aspose Document
     firstDoc = Document(pathSource1, opt1)
 
     opt2 = EpubLoadOptions()
     # use algorithm to prevent content to be truncated
-    opt1.PageSizeAdjustmentMode = PageSizeAdjustmentModes.EnlargeRequiredViewportWidthAndDoConversionAgain
+    opt1.page_size_adjustment_mode = PageSizeAdjustmentModes.ENLARGE_REQUIRED_VIEWPORT_WIDTH_AND_DO_CONVERSION_AGAIN
     # usage of margins area during conversion
-    opt1.MarginsAreaUsageMode = MarginsAreaUsageModes.PutContentOnMarginAreaIfNecessary
+    opt1.margins_area_usage_mode = MarginsAreaUsageModes.PUT_CONTENT_ON_MARGIN_AREA_IF_NECESSARY
     secondDoc = Document(pathSource2, opt2)
 
     # create empty pdf document
     outputDoc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.EnableObjectUnload = True
+    outputDoc.enable_object_unload = True
 
     for page in firstDoc.Pages:
         # add page from one document to another directly

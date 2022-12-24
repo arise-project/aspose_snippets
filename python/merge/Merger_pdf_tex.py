@@ -15,7 +15,7 @@ def pdf_to_tex(self):
     outputDoc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.EnableObjectUnload = True
+    outputDoc.enable_object_unload = True
 
     for page in firstDoc.Pages:
         # add page from one document to another directly
@@ -27,7 +27,7 @@ def pdf_to_tex(self):
 
     opt1 = TeXSaveOptions()
     # save parsed artifacts, for example images to a directory
-    opt1.OutDirectoryPath = "./test"
+    opt1.out_directory_path = "./test"
 
     # save pdf to TeX document
     outputDoc.Save("test.tex", opt1)

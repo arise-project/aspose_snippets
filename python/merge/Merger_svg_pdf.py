@@ -10,14 +10,14 @@ def svg_to_pdf(self):
 
     opt1 = SvgLoadOptions()
     # Adust pdf page size to svg size
-    opt1.AdjustPageSize = True
+    opt1.adjust_page_size = True
 
     # SVG files can be parsed and loaded as Aspose Document
     firstDoc = Document(pathSource1, opt1)
 
     opt2 = SvgLoadOptions()
     # Use default pdf page size
-    opt2.AdjustPageSize = False
+    opt2.adjust_page_size = False
 
     secondDoc = Document(pathSource2, opt2)
 
@@ -25,7 +25,7 @@ def svg_to_pdf(self):
     outputDoc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.EnableObjectUnload = True
+    outputDoc.enable_object_unload = True
 
     for page in firstDoc.Pages:
         # add page from one document to another directly
