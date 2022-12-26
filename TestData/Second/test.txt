@@ -516,7 +516,7 @@ f1shy 17 hours ago | prev | next [–]
 In my current employer "architect" are people that do (exclusively) drawing. The preferred tool is IBM Rhapsody. Once somebody suggested to use PlantUML, he was directly laugh at his face; and they explained how much better Rhapsody is. To be fair, they had some good points...
 But once I suggested they should do some back and forth with the people actually writing code... they told me "I cannot understand code, and it is all right so. I do not need to. I'm the architect, not the carpenter"
 
-Another time I asked the chief architect --we were working in an embedded system-- "I have to program this function, what is my RAM, ROM and CPU budget for it?" His reply shocked me: "I'm architect here, I do not care about that little things, I do only the architecture, look here" and he proceeded to show me lots of boxes connected with lines. Then he added "that here is what is important, the real architecture is here".
+Another time I asked the chief architect --we were working in an embeded system-- "I have to program this function, what is my RAM, ROM and CPU budget for it?" His reply shocked me: "I'm architect here, I do not care about that little things, I do only the architecture, look here" and he proceeded to show me lots of boxes connected with lines. Then he added "that here is what is important, the real architecture is here".
 
 Needless to say, those projects failed miserably, with no hope for recovery...
 

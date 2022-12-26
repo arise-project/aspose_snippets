@@ -26,10 +26,10 @@ public class Merger_pdf_html {
         }
 
         var opt1 = new com.aspose.pdf.HtmlSaveOptions();
-        //embedd css into a page
-        opt1.setPartsEmbeddingMode(com.aspose.pdf.HtmlSaveOptions.PartsEmbeddingModes.EmbedAllIntoHtml);
-        //embedd images into a page
-        opt1.setRasterImagesSavingMode(com.aspose.pdf.HtmlSaveOptions.RasterImagesSavingModes.AsEmbeddedPartsOfPngPageBackground);
+        //embed css into a page
+        opt1.setPartsembedingMode(com.aspose.pdf.HtmlSaveOptions.PartsembedingModes.EmbedAllIntoHtml);
+        //embed images into a page
+        opt1.setRasterImagesSavingMode(com.aspose.pdf.HtmlSaveOptions.RasterImagesSavingModes.AsembededPartsOfPngPageBackground);
         //enhance conversion of documents with backgrounds
         opt1.setAntialiasingProcessing(com.aspose.pdf.HtmlSaveOptions.AntialiasingProcessingType.TryCorrectResultHtml);
         //use fixed layout render

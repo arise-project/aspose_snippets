@@ -1,6 +1,6 @@
 from Aspose.Pdf.HtmlSaveOptions import AntialiasingProcessingType
 from Aspose.Pdf.HtmlSaveOptions import RasterImagesSavingModes
-from Aspose.Pdf.HtmlSaveOptions import PartsEmbeddingModes
+from Aspose.Pdf.HtmlSaveOptions import PartsembedingModes
 from Aspose.Pdf import HtmlSaveOptions
 from Aspose.Pdf import Document
 import clr
@@ -38,10 +38,10 @@ class pdf_to_epub(object):
             outputDoc.Pages.Add(page)
 
         opt1 = HtmlSaveOptions
-        # embedd css into a page
-        opt1.PartsEmbeddingMode = PartsEmbeddingModes.EmbedAllIntoHtml
-        # embedd images into a page
-        opt1.RasterImagesSavingMode = RasterImagesSavingModes.AsEmbeddedPartsOfPngPageBackground
+        # embed css into a page
+        opt1.PartsembedingMode = PartsembedingModes.EmbedAllIntoHtml
+        # embed images into a page
+        opt1.RasterImagesSavingMode = RasterImagesSavingModes.AsembededPartsOfPngPageBackground
         # enhance conversion of documents with backgrounds
         opt1.AntialiasingProcessing = AntialiasingProcessingType.TryCorrectResultHtml
         # use fixed layout render

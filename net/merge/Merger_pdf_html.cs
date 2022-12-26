@@ -34,10 +34,10 @@ namespace aspose_snippets.net
             outputDoc.Save("test.html",
                             new Aspose.Pdf.HtmlSaveOptions
                             {
-                                //embedd css into a page
-                                PartsEmbeddingMode = Aspose.Pdf.HtmlSaveOptions.PartsEmbeddingModes.EmbedAllIntoHtml,
-                                //embedd images into a page
-                                RasterImagesSavingMode = Aspose.Pdf.HtmlSaveOptions.RasterImagesSavingModes.AsEmbeddedPartsOfPngPageBackground,
+                                //embed css into a page
+                                PartsembedingMode = Aspose.Pdf.HtmlSaveOptions.PartsembedingModes.EmbedAllIntoHtml,
+                                //embed images into a page
+                                RasterImagesSavingMode = Aspose.Pdf.HtmlSaveOptions.RasterImagesSavingModes.AsembededPartsOfPngPageBackground,
                                 //enhance conversion of documents with backgrounds
                                 AntialiasingProcessing = Aspose.Pdf.HtmlSaveOptions.AntialiasingProcessingType.TryCorrectResultHtml,
                                 //use fixed layout render

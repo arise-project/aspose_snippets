@@ -3,8 +3,6 @@ from aspose.pdf import (
     Document
 )
 
-import aspose.pdf.EpubSaveOptions as EpubSaveOptions
-
 
 def pdf_to_emf():
     path_source1 = "../../TestData/test.pdf"

@@ -28,5 +28,4 @@ def pdf_to_pdfa():
         output_doc.pages.add(page)
 
     # save document as specific pdf standard PDFA 3Y
-    # delete objects that impossible to convert
-    output_doc.Convert("test.pdf", PdfFormat.PDF_A_3U, ConvertErrorAction.Delete)
+    output_doc.convert("test.pdf", PdfFormat.PDF_A_3U)

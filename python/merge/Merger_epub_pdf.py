@@ -1,10 +1,9 @@
 from aspose.pdf import (
     SaveFormat,
     EpubLoadOptions,
+    LoadOptions,
     Document
 )
-
-import aspose.pdf.LoadOptions as LoadOptions
 
 
 def epub_to_pdf():
@@ -14,7 +13,7 @@ def epub_to_pdf():
     opt1 = EpubLoadOptions()
     # use algorithm to prevent content to be truncated
     opt1.page_size_adjustment_mode = \
-        LoadOptions.pagesizeAdjustmentModes.ENLARGE_REQUIRED_VIEWPORT_WIDTH_AND_DO_CONVERSION_AGAIN
+        LoadOptions.PageSizeAdjustmentModes.ENLARGE_REQUIRED_VIEWPORT_WIDTH_AND_DO_CONVERSION_AGAIN
     # usage of margins area during conversion
     opt1.margins_area_usage_mode = \
         LoadOptions.MarginsAreaUsageModes.PUT_CONTENT_ON_MARGIN_AREA_IF_NECESSARY
@@ -25,7 +24,7 @@ def epub_to_pdf():
     opt2 = EpubLoadOptions
     # use algorithm to prevent content to be truncated
     opt1.page_size_adjustment_mode = \
-        LoadOptions.pagesizeAdjustmentModes.ENLARGE_REQUIRED_VIEWPORT_WIDTH_AND_DO_CONVERSION_AGAIN
+        LoadOptions.PageSizeAdjustmentModes.ENLARGE_REQUIRED_VIEWPORT_WIDTH_AND_DO_CONVERSION_AGAIN
     # usage of margins area during conversion
     opt1.margins_area_usage_mode = \
         LoadOptions.MarginsAreaUsageModes.PUT_CONTENT_ON_MARGIN_AREA_IF_NECESSARY
@@ -46,4 +45,4 @@ def epub_to_pdf():
         output_doc.pages.add(page)
 
     # save result pdf to file
-    output_doc.save("test.pdf", SaveFormat.Pdf)
+    output_doc.save("test.pdf", SaveFormat.PDF)

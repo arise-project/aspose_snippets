@@ -34,10 +34,10 @@ void pdf_to_html()
     }
 
     var opt1 = MakeObject<HtmlSaveOptions>();
-    // embedd css into a page
-    opt1->PartsEmbeddingMode = PartsEmbeddingModes::EmbedAllIntoHtml;
-    // embedd images into a page
-    opt1->RasterImagesSavingMode = RasterImagesSavingModes::AsEmbeddedPartsOfPngPageBackground;
+    // embed css into a page
+    opt1->PartsembedingMode = PartsembedingModes::EmbedAllIntoHtml;
+    // embed images into a page
+    opt1->RasterImagesSavingMode = RasterImagesSavingModes::AsembededPartsOfPngPageBackground;
     // enhance conversion of documents with backgrounds
     opt1->AntialiasingProcessing = AntialiasingProcessingType::TryCorrectResultHtml;
     // use fixed layout render

@@ -34,5 +34,5 @@ def bmp_to_pdf():
         page.addImage(fs, rect)
 
     # save result pdf to file
-    doc.save("test.pdf", SaveFormat.Pdf)
+    doc.save("test.pdf", SaveFormat.PDF)
 

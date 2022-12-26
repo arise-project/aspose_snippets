@@ -4,7 +4,6 @@ from aspose.pdf import (
     Document
 )
 
-
 def tex_to_pdf():
     path_source1 = "../../TestData/test.tex"
     path_source2 = "../../TestData/Second/test.tex"
@@ -44,4 +43,4 @@ def tex_to_pdf():
         output_doc.pages.add(page)
 
     # save result pdf to file
-    output_doc.save("test.pdf", SaveFormat.Pdf)
+    output_doc.save("test.pdf", SaveFormat.PDF)
