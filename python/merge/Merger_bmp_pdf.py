@@ -13,7 +13,7 @@ def bmp_to_pdf():
     path_source2 = "../../TestData/Second/test.bmp"
 
     # create empty pdf document
-    doc = Document
+    doc = Document()
 
     # make list of files with images to merge
     images = [path_source1, path_source2]

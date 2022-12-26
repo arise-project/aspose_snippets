@@ -1,5 +1,4 @@
 from aspose.pdf import (
-    ConvertErrorAction,
     PdfFormat,
     Document
 )

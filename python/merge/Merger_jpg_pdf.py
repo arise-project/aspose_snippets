@@ -13,7 +13,7 @@ def jpg_to_pdf():
     path_source2 = "../../../../TestData/Second/test.jpg"
 
     # create empty pdf document
-    doc = Document
+    doc = Document()
 
     # set less memory usage with unload instead of fast performance
     doc.enable_object_unload = True
@@ -37,4 +37,4 @@ def jpg_to_pdf():
         page.addImage(fs, rect)
 
     # save result pdf to file
-    doc.save("test.pdf", SaveFormat.Pdf)
+    doc.save("test.pdf", SaveFormat.PDF)

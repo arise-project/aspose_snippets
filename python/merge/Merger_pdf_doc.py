@@ -13,7 +13,7 @@ def pdf_to_doc():
     second_doc = Document(path_source2)
 
     # create empty pdf document
-    output_doc = Document
+    output_doc = Document()
 
     # set less memory usage with unload instead of fast performance
     output_doc.enable_object_unload = True

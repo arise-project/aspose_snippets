@@ -1,6 +1,7 @@
-from aspose.pdf import Document
-
-import aspose.pdf.DocSaveOptions as DocSaveOptions
+from aspose.pdf import (
+    DocSaveOptions,
+    Document
+)
 
 
 def pdf_to_docx():

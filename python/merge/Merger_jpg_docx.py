@@ -13,7 +13,7 @@ def jpg_to_docx():
     path_source2 = "../../TestData/Second/test.jpg"
 
     # create empty pdf document
-    doc = Document
+    doc = Document()
 
     # set less memory usage with unload instead of fast performance
     doc.enable_object_unload = True
