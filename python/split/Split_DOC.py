@@ -2,7 +2,7 @@ import clr
 
 aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
 
-from Aspose.Pdf import Document
+from aspose.pdf import Document
 
 class DOC(object):
     def __init__(self,licence_path):
