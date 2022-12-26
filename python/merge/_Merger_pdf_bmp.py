@@ -1,13 +1,10 @@
-from Aspose.Imaging.FileFormats.Bmp import BmpImage
 from Aspose.Imaging.ImageOptions import BmpOptions
 from Aspose.Imaging.Sources import FileCreateSource
 from Aspose.Imaging import Rectangle
-from Aspose.Imaging import Source
-from Aspose.Imaging import RasterImage
-from Aspose.Imaging import Size
 from Aspose.Imaging import Image
-from aspose.pdf.Devices import BmpDevice
-from aspose.pdf.Devices import Resolution
+
+from aspose.pdf.devices import BmpDevice
+from aspose.pdf.devices import Resolution
 from aspose.pdf import Document
 import clr
 
@@ -23,10 +20,10 @@ class pdf_to_bmp(object):
             self.aspose_license.SetLicense(self.licence_path)
 
     def exec():
-        pathSource = "../../TestData/test.pdf"
+        path_source = "../../TestData/test.pdf"
 
         # read pdf file to Aspose Document
-        doc = Document(pathSource)
+        doc = Document(path_source)
 
         # make list of path to temporary images
         images = []
@@ -37,14 +34,14 @@ class pdf_to_bmp(object):
             resolution = Resolution(72)
 
             # create image device to save document as image with page dimensions and resolution
-            imageDevice = BmpDevice(
+            image_device = BmpDevice(
                 doc.pages[pageCount].PageInfo.width, doc.pages[pageCount].PageInfo.height, resolution)
 
-            outPath = "test_"+pageCount+".bmp"
+            out_path = "test_"+pageCount+".bmp"
 
             # process document page to image
-            imageDevice.Process(doc.pages[pageCount], outPath)
-            images.add(outPath)
+            image_device.Process(doc.pages[pageCount], out_path)
+            images.add(out_path)
 
         # make list pf parsed image sizes
         imageSizes = []
