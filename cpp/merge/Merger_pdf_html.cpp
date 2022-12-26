@@ -1,17 +1,6 @@
-#include <iostream>
-
-#include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
-#include "Aspose.PDF.Cpp/HtmlSaveOptions.h"
-#include "Aspose.PDF.Cpp/HtmlSaveOptions/PartsEmbeddingModes.h"
-#include "Aspose.PDF.Cpp/HtmlSaveOptions/RasterImagesSavingModes.h"
-#include "Aspose.PDF.Cpp/HtmlSaveOptions/AntialiasingProcessingType.h"
-#include "Aspose.PDF.Cpp/Page.h"
-#include "Aspose.PDF.Cpp/PageCollection.h"
-#include "Aspose.PDF.Cpp/SaveFormat.h"
-
-#include "system/string.h"
-
+#include "Aspose.PDF.Cpp\Document.h"
+#include "Aspose.PDF.Cpp\Page.h"
+#include "Aspose.PDF.Cpp\HtmlSaveOptions.h"
 using namespace System;
 using namespace Aspose::Pdf;
 

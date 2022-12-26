@@ -1,15 +1,6 @@
-#include <iostream>
-
-#include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
-#include "Aspose.PDF.Cpp/Page.h"
-#include "Aspose.PDF.Cpp/PageCollection.h"
-#include "Aspose.PDF.Cpp/DocSaveOptions/DocFormat.h"
-#include "Aspose.PDF.Cpp/DocSaveOptions/RecognitionMode.h"
-#include "Aspose.PDF.Cpp/SaveFormat.h"
-
-#include "system/string.h"
-
+#include "Aspose.PDF.Cpp\Document.h"
+#include "Aspose.PDF.Cpp\Page.h"
+#include "Aspose.PDF.Cpp\DocSaveOptions.h"
 using namespace System;
 using namespace Aspose::Pdf;
 

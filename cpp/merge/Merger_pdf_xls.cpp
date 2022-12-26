@@ -1,16 +1,6 @@
-#include <iostream>
-
-#include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
-#include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
-#include "Aspose.PDF.Cpp/Page.h"
-#include "Aspose.PDF.Cpp/PageCollection.h"
-#include "Aspose.PDF.Cpp/ExcelSaveOptions.h"
-#include "Aspose.PDF.Cpp/SaveFormat.h"
-#include "Aspose.PDF.Cpp/ExcelSaveOptions/ExcelFormat.h"
-
-#include "system/string.h"
-
+#include "Aspose.PDF.Cpp\Document.h"
+#include "Aspose.PDF.Cpp\Page.h"
+#include "Aspose.PDF.Cpp\ExcelSaveOptions.h"
 using namespace System;
 using namespace Aspose::Pdf;
 
