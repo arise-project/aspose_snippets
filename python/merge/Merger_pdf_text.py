@@ -1,6 +1,6 @@
-from System.IO import File
-import aspose.pdf.Text import TextAbsorber
-from aspose.pdf import Document
+from aspose.pdf import (
+    Document
+)
 
 
 def pdf_to_text():
@@ -26,9 +26,10 @@ def pdf_to_text():
         output_doc.pages.add(page)
 
     # create text absorber for extract text
-    textAbsorber = TextAbsorber()
-    output_doc.pages.Accept(textAbsorber)
-    extractedText = textAbsorber.Text
+    text_absorber = aspose.pdf.text.TextAbsorber()
+    output_doc.pages.Accept(text_absorber)
+    extracted_text = text_absorber.Text
 
     # save content to text file
-    File.WriteAllText("test.txt", extractedText)
+    with open("test.txt", "w") as f:
+        f.write(extracted_text)
