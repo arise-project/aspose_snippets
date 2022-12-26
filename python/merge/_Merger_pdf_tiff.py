@@ -1,67 +1,42 @@
-from Aspose.Imaging import Image
-from Aspose.Imaging.FileFormats.Tiff.Enums import TiffPhotometrics
-from Aspose.Imaging.FileFormats.Tiff.Enums import TiffCompressions
-from Aspose.Imaging.FileFormats.Tiff.Enums import TiffExpectedFormat
-from Aspose.Imaging.ImageOptions import TiffOptions
-from Aspose.Imaging.Sources import FileCreateSource
-from aspose.pdf.Devices import JpegDevice
-from aspose.pdf.Devices import Resolution
-from aspose.pdf import Document
-import clr
+from aspose.pdf import (
+    Document
+)
 
-aspose_pdf = clr.addReference("../../lib/Aspose.PDF.dll")
-aspose_imaging = clr.addReference("../../lib/Aspose.Imaging.dll")
+from PIL import Image
+import tifffile
+import numpy
 
-class pdf_to_tiff(object):
-    def __init__(self, licence_path):
-        self.dataDir = "../../TestData"
-        if licence_path:
-            self.licence_path = licence_path
-            self.aspose_license = License()
-            self.aspose_license.SetLicense(self.licence_path)
 
-    def exec():
-        path_source1 = "../../TestData/test.pdf"
+def pdf_to_tiff():
+    path_source1 = "../../TestData/test.pdf"
 
-        # read pdf file to Aspose Document
-        doc = Document(path_source1)
+    # read pdf file to Aspose Document
+    doc = Document(path_source1)
 
-        # make list of Aspose images
-        images = []
+    # make list of Aspose images
 
-        # pdf document count pages from 1 to n
-        for pageCount in range(1, doc.pages.Length):
-            # setup default resolution to pdf documents 72dpi
-            resolution = Resolution(72)
+    frames = []  # Empty list of frames
+    first_size = None  # I am going to say that the first file is the right size
 
-            # create image device to save document as image with page dimensions and resolution
-            imageDevice = JpegDevice(
-                doc.pages[pageCount].PageInfo.width, doc.pages[pageCount].PageInfo.height, resolution)
+    # pdf document count pages from 1 to n
+    for pageCount in range(1, doc.pages.Length):
+        # setup default resolution to pdf documents 72dpi
+        resolution = aspose.pdf.devices.Resolution(72)
 
-            outPath = "test_" + pageCount + ".jpg"
+        # create image device to save document as image with page dimensions and resolution
+        image_device = aspose.pdf.devices.JpegDevice(
+            doc.pages[pageCount].PageInfo.width, doc.pages[pageCount].PageInfo.height, resolution)
 
-            # process document page to image
-            imageDevice.process(doc.pages[pageCount], outPath)
+        out_path = "test_" + str(pageCount) + ".jpg"
 
-            # load image from file, it supports a lot of formats
-            images[pageCount - 1] = Image.load(outPath)
+        # process document page to image
+        image_device.process(doc.pages[pageCount], out_path)
 
-        # use file system as source for save image
-        # preserve image on the disk
-        fileSource = FileCreateSource("./test.tiff", False)
+        img = Image.open(out_path)  # Read the image
+        if first_size is None:  # Don't have a size
+            first_size = img.size  # So use this one
+        frames.append(img)  # Add it to our frames list
 
-        # The default tiff format is no compression with B/W 1 bit per pixel only format.
-        # You can also use this setting to get an empty options and initialize with your tags or other settings.
-        createOptions = TiffOptions(TiffExpectedFormat.Default)
-
-        # type of image compression Lzw
-        createOptions.SetCompression(TiffCompressions.Lzw)
-        # Pits per pixel
-        createOptions.SetBitsPerSample([8, 8, 8])
-        # Photometric RGB interpolation
-        createOptions.SetPhotometric(TiffPhotometrics.Rgb)
-        createOptions.Source = fileSource
-
-        tiffImage = Image.create(images, True)
-        # save tiff file
-        tiffImage.save("test.tiff", createOptions)
+    with tifffile.TiffWriter("test.tiff") as tiff:
+        for img in frames:
+            tiff.write(numpy.array(img.getdata(), numpy.uint8).reshape(img.size[1], img.size[0], 3))
