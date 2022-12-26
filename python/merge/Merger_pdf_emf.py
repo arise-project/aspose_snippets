@@ -5,6 +5,7 @@ from aspose.pdf import (
 
 import aspose.pdf.EpubSaveOptions as EpubSaveOptions
 
+
 def pdf_to_emf(self):
     pathSource1 = "../../TestData/test.pdf"
     pathSource2 = "../../TestData/Second/test.pdf"

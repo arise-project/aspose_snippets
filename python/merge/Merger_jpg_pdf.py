@@ -8,14 +8,15 @@ from aspose.pdf import (
 from PIL import Image
 
 
-def bmp_to_pdf(self):
-    pathSource1 = "../../TestData/test.bmp"
-    pathSource2 = "../../TestData/Second/test.bmp"
+def jpg_to_pdf(self):
+    pathSource1 = "../../../../TestData/test.jpg"
+    pathSource2 = "../../../../TestData/Second/test.jpg"
 
     # create empty pdf document
     doc = Document
 
-    rect = Rectangle
+    # set less memory usage with unload instead of fast performance
+    doc.enable_object_unload = True
 
     # make list of files with images to merge
     images = [pathSource1, pathSource2]
@@ -25,7 +26,9 @@ def bmp_to_pdf(self):
         page = doc.Pages.Add()
 
         # setup page size to be A4
-        page.SetPageSize(PageSize.A4.Width, PageSize.A4.Height)
+        page.setPageSize(PageSize.A4.Width, PageSize.A4.Height)
+
+        rect = Rectangle
 
         # load image from stream, it supports a lot of formats
         image = Image.open(fs)

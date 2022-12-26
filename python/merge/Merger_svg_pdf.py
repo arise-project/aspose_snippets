@@ -4,6 +4,7 @@ from aspose.pdf import (
     Document
 )
 
+
 def svg_to_pdf(self):
     pathSource1 = "../../TestData/test.svg"
     pathSource2 = "../../TestData/Second/test.svg"

@@ -2,6 +2,7 @@ from aspose.pdf import Document
 
 import aspose.pdf.DocSaveOptions as DocSaveOptions
 
+
 def pdf_to_docx(self):
     pathSource1 = "../../TestData/test.pdf"
     pathSource2 = "../../TestData/Second/test.pdf"

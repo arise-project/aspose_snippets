@@ -4,6 +4,7 @@ from aspose.pdf import (
     Document
 )
 
+
 def html_to_pdf(self):
     pathSource1 = "../../TestData/test.html"
     pathSource2 = "../../TestData/Second/test.html"

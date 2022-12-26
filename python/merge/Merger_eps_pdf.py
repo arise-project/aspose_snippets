@@ -4,6 +4,7 @@ from aspose.pdf import (
     Document
 )
 
+
 def eps_to_pdf(self):
     pathSource1 = "../../TestData/test.eps"
     pathSource2 = "../../TestData/Second/test.eps"

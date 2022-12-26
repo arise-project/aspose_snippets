@@ -4,6 +4,7 @@ from aspose.pdf import (
     Document
 )
 
+
 def xps_to_pdf(self):
     pathSource1 = "../../TestData/test.xps"
     pathSource2 = "../../TestData/Second/test.xps"

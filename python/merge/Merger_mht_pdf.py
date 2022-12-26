@@ -4,6 +4,7 @@ from aspose.pdf import (
     Document
 )
 
+
 def mht_to_pdf(self):
     pathSource1 = "../../TestData/test.mht"
     pathSource2 = "../../TestData/Second/test.mht"

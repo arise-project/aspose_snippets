@@ -4,6 +4,7 @@ from aspose.pdf import (
     Document
 )
 
+
 def cgm_to_pdf():
     pathSource1 = "../../TestData/test.cgm"
     pathSource2 = "../../TestData/Second/test.cgm"

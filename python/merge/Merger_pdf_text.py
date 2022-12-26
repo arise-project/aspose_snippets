@@ -2,6 +2,7 @@ from System.IO import File
 import aspose.pdf.Text import TextAbsorber
 from aspose.pdf import Document
 
+
 def pdf_to_text(self):
     pathSource1 = "../../TestData/test.pdf"
     pathSource2 = "../../TestData/Second/test.pdf"
