@@ -6,26 +6,26 @@ from aspose.pdf import (
 
 
 def cgm_to_pdf():
-    pathSource1 = "../../TestData/test.cgm"
-    pathSource2 = "../../TestData/Second/test.cgm"
+    path_source1 = "../../TestData/test.cgm"
+    path_source2 = "../../TestData/Second/test.cgm"
 
     # /cgm files can be parsed and loaded as Aspose Document
-    firstDoc = Document(pathSource1, CgmLoadOptions)
-    secondDoc = Document(pathSource2, CgmLoadOptions)
+    first_doc = Document(path_source1, CgmLoadOptions)
+    second_doc = Document(path_source2, CgmLoadOptions)
 
-     # create empty pdf document
-    outputDoc = Document()
+    # create empty pdf document
+    output_doc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.enable_object_unload = True
+    output_doc.enable_object_unload = True
 
-    for page in firstDoc.Pages:
+    for page in first_doc.pages:
         # add page from one document to another directly
-        outputDoc.Pages.Add(page)
+        output_doc.pages.add(page)
 
-    for page in secondDoc.Pages:
+    for page in second_doc.pages:
         # add page from one document to another directly
-        outputDoc.Pages.Add(page)
+        output_doc.pages.add(page)
 
     # save result pdf to file
-    outputDoc.Save("test.pdf", SaveFormat.Pdf)
+    output_doc.save("test.pdf", SaveFormat.Pdf)

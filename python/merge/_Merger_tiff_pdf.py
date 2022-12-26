@@ -8,8 +8,8 @@ from aspose.pdf import PdfImage
 from aspose.pdf import Document
 import clr
 
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
-aspose_imaging = clr.AddReference("../../lib/Aspose.Imaging.dll")
+aspose_pdf = clr.addReference("../../lib/Aspose.PDF.dll")
+aspose_imaging = clr.addReference("../../lib/Aspose.Imaging.dll")
 
 class tiff_to_pdf(object):
     def __init__(self, licence_path):
@@ -20,18 +20,18 @@ class tiff_to_pdf(object):
             self.aspose_license.SetLicense(self.licence_path)
 
     def exec(self):
-        pathSource1 = "../../TestData/test.tiff"
-        pathSource2 = "../../TestData/Second/test.tiff"
+        path_source1 = "../../TestData/test.tiff"
+        path_source2 = "../../TestData/Second/test.tiff"
 
         # Load tiff to Aspose image
-        multiImage1 = Image.Load(pathSource1)
-        multiImage2 = Image.Load(pathSource2)
+        multiImage1 = Image.Load(path_source1)
+        multiImage2 = Image.Load(path_source2)
 
         # make list of tiff images to merge
         images = [multiImage1, multiImage2]
 
         # create empty pdf document
-        outputDoc = Document
+        output_doc = Document
 
         index = 1
         for multiImage in images:
@@ -52,21 +52,21 @@ class tiff_to_pdf(object):
 
                 # create empty image with width and hight
                 tiffImage = Image.Create(
-                    createOptions, tiffFrame.Width, tiffFrame.Height)
+                    createOptions, tiffFrame.width, tiffFrame.height)
                 # set frame bounds to save to bitmap
-                tiffImage.SavePixels(tiffFrame.Bounds, pixels)
+                tiffImage.savePixels(tiffFrame.Bounds, pixels)
                 # save frame bitmap to stream
-                tiffImage.Save()
+                tiffImage.save()
 
                 # add new page to document
-                page = outputDoc.Pages.Add()
+                page = output_doc.pages.add()
 
                 page.page_info.Margin.Bottom = 0
                 page.page_info.Margin.Top = 0
                 page.page_info.Margin.Left = 0
                 page.page_info.Margin.Right = 0
-                page.page_info.Width = tiffFrame.Width
-                page.page_info.Height = tiffFrame.Height
+                page.page_info.width = tiffFrame.width
+                page.page_info.height = tiffFrame.height
 
                 # create new image into document
                 image = PdfImage
@@ -74,7 +74,7 @@ class tiff_to_pdf(object):
                 image.image_stream = FileStream(index.toString() + "temp.tiff")
 
                 # add document image to specific page
-                page.Paragraphs.Add(image)
+                page.Paragraphs.add(image)
 
         # save result pdf to file
-        outputDoc.Save("test.pdf", SaveFormat.Pdf)
+        output_doc.save("test.pdf", SaveFormat.Pdf)

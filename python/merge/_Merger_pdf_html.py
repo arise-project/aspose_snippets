@@ -7,8 +7,8 @@ from aspose.pdf.Devices import Resolution
 from aspose.pdf import Document
 import clr
 
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
-aspose_imaging = clr.AddReference("../../lib/Aspose.Imaging.dll")
+aspose_pdf = clr.addReference("../../lib/Aspose.PDF.dll")
+aspose_imaging = clr.addReference("../../lib/Aspose.Imaging.dll")
 
 class pdf_to_html(object):
     def __init__(self, licence_path):
@@ -28,32 +28,32 @@ class pdf_to_html(object):
         images = []
 
         # pages in pdf counted from 1 to n
-        for pageCount in range(1, doc.Pages.Count):
+        for pageCount in range(1, doc.pages.Count):
             # setup default resolution to pdf documents 72dpi
             resolution = Resolution(72)
 
             # create image device to save document as image with page dimensions and resolution
             imageDevice = JpegDevice(
-                doc.Pages[pageCount].PageInfo.Width, doc.Pages[pageCount].PageInfo.Height, resolution)
+                doc.pages[pageCount].PageInfo.width, doc.pages[pageCount].PageInfo.height, resolution)
             outPath = "test_"+pageCount+".jpg"
 
             # process document page to image
-            imageDevice.Process(doc.Pages[pageCount], outPath)
-            images.Add(outPath)
+            imageDevice.Process(doc.pages[pageCount], outPath)
+            images.add(outPath)
 
         # make list pf parsed image sizes
         imageSizes = []
         for path in images:
             # load image from file, it supports a lot of formats
             image = Image.Load(path)
-            imageSizes.Add(image.Size)
+            imageSizes.add(image.Size)
 
         newWidth = 0
         newHeight = 0
         for s in imageSizes:
-            newWidth += s.Width
-            if newHeight < s.Height:
-                newHeight = s.Height
+            newWidth += s.width
+            if newHeight < s.height:
+                newHeight = s.height
             else:
                 newHeight = newHeight
 
@@ -71,15 +71,15 @@ class pdf_to_html(object):
         for imagePath in images:
             image = Image.Load(imagePath)
             # create bounds to insert small image into large
-            bounds = Rectangle(stitchedWidth, 0, image.Width, image.Height)
+            bounds = Rectangle(stitchedWidth, 0, image.width, image.height)
 
             # combining images into new one
             # bounds = where to insert image
             # LoadArgb32Pixels = convert image chunk to 32bit Argb
-            newImage.SaveArgb32Pixels(
+            newImage.saveArgb32Pixels(
                 bounds, image.LoadArgb32Pixels(image.Bounds))
 
-            stitchedWidth += image.Width
+            stitchedWidth += image.width
 
         # save created image to disk
-        newImage.Save()
+        newImage.save()

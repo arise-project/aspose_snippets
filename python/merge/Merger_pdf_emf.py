@@ -7,30 +7,30 @@ import aspose.pdf.EpubSaveOptions as EpubSaveOptions
 
 
 def pdf_to_emf(self):
-    pathSource1 = "../../TestData/test.pdf"
-    pathSource2 = "../../TestData/Second/test.pdf"
+    path_source1 = "../../TestData/test.pdf"
+    path_source2 = "../../TestData/Second/test.pdf"
 
     # read pdf file to Aspose Document
-    firstDoc = Document(pathSource1)
-    secondDoc = Document(pathSource2)
+    first_doc = Document(path_source1)
+    second_doc = Document(path_source2)
 
     # create empty pdf document
-    outputDoc = Document()
+    output_doc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.enable_object_unload = True
+    output_doc.enable_object_unload = True
 
-    for page in firstDoc.Pages:
+    for page in first_doc.pages:
         # add page from one document to another directly
-        outputDoc.Pages.Add(page)
+        output_doc.pages.add(page)
 
-    for page in secondDoc.Pages:
+    for page in second_doc.pages:
         # add page from one document to another directly
-        outputDoc.Pages.Add(page)
+        output_doc.pages.add(page)
 
     opt1 = EpubSaveOptions()
     # keep the logical structure of transformed document
     opt1.content_recognition_mode = EpubSaveOptions.RecognitionMode.PDF_FLOW
 
     # save pdf to epub
-    outputDoc.Save("test.epub", opt1)
+    output_doc.save("test.epub", opt1)

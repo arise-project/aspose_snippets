@@ -3,7 +3,7 @@ from aspose.pdf import PdfFormat
 from aspose.pdf import Document
 import clr
 
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
+aspose_pdf = clr.addReference("../../lib/Aspose.PDF.dll")
 
 class pdf_to_jpeg(object):
     def __init__(self, licence_path):
@@ -14,28 +14,28 @@ class pdf_to_jpeg(object):
             self.aspose_license.SetLicense(self.licence_path)
 
     def exec(self):
-        pathSource1 = "../../TestData/test.pdf"
-        pathSource2 = "../../TestData/Second/test.pdf"
+        path_source1 = "../../TestData/test.pdf"
+        path_source2 = "../../TestData/Second/test.pdf"
 
         # read pdf file to Aspose Document
-        firstDoc = Document(pathSource1)
-        secondDoc = Document(pathSource2)
+        first_doc = Document(path_source1)
+        second_doc = Document(path_source2)
 
         # create empty pdf document
-        outputDoc = Document
+        output_doc = Document
 
         # set less memory usage with unload instead of fast performance
-        outputDoc.enable_object_unload = True
+        output_doc.enable_object_unload = True
 
-        for page in firstDoc.Pages:
+        for page in first_doc.pages:
             # add page from one document to another directly
-            outputDoc.Pages.Add(page)
+            output_doc.pages.add(page)
 
-        for page in secondDoc.Pages:
+        for page in second_doc.pages:
             # add page from one document to another directly
-            outputDoc.Pages.Add(page)
+            output_doc.pages.add(page)
 
         # save document as specific pdf standard PDFA 3Y
         # delete objects that impossible to convert
-        outputDoc.Convert("test.pdf", PdfFormat.PDF_A_3U,
+        output_doc.Convert("test.pdf", PdfFormat.PDF_A_3U,
                           ConvertErrorAction.Delete)

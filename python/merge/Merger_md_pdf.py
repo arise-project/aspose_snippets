@@ -6,26 +6,26 @@ from aspose.pdf import (
 
 
 def md_to_pdf(self):
-    pathSource1 = "../../TestData/test.md"
-    pathSource2 = "../../TestData/Second/test.md"
+    path_source1 = "../../TestData/test.md"
+    path_source2 = "../../TestData/Second/test.md"
 
     # Markdown files can be parsed and loaded as Aspose Document
-    firstDoc = Document(pathSource1, MdLoadOptions)
-    secondDoc = Document(pathSource2, MdLoadOptions)
+    first_doc = Document(path_source1, MdLoadOptions)
+    second_doc = Document(path_source2, MdLoadOptions)
 
     # create empty pdf document
-    outputDoc = Document()
+    output_doc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.enable_object_unload = True
+    output_doc.enable_object_unload = True
 
-    for page in firstDoc.Pages:
+    for page in first_doc.pages:
         # add page from one document to another directly
-        outputDoc.Pages.Add(page)
+        output_doc.pages.add(page)
 
-    for page in secondDoc.Pages:
+    for page in second_doc.pages:
         # add page from one document to another directly
-        outputDoc.Pages.Add(page)
+        output_doc.pages.add(page)
 
         # save result pdf to file
-        outputDoc.Save("test.pdf", SaveFormat.Pdf)
+        output_doc.save("test.pdf", SaveFormat.Pdf)

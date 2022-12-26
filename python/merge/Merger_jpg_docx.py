@@ -9,8 +9,8 @@ from PIL import Image
 
 
 def jpg_to_docx(self):
-    pathSource1 = "../../TestData/test.jpg"
-    pathSource2 = "../../TestData/Second/test.jpg"
+    path_source1 = "../../TestData/test.jpg"
+    path_source2 = "../../TestData/Second/test.jpg"
 
     # create empty pdf document
     doc = Document
@@ -19,23 +19,23 @@ def jpg_to_docx(self):
     doc.enable_object_unload = True
 
     # make list of files with images to merge
-    images = [pathSource1, pathSource2]
+    images = [path_source1, path_source2]
 
     for fs in images:
         # add new page to pdf
-        page = doc.Pages.Add()
+        page = doc.pages.add()
 
         # setup page size to be A4
-        page.SetPageSize(PageSize.A4.Width, PageSize.A4.Height)
+        page.SetPageSize(PageSize.a4.width, PageSize.a4.height)
 
         rect = Rectangle
 
         # load image from stream, it supports a lot of formats
         image = Image.open(fs)
         # read image dimensions to pdf page rectangle
-        image.rect = Rectangle(0, 0, image.Width - 1, image.Heigh - 1)
+        image.rect = Rectangle(0, 0, image.width - 1, image.Heigh - 1)
 
         # add image to new pdf page
-        page.AddImage(fs, rect)
+        page.addImage(fs, rect)
 
-    doc.Save("test.docx", SaveFormat.DOC_X)
+    doc.save("test.docx", SaveFormat.DOC_X)

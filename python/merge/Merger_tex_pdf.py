@@ -6,8 +6,8 @@ from aspose.pdf import (
 
 
 def tex_to_pdf(self):
-    pathSource1 = "../../TestData/test.tex"
-    pathSource2 = "../../TestData/Second/test.tex"
+    path_source1 = "../../TestData/test.tex"
+    path_source2 = "../../TestData/Second/test.tex"
 
     opt1 = TeXLoadOptions()
     # Cancels ligatures in all fonts
@@ -18,7 +18,7 @@ def tex_to_pdf(self):
     opt1.show_terminal_output = True
 
     # TeX files can be parsed and loaded as Aspose Document
-    firstDoc = Document(pathSource1, opt1)
+    first_doc = Document(path_source1, opt1)
 
     opt1 = TeXLoadOptions()
     # Set ligatures in all fonts
@@ -28,20 +28,20 @@ def tex_to_pdf(self):
     # Print parsing steps details to console output
     opt1.show_terminal_output = True
 
-    secondDoc = Document(pathSource2, opt1)
+    second_doc = Document(path_source2, opt1)
 
-    outputDoc = Document()
+    output_doc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.enable_object_unload = True
+    output_doc.enable_object_unload = True
 
-    for page in firstDoc.Pages:
+    for page in first_doc.pages:
         # add page from one document to another directly
-        outputDoc.Pages.Add(page)
+        output_doc.pages.add(page)
 
-    for page in secondDoc.Pages:
+    for page in second_doc.pages:
         # add page from one document to another directly
-        outputDoc.Pages.Add(page)
+        output_doc.pages.add(page)
 
     # save result pdf to file
-    outputDoc.Save("test.pdf", SaveFormat.Pdf)
+    output_doc.save("test.pdf", SaveFormat.Pdf)

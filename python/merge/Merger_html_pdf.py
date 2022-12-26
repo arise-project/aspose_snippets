@@ -6,8 +6,8 @@ from aspose.pdf import (
 
 
 def html_to_pdf(self):
-    pathSource1 = "../../TestData/test.html"
-    pathSource2 = "../../TestData/Second/test.html"
+    path_source1 = "../../TestData/test.html"
+    path_source2 = "../../TestData/Second/test.html"
 
     opt1 = HtmlLoadOptions()
     # set html encodyng
@@ -16,7 +16,7 @@ def html_to_pdf(self):
     opt1.is_render_to_single_page = True
 
     # html files can be parsed and loaded as Aspose Document
-    firstDoc = Document(pathSource1, opt1)
+    first_doc = Document(path_source1, opt1)
 
     opt2 = HtmlLoadOptions()
     # set html encodyng
@@ -24,21 +24,21 @@ def html_to_pdf(self):
     # split html content to pdf pages
     opt2.is_render_to_single_page = False
 
-    secondDoc = Document(pathSource2, opt2)
+    second_doc = Document(path_source2, opt2)
 
     # create empty pdf document
-    outputDoc = Document()
+    output_doc = Document()
 
     # set less memory usage with unload instead of fast performance
-    outputDoc.enable_object_unload = True
+    output_doc.enable_object_unload = True
 
-    for page in firstDoc.Pages:
+    for page in first_doc.pages:
         # add page from one document to another directly
-        outputDoc.Pages.Add(page)
+        output_doc.pages.add(page)
 
-    for page in secondDoc.Pages:
+    for page in second_doc.pages:
         # add page from one document to another directly
-        outputDoc.Pages.Add(page)
+        output_doc.pages.add(page)
 
     # save result pdf to file
-    outputDoc.Save("test.pdf", SaveFormat.Pdf)
+    output_doc.save("test.pdf", SaveFormat.Pdf)

@@ -9,8 +9,8 @@ from aspose.pdf.Devices import Resolution
 from aspose.pdf import Document
 import clr
 
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
-aspose_imaging = clr.AddReference("../../lib/Aspose.Imaging.dll")
+aspose_pdf = clr.addReference("../../lib/Aspose.PDF.dll")
+aspose_imaging = clr.addReference("../../lib/Aspose.Imaging.dll")
 
 class pdf_to_tiff(object):
     def __init__(self, licence_path):
@@ -21,27 +21,27 @@ class pdf_to_tiff(object):
             self.aspose_license.SetLicense(self.licence_path)
 
     def exec(self):
-        pathSource1 = "../../TestData/test.pdf"
+        path_source1 = "../../TestData/test.pdf"
 
         # read pdf file to Aspose Document
-        doc = Document(pathSource1)
+        doc = Document(path_source1)
 
         # make list of Aspose images
         images = []
 
         # pdf document count pages from 1 to n
-        for pageCount in range(1, doc.Pages.Length):
+        for pageCount in range(1, doc.pages.Length):
             # setup default resolution to pdf documents 72dpi
             resolution = Resolution(72)
 
             # create image device to save document as image with page dimensions and resolution
             imageDevice = JpegDevice(
-                doc.Pages[pageCount].PageInfo.Width, doc.Pages[pageCount].PageInfo.Height, resolution)
+                doc.pages[pageCount].PageInfo.width, doc.pages[pageCount].PageInfo.height, resolution)
 
             outPath = "test_" + pageCount + ".jpg"
 
             # process document page to image
-            imageDevice.process(doc.Pages[pageCount], outPath)
+            imageDevice.process(doc.pages[pageCount], outPath)
 
             # load image from file, it supports a lot of formats
             images[pageCount - 1] = Image.load(outPath)
@@ -64,4 +64,4 @@ class pdf_to_tiff(object):
 
         tiffImage = Image.create(images, True)
         # save tiff file
-        tiffImage.Save("test.tiff", createOptions)
+        tiffImage.save("test.tiff", createOptions)
