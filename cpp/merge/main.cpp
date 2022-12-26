@@ -1,3 +1,6 @@
+#include "Aspose.PDF.Cpp\PdfLicense.h"
+#include "Aspose.PDF.Cpp\PdfLicense.h"
+#include "Aspose.PDF.Cpp\PdfLicense.h"
 #include <iostream>
 
 #include "Aspose.PDF.Cpp/PdfLicense.h"

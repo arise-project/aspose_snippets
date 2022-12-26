@@ -1,16 +1,9 @@
-#include <iostream>
-
-#include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
-#include "Aspose.PDF.Cpp/Page.h"
-#include "Aspose.PDF.Cpp/PageCollection.h"
-#include "Aspose.PDF.Cpp/EpubLoadOptions.h"
-#include "Aspose.PDF.Cpp/LoadOptions/PageSizeAdjustmentModes.h"
-#include "Aspose.PDF.Cpp/LoadOptions/MarginsAreaUsageModes.h"
-#include "Aspose.PDF.Cpp/SaveFormat.h"
-
-#include "system/string.h"
-
+#include "Aspose.PDF.Cpp\EpubLoadOptions.h"
+#include "Aspose.PDF.Cpp\Facades\Algorithm.h"
+#include "Aspose.PDF.Cpp\Devices\Margins.h"
+#include "Aspose.PDF.Cpp\Document.h"
+#include "Aspose.PDF.Cpp\Page.h"
+#include "Aspose.PDF.Cpp\SaveFormat.h"
 using namespace System;
 using namespace Aspose::Pdf;
 
