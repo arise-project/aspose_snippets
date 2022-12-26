@@ -12,6 +12,6 @@ class PDF(object):
             self.aspose_license = License()
             self.aspose_license.SetLicense(self.licence_path)
 
-    def exec(self):
+    def exec():
 
         

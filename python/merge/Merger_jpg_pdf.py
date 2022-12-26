@@ -8,7 +8,7 @@ from aspose.pdf import (
 from PIL import Image
 
 
-def jpg_to_pdf(self):
+def jpg_to_pdf():
     path_source1 = "../../../../TestData/test.jpg"
     path_source2 = "../../../../TestData/Second/test.jpg"
 
@@ -27,8 +27,6 @@ def jpg_to_pdf(self):
 
         # setup page size to be A4
         page.setPageSize(PageSize.a4.width, PageSize.a4.height)
-
-        rect = Rectangle
 
         # load image from stream, it supports a lot of formats
         image = Image.open(fs)

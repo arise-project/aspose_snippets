@@ -3,7 +3,7 @@ import aspose.pdf.Text import TextAbsorber
 from aspose.pdf import Document
 
 
-def pdf_to_text(self):
+def pdf_to_text():
     path_source1 = "../../TestData/test.pdf"
     path_source2 = "../../TestData/Second/test.pdf"
 

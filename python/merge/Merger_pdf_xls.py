@@ -5,7 +5,7 @@ from aspose.pdf import (
 )
 
 
-def pdf_to_xls(self):
+def pdf_to_xls():
     path_source1 = "../../TestData/test.pdf"
     path_source2 = "../../TestData/Second/test.pdf"
 

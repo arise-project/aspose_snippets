@@ -13,7 +13,7 @@ class pdf_to_jpeg(object):
             self.aspose_license = License()
             self.aspose_license.SetLicense(self.licence_path)
 
-    def exec(self):
+    def exec():
         path_source1 = "../../TestData/test.pdf"
         path_source2 = "../../TestData/Second/test.pdf"
 

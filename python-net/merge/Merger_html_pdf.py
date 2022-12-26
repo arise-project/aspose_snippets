@@ -18,7 +18,7 @@ class html_to_pdf(object):
         pathSource2 = "../../TestData/Second/test.html"
 
         opt1 = HtmlLoadOptions
-        # set html encodyng
+        # set html encoding
         opt1.InputEncoding = "UTF-8",
         # render all html to single large pdf page
         opt1.IsRenderToSinglePage = True
@@ -27,7 +27,7 @@ class html_to_pdf(object):
         firstDoc = Document(pathSource1, opt1)
 
         opt2 = HtmlLoadOptions
-        # set html encodyng
+        # set html encoding
         opt2.InputEncoding = "UTF-8",
         # split html content to pdf pages
         opt2.IsRenderToSinglePage = False

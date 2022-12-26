@@ -8,7 +8,7 @@ from aspose.pdf import (
 from PIL import Image
 
 
-def jpg_to_docx(self):
+def jpg_to_docx():
     path_source1 = "../../TestData/test.jpg"
     path_source2 = "../../TestData/Second/test.jpg"
 
@@ -28,12 +28,10 @@ def jpg_to_docx(self):
         # setup page size to be A4
         page.SetPageSize(PageSize.a4.width, PageSize.a4.height)
 
-        rect = Rectangle
-
         # load image from stream, it supports a lot of formats
         image = Image.open(fs)
         # read image dimensions to pdf page rectangle
-        image.rect = Rectangle(0, 0, image.width - 1, image.Heigh - 1)
+        rect = Rectangle(0, 0, image.width - 1, image.height - 1)
 
         # add image to new pdf page
         page.addImage(fs, rect)

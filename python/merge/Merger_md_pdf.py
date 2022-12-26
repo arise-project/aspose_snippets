@@ -5,7 +5,7 @@ from aspose.pdf import (
 )
 
 
-def md_to_pdf(self):
+def md_to_pdf():
     path_source1 = "../../TestData/test.md"
     path_source2 = "../../TestData/Second/test.md"
 

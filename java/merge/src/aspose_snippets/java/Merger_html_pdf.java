@@ -7,7 +7,7 @@ public class Merger_html_pdf {
 
         com.aspose.pdf.HtmlLoadOptions opt1 = new com.aspose.pdf.HtmlLoadOptions();
 
-        //set html encodyng
+        //set html encoding
         opt1.setInputEncoding("UTF-8");
         //render all html to single large pdf page
         opt1.setRenderToSinglePage(true);
@@ -16,7 +16,7 @@ public class Merger_html_pdf {
         com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, opt1);
 
         com.aspose.pdf.HtmlLoadOptions opt2 = new com.aspose.pdf.HtmlLoadOptions();
-        //set html encodyng
+        //set html encoding
         opt2.setInputEncoding("UTF-8");
         //split html content to pdf pages
         opt2.setRenderToSinglePage(false);

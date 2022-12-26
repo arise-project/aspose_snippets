@@ -5,12 +5,12 @@ from aspose.pdf import (
 )
 
 
-def html_to_pdf(self):
+def html_to_pdf():
     path_source1 = "../../TestData/test.html"
     path_source2 = "../../TestData/Second/test.html"
 
     opt1 = HtmlLoadOptions()
-    # set html encodyng
+    # set html encoding
     opt1.input_encoding = "UTF-8",
     # render all html to single large pdf page
     opt1.is_render_to_single_page = True
@@ -19,7 +19,7 @@ def html_to_pdf(self):
     first_doc = Document(path_source1, opt1)
 
     opt2 = HtmlLoadOptions()
-    # set html encodyng
+    # set html encoding
     opt2.input_encoding = "UTF-8",
     # split html content to pdf pages
     opt2.is_render_to_single_page = False

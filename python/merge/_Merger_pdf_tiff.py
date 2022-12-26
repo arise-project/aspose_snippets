@@ -20,7 +20,7 @@ class pdf_to_tiff(object):
             self.aspose_license = License()
             self.aspose_license.SetLicense(self.licence_path)
 
-    def exec(self):
+    def exec():
         path_source1 = "../../TestData/test.pdf"
 
         # read pdf file to Aspose Document

@@ -7,7 +7,7 @@ from aspose.pdf import (
 import aspose.pdf.LoadOptions as LoadOptions
 
 
-def epub_to_pdf(self):
+def epub_to_pdf():
     path_source1 = "../../TestData/test.epub"
     path_source2 = "../../TestData/Second/test.epub"
 
@@ -22,7 +22,7 @@ def epub_to_pdf(self):
     # epub files can be parsed and loaded as Aspose Document
     first_doc = Document(path_source1, opt1)
 
-    opt2 = EpubLoadOptions()
+    opt2 = EpubLoadOptions
     # use algorithm to prevent content to be truncated
     opt1.page_size_adjustment_mode = \
         LoadOptions.pagesizeAdjustmentModes.ENLARGE_REQUIRED_VIEWPORT_WIDTH_AND_DO_CONVERSION_AGAIN

@@ -5,7 +5,7 @@ from aspose.pdf import (
 )
 
 
-def tex_to_pdf(self):
+def tex_to_pdf():
     path_source1 = "../../TestData/test.tex"
     path_source2 = "../../TestData/Second/test.tex"
 

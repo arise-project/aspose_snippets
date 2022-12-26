@@ -16,7 +16,7 @@ class png_to_pdf(object):
             self.aspose_license = License()
             self.aspose_license.SetLicense(self.licence_path)
 
-    def exec(self):
+    def exec():
         path_source1 = "../../TestData/test.png"
         path_source2 = "../../TestData/Second/test.png"
 

@@ -5,7 +5,7 @@ from aspose.pdf import (
 )
 
 
-def pcl_to_pdf(self):
+def pcl_to_pdf():
     path_source1 = "../../TestData/test.pcl"
     path_source2 = "../../TestData/Second/test.pcl"
 

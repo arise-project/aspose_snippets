@@ -3,10 +3,8 @@ from aspose.pdf import (
     Document
 )
 
-import aspose.pdf.DocSaveOptions as DocSaveOptions
 
-
-def pdf_to_doc(self):
+def pdf_to_doc():
     path_source1 = "../../TestData/test.pdf"
     path_source2 = "../../TestData/Second/test.pdf"
 
@@ -28,7 +26,7 @@ def pdf_to_doc(self):
         # add page from one document to another directly
         output_doc.pages.add(page)
 
-    opt1 = DocSaveOptions()
+    opt1 = DocSaveOptions
     # use doc format
     opt1.Format = DocSaveOptions.DocFormat.Doc,
     # This mode is fast and good for maximally preserving original look

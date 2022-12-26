@@ -12,7 +12,7 @@ void html_to_pdf()
 
     auto opt1 = MakeObject<HtmlLoadOptions>();
 
-    // set html encodyng
+    // set html encoding
     opt1->InputEncoding = u"UTF-8";
     // render all html to single large pdf page
     opt1->RenderToSinglePage = true;
@@ -21,7 +21,7 @@ void html_to_pdf()
     auto firstDoc = MakeObject<Document>(pathSource1, opt1);
 
     auto opt2 = MakeObject<HtmlLoadOptions>();
-    // set html encodyng
+    // set html encoding
     opt2->InputEncoding = u"UTF-8";
     // split html content to pdf pages
     opt2->RenderToSinglePage = false;

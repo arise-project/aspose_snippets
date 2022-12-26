@@ -6,7 +6,7 @@ from aspose.pdf import (
 )
 
 
-def pdf_to_epub(self):
+def pdf_to_epub():
     path_source1 = "../../TestData/test.pdf"
     path_source2 = "../../TestData/Second/test.pdf"
 
