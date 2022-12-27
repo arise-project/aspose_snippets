@@ -23,7 +23,7 @@ void tiff_to_pdf()
     int index = 1;
     for (var multiImage : images)
     {
-        // iterate througn tiff frames
+        // iterate through tiff frames
         for (var tiffFrame : multiImage.getFrames())
         {
             // set active frame to work with
@@ -60,7 +60,7 @@ void tiff_to_pdf()
 
             // create new image into document
             var image = new com.aspose.pdf.Image();
-            // set image source to memeory stream
+            // set image source to memory stream
             image.setImageStream(new FileInputStream(index.toString() + "temp.tiff"));
 
             // add document image to specific page

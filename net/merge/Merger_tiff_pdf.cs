@@ -21,7 +21,7 @@ namespace aspose_snippets.net
 
             foreach (var multiImage in images)
             {
-                //iterate througn tiff frames
+                //iterate through tiff frames
                 foreach (var tiffFrame in multiImage.Frames)
                 {
                     //set active frame to work with
@@ -61,7 +61,7 @@ namespace aspose_snippets.net
                     //create new image into document
                     var image = new Aspose.Pdf.Image
                     {
-                        //set image source to memeory stream
+                        //set image source to memory stream
                         ImageStream = ms
                     };
 

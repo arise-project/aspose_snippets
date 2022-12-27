@@ -35,7 +35,7 @@ class tiff_to_pdf(object):
 
         index = 1
         for multiImage in images:
-            # iterate througn tiff frames
+            # iterate through tiff frames
             for tiffFrame in multiImage.Frames:
                 # set active frame to work with
                 multiImage.ActiveFrame = tiffFrame
@@ -70,7 +70,7 @@ class tiff_to_pdf(object):
 
                 # create new image into document
                 image = PdfImage
-                # set image source to memeory stream
+                # set image source to memory stream
                 image.ImageStream = FileStream(index.toString() + "temp.tiff")
 
                 # add document image to specific page
