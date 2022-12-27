@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="test.cpp" />
     <ClCompile Include="watermark.cpp" />
+    <ClCompile Include="Watermark_add.cpp" />
+    <ClCompile Include="Watermark_get.cpp" />
+    <ClCompile Include="Watermark_remove.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

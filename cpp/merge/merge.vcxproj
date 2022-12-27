@@ -128,6 +128,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="merge.cpp" />
+    <ClCompile Include="Merger_cgm_pdf.cpp" />
+    <ClCompile Include="Merger_eps_pdf.cpp" />
+    <ClCompile Include="Merger_epub_pdf.cpp" />
+    <ClCompile Include="Merger_html_pdf.cpp" />
+    <ClCompile Include="Merger_md_pdf.cpp" />
+    <ClCompile Include="Merger_mht_pdf.cpp" />
+    <ClCompile Include="Merger_pcl_pdf.cpp" />
+    <ClCompile Include="Merger_pdf_doc.cpp" />
+    <ClCompile Include="Merger_pdf_docx.cpp" />
+    <ClCompile Include="Merger_pdf_epub.cpp" />
+    <ClCompile Include="Merger_pdf_html.cpp" />
+    <ClCompile Include="Merger_pdf_pdfa.cpp" />
+    <ClCompile Include="Merger_pdf_pptx.cpp" />
+    <ClCompile Include="Merger_pdf_svg.cpp" />
+    <ClCompile Include="Merger_pdf_tex.cpp" />
+    <ClCompile Include="Merger_pdf_text.cpp" />
+    <ClCompile Include="Merger_pdf_xls.cpp" />
+    <ClCompile Include="Merger_pdf_xps.cpp" />
+    <ClCompile Include="Merger_ps_pdf.cpp" />
+    <ClCompile Include="Merger_svg_pdf.cpp" />
+    <ClCompile Include="Merger_tex_pdf.cpp" />
+    <ClCompile Include="Merger_xps_pdf.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
