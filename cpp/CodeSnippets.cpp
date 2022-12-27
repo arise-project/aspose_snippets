@@ -37,7 +37,7 @@ void interested()
 {
     auto document = MakeObject<Document>();
 
-    auto page = document->get_Pages()->Add();
+    auto page = document->get_Pages()->CopyPage();
     paragraps->Add(MakeObject<Aspose::Pdf::Text::TextFragment>(u"Hello World!"));
     document->Save(filename);
 
@@ -101,12 +101,12 @@ bool create_pdf(String filename)
 
         auto document = MakeObject<Document>();
 
-        auto page = document->get_Pages()->Add();
+        auto page = document->get_Pages()->CopyPage();
         auto paragraps = page->get_Paragraphs();
         paragraps->Add(MakeObject<Aspose::Pdf::Text::TextFragment>(u"Hello World!"));
         paragraps->Add(MakeObject<Aspose::Pdf::Text::TextFragment>(u"This example is created by Aspose.Pdf for C++."));
 
-        page = document->get_Pages()->Add();
+        page = document->get_Pages()->CopyPage();
         paragraps = page->get_Paragraphs();
         paragraps->Add(MakeObject<Aspose::Pdf::Text::TextFragment>(u"Second page."));
         paragraps->Add(MakeObject<Aspose::Pdf::Text::TextFragment>(u"This example is created by Aspose.Pdf for C++."));

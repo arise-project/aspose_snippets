@@ -22,7 +22,7 @@ void bmp_to_pdf()
     {
         auto fs = images[i];
         // add new page to pdf
-        auto page = document->get_Pages()->Add();
+        auto page = document->get_Pages()->CopyPage();
 
         // setup page size to be A4
         page->SetPageSize(PageSize::get_A4()->get_Width(), PageSize::get_A4()->get_Height());

@@ -18,20 +18,20 @@ void pdf_to_xps()
     auto outputDoc = MakeObject<Document>();
 
     // set less memory usage with unload instead of fast performance
-    outputDoc->EnableObjectUnload = true;
+    outputDoc->set_EnableObjectUnload(true);
 
     for (int i = 1; i < firstDoc->get_Pages()->get_Count(); i++)
     {
         auto page = firstDoc->get_Pages()->idx_get(i);
         // add page from one document to another directly
-        outputDoc->get_Pages()->Add(page);
+        outputDoc->get_Pages()->CopyPage(page);
     }
 
     for (int i = 1; i < secondDoc->get_Pages()->get_Count(); i++)
     {
         auto page = secondDoc->get_Pages()->idx_get(i);
         // add page from one document to another directly
-        outputDoc->get_Pages()->Add(page);
+        outputDoc->get_Pages()->CopyPage(page);
     }
 
     var opt1 = MakeObject<XpsSaveOptions>();

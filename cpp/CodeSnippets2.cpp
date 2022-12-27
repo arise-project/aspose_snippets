@@ -47,12 +47,12 @@ bool create_pdf(String filename)
 
         auto document = MakeObject<Document>();
 
-        auto page = document->get_Pages()->Add();
+        auto page = document->get_Pages()->CopyPage();
         auto paragraps = page->get_Paragraphs();
         paragraps->Add(MakeObject<Aspose::Pdf::Text::TextFragment>(u"Hello World!"));
         paragraps->Add(MakeObject<Aspose::Pdf::Text::TextFragment>(u"This example is created by Aspose.Pdf for C++."));
 
-        page = document->get_Pages()->Add();
+        page = document->get_Pages()->CopyPage();
         paragraps = page->get_Paragraphs();
         paragraps->Add(MakeObject<Aspose::Pdf::Text::TextFragment>(u"Second page."));
         paragraps->Add(MakeObject<Aspose::Pdf::Text::TextFragment>(u"This example is created by Aspose.Pdf for C++."));
@@ -206,7 +206,7 @@ void pdf_to_()
 void jpeg2pdf(String jpegFilename, String pdfFilename)
 {
     auto document = MakeObject<Document>();
-    auto page = document->get_Pages()->Add();
+    auto page = document->get_Pages()->CopyPage();
     auto rect = MakeObject<Aspose::Pdf::Rectangle>(0, 0, 600, 800);
     page->AddImage(jpegFilename, rect);
     document->Save(pdfFilename);
@@ -215,7 +215,7 @@ void jpeg2pdf(String jpegFilename, String pdfFilename)
 void png2pdf(String pngFilename, String pdfFilename)
 {
     auto document = MakeObject<Document>();
-    auto page = document->get_Pages()->Add();
+    auto page = document->get_Pages()->CopyPage();
     auto rect = MakeObject<Aspose::Pdf::Rectangle>(0, 800, 600, 400);
     page->AddImage(pngFilename, rect);
     document->Save(pdfFilename);
@@ -224,7 +224,7 @@ void png2pdf(String pngFilename, String pdfFilename)
 void tiff2pdf(String tiffFilename, String pdfFilename)
 {
     auto document = MakeObject<Document>();
-    auto page = document->get_Pages()->Add();
+    auto page = document->get_Pages()->CopyPage();
     auto rect = MakeObject<Aspose::Pdf::Rectangle>(0, 800, 600, 400);
 
 
@@ -239,7 +239,7 @@ void tiff2pdf(String tiffFilename, String pdfFilename)
 void bmp2pdf(String bmpFilename, String pdfFilename)
 {
     auto document = MakeObject<Document>();
-    auto page = document->get_Pages()->Add();
+    auto page = document->get_Pages()->CopyPage();
 
 
     auto image = MakeObject<Aspose::Pdf::Image>();

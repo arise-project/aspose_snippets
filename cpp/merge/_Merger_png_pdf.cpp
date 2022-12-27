@@ -16,7 +16,7 @@ void png_to_pdf()
     auto outputDoc = MakeObject<Document>();
 
     // set less memory usage with unload instead of fast performance
-    doc->EnableObjectUnload = true;
+    doc->set_EnableObjectUnload(true);
 
     // make list of files with images to merge
     auto images[] = {pathSource1, pathSource2};
@@ -25,7 +25,7 @@ void png_to_pdf()
     {
         auto fs = images[i];
         // add new page to pdf
-        auto page = document->get_Pages()->Add();
+        auto page = document->get_Pages()->CopyPage();
 
         // setup page size to be A4
         page->SetPageSize(PageSize::get_A4()->get_Width(), PageSize::get_A4()->get_Height());
