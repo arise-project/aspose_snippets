@@ -1,7 +1,7 @@
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
-#include "Aspose.PDF.Cpp/EpubSaveOptions.h"
+#include "Aspose.PDF.Cpp/SaveFormat.h"
 
 using namespace System;
 using namespace Aspose::Pdf;
@@ -35,8 +35,5 @@ void pdf_to_epub()
         outputDoc->get_Pages()->CopyPage(page);
     }
 
-    auto opt1 = MakeObject<EpubSaveOptions>();
-    // keep the logical structure of transformed document
-    opt1->ContentRecognitionMode = RecognitionMode::PdfFlow;
-    outputDoc->Save(u"test.epub", opt1);
+    outputDoc->Save(u"test.epub", SaveFormat::Epub);
 }
