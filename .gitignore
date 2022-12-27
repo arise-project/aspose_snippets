@@ -4,3 +4,7 @@ lib/
 *.lic
 .idea/
 out/
+packages/
+x64/
+*.user
+.vs/
