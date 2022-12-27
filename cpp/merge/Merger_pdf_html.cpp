@@ -34,14 +34,14 @@ void pdf_to_html()
         outputDoc->get_Pages()->CopyPage(page);
     }
 
-    var opt1 = MakeObject<HtmlSaveOptions>();
+    auto opt1 = MakeObject<HtmlSaveOptions>();
     // embed css into a page
-    opt1->PartsembedingMode = PartsembedingModes::EmbedAllIntoHtml;
+    opt1->set_PartsembedingMode(PartsembedingModes::EmbedAllIntoHtml);
     // embed images into a page
-    opt1->RasterImagesSavingMode = RasterImagesSavingModes::AsembededPartsOfPngPageBackground;
+    opt1->set_RasterImagesSavingMode(RasterImagesSavingModes::AsembededPartsOfPngPageBackground);
     // enhance conversion of documents with backgrounds
-    opt1->AntialiasingProcessing = AntialiasingProcessingType::TryCorrectResultHtml;
+    opt1->set_AntialiasingProcessing(AntialiasingProcessingType::TryCorrectResultHtml);
     // use fixed layout render
-    opt1->FixedLayout = true;
+    opt1->set_FixedLayout(true);
     outputDoc->Save(u"test.html", opt1);
 }

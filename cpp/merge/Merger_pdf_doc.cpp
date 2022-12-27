@@ -2,6 +2,8 @@
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/DocSaveOptions.h"
+#include "Aspose.PDF.Cpp/SaveFormat.h"
+
 using namespace System;
 using namespace Aspose::Pdf;
 
@@ -36,9 +38,9 @@ void pdf_to_doc()
 
     auto opt1 = MakeObject<DocSaveOptions>();
     // use doc format
-    opt1->Format = DocFormat::Doc;
+    opt1->set_Format(Aspose::Pdf::DocSaveOptions::DocFormat::Doc);
     // This mode is fast and good for maximally preserving original look
-    opt1->Mode = RecognitionMode::Textbox;
+    opt1->set_Mode(Aspose::Pdf::DocSaveOptions::RecognitionMode::Textbox);
 
     outputDoc->Save(u"test.doc", opt1);
 }

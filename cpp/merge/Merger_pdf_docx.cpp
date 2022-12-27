@@ -2,6 +2,7 @@
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/DocSaveOptions.h"
+
 using namespace System;
 using namespace Aspose::Pdf;
 
@@ -34,11 +35,11 @@ void pdf_to_docx()
         outputDoc->get_Pages()->CopyPage(page);
     }
 
-    var opt1 = MakeObject<DocSaveOptions>();
+    auto opt1 = MakeObject<DocSaveOptions>();
     // use docx format
-    opt1->Format = DocFormat::DocX;
+    opt1->set_Format(Aspose::Pdf::DocSaveOptions::DocFormat::DocX);
     // make document editable flow and recognize of tables
-    opt1->Mode = RecognitionMode::EnhancedFlow;
+    opt1->set_Mode(Aspose::Pdf::DocSaveOptions::RecognitionMode::EnhancedFlow);
 
     outputDoc->Save(u"test.docx", opt1);
 }

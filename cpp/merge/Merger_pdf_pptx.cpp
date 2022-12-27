@@ -2,7 +2,8 @@
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/PptxSaveOptions.h"
-#include "Aspose.PDF.Cpp/Generator\Image.h"
+#include "Aspose.PDF.Cpp/Generator/Image.h"
+
 using namespace System;
 using namespace Aspose::Pdf;
 
@@ -33,8 +34,8 @@ void pdf_to_pptx()
         outputDoc->get_Pages()->CopyPage(page);
     }
 
-    var opt1 = MakeObject<PptxSaveOptions>();
+    auto opt1 = MakeObject<PptxSaveOptions>();
     // save all content on page as single image
-    opt1->SlidesAsImages = true;
+    opt1->set_SlidesAsImages(true);
     outputDoc->Save(u"test.pptx", opt1);
 }

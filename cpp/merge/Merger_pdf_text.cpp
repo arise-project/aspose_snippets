@@ -1,7 +1,10 @@
+#include <fstream>
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/Text\TextAbsorber.h"
+
+using namespace std;
 using namespace System;
 using namespace Aspose::Pdf;
 
@@ -35,9 +38,12 @@ void pdf_to_text()
     }
 
     // create text absorber for extract text
-    var textAbsorber = MakeObject<TextAbsorber>();
+    auto textAbsorber = MakeObject<Aspose::Pdf::Text::TextAbsorber>();
     outputDoc->get_Pages()->Accept(textAbsorber);
     auto extractedText = textAbsorber->get_Text();
 
-    File::WriteAllText(u"text.txt", extractedText);
+    fstream file;
+    file.open("text.txt", ios::out);
+    file << extractedText;
+    file.close();
 }

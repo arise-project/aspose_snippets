@@ -2,6 +2,7 @@
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/TeXSaveOptions.h"
+
 using namespace System;
 using namespace Aspose::Pdf;
 
@@ -34,8 +35,9 @@ void pdf_to_tex()
         outputDoc->get_Pages()->CopyPage(page);
     }
 
-    var opt1 = MakeObject<TeXSaveOptions>();
+    auto opt1 = MakeObject<TeXSaveOptions>();
     // save parsed artifacts, for example images to a directory
-    opt1->OutDirectoryPath = u"./test";
+    opt1->set_OutDirectoryPath(u"./test");
+
     outputDoc->Save(u"test.tex", opt1);
 }

@@ -3,6 +3,7 @@
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
+
 using namespace System;
 using namespace Aspose::Pdf;
 
