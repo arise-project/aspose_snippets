@@ -1,13 +1,14 @@
-#include "Aspose.PDF.Cpp\Document.h"
-#include "Aspose.PDF.Cpp\Page.h"
-#include "Aspose.PDF.Cpp\ExcelSaveOptions.h"
+#include "Aspose.PDF.Cpp/Document.h"
+#include "Aspose.PDF.Cpp/Page.h"
+#include "Aspose.PDF.Cpp/PageCollection.h"
+#include "Aspose.PDF.Cpp/ExcelSaveOptions.h"
 using namespace System;
 using namespace Aspose::Pdf;
 
 void pdf_to_xls()
 {
-    auto pathSource1 = u"../../TestData/test.pdf";
-    auto pathSource2 = u"../../TestData/Second/test.pdf";
+    String pathSource1 = u"../../TestData/test.pdf";
+    String pathSource2 = u"../../TestData/Second/test.pdf";
 
     // read pdf file to Aspose Document
     auto firstDoc = MakeObject<Document>(pathSource1);
@@ -19,16 +20,16 @@ void pdf_to_xls()
     // set less memory usage with unload instead of fast performance
     outputDoc->EnableObjectUnload = true;
 
-    for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++)
+    for (int i = 1; i < firstDoc->get_Pages()->get_Count(); i++)
     {
-        auto page = firstDoc->get_Pages()->get_Item(i);
+        auto page = firstDoc->get_Pages()->idx_get(i);
         // add page from one document to another directly
         outputDoc->get_Pages()->Add(page);
     }
 
-    for (int i = 0; i < secondDoc->get_Pages()->get_Count(); i++)
+    for (int i = 1; i < secondDoc->get_Pages()->get_Count(); i++)
     {
-        auto page = secondDoc->get_Pages()->get_Item(i);
+        auto page = secondDoc->get_Pages()->idx_get(i);
         // add page from one document to another directly
         outputDoc->get_Pages()->Add(page);
     }
@@ -38,5 +39,5 @@ void pdf_to_xls()
     // set Microsoft document type
     opt1->Format = ExcelFormat->XMLSpreadSheet2003;
     // save Excel document
-    outputDoc->Save("test.xls", opt1);
+    outputDoc->Save(u"test.xls", opt1);
 }

@@ -1,12 +1,12 @@
-#include "Aspose.PDF.Cpp\Document.h"
-#include "Aspose.PDF.Cpp\Generator\Drawing\Path.h"
-#include "Aspose.PDF.Cpp\Devices\Resolution.h"
-#include "Aspose.PDF.Cpp\Generator\Image.h"
-#include "Aspose.PDF.Cpp\Devices\Device.h"
-#include "Aspose.PDF.Cpp\Page.h"
-#include "Aspose.PDF.Cpp\Devices\ImageDevice.h"
-#include "Aspose.PDF.Cpp\Devices\PngDevice.h"
-#include "Aspose.PDF.Cpp\Rectangle.h"
+#include "Aspose.PDF.Cpp/Document.h"
+#include "Aspose.PDF.Cpp/Generator\Drawing\Path.h"
+#include "Aspose.PDF.Cpp/Devices\Resolution.h"
+#include "Aspose.PDF.Cpp/Generator\Image.h"
+#include "Aspose.PDF.Cpp/Devices\Device.h"
+#include "Aspose.PDF.Cpp/Page.h"
+#include "Aspose.PDF.Cpp/Devices\ImageDevice.h"
+#include "Aspose.PDF.Cpp/Devices\PngDevice.h"
+#include "Aspose.PDF.Cpp/Rectangle.h"
 using namespace System;
 using namespace Aspose::Pdf;
 
@@ -69,7 +69,7 @@ void pdf_to_png()
 
     int stitchedWidth = 0;
 
-    for (int i = 0; i < sizeof(images); i++)
+    for (int i = 1; i < sizeof(images); i++)
     {
         auto fs = images[i];
 

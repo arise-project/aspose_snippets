@@ -1,14 +1,15 @@
-#include "Aspose.PDF.Cpp\PclLoadOptions.h"
-#include "Aspose.PDF.Cpp\Document.h"
-#include "Aspose.PDF.Cpp\Page.h"
-#include "Aspose.PDF.Cpp\SaveFormat.h"
+#include "Aspose.PDF.Cpp/PclLoadOptions.h"
+#include "Aspose.PDF.Cpp/Document.h"
+#include "Aspose.PDF.Cpp/Page.h"
+#include "Aspose.PDF.Cpp/PageCollection.h"
+#include "Aspose.PDF.Cpp/SaveFormat.h"
 using namespace System;
 using namespace Aspose::Pdf;
 
 void pcl_to_pdf()
 {
-    auto pathSource1 = u"../../TestData/test.pcl";
-    auto pathSource2 = u"../../TestData/Second/test.pcl";
+    String pathSource1 = u"../../TestData/test.pcl";
+    String pathSource2 = u"../../TestData/Second/test.pcl";
 
     auto opt1 = MakeObject<PclLoadOptions>();
     // suspend not critical errors
@@ -28,20 +29,20 @@ void pcl_to_pdf()
     // set less memory usage with unload instead of fast performance
     outputDoc->EnableObjectUnload = true;
 
-    for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++)
+    for (int i = 1; i < firstDoc->get_Pages()->get_Count(); i++)
     {
-        auto page = firstDoc->get_Pages()->get_Item(i);
+        auto page = firstDoc->get_Pages()->idx_get(i);
         // add page from one document to another directly
         outputDoc->get_Pages()->Add(page);
     }
 
-    for (int i = 0; i < secondDoc->get_Pages()->get_Count(); i++)
+    for (int i = 1; i < secondDoc->get_Pages()->get_Count(); i++)
     {
-        auto page = secondDoc->get_Pages()->get_Item(i);
+        auto page = secondDoc->get_Pages()->idx_get(i);
         // add page from one document to another directly
         outputDoc->get_Pages()->Add(page);
     }
 
     // save result pdf to file
-    outputDoc->Save("test.pdf", SaveFormat::Pdf);
+    outputDoc->Save(u"test.pdf", SaveFormat::Pdf);
 }

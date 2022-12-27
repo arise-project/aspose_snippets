@@ -1,12 +1,12 @@
-#include "Aspose.PDF.Cpp\Document.h"
-#include "Aspose.PDF.Cpp\Generator\Drawing\Path.h"
-#include "Aspose.PDF.Cpp\Devices\Resolution.h"
-#include "Aspose.PDF.Cpp\Generator\Image.h"
-#include "Aspose.PDF.Cpp\Devices\Device.h"
-#include "Aspose.PDF.Cpp\Page.h"
-#include "Aspose.PDF.Cpp\Devices\JpegDevice.h"
-#include "Aspose.PDF.Cpp\Devices\ImageDevice.h"
-#include "Aspose.PDF.Cpp\Rectangle.h"
+#include "Aspose.PDF.Cpp/Document.h"
+#include "Aspose.PDF.Cpp/Generator\Drawing\Path.h"
+#include "Aspose.PDF.Cpp/Devices\Resolution.h"
+#include "Aspose.PDF.Cpp/Generator\Image.h"
+#include "Aspose.PDF.Cpp/Devices\Device.h"
+#include "Aspose.PDF.Cpp/Page.h"
+#include "Aspose.PDF.Cpp/Devices\JpegDevice.h"
+#include "Aspose.PDF.Cpp/Devices\ImageDevice.h"
+#include "Aspose.PDF.Cpp/Rectangle.h"
 using namespace System;
 using namespace Aspose::Pdf;
 

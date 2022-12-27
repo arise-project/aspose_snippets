@@ -1,16 +1,16 @@
-#include "Aspose.PDF.Cpp\Document.h"
-#include "Aspose.PDF.Cpp\Page.h"
-#include "Aspose.PDF.Cpp\PageSize.h"
-#include "Aspose.PDF.Cpp\Generator\Image.h"
-#include "Aspose.PDF.Cpp\Rectangle.h"
-#include "Aspose.PDF.Cpp\SaveFormat.h"
+#include "Aspose.PDF.Cpp/Document.h"
+#include "Aspose.PDF.Cpp/Page.h"
+#include "Aspose.PDF.Cpp/PageSize.h"
+#include "Aspose.PDF.Cpp/Generator\Image.h"
+#include "Aspose.PDF.Cpp/Rectangle.h"
+#include "Aspose.PDF.Cpp/SaveFormat.h"
 using namespace System;
 using namespace Aspose::Pdf;
 
 void bmp_to_pdf()
 {
-    auto pathSource1 = u"../../TestData/test.bmp";
-    auto pathSource2 = u"../../TestData/Second/test.bmp";
+    String pathSource1 = u"../../TestData/test.bmp";
+    String pathSource2 = u"../../TestData/Second/test.bmp";
 
     // create empty pdf document
     auto doc = MakeObject<Document>();
@@ -18,7 +18,7 @@ void bmp_to_pdf()
     // make list of files with images to merge
     auto images[] = {pathSource1, pathSource2};
 
-    for (int i = 0; i < sizeof(images); i++)
+    for (int i = 1; i < sizeof(images); i++)
     {
         auto fs = images[i];
         // add new page to pdf

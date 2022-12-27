@@ -1,14 +1,15 @@
-#include "Aspose.PDF.Cpp\TeXLoadOptions.h"
-#include "Aspose.PDF.Cpp\Document.h"
-#include "Aspose.PDF.Cpp\Page.h"
-#include "Aspose.PDF.Cpp\SaveFormat.h"
+#include "Aspose.PDF.Cpp/TeXLoadOptions.h"
+#include "Aspose.PDF.Cpp/Document.h"
+#include "Aspose.PDF.Cpp/Page.h"
+#include "Aspose.PDF.Cpp/PageCollection.h"
+#include "Aspose.PDF.Cpp/SaveFormat.h"
 using namespace System;
 using namespace Aspose::Pdf;
 
 void tex_to_pdf()
 {
-    auto pathSource1 = u"../../TestData/test.tex";
-    auto pathSource2 = u"../../TestData/Second/test.tex";
+    String pathSource1 = u"../../TestData/test.tex";
+    String pathSource2 = u"../../TestData/Second/test.tex";
 
     var opt1 = MakeObject<TeXLoadOptions>();
 
@@ -37,20 +38,20 @@ void tex_to_pdf()
     // set less memory usage with unload instead of fast performance
     outputDoc->EnableObjectUnload = true;
 
-    for (int i = 0; i < firstDoc->get_Pages()->get_Count(); i++)
+    for (int i = 1; i < firstDoc->get_Pages()->get_Count(); i++)
     {
-        auto page = firstDoc->get_Pages()->get_Item(i);
+        auto page = firstDoc->get_Pages()->idx_get(i);
         // add page from one document to another directly
         outputDoc->get_Pages()->Add(page);
     }
 
-    for (int i = 0; i < secondDoc->get_Pages()->get_Count(); i++)
+    for (int i = 1; i < secondDoc->get_Pages()->get_Count(); i++)
     {
-        auto page = secondDoc->get_Pages()->get_Item(i);
+        auto page = secondDoc->get_Pages()->idx_get(i);
         // add page from one document to another directly
         outputDoc->get_Pages()->Add(page);
     }
 
     // save result pdf to file
-    outputDoc->Save("test.pdf", SaveFormat::Pdf);
+    outputDoc->Save(u"test.pdf", SaveFormat::Pdf);
 }

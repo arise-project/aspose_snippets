@@ -1,14 +1,14 @@
-#include "Aspose.PDF.Cpp\Generator\Image.h"
-#include "Aspose.PDF.Cpp\Document.h"
-#include "Aspose.PDF.Cpp\Page.h"
-#include "Aspose.PDF.Cpp\SaveFormat.h"
+#include "Aspose.PDF.Cpp/Generator\Image.h"
+#include "Aspose.PDF.Cpp/Document.h"
+#include "Aspose.PDF.Cpp/Page.h"
+#include "Aspose.PDF.Cpp/SaveFormat.h"
 using namespace System;
 using namespace Aspose::Pdf;
 
 void tiff_to_pdf()
 {
-    auto pathSource1 = u"../../TestData/test.tiff";
-    auto pathSource2 = u"../../TestData/Second/test.tiff";
+    String pathSource1 = u"../../TestData/test.tiff";
+    String pathSource2 = u"../../TestData/Second/test.tiff";
 
     // Load tiff to Aspose image
     var multiImage1 = (com.aspose.imaging.fileformats.tiff.TiffImage)com.aspose.imaging.Image.load(pathSource1);

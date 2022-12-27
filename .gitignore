@@ -7,4 +7,4 @@ out/
 packages/
 x64/
 *.user
-.vs/for (int i = 1;
+.vs/
