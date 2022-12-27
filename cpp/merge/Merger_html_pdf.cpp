@@ -14,18 +14,18 @@ void html_to_pdf()
     auto opt1 = MakeObject<HtmlLoadOptions>();
 
     // set html encoding
-    opt1->InputEncoding = u"UTF-8";
+    opt1->set_InputEncoding(u"UTF-8");
     // render all html to single large pdf page
-    opt1->RenderToSinglePage = true;
+    opt1->set_IsRenderToSinglePage(true);
 
     // html files can be parsed and loaded as Aspose Document
     auto firstDoc = MakeObject<Document>(pathSource1, opt1);
 
     auto opt2 = MakeObject<HtmlLoadOptions>();
     // set html encoding
-    opt2->InputEncoding = u"UTF-8";
+    opt2->set_InputEncoding(u"UTF-8");
     // split html content to pdf pages
-    opt2->RenderToSinglePage = false;
+    opt2->set_IsRenderToSinglePage(false);
 
     auto secondDoc = MakeObject<Document>(pathSource2, opt2);
 
