@@ -37,7 +37,8 @@ void pdf_to_pdfa()
     }
 
     // save document as specific pdf standard PDFA 3Y
-    outputDoc.convert(
+
+    outputDoc->Convert(
         u"test.pdf",
         PdfFormat::PDF_A_3U,
         // delete objects that impossible to convert
