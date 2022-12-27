@@ -3,6 +3,7 @@
 #include "Aspose.PDF.Cpp/SvgLoadOptions.h"
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
+
 using namespace System;
 using namespace Aspose::Pdf;
 
@@ -12,15 +13,15 @@ void svg_to_pdf()
     String pathSource2 = u"../../TestData/Second/test.svg";
 
     // Adust pdf page size to svg size
-    var opt1 = MakeObject<SvgLoadOptions>();
-    opt1->AdjustPageSize = true;
+    auto opt1 = MakeObject<SvgLoadOptions>();
+    opt1->set_AdjustPageSize(true);
     // SVG files can be parsed and loaded as Aspose Document
-    var firstDoc = MakeObject<Document>(pathSource1, opt1);
+    auto firstDoc = MakeObject<Document>(pathSource1, opt1);
 
     // Use default pdf page size
-    var opt2 = MakeObject<SvgLoadOptions>();
-    opt1->AdjustPageSize = false;
-    var secondDoc = MakeObject<Document>(pathSource2, opt2);
+    auto opt2 = MakeObject<SvgLoadOptions>();
+    opt1->set_AdjustPageSize(false);
+    auto secondDoc = MakeObject<Document>(pathSource2, opt2);
 
     // create empty pdf document
     auto outputDoc = MakeObject<Document>();

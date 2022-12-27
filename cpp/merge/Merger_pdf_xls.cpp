@@ -2,6 +2,7 @@
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/ExcelSaveOptions.h"
+
 using namespace System;
 using namespace Aspose::Pdf;
 
@@ -34,10 +35,10 @@ void pdf_to_xls()
         outputDoc->get_Pages()->CopyPage(page);
     }
 
-    var opt1 = MakeObject<ExcelSaveOptions>();
+    auto opt1 = MakeObject<ExcelSaveOptions>();
 
     // set Microsoft document type
-    opt1->Format = ExcelFormat->XMLSpreadSheet2003;
+    opt1->set_Format(Aspose::Pdf::ExcelSaveOptions::ExcelFormat::XMLSpreadSheet2003);
     // save Excel document
     outputDoc->Save(u"test.xls", opt1);
 }

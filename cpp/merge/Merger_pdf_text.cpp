@@ -2,7 +2,7 @@
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
-#include "Aspose.PDF.Cpp/Text\TextAbsorber.h"
+#include "Aspose.PDF.Cpp/Text/TextAbsorber.h"
 
 using namespace std;
 using namespace System;

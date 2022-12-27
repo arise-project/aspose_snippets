@@ -2,6 +2,7 @@
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/XpsSaveOptions.h"
+
 using namespace System;
 using namespace Aspose::Pdf;
 
@@ -34,9 +35,9 @@ void pdf_to_xps()
         outputDoc->get_Pages()->CopyPage(page);
     }
 
-    var opt1 = MakeObject<XpsSaveOptions>();
+    auto opt1 = MakeObject<XpsSaveOptions>();
     // do not save transparent text to output file
-    opt1->SaveTransparentTexts = false;
+    opt1->set_SaveTransparentTexts(false);
     // save xps document
     outputDoc->Save(u"test.xps", opt1);
 }
