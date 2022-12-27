@@ -150,7 +150,6 @@
     <ClCompile Include="Merger_svg_pdf.cpp" />
     <ClCompile Include="Merger_tex_pdf.cpp" />
     <ClCompile Include="Merger_xps_pdf.cpp" />
-    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -18,9 +18,6 @@
     <ClCompile Include="merge.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Merger_cgm_pdf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

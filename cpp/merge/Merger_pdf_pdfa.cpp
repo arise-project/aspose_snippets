@@ -37,11 +37,6 @@ void pdf_to_pdfa()
     }
 
     // save document as specific pdf standard PDFA 3Y
-
-    outputDoc->Convert(
-        u"test.pdf",
-        PdfFormat::PDF_A_3U,
-        // delete objects that impossible to convert
-        ConvertErrorAction::Delete);
-}
+    // delete objects that impossible to convert
+    outputDoc->Convert(u"test.pdf", PdfFormat::PDF_A_3U, ConvertErrorAction::Delete);
 }
