@@ -37,11 +37,11 @@ void pdf_to_html()
 
     auto opt1 = MakeObject<HtmlSaveOptions>();
     // embed css into a page
-    opt1->set_PartsembedingMode(PartsembedingModes::EmbedAllIntoHtml);
+    opt1->PartsEmbeddingMode = Aspose::Pdf::HtmlSaveOptions::PartsEmbeddingModes::EmbedAllIntoHtml;
     // embed images into a page
-    opt1->set_RasterImagesSavingMode(RasterImagesSavingModes::AsembededPartsOfPngPageBackground);
+    opt1->RasterImagesSavingMode = Aspose::Pdf::HtmlSaveOptions::RasterImagesSavingModes::AsEmbeddedPartsOfPngPageBackground;
     // enhance conversion of documents with backgrounds
-    opt1->set_AntialiasingProcessing(AntialiasingProcessingType::TryCorrectResultHtml);
+    opt1->AntialiasingProcessing = Aspose::Pdf::HtmlSaveOptions::AntialiasingProcessingType::TryCorrectResultHtml;
     // use fixed layout render
     opt1->set_FixedLayout(true);
     outputDoc->Save(u"test.html", opt1);
