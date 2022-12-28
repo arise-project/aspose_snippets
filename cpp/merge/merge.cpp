@@ -24,11 +24,23 @@
 #include "Merger_svg_pdf.cpp"
 #include "Merger_tex_pdf.cpp"
 #include "Merger_xps_pdf.cpp"
+#include "Merger_pdf_tiff.cpp"
+#include "Merger_tiff_pdf.cpp"
+#include "Merger_bmp_pdf.cpp"
+#include "Merger_jpg_docx.cpp"
+#include "Merger_jpg_pdf.cpp"
+#include "Merger_png_pdf.cpp"
 
 int main()
 {
 	std::cout << "Hello World!\n";
 
+	pdf_to_tiff();
+	tiff_to_pdf();
+	bmp_to_pdf();
+	jpg_to_docx();
+	jpg_to_pdf();
+	png_to_pdf();
 	cgm_to_pdf();
 	eps_to_pdf();
 	epub_to_pdf();
