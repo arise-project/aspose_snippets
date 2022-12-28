@@ -24,14 +24,12 @@ void cgm_to_pdf()
 
 	for (auto const& page : firstDoc->get_Pages())
 	{
-		auto page = firstDoc->get_Pages()->idx_get(i);
 		// add page from one document to another directly
 		outputDoc->get_Pages()->CopyPage(page);
 	}
 
 	for (auto const& page : secondDoc->get_Pages())
 	{
-		auto page = secondDoc->get_Pages()->idx_get(i);
 		// add page from one document to another directly
 		outputDoc->get_Pages()->CopyPage(page);
 	}
