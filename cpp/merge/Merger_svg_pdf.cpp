@@ -21,10 +21,10 @@ void svg_to_pdf()
 	// Use default pdf page size
 	auto opt2 = MakeObject<SvgLoadOptions>();
 	opt1->set_AdjustPageSize(false);
-	System::SharedPtr<Document> secondDoc = MakeObject<Document>(pathSource2, opt2);
+	auto secondDoc = MakeObject<Document>(pathSource2, opt2);
 
 	// create empty pdf document
-	System::SharedPtr<Document> outputDoc = MakeObject<Document>();
+	auto outputDoc = MakeObject<Document>();
 
 	// set less memory usage with unload instead of fast performance
 	outputDoc->set_EnableObjectUnload(true);

@@ -32,9 +32,9 @@ void tex_to_pdf()
 	opt2->set_RasterizeFormulas(true);
 	// Print parsing steps details to console output
 	opt2->set_ShowTerminalOutput(true);
-	System::SharedPtr<Document> secondDoc = MakeObject<Document>(pathSource2, opt2);
+	auto secondDoc = MakeObject<Document>(pathSource2, opt2);
 
-	System::SharedPtr<Document> outputDoc = MakeObject<Document>();
+	auto outputDoc = MakeObject<Document>();
 
 	// set less memory usage with unload instead of fast performance
 	outputDoc->set_EnableObjectUnload(true);

@@ -22,10 +22,10 @@ void pcl_to_pdf()
 	auto opt2 = MakeObject<PclLoadOptions>();
 	// suspend not critical errors
 	opt2->SupressErrors = true;
-	System::SharedPtr<Document> secondDoc = MakeObject<Document>(pathSource2, opt2);
+	auto secondDoc = MakeObject<Document>(pathSource2, opt2);
 
 	// create empty pdf document
-	System::SharedPtr<Document> outputDoc = MakeObject<Document>();
+	auto outputDoc = MakeObject<Document>();
 
 	// set less memory usage with unload instead of fast performance
 	outputDoc->set_EnableObjectUnload(true);

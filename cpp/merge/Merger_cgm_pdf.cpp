@@ -13,23 +13,23 @@ void cgm_to_pdf()
 	String pathSource2 = u"../../TestData/Second/test.cgm";
 
 	// cgm files can be parsed and loaded as Aspose Document
-	auto firstDoc = MakeObject<Document>(pathSource1, MakeObject<CgmLoadOptions>());
+	System::SharedPtr<Document> firstDoc = MakeObject<Document>(pathSource1, MakeObject<CgmLoadOptions>());
 	auto secondDoc = MakeObject<Document>(pathSource2, MakeObject<CgmLoadOptions>());
 
 	// create empty pdf document
-	System::SharedPtr<Document> outputDoc = MakeObject<Document>();
+	auto outputDoc = MakeObject<Document>();
 
 	// set less memory usage with unload instead of fast performance
 	outputDoc->set_EnableObjectUnload(true);
 
-	for (int i = 1; i < firstDoc->get_Pages()->get_Count(); i++)
+	for (auto const& page : firstDoc->get_Pages())
 	{
 		auto page = firstDoc->get_Pages()->idx_get(i);
 		// add page from one document to another directly
 		outputDoc->get_Pages()->CopyPage(page);
 	}
 
-	for (int i = 1; i < secondDoc->get_Pages()->get_Count(); i++)
+	for (auto const& page : secondDoc->get_Pages())
 	{
 		auto page = secondDoc->get_Pages()->idx_get(i);
 		// add page from one document to another directly

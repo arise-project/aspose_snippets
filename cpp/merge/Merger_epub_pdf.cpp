@@ -30,10 +30,10 @@ void epub_to_pdf()
 	// usage of margins area during conversion
 	opt2->MarginsAreaUsageMode = Aspose::Pdf::LoadOptions::MarginsAreaUsageModes::PutContentOnMarginAreaIfNecessary;
 
-	System::SharedPtr<Document> secondDoc = MakeObject<Document>(pathSource2, opt2);
+	auto secondDoc = MakeObject<Document>(pathSource2, opt2);
 
 	// create empty pdf document
-	System::SharedPtr<Document> outputDoc = MakeObject<Document>();
+	auto outputDoc = MakeObject<Document>();
 
 	// set less memory usage with unload instead of fast performance
 	outputDoc->set_EnableObjectUnload(true);

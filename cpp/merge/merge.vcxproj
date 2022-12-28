@@ -153,9 +153,9 @@
     <ClCompile Include="Merger_bmp_pdf.cpp" />
     <ClCompile Include="Merger_jpg_docx.cpp" />
     <ClCompile Include="Merger_jpg_pdf.cpp" />
-    <ClCompile Include="_Merger_pdf_bmp.cpp" />
-    <ClCompile Include="_Merger_pdf_jpeg.cpp" />
-    <ClCompile Include="_Merger_pdf_png.cpp" />
+    <ClCompile Include="Merger_pdf_bmp.cpp" />
+    <ClCompile Include="Merger_pdf_jpeg.cpp" />
+    <ClCompile Include="Merger_pdf_png.cpp" />
     <ClCompile Include="_Merger_pdf_tiff.cpp" />
     <ClCompile Include="Merger_png_pdf.cpp" />
     <ClCompile Include="_Merger_tiff_pdf.cpp" />

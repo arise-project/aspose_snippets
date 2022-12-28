@@ -93,13 +93,13 @@
     <ClCompile Include="Merger_jpg_pdf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="_Merger_pdf_bmp.cpp">
+    <ClCompile Include="Merger_pdf_bmp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="_Merger_pdf_jpeg.cpp">
+    <ClCompile Include="Merger_pdf_jpeg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="_Merger_pdf_png.cpp">
+    <ClCompile Include="Merger_pdf_png.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="_Merger_pdf_tiff.cpp">
