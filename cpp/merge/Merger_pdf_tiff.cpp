@@ -17,7 +17,6 @@
 using namespace Gdiplus;
 
 using namespace System;
-using namespace Aspose::Pdf;
 
 INT GetEncoderClsid(const WCHAR* format, CLSID* pClsid);  // helper function
 
@@ -26,7 +25,7 @@ void pdf_to_tiff()
         String pathSource1 = u"../../TestData/test.pdf";
 
         // read pdf file to Aspose Document
-        System::SharedPtr<Document> doc = MakeObject<Document>(pathSource1);
+        System::SharedPtr<Aspose::Pdf::Document> doc = MakeObject<Aspose::Pdf::Document>(pathSource1);
 
 		// make list of path to temporary images
 		String* images = new String[doc->get_Pages()->get_Count()];
@@ -39,10 +38,10 @@ void pdf_to_tiff()
 		for (auto const& page : doc->get_Pages())
 		{
 			// setup default resolution to pdf documents 72dpi
-			auto resolution = MakeObject<Devices::Resolution>(72);
+			auto resolution = MakeObject<Aspose::Pdf::Devices::Resolution>(72);
 
 			// create image device to save document as image with page dimensions and resolution
-			auto imageDevice = MakeObject<Devices::JpegDevice>(
+			auto imageDevice = MakeObject<Aspose::Pdf::Devices::JpegDevice>(
 				page->get_PageInfo()->get_Width(),
 				page->get_PageInfo()->get_Height(),
 				resolution);

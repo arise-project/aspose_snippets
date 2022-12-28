@@ -3,21 +3,44 @@
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
+#include <guiddef.h>
+
+#include <windows.h>
+#include <gdiplus.h>
+#include <stdio.h>
 
 using namespace System;
-using namespace Aspose::Pdf;
+
+INT GetEncoderClsid(const WCHAR* format, CLSID* pClsid);  // helper function
 
 void tiff_to_pdf()
 {
-    String pathSource1 = u"../../TestData/test.tiff";
-    String pathSource2 = u"../../TestData/Second/test.tiff";
+    GUID   pageGuid = FrameDimensionPage;
+    CLSID  encoderClsid;
+    Image  multi(L"../../TestData/test.tiff");
 
-    // Load tiff to Aspose image
-    var multiImage1 = (com.aspose.imaging.fileformats.tiff.TiffImage)com.aspose.imaging.Image.load(pathSource1);
-    var multiImage2 = (com.aspose.imaging.fileformats.tiff.TiffImage)com.aspose.imaging.Image.load(pathSource2);
+    // Get the CLSID of the PNG encoder.
+    GetEncoderClsid(L"image/png", &encoderClsid);
 
-    // make list of tiff images to merge
-    var images = new com.aspose.imaging.fileformats.tiff.TiffImage[]{multiImage1, multiImage2};
+    // Display and save the first page (index 0).
+    multi.SelectActiveFrame(&pageGuid, 0);
+    graphics.DrawImage(&multi, 10, 10);
+    multi.Save(L"Page0.png", &encoderClsid, NULL);
+
+    // Display and save the second page.
+    multi.SelectActiveFrame(&pageGuid, 1);
+    graphics.DrawImage(&multi, 200, 10);
+    multi.Save(L"Page1.png", &encoderClsid, NULL);
+
+    // Display and save the third page.
+    multi.SelectActiveFrame(&pageGuid, 2);
+    graphics.DrawImage(&multi, 10, 150);
+    multi.Save(L"Page2.png", &encoderClsid, NULL);
+
+    // Display and save the fourth page.
+    multi.SelectActiveFrame(&pageGuid, 3);
+    graphics.DrawImage(&multi, 200, 150);
+    multi.Save(L"Page3.png", &encoderClsid, NULL);
 
     // create empty pdf document
     System::SharedPtr<Document> outputDoc = MakeObject<Document>();
