@@ -1,14 +1,25 @@
 #include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/Generator/Image.h"
 #include "Aspose.PDF.Cpp/Devices/Resolution.h"
 #include "Aspose.PDF.Cpp/Devices/Device.h"
+#include "Aspose.PDF.Cpp/Devices/JpegDevice.h"
 #include "Aspose.PDF.Cpp/Page.h"
+#include "Aspose.PDF.Cpp/Generator/PageInfo.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/Devices/ImageDevice.h"
 #include "Aspose.PDF.Cpp/Devices/JpegDevice.h"
+#include "system/io/file.h"
+#include "drawing/bitmap.h"
+#include "drawing/graphics.h"
+
+#include <windows.h>
+#include <gdiplus.h>
+#include <stdio.h>
+using namespace Gdiplus;
 
 using namespace System;
 using namespace Aspose::Pdf;
+
+INT GetEncoderClsid(const WCHAR* format, CLSID* pClsid);  // helper function
 
 void pdf_to_tiff()
 {
@@ -17,48 +28,96 @@ void pdf_to_tiff()
         // read pdf file to Aspose Document
         System::SharedPtr<Document> doc = MakeObject<Document>(pathSource1);
 
-        // make list of Aspose images
-        var images = new com.aspose.imaging.Image[doc.getPages().size()];
+		// make list of path to temporary images
+		String* images = new String[doc->get_Pages()->get_Count()];
 
-        // pdf document count pages from 1 to n
-        for (int pageCount = 1; pageCount <= doc.getPages().size(); pageCount++)
-        {
-                // setup default resolution to pdf documents 72dpi
-                var resolution = new com.aspose.pdf.devices.Resolution(72);
+		int newWidth = 0;
+		int newHeight = 0;
 
-                // create image device to save document as image with page dimensions and resolution
-                var imageDevice = new com.aspose.pdf.devices.JpegDevice(
-                    (int)doc.getPages().get_Item(pageCount).getPageInfo().getWidth(),
-                    (int)doc.getPages().get_Item(pageCount).getPageInfo().getHeight(), resolution);
+		// pages in pdf counted from 1 to n
+		int pageCount = 1;
+		for (auto const& page : doc->get_Pages())
+		{
+			// setup default resolution to pdf documents 72dpi
+			auto resolution = MakeObject<Devices::Resolution>(72);
 
-                var outPath = "test_" + pageCount + ".jpg";
+			// create image device to save document as image with page dimensions and resolution
+			auto imageDevice = MakeObject<Devices::JpegDevice>(
+				page->get_PageInfo()->get_Width(),
+				page->get_PageInfo()->get_Height(),
+				resolution);
 
-                // process document page to image
-                imageDevice.process(doc.getPages().get_Item(pageCount), outPath);
+			// process document page to image
+			String outPath = String::Format(u"{0}_test.jpg", pageCount);
+			auto stream = System::IO::File::Create(outPath);
+			imageDevice->Process(page, stream);
+			images[pageCount - 1] = outPath;
+			pageCount++;
+		}
 
-                // load image from file, it supports a lot of formats
-                images[pageCount - 1] = com.aspose.imaging.Image.load(outPath);
-        }
+		// Initialize GDI+.
+		GdiplusStartupInput gdiplusStartupInput;
+		ULONG_PTR gdiplusToken;
+		GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, NULL);
 
-        // use file system as source for save image
-        com.aspose.imaging.Source fileSource = new com.aspose.imaging.sources.FileCreateSource(
-            "./test.tiff",
-            false); // preserve image on the disk
+		EncoderParameters encoderParameters;
+		ULONG             parameterValue;
+		Status            stat;
 
-        var createOptions = new com.aspose.imaging.imageoptions.TiffOptions(
-            // The default tiff format is no compression with B/W 1 bit per pixel only format.
-            // You can also use this setting to get an empty options and initialize with your tags or other settings.
-            com.aspose.imaging.fileformats.tiff.enums.TiffExpectedFormat.Default);
+		// An EncoderParameters object has an array of
+		// EncoderParameter objects. In this case, there is only
+		// one EncoderParameter object in the array.
+		encoderParameters.Count = 1;
 
-        // type of image compression Lzw
-        createOptions.setCompression(com.aspose.imaging.fileformats.tiff.enums.TiffCompressions.Lzw);
-        // Pits per pixel
-        createOptions.setBitsPerSample(new int[]{8, 8, 8});
-        // Photometric RGB interpolation
-        createOptions.setPhotometric(com.aspose.imaging.fileformats.tiff.enums.TiffPhotometrics.Rgb);
-        createOptions.setSource(fileSource);
+		// Initialize the one EncoderParameter object.
+		encoderParameters.Parameter[0].Guid = EncoderSaveFlag;
+		encoderParameters.Parameter[0].Type = EncoderParameterValueTypeLong;
+		encoderParameters.Parameter[0].NumberOfValues = 1;
+		encoderParameters.Parameter[0].Value = &parameterValue;
 
-        var tiffImage = com.aspose.imaging.Image.create(images, true);
-        // save tiff file
-        tiffImage.save(u"test.tiff", createOptions);
+		// Get the CLSID of the TIFF encoder.
+		CLSID encoderClsid;
+		GetEncoderClsid(L"image/tiff", &encoderClsid);
+
+		// Create four image objects.
+		Image* multi = new Image(L"Shapes.bmp");
+		Image* page2 = new Image(L"Cereal.gif");
+		Image* page3 = new Image(L"Iron.jpg");
+		Image* page4 = new Image(L"House.png");
+
+		// Save the first page (frame).
+		parameterValue = EncoderValueMultiFrame;
+		stat = multi->Save(L"MultiFrame.tif", &encoderClsid, &encoderParameters);
+		if (stat == Ok)
+			printf("Page 1 saved successfully.\n");
+
+		// Save the second page (frame).
+		parameterValue = EncoderValueFrameDimensionPage;
+		stat = multi->SaveAdd(page2, &encoderParameters);
+		if (stat == Ok)
+			printf("Page 2 saved successfully.\n");
+
+		// Save the third page (frame).
+		parameterValue = EncoderValueFrameDimensionPage;
+		stat = multi->SaveAdd(page3, &encoderParameters);
+		if (stat == Ok)
+			printf("Page 3 saved successfully.\n");
+
+		// Save the fourth page (frame).
+		parameterValue = EncoderValueFrameDimensionPage;
+		stat = multi->SaveAdd(page4, &encoderParameters);
+		if (stat == Ok)
+			printf("Page 4 saved successfully.\n");
+
+		// Close the multiframe file.
+		parameterValue = EncoderValueFlush;
+		stat = multi->SaveAdd(&encoderParameters);
+		if (stat == Ok)
+			printf("File closed successfully.\n");
+
+		delete multi;
+		delete page2;
+		delete page3;
+		delete page4;
+		GdiplusShutdown(gdiplusToken);
 }
