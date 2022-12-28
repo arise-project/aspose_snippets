@@ -4,88 +4,84 @@
 #include "Aspose.PDF.Cpp/Generator/Image.h"
 #include "Aspose.PDF.Cpp/Devices/Device.h"
 #include "Aspose.PDF.Cpp/Page.h"
+#include "Aspose.PDF.Cpp/Generator/PageInfo.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/Devices/JpegDevice.h"
 #include "Aspose.PDF.Cpp/Devices/ImageDevice.h"
 #include "Aspose.PDF.Cpp/Rectangle.h"
+#include "system/io/file.h"
+#include "drawing/image.h"
+#include "drawing/bitmap.h"
+#include "drawing/graphics.h"
 
 using namespace System;
 using namespace Aspose::Pdf;
 
 void pdf_to_jpeg()
 {
-    auto pathSource = u"../../TestData/test.pdf";
+	String pathSource = u"../../TestData/test.pdf";
 
-    // read pdf file to Aspose Document
-    System::SharedPtr<Document> doc = MakeObject<Document>(inputFilename);
+	// read pdf file to Aspose Document
+	System::SharedPtr<Document> doc = MakeObject<Document>(pathSource);
 
-    // make list of path to temporary images
-    ArrayList<String> images = new ArrayList<>();
+	// make list of path to temporary images
+	String* images = new String[doc->get_Pages()->get_Count()];
 
-    // pages in pdf counted from 1 to n
-    for (int pageCount = 1; pageCount <= doc.getPages().size(); pageCount++)
-    {
-        // setup default resolution to pdf documents 72dpi
-        com.aspose.pdf.devices.Resolution resolution = new com.aspose.pdf.devices.Resolution(72);
+	int newWidth = 0;
+	int newHeight = 0;
 
-        // create image device to save document as image with page dimensions and resolution
-        com.aspose.pdf.devices.JpegDevice imageDevice = new com.aspose.pdf.devices.JpegDevice((int)doc.getPages().get_Item(pageCount).getPageInfo().getWidth(), (int)doc.getPages().get_Item(pageCount).getPageInfo().getHeight(), resolution);
-        String outPath = "test_" + pageCount + ".jpg";
+	// pages in pdf counted from 1 to n
+	int pageCount = 1;
+	for (auto const& page : doc->get_Pages())
+	{
+		// setup default resolution to pdf documents 72dpi
+		auto resolution = MakeObject<Devices::Resolution>(72);
 
-        // process document page to image
-        imageDevice.process(doc.getPages().get_Item(pageCount), outPath);
-        images.add(outPath);
-    }
+		// create image device to save document as image with page dimensions and resolution
+		auto imageDevice = MakeObject<Devices::JpegDevice>(
+			page->get_PageInfo()->get_Width(),
+			page->get_PageInfo()->get_Height(),
+			resolution);
 
-    // make list pf parsed image sizes
-    ArrayList<com.aspose.imaging.Size> imageSizes = new ArrayList<>();
-    for (var path : images)
-    {
-        // load image from file, it supports a lot of formats
-        com.aspose.imaging.RasterImage image = (com.aspose.imaging.RasterImage)com.aspose.imaging.Image.load(path);
-        imageSizes.add(image.getSize());
-    }
+		// process document page to image
+		String outPath = String::Format(u"{0}_test.jpg", pageCount);
+		auto stream = System::IO::File::Create(outPath);
+		imageDevice->Process(page, stream);
+		images[pageCount - 1] = outPath;
+		pageCount++;
+	}
 
-    int newWidth = 0;
-    int newHeight = 0;
-    for (com.aspose.imaging.Size s : imageSizes)
-    {
-        newWidth += s.getWidth();
-        newHeight = newHeight < s.getHeight() ? s.getHeight() : newHeight;
-    }
+	int newWidth = 0;
+	int newHeight = 0;
 
-    // use file system as source for save image
-    com.aspose.imaging.Source fileSource = new com.aspose.imaging.sources.FileCreateSource(
-        "./test.jpg",
-        false); // preserve image on the disk
+	for (int i = 0; i < sizeof(images); i++)
+	{
+		String path = images[i];
+		// load image from file, it supports a lot of formats
+		auto image = System::Drawing::Image::FromFile(path);
+		// read image dimensions to pdf page rectangle
+		auto rect = new Aspose::Pdf::Rectangle(0, 0, image->get_Width() - 1, image->get_Height() - 1);
 
-    com.aspose.imaging.imageoptions.JpegOptions options = new com.aspose.imaging.imageoptions.JpegOptions();
-    options.setSource(fileSource);
-    // the best quality for jpg
-    options.setQuality(100);
+		newWidth += image->get_Width();
+		newHeight = newHeight < image->get_Height() ? image->get_Height() : newHeight;
+	}
 
-    // create empty image with calculated width and hight
-    com.aspose.imaging.fileformats.jpeg.JpegImage newImage = (com.aspose.imaging.fileformats.jpeg.JpegImage)com.aspose.imaging.Image.create(options, newWidth, newHeight);
-    int stitchedWidth = 0;
-    for (String imagePath : images)
-    {
+	auto newImage = new System::Drawing::Bitmap(newWidth, newHeight);
+	auto canvas = System::Drawing::Graphics::FromImage(newImage);
+	canvas->set_InterpolationMode(System::Drawing::Drawing2D::InterpolationMode::HighQualityBicubic);
+	int stitchedWidth = 0;
+	for (int i = 0; i < sizeof(images); i++)
+	{
+		auto fs = images[i];
 
-        // TODO: read image size
-        var image = (com.aspose.imaging.RasterImage)com.aspose.imaging.Image.load(imagePath);
-        // create bounds to insert small image into large
-        com.aspose.imaging.Rectangle bounds = new com.aspose.imaging.Rectangle(
-            stitchedWidth,
-            0,
-            image.getWidth(), image.getHeight());
+		// load image from file, it supports a lot of formats
+		auto image = System::Drawing::Image::FromFile(fs);
+		canvas->DrawImage(image, stitchedWidth, 0);
+		stitchedWidth += image->get_Width();
+	}
 
-        // combining images into new one
-        newImage.saveArgb32Pixels(
-            bounds,                                     // where to insert image
-            image.loadArgb32Pixels(image.getBounds())); // convert image chunk to 32bit Argb
+	canvas->Save();
 
-        stitchedWidth += image.getWidth();
-    }
-
-    // save created image to disk
-    newImage.save();
+	// save created image to disk
+	newImage->Save(u"test.jpg", System::Drawing::Imaging::ImageFormat::get_Jpeg());
 }
