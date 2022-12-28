@@ -15,7 +15,7 @@ void jpg_to_docx()
     String pathSource2 = u"../../TestData/Second/test.jpg";
 
     // create empty pdf document
-    auto outputDoc = MakeObject<Document>();
+    System::SharedPtr<Document> outputDoc = MakeObject<Document>();
 
     // set less memory usage with unload instead of fast performance
     doc->set_EnableObjectUnload(true);
@@ -33,14 +33,11 @@ void jpg_to_docx()
         page->SetPageSize(PageSize::get_A4()->get_Width(), PageSize::get_A4()->get_Height());
 
         // TODO: read image size
-        com.aspose.pdf.Rectangle rect;
 
-        // load image from stream, it supports a lot of formats
-        com.aspose.imaging.Image image = com.aspose.imaging.Image.load(fs);
-        {
-            // read image dimensions to pdf page rectangle
-            rect = new com.aspose.pdf.Rectangle(0, 0, image.getWidth() - 1, image.getHeight() - 1);
-        }
+        // load image from file, it supports a lot of formats
+        auto image = System::Drawing::Image::FromFile(fs);
+        // read image dimensions to pdf page rectangle
+        auto rect = new Aspose::Pdf::Rectangle(0, 0, image->get_Width() - 1, image.get_Height() - 1);
 
         // add image to new pdf page
         page->AddImage(fs, rect);

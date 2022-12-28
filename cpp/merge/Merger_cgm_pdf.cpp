@@ -17,7 +17,7 @@ void cgm_to_pdf()
     auto secondDoc = MakeObject<Document>(pathSource2, MakeObject<CgmLoadOptions>());
 
     // create empty pdf document
-    auto outputDoc = MakeObject<Document>();
+    System::SharedPtr<Document> outputDoc = MakeObject<Document>();
 
     // set less memory usage with unload instead of fast performance
     outputDoc->set_EnableObjectUnload(true);

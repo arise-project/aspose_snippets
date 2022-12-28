@@ -13,11 +13,11 @@ void mht_to_pdf()
     String pathSource2 = u"../../TestData/Second/test.mht";
 
     // mht files can be parsed and loaded as Aspose Document
-    auto firstDoc = MakeObject<Document>(pathSource1, MakeObject<MhtLoadOptions>());
-    auto secondDoc = MakeObject<Document>(pathSource2, MakeObject<MhtLoadOptions>());
+    System::SharedPtr<Document> firstDoc = MakeObject<Document>(pathSource1, MakeObject<MhtLoadOptions>());
+    System::SharedPtr<Document> secondDoc = MakeObject<Document>(pathSource2, MakeObject<MhtLoadOptions>());
 
     // create empty pdf document
-    auto outputDoc = MakeObject<Document>();
+    System::SharedPtr<Document> outputDoc = MakeObject<Document>();
 
     // set less memory usage with unload instead of fast performance
     outputDoc->set_EnableObjectUnload(true);

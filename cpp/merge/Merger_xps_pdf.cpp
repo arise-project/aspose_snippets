@@ -13,11 +13,11 @@ void xps_to_pdf()
     String pathSource2 = u"../../TestData/Second/test.xps";
 
     // xps files can be parsed and loaded as Aspose Document
-    auto firstDoc = MakeObject<Document>(pathSource1, MakeObject<XpsLoadOptions>());
-    auto secondDoc = MakeObject<Document>(pathSource2, MakeObject<XpsLoadOptions>());
+    System::SharedPtr<Document> firstDoc = MakeObject<Document>(pathSource1, MakeObject<XpsLoadOptions>());
+    System::SharedPtr<Document> secondDoc = MakeObject<Document>(pathSource2, MakeObject<XpsLoadOptions>());
 
     // create empty pdf document
-    auto outputDoc = MakeObject<Document>();
+    System::SharedPtr<Document> outputDoc = MakeObject<Document>();
 
     // set less memory usage with unload instead of fast performance
     outputDoc->set_EnableObjectUnload(true);

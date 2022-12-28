@@ -14,13 +14,16 @@ using namespace Aspose::Pdf;
 
 void pdf_to_bmp()
 {
-        auto pathSource = u"../../TestData/test.pdf";
+        String pathSource = u"../../TestData/test.pdf";
 
         // read pdf file to Aspose Document
-        auto doc = MakeObject<Document>(inputFilename);
+        System::SharedPtr<Document> doc = MakeObject<Document>(inputFilename);
 
         // make list of path to temporary images
-        ArrayList<String> images = new ArrayList<>();
+        String images[doc->get_Pages()->get_Count()];
+
+        int newWidth = 0;
+        int newHeight = 0;
 
         // pages in pdf counted from 1 to n
         for (int pageCount = 1; pageCount <= doc.getPages().size(); pageCount++)

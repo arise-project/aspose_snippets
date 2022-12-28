@@ -7,6 +7,7 @@
 #include "Aspose.PDF.Cpp/SaveFormat.h"
 
 using namespace System;
+using namespace System::Drawing;
 using namespace Aspose::Pdf;
 
 void bmp_to_pdf()
@@ -15,7 +16,7 @@ void bmp_to_pdf()
     String pathSource2 = u"../../TestData/Second/test.bmp";
 
     // create empty pdf document
-    auto doc = MakeObject<Document>();
+    System::SharedPtr<Document> doc = MakeObject<Document>();
 
     // make list of files with images to merge
     String images[] = {pathSource1, pathSource2};
@@ -29,10 +30,10 @@ void bmp_to_pdf()
         // setup page size to be A4
         page->SetPageSize(PageSize::get_A4()->get_Width(), PageSize::get_A4()->get_Height());
 
-        // load image from stream, it supports a lot of formats
-        auto image = MakeObject<System::Drawing::Image>(fs);
+        // load image from file, it supports a lot of formats
+        auto image = System::Drawing::Image::FromFile(fs);
         // read image dimensions to pdf page rectangle
-        auto rect = new Rectangle(0, 0, image->get_FixWidth() - 1, image.get_FixHeight() - 1);
+        auto rect = new Aspose::Pdf::Rectangle(0, 0, image->get_Width() - 1, image.get_Height() - 1);
 
         // add image to new pdf page
         page->AddImage(fs, rect);

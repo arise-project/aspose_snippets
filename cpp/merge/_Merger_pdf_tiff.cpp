@@ -15,7 +15,7 @@ void pdf_to_tiff()
         String pathSource1 = u"../../TestData/test.pdf";
 
         // read pdf file to Aspose Document
-        var doc = new com.aspose.pdf.Document(pathSource1);
+        System::SharedPtr<Document> doc = MakeObject<Document>(pathSource1);
 
         // make list of Aspose images
         var images = new com.aspose.imaging.Image[doc.getPages().size()];

@@ -17,7 +17,7 @@ void pdf_to_png()
     auto pathSource = u"../../TestData/test.pdf";
 
     // read pdf file to Aspose Document
-    auto doc = MakeObject<Document>(inputFilename);
+    System::SharedPtr<Document> doc = MakeObject<Document>(inputFilename);
 
     // make list of path to temporary images
     ArrayList<String> images = new ArrayList<>();

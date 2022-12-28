@@ -20,7 +20,7 @@ void tiff_to_pdf()
     var images = new com.aspose.imaging.fileformats.tiff.TiffImage[]{multiImage1, multiImage2};
 
     // create empty pdf document
-    auto outputDoc = MakeObject<Document>();
+    System::SharedPtr<Document> outputDoc = MakeObject<Document>();
 
     int index = 1;
     for (var multiImage : images)
