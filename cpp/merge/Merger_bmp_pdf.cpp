@@ -8,18 +8,16 @@
 #include "drawing/image.h"
 
 using namespace System;
+using namespace System::Drawing;
 using namespace Aspose::Pdf;
 
-void png_to_pdf()
+void bmp_to_pdf()
 {
-	String pathSource1 = u"../../TestData/test.png";
-	String pathSource2 = u"../../TestData/Second/test.png";
+	String pathSource1 = u"../../TestData/test.bmp";
+	String pathSource2 = u"../../TestData/Second/test.bmp";
 
 	// create empty pdf document
-	System::SharedPtr<Document> outputDoc = MakeObject<Document>();
-
-	// set less memory usage with unload instead of fast performance
-	outputDoc->set_EnableObjectUnload(true);
+	System::SharedPtr<Document> doc = MakeObject<Document>();
 
 	// make list of files with images to merge
 	String images[] = { pathSource1, pathSource2 };
@@ -28,7 +26,7 @@ void png_to_pdf()
 	{
 		auto fs = images[i];
 		// add new page to pdf
-		auto page = outputDoc->get_Pages()->CopyPage();
+		auto page = doc->get_Pages()->CopyPage();
 
 		// setup page size to be A4
 		page->SetPageSize(PageSize::get_A4()->get_Width(), PageSize::get_A4()->get_Height());
@@ -43,5 +41,5 @@ void png_to_pdf()
 	}
 
 	// save result pdf to file
-	outputDoc->Save(u"test.pdf", SaveFormat::Pdf);
+	doc->Save(u"test.pdf", SaveFormat::Pdf);
 }

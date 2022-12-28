@@ -10,10 +10,10 @@
 using namespace System;
 using namespace Aspose::Pdf;
 
-void png_to_pdf()
+void jpg_to_pdf()
 {
-	String pathSource1 = u"../../TestData/test.png";
-	String pathSource2 = u"../../TestData/Second/test.png";
+	String pathSource1 = u"../../TestData/test.jpg";
+	String pathSource2 = u"../../TestData/Second/test.jpg";
 
 	// create empty pdf document
 	System::SharedPtr<Document> outputDoc = MakeObject<Document>();

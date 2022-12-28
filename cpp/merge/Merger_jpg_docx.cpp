@@ -5,6 +5,7 @@
 #include "Aspose.PDF.Cpp/Generator/Image.h"
 #include "Aspose.PDF.Cpp/Rectangle.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
+#include "drawing/image.h"
 
 using namespace System;
 using namespace Aspose::Pdf;
@@ -18,7 +19,7 @@ void jpg_to_docx()
     System::SharedPtr<Document> outputDoc = MakeObject<Document>();
 
     // set less memory usage with unload instead of fast performance
-    doc->set_EnableObjectUnload(true);
+    outputDoc->set_EnableObjectUnload(true);
 
     // make list of files with images to merge
     String images[] = {pathSource1, pathSource2};
@@ -27,21 +28,19 @@ void jpg_to_docx()
     {
         auto fs = images[i];
         // add new page to pdf
-        auto page = doc->get_Pages()->CopyPage();
+        auto page = outputDoc->get_Pages()->CopyPage();
 
         // setup page size to be A4
         page->SetPageSize(PageSize::get_A4()->get_Width(), PageSize::get_A4()->get_Height());
 
-        // TODO: read image size
-
         // load image from file, it supports a lot of formats
         auto image = System::Drawing::Image::FromFile(fs);
         // read image dimensions to pdf page rectangle
-        auto rect = new Aspose::Pdf::Rectangle(0, 0, image->get_Width() - 1, image.get_Height() - 1);
+        auto rect = new Aspose::Pdf::Rectangle(0, 0, image->get_Width() - 1, image->get_Height() - 1);
 
         // add image to new pdf page
         page->AddImage(fs, rect);
     }
 
-    doc->Save(u"test.docx", SaveFormat::DocX);
+    outputDoc->Save(u"test.docx", SaveFormat::DocX);
 }
