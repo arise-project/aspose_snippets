@@ -1,9 +1,11 @@
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/Page.h"
+#include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/PageSize.h"
-#include "Aspose.PDF.Cpp/Generator\Image.h"
+#include "Aspose.PDF.Cpp/Generator/Image.h"
 #include "Aspose.PDF.Cpp/Rectangle.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
+
 using namespace System;
 using namespace Aspose::Pdf;
 
@@ -19,7 +21,7 @@ void png_to_pdf()
     doc->set_EnableObjectUnload(true);
 
     // make list of files with images to merge
-    auto images[] = {pathSource1, pathSource2};
+    String images[] = {pathSource1, pathSource2};
 
     for (int i = 1; i < sizeof(images); i++)
     {
@@ -43,5 +45,5 @@ void png_to_pdf()
     }
 
     // save result pdf to file
-    doc->Save("test.pdf", SaveFormat::Pdf);
+    doc->Save(u"test.pdf", SaveFormat::Pdf);
 }

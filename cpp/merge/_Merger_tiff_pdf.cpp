@@ -1,7 +1,9 @@
-#include "Aspose.PDF.Cpp/Generator\Image.h"
+#include "Aspose.PDF.Cpp/Generator/Image.h"
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/Page.h"
+#include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
+
 using namespace System;
 using namespace Aspose::Pdf;
 
@@ -69,5 +71,5 @@ void tiff_to_pdf()
     }
 
     // save result pdf to file
-    outputDoc->Save("test.pdf", SaveFormat::Pdf);
+    outputDoc->Save(u"test.pdf", SaveFormat::Pdf);
 }

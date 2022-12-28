@@ -1,10 +1,12 @@
 #include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/Generator\Image.h"
-#include "Aspose.PDF.Cpp/Devices\Resolution.h"
-#include "Aspose.PDF.Cpp/Devices\Device.h"
+#include "Aspose.PDF.Cpp/Generator/Image.h"
+#include "Aspose.PDF.Cpp/Devices/Resolution.h"
+#include "Aspose.PDF.Cpp/Devices/Device.h"
 #include "Aspose.PDF.Cpp/Page.h"
-#include "Aspose.PDF.Cpp/Devices\ImageDevice.h"
-#include "Aspose.PDF.Cpp/Devices\JpegDevice.h"
+#include "Aspose.PDF.Cpp/PageCollection.h"
+#include "Aspose.PDF.Cpp/Devices/ImageDevice.h"
+#include "Aspose.PDF.Cpp/Devices/JpegDevice.h"
+
 using namespace System;
 using namespace Aspose::Pdf;
 
@@ -58,5 +60,5 @@ void pdf_to_tiff()
 
         var tiffImage = com.aspose.imaging.Image.create(images, true);
         // save tiff file
-        tiffImage.save("test.tiff", createOptions);
+        tiffImage.save(u"test.tiff", createOptions);
 }
