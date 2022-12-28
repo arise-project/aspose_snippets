@@ -23,7 +23,7 @@ void tiff_to_pdf()
 {
     GUID   pageGuid = FrameDimensionPage;
     CLSID  encoderClsid;
-    Image  multi(L"../../TestData/test.tiff");
+    Gdiplus::Image  multi(L"../../TestData/test.tiff");
 
     // Get the CLSID of the PNG encoder.
     GetEncoderClsid(L"image/png", &encoderClsid);

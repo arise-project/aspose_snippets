@@ -51,9 +51,6 @@ void pdf_to_png()
 		pageCount++;
 	}
 
-	int newWidth = 0;
-	int newHeight = 0;
-
 	for (int i = 0; i < sizeof(images); i++)
 	{
 		String path = images[i];

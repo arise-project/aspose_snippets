@@ -79,8 +79,8 @@ void pdf_to_tiff()
 		GetEncoderClsid(L"image/tiff", &encoderClsid);
 
 		// Create four image objects.
-		Image* multi = new Image(L"1_test.jpg");
-		Image* page2 = new Image(L"2_test.jpg");
+		auto multi = new Gdiplus::Image(L"1_test.jpg");
+		auto page2 = new Gdiplus::Image(L"2_test.jpg");
 
 		// Save the first page (frame).
 		parameterValue = EncoderValueMultiFrame;

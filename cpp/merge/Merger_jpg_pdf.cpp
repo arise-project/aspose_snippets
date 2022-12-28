@@ -28,7 +28,7 @@ void jpg_to_pdf()
 	{
 		auto fs = images[i];
 		// add new page to pdf
-		auto page = outputDoc->get_Pages()->CopyPage();
+		auto page = outputDoc->get_Pages()->Add();
 
 		// setup page size to be A4
 		page->SetPageSize(PageSize::get_A4()->get_Width(), PageSize::get_A4()->get_Height());
