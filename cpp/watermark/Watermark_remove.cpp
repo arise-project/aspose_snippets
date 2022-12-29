@@ -4,6 +4,7 @@
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
+#include "Aspose.PDF.Cpp/Artifacts/ArtifactCollection.h"
 
 #include "system/string.h"
 #include "system/io/file.h"
@@ -17,9 +18,9 @@ void remove()
     String pathSource = u"../../TestData/test_with_watermark.pdf";
     auto doc = MakeObject<Document>(pathSource);
 
-    if(doc->get_Pages()->idx_get(1)->get_Artifacts()->idx_get(1)->set_Subtype(Aspose.Pdf.Artifact.ArtifactSubtype.Watermark))
+    if(doc->get_Pages()->idx_get(1)->get_Artifacts()->idx_get(1)->get_Subtype() == Aspose::Pdf::Artifact::ArtifactSubtype::Watermark)
     {
-        ->get_Pages()->idx_get(1)->get_Artifacts()->Delete(doc->get_Pages()->idx_get(1)->get_Artifacts()->idx_get(1));
+        doc->get_Pages()->idx_get(1)->get_Artifacts()->Delete(doc->get_Pages()->idx_get(1)->get_Artifacts()->idx_get(1));
     }
 
     //save result pdf to file
