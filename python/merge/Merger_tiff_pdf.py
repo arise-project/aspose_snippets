@@ -51,4 +51,4 @@ def tiff_to_pdf():
             page.Paragraphs.add(image)
 
     # save result pdf to file
-    output_doc.save("test.pdf", SaveFormat.Pdf)
+    output_doc.save("Merger_tiff_pdf.pdf", SaveFormat.Pdf)

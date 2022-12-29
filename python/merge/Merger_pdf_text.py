@@ -31,5 +31,5 @@ def pdf_to_text():
     extracted_text = text_absorber.Text
 
     # save content to text file
-    with open("test.txt", "w") as f:
+    with open("Merger_pdf_text.txt", "w") as f:
         f.write(extracted_text)

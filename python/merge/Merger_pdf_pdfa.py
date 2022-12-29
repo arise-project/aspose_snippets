@@ -27,4 +27,4 @@ def pdf_to_pdfa():
         output_doc.pages.add(page)
 
     # save document as specific pdf standard PDFA 3Y
-    output_doc.convert("test.pdf", PdfFormat.PDF_A_3U)
+    output_doc.convert("Merger_pdf_pdfa.pdf", PdfFormat.PDF_A_3U)

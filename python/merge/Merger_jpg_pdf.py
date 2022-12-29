@@ -37,4 +37,4 @@ def jpg_to_pdf():
         page.addImage(fs, rect)
 
     # save result pdf to file
-    doc.save("jpg_to_pdf.pdf", SaveFormat.PDF)
+    doc.save("Merger_jpg_pdf.pdf", SaveFormat.PDF)

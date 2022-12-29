@@ -29,4 +29,4 @@ def pdf_to_pptx():
     opt1.slides_as_images = True
 
     # save pdf to Microsoft PowerPoint
-    output_doc.save("test.pptx", opt1)
+    output_doc.save("Merger_pdf_pptx.pptx", opt1)

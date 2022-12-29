@@ -39,4 +39,4 @@ def pdf_to_epub():
     opt1.fixed_layout = True
 
     # save pdf to html page
-    output_doc.save("test.html", opt1)
+    output_doc.save("Merger_pdf_epub.html", opt1)

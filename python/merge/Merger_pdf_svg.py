@@ -31,4 +31,4 @@ def pdf_to_svg():
     opt1.scale_to_pixels = True
 
     # save pdf to svg
-    output_doc.save("test.svg", opt1)
+    output_doc.save("Merger_pdf_svg.svg", opt1)

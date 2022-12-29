@@ -33,4 +33,4 @@ def pdf_to_doc():
     opt1.Mode = DocSaveOptions.RecognitionMode.Textbox
 
     # save pdf to Microsoft Word doc format
-    output_doc.save("test.doc", opt1)
+    output_doc.save("Merger_pdf_doc.doc", opt1)

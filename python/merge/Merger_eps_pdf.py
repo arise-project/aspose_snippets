@@ -28,4 +28,4 @@ def eps_to_pdf():
         output_doc.pages.add(page)
 
     # save result pdf to file
-    output_doc.save("eps_to_pdf.pdf", SaveFormat.PDF)
+    output_doc.save("Merger_eps_pdf.pdf", SaveFormat.PDF)

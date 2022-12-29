@@ -31,4 +31,4 @@ def pdf_to_emf():
     opt1.content_recognition_mode = EpubSaveOptions.RecognitionMode.PDF_FLOW
 
     # save pdf to epub
-    output_doc.save("test.epub", opt1)
+    output_doc.save("Merger_pdf_emf.epub", opt1)

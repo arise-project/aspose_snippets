@@ -32,4 +32,4 @@ def pdf_to_xls():
     opt1.Format = ExcelSaveOptions.ExcelFormat.XMLSpreadSheet2003
 
     # save Excel document
-    output_doc.save("test.xls", opt1)
+    output_doc.save("Merger_pdf_xls.xls", opt1)
