@@ -28,6 +28,6 @@ public class Merger_pdf_tex {
         var opt1 = new com.aspose.pdf.TeXSaveOptions();
         //save parsed artifacts, for example images to a directory
         opt1.setOutDirectoryPath("./test");
-        outputDoc.save("test.tex", opt1);
+        outputDoc.save("Merger_pdf_tex.tex", opt1);
     }
 }

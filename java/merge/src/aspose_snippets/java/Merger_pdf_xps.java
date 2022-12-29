@@ -29,6 +29,6 @@ public class Merger_pdf_xps {
         //do not save transparent text to output file
         opt1.setSaveTransparentTexts(false);
         //save xps document
-        outputDoc.save("test.xps", opt1);
+        outputDoc.save("Merger_pdf_xps.xps", opt1);
     }
 }

@@ -1,0 +1,29 @@
+from aspose.pdf import (
+    License
+)
+
+from Split_cgm_pdf import *
+from Split_DOC import *
+from Split_HTML import *
+from Split_PDF import *
+from Split_TXT import *
+
+
+def main():
+    set_license()
+
+def set_license():
+    """Sets license to fully work with Aspose.PDF"""
+
+    license_file = "../../test.lic"
+
+    license = License()
+    license.SetLicense(license_file)
+
+    DOC()
+    HTML()
+    PDF()
+    TXT()
+    
+if __name__ == '__main__':
+    main()

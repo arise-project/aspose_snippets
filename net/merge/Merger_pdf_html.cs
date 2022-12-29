@@ -31,7 +31,7 @@ namespace aspose_snippets.net
             }
 
             //save pdf to html page
-            outputDoc.Save("test.html",
+            outputDoc.Save("Merger_pdf_html.html",
                             new Aspose.Pdf.HtmlSaveOptions
                             {
                                 //embed css into a page

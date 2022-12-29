@@ -29,8 +29,6 @@ namespace aspose_snippets.net
                     File.WriteAllText("text_"+index+".txt", extractedText);
                     index++;
                 }
-            }
-            File.Delete("test.pdf");
-        }
+            }        }
     }
 }

@@ -38,5 +38,5 @@ void pdf_to_xls()
 	// set Microsoft document type
 	opt1->set_Format(Aspose::Pdf::ExcelSaveOptions::ExcelFormat::XMLSpreadSheet2003);
 	// save Excel document
-	outputDoc->Save(u"test.xls", opt1);
+	outputDoc->Save(u"Merger_pdf_xls.xls", opt1);
 }

@@ -35,5 +35,5 @@ void pdf_to_pptx()
 	auto opt1 = MakeObject<PptxSaveOptions>();
 	// save all content on page as single image
 	opt1->set_SlidesAsImages(true);
-	outputDoc->Save(u"test.pptx", opt1);
-}
+	outputDoc->Save(u"Merger_pdf_pptx.pptx", opt1);
+}1

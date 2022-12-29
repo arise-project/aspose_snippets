@@ -42,5 +42,5 @@ void jpg_to_docx()
         page->AddImage(fs, rect);
     }
 
-    outputDoc->Save(u"test.docx", SaveFormat::DocX);
+    outputDoc->Save(u"Merger_jpg_docx.docx", SaveFormat::DocX);
 }

@@ -31,7 +31,7 @@ namespace aspose_snippets.net
             }
 
             //save pdf to svg
-            outputDoc.Save("test.svg",
+            outputDoc.Save("Merger_pdf_svg.svg",
                             new Aspose.Pdf.SvgSaveOptions
                             {
                                 //scale the output document from typographic points to pixels

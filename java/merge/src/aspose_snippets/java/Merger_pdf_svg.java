@@ -28,6 +28,6 @@ public class Merger_pdf_svg {
         var opt1 = new com.aspose.pdf.SvgSaveOptions();
         //scale the output document from typographic points to pixels
         opt1.setScaleToPixels(true);
-        outputDoc.save("test.svg", opt1);
+        outputDoc.save("Merger_pdf_svg.svg", opt1);
     }
 }

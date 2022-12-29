@@ -41,7 +41,7 @@ void pdf_to_text()
 	auto extractedText = textAbsorber->get_Text();
 
 	fstream file;
-	file.open("text.txt", ios::out);
+	file.open("Merger_pdf_text.txt", ios::out);
 	file << extractedText;
 	file.close();
 }

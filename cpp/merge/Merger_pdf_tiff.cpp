@@ -84,7 +84,7 @@ void pdf_to_tiff()
 
 		// Save the first page (frame).
 		parameterValue = EncoderValueMultiFrame;
-		stat = multi->Save(L"test.tif", &encoderClsid, &encoderParameters);
+		stat = multi->Save(L"Merger_pdf_tiff.tiff", &encoderClsid, &encoderParameters);
 		
 		// Save the second page (frame).
 		parameterValue = EncoderValueFrameDimensionPage;

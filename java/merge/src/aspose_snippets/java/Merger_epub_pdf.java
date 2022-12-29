@@ -39,6 +39,6 @@ public class Merger_epub_pdf {
         }
 
         //save result pdf to file
-        outputDoc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
+        outputDoc.save("Merger_epub_pdf.pdf", com.aspose.pdf.SaveFormat.Pdf);
     }
 }

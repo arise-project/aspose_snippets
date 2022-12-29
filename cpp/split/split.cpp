@@ -2,10 +2,17 @@
 //
 
 #include <iostream>
-
+#include "Split_HTML.cpp"
+#include "Split_PDF.cpp"
+#include "Split_TXT.cpp"
+#include "Split_WORD.cpp"
+    
 int main()
 {
     std::cout << "Hello World!\n";
+    HTML();
+    PDF();
+    TXT();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

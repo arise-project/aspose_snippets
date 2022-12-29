@@ -36,7 +36,7 @@ namespace aspose_snippets.net
             string extractedText = textAbsorber.Text;
 
             //save content to text file
-            File.WriteAllText("test.txt", extractedText);
+            File.WriteAllText("Merger_pdf_text.txt", extractedText);
         }
     }
 }

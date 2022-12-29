@@ -31,7 +31,7 @@ namespace aspose_snippets.net
             }
 
             //save pdf to TeX document
-            outputDoc.Save("test.tex",
+            outputDoc.Save("Merger_pdf_tex.tex",
                             new Aspose.Pdf.TeXSaveOptions
                             {
                                 //save parsed artifacts, for example images to a directory

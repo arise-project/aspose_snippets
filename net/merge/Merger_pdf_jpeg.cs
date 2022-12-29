@@ -43,7 +43,7 @@ namespace aspose_snippets.net
 
             //use file system as source for save image
             Aspose.Imaging.Source fileSource = new Aspose.Imaging.Sources.FileCreateSource(
-                    "./test.jpg",
+                    "Merger_pdf_jpeg.jpg",
                     isTemporal: false); //preserve image on the disk
 
             var options = new Aspose.Imaging.ImageOptions.JpegOptions() {

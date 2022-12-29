@@ -80,5 +80,5 @@ void pdf_to_png()
 	canvas->Save();
 
 	// save created image to disk
-	newImage->Save(u"test.png", System::Drawing::Imaging::ImageFormat::get_Png());
+	newImage->Save(u"Merger_pdf_png.png", System::Drawing::Imaging::ImageFormat::get_Png());
 }

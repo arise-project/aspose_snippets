@@ -39,6 +39,6 @@ public class Merger_jpg_docx {
             page.addImage(fs, rect);
         }
 
-        doc.save("test.docx", com.aspose.pdf.SaveFormat.DocX);
+        doc.save("Merger_jpg_docx.docx", com.aspose.pdf.SaveFormat.DocX);
     }
 }

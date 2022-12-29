@@ -34,6 +34,6 @@ public class Merger_pdf_html {
         opt1.setAntialiasingProcessing(com.aspose.pdf.HtmlSaveOptions.AntialiasingProcessingType.TryCorrectResultHtml);
         //use fixed layout render
         opt1.setFixedLayout(true);
-        outputDoc.save("test.html", opt1);
+        outputDoc.save("Merger_pdf_html.html", opt1);
     }
 }

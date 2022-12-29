@@ -41,5 +41,5 @@ void bmp_to_pdf()
 	}
 
 	// save result pdf to file
-	doc->Save(u"test.pdf", SaveFormat::Pdf);
+	doc->Save(u"Merger_bmp_pdf.pdf", SaveFormat::Pdf);
 }

@@ -32,7 +32,7 @@ namespace aspose_snippets.net
 
             //save document as specific pdf standard PDFA 3Y
             outputDoc.Convert(
-                "test.pdf",
+                "Merger_pdf_pdfa.pdf",
                 Aspose.Pdf.PdfFormat.PDF_A_3U,
                 //delete objects that impossible to convert
                 Aspose.Pdf.ConvertErrorAction.Delete);

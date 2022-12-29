@@ -33,6 +33,6 @@ public class Merger_svg_pdf {
         }
 
         //save result pdf to file
-        outputDoc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
+        outputDoc.save("Merger_svg_pdf.pdf", com.aspose.pdf.SaveFormat.Pdf);
     }
 }

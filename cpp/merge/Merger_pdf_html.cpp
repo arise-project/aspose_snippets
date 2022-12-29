@@ -42,5 +42,5 @@ void pdf_to_html()
 	opt1->AntialiasingProcessing = Aspose::Pdf::HtmlSaveOptions::AntialiasingProcessingType::TryCorrectResultHtml;
 	// use fixed layout render
 	opt1->set_FixedLayout(true);
-	outputDoc->Save(u"test.html", opt1);
+	outputDoc->Save(u"Merger_pdf_html.html", opt1);
 }

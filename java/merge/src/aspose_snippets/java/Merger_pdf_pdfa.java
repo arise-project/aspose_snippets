@@ -27,7 +27,7 @@ public class Merger_pdf_pdfa {
 
         //save document as specific pdf standard PDFA 3Y
         outputDoc.convert(
-                "test.pdf",
+                "Merger_pdf_pdfa",
                 com.aspose.pdf.PdfFormat.PDF_A_3U,
                 //delete objects that impossible to convert
                 com.aspose.pdf.ConvertErrorAction.Delete);

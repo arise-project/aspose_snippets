@@ -33,5 +33,5 @@ void pdf_to_epub()
 		outputDoc->get_Pages()->CopyPage(page);
 	}
 
-	outputDoc->Save(u"test.epub", SaveFormat::Epub);
+	outputDoc->Save(u"Merger_pdf_epub.epub", SaveFormat::Epub);
 }

@@ -47,7 +47,7 @@ public class Merger_pdf_png {
 
         //use file system as source for save image
         com.aspose.imaging.Source fileSource = new com.aspose.imaging.sources.FileCreateSource(
-                "./test.png",
+                "Merger_pdf_png.png",
                 false); //preserve image on the disk
 
         com.aspose.imaging.imageoptions.PngOptions options = new com.aspose.imaging.imageoptions.PngOptions();

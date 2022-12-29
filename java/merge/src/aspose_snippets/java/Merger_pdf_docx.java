@@ -31,6 +31,6 @@ public class Merger_pdf_docx {
         //make document editable flow and recognize of tables
         opt1.setMode(com.aspose.pdf.DocSaveOptions.RecognitionMode.EnhancedFlow);
 
-        outputDoc.save("test.docx", opt1);
+        outputDoc.save("Merger_pdf_docx.docx", opt1);
     }
 }

@@ -26,5 +26,26 @@ using namespace Aspose::Pdf;
 
 void TXT()
 {
+    const string pathSource = "../../TestData/test.txt";
+            var pdfEditor = new PdfFileEditor();
 
+            using (var doc = new Document(pathSource, new TxtLoadOptions()))
+            {
+                //save input text to pdf to file
+                doc.Save("test.pdf", SaveFormat.Pdf);
+            }
+
+            MemoryStream [] pages = pdfEditor.SplitToPages("test.pdf");
+            int index = 1;
+            foreach(var ms in pages)
+            {
+                using(var page = new Document(ms))
+                {
+                    var textAbsorber = new TextAbsorber();
+                    page.Pages.Accept(textAbsorber);
+                    string extractedText = textAbsorber.Text;
+                    File.WriteAllText("text_"+index+".txt", extractedText);
+                    index++;
+                }
+            }
 }

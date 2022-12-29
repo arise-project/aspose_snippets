@@ -31,7 +31,7 @@ namespace aspose_snippets.net
             }
 
             //save xps document
-            outputDoc.Save("test.xps",
+            outputDoc.Save("Merger_pdf_xps.xps",
                             new Aspose.Pdf.XpsSaveOptions
                             {
                                 //do not save transparent text to output file

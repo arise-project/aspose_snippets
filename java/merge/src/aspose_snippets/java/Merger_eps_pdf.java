@@ -28,6 +28,6 @@ public class Merger_eps_pdf {
         }
 
         //save result pdf to file
-        outputDoc.save("test.pdf", SaveFormat.Pdf);
+        outputDoc.save("Merger_eps_pdf.pdf", SaveFormat.Pdf);
     }
 }

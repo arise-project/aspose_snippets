@@ -48,7 +48,7 @@ public class Merger_pdf_bmp {
 
         //use file system as source for save image
         com.aspose.imaging.Source fileSource = new com.aspose.imaging.sources.FileCreateSource(
-                "./test.bmp",
+                "Merger_pdf_bmp.bmp",
                 false); //preserve image on the disk
 
         com.aspose.imaging.imageoptions.BmpOptions options = new com.aspose.imaging.imageoptions.BmpOptions();

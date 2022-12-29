@@ -84,5 +84,5 @@ void pdf_to_bmp()
 	canvas->Save();
 
 	// save created image to disk
-	newImage->Save(u"test.bmp", System::Drawing::Imaging::ImageFormat::get_Bmp());
+	newImage->Save(u"Merger_pdf_bmp.bmp", System::Drawing::Imaging::ImageFormat::get_Bmp());
 }

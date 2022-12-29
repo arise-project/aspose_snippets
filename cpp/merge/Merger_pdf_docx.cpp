@@ -39,5 +39,5 @@ void pdf_to_docx()
 	// make document editable flow and recognize of tables
 	opt1->set_Mode(Aspose::Pdf::DocSaveOptions::RecognitionMode::EnhancedFlow);
 
-	outputDoc->Save(u"test.docx", opt1);
+	outputDoc->Save(u"Merger_pdf_docx.docx", opt1);
 }

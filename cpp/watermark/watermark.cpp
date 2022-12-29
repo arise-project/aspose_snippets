@@ -3,9 +3,16 @@
 
 #include <iostream>
 
+#include "Watermark_add.cpp"
+#include "Watermark_get.cpp"
+#include "Watermark_remove.cpp"
+    
 int main()
 {
     std::cout << "Hello World!\n";
+    add();
+    get();
+    remove();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -30,6 +30,6 @@ public class Merger_pdf_doc {
         opt1.setFormat(com.aspose.pdf.DocSaveOptions.DocFormat.Doc);
         //This mode is fast and good for maximally preserving original look
         opt1.setMode(com.aspose.pdf.DocSaveOptions.RecognitionMode.Textbox);
-        outputDoc.save("test.doc", opt1);
+        outputDoc.save("Merger_pdf_doc.doc", opt1);
     }
 }

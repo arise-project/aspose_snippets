@@ -46,7 +46,7 @@ namespace aspose_snippets.net
                 page.AddImage(fs, rect);
             }
 
-            doc.Save("test.docx", Aspose.Pdf.SaveFormat.DocX);
+            doc.Save("Merger_jpg_docx.docx", Aspose.Pdf.SaveFormat.DocX);
         }
     }
 }

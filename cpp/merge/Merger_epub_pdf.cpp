@@ -51,5 +51,5 @@ void epub_to_pdf()
 	}
 
 	// save result pdf to file
-	outputDoc->Save(u"test.pdf", SaveFormat::Pdf);
+	outputDoc->Save(u"Merger_epub_pdf.pdf", SaveFormat::Pdf);
 }

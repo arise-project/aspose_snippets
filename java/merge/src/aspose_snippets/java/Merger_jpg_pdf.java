@@ -38,6 +38,6 @@ public class Merger_jpg_pdf {
         }
 
         //save result pdf to file
-        doc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
+        doc.save("Merger_jpg_pdf.pdf", com.aspose.pdf.SaveFormat.Pdf);
     }
 }

@@ -30,7 +30,7 @@ namespace aspose_snippets.net
             }
 
             //save pdf to Microsoft PowerPoint
-            outputDoc.Save("test.pptx",
+            outputDoc.Save("Merger_pdf_pptx.pptx",
                             new Aspose.Pdf.PptxSaveOptions
                             {
                                 //save all content on page as single image

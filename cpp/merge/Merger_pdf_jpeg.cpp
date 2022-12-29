@@ -80,5 +80,5 @@ void pdf_to_jpeg()
 	canvas->Save();
 
 	// save created image to disk
-	newImage->Save(u"test.jpg", System::Drawing::Imaging::ImageFormat::get_Jpeg());
+	newImage->Save(u"Merger_pdf_jpeg.jpg", System::Drawing::Imaging::ImageFormat::get_Jpeg());
 }

@@ -31,7 +31,7 @@ namespace aspose_snippets.net
             }
 
             //save pdf to Microsoft Word doc format
-            outputDoc.Save("test.doc",
+            outputDoc.Save("Merger_pdf_doc.doc",
                             new Aspose.Pdf.DocSaveOptions
                             {
                                 //use doc format

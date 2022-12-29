@@ -58,7 +58,7 @@ namespace aspose_snippets.net
             using (var tiffImage = Aspose.Imaging.Image.Create(images, true))
             {
                 //save tiff file
-                tiffImage.Save("test.tiff", createOptions);
+                tiffImage.Save("Merger_pdf_tiff.tiff", createOptions);
             }
         }
     }

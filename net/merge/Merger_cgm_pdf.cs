@@ -33,7 +33,7 @@ namespace aspose_snippets.net
             }
 
             //save result pdf to file
-            outputDoc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
+            outputDoc.Save("Merger_cgm_pdf.pdf", Aspose.Pdf.SaveFormat.Pdf);
         }
     }
 }

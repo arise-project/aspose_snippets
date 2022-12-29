@@ -37,5 +37,5 @@ void pdf_to_tex()
 	// save parsed artifacts, for example images to a directory
 	opt1->set_OutDirectoryPath(u"./test");
 
-	outputDoc->Save(u"test.tex", opt1);
+	outputDoc->Save(u"Merger_pdf_tex.tex", opt1);
 }

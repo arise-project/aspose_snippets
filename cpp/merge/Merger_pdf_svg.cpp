@@ -37,5 +37,5 @@ void pdf_to_svg()
 	// scale the output document from typographic points to pixels
 	opt1->ScaleToPixels = true;
 
-	outputDoc->Save(u"test.svg", opt1);
+	outputDoc->Save(u"Merger_pdf_svg.svg", opt1);
 }

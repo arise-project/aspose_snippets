@@ -49,6 +49,6 @@ public class Merger_pdf_tiff {
 
         var tiffImage = com.aspose.imaging.Image.create(images, true);
         //save tiff file
-        tiffImage.save("test.tiff", createOptions);
+        tiffImage.save("Merger_pdf_tiff.tiff", createOptions);
     }
 }

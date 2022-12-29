@@ -43,7 +43,7 @@ public class Merger_pdf_jpeg {
 
         //use file system as source for save image
         com.aspose.imaging.Source fileSource = new com.aspose.imaging.sources.FileCreateSource(
-                "./test.jpg",
+                "Merger_pdf_jpeg.jpg",
                 false); //preserve image on the disk
 
         com.aspose.imaging.imageoptions.JpegOptions options = new com.aspose.imaging.imageoptions.JpegOptions();

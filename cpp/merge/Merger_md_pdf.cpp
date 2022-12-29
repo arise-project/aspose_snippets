@@ -35,5 +35,5 @@ void md_to_pdf()
 	}
 
 	// save result pdf to file
-	outputDoc->Save(u"test.pdf", SaveFormat::Pdf);
+	outputDoc->Save(u"Merger_md_pdf.pdf", SaveFormat::Pdf);
 }

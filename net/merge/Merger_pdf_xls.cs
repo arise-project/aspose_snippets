@@ -31,7 +31,7 @@ namespace aspose_snippets.net
             }
 
             //save Excel document
-            outputDoc.Save("test.xls",
+            outputDoc.Save("Merger_pdf_xls.xls",
                             new Aspose.Pdf.ExcelSaveOptions()
                             {
                                 //set Microsoft document type

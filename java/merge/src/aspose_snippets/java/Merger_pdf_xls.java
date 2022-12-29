@@ -30,6 +30,6 @@ public class Merger_pdf_xls {
         //set Microsoft document type
         opt1.setFormat(com.aspose.pdf.ExcelSaveOptions.ExcelFormat.XMLSpreadSheet2003);
         //save Excel document
-        outputDoc.save("test.xls", opt1);
+        outputDoc.save("Merger_pdf_xls.xls", opt1);
     }
 }

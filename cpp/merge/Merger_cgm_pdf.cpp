@@ -35,5 +35,5 @@ void cgm_to_pdf()
 	}
 
 	// save result pdf to file
-	outputDoc->Save(u"test.pdf", SaveFormat::Pdf);
+	outputDoc->Save(u"Merger_cgm_pdf.pdf", SaveFormat::Pdf);
 }

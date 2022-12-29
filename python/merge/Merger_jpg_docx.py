@@ -36,4 +36,4 @@ def jpg_to_docx():
         # add image to new pdf page
         page.addImage(fs, rect)
 
-    doc.save("test.docx", SaveFormat.DOC_X)
+    doc.save("jpg_to_docx.docx", SaveFormat.DOC_X)

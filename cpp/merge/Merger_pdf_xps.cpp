@@ -37,5 +37,5 @@ void pdf_to_xps()
 	// do not save transparent text to output file
 	opt1->set_SaveTransparentTexts(false);
 	// save xps document
-	outputDoc->Save(u"test.xps", opt1);
+	outputDoc->Save(u"Merger_pdf_xps.xps", opt1);
 }

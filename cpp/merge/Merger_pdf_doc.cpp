@@ -40,5 +40,5 @@ void pdf_to_doc()
 	// This mode is fast and good for maximally preserving original look
 	opt1->set_Mode(Aspose::Pdf::DocSaveOptions::RecognitionMode::Textbox);
 
-	outputDoc->Save(u"test.doc", opt1);
+	outputDoc->Save(u"Merger_pdf_doc.doc", opt1);
 }

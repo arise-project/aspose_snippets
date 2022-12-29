@@ -5,8 +5,8 @@ namespace aspose_snippets.net.watermark
         static void Main()
         {
             LicenseProvider.License();
-            //Watermark.add();
-            //Watermark.get();
+            Watermark.add();
+            Watermark.get();
             Watermark.remove();
         }
     }

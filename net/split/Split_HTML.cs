@@ -20,8 +20,6 @@ namespace aspose_snippets.net
             {
                 doc.Save("first_page.html", SaveFormat.Html);
             }
-
-            File.Delete("test.pdf");
         }
     }
 }

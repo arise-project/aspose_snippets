@@ -43,5 +43,5 @@ void jpg_to_pdf()
 	}
 
 	// save result pdf to file
-	outputDoc->Save(u"test.pdf", SaveFormat::Pdf);
+	outputDoc->Save(u"Merger_jpg_pdf.pdf", SaveFormat::Pdf);
 }

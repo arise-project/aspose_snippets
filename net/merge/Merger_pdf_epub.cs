@@ -31,7 +31,7 @@ namespace aspose_snippets.net
             }
 
             //save pdf to epub
-            outputDoc.Save("test.epub",
+            outputDoc.Save("Merger_pdf_epub.epub",
                             new Aspose.Pdf.EpubSaveOptions
                             {
                                 //keep the logical structure of transformed document 

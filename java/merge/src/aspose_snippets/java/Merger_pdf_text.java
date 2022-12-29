@@ -29,5 +29,7 @@ public class Merger_pdf_text {
         var textAbsorber = new com.aspose.pdf.TextAbsorber();
         outputDoc.getPages().accept(textAbsorber);
         String extractedText = textAbsorber.getText();
+        
+        //TODO Merger_pdf_text.txt!
     }
 }

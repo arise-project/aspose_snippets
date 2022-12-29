@@ -40,6 +40,6 @@ public class Merger_html_pdf {
         }
 
         //save result pdf to file
-        outputDoc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
+        outputDoc.save("Merger_html_pdf.pdf", com.aspose.pdf.SaveFormat.Pdf);
     }
 }

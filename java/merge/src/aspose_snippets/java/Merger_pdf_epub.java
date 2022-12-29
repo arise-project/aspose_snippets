@@ -28,6 +28,6 @@ public class Merger_pdf_epub {
         com.aspose.pdf.EpubSaveOptions opt1 = new com.aspose.pdf.EpubSaveOptions();
         //keep the logical structure of transformed document
         opt1.setContentRecognitionMode(com.aspose.pdf.EpubSaveOptions.RecognitionMode.PdfFlow);
-        outputDoc.save("test.epub", opt1);
+        outputDoc.save("Merger_pdf_epub.epub", opt1);
     }
 }

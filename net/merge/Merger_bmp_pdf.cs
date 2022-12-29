@@ -44,7 +44,7 @@ namespace aspose_snippets.net
             }
 
             //save result pdf to file
-            doc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
+            doc.Save("Merger_bmp_pdf.pdf", Aspose.Pdf.SaveFormat.Pdf);
         }
     }
 }
