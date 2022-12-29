@@ -1,16 +1,19 @@
 from aspose.pdf import (
     WatermarkArtifact,
-    Document
+    HorizontalAlignment,
+    VerticalAlignment,
+    Document,
+    SaveFormat
 )
 
 
 def add():
-    pathSource = "../../TestData/test.pdf"
-    watermarkSource = "../../TestData/test.jpg"
-    doc = Document(pathSource)
+    path_source = "../../TestData/test.pdf"
+    watermark_source = "../../TestData/test.jpg"
+    doc = Document(path_source)
 
     artifact = WatermarkArtifact()
-    artifact.SetImage(new FileStream(watermarkSource, FileMode.Open))
+    artifact.SetImage(watermark_source)
 
     artifact.ArtifactHorizontalAlignment = HorizontalAlignment.Center
     artifact.ArtifactVerticalAlignment = VerticalAlignment.Center
