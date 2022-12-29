@@ -2,12 +2,11 @@ package aspose_snippets.java;
 
 public class Split_PDF {
     public static void Execute() {
-        const string pathSource = "../../TestData/test.pdf";
-        var pdfEditor = new PdfFileEditor();
+        String pathSource = "../../TestData/test.pdf";
+        var pdfEditor = new com.aspose.pdf.PdfFileEditor();
         int beg = 1, end = 1;
     
-        var fs = new FileStream(pathSource, FileMode.Open, FileAccess.Read);
-        var doc = new Document(fs);
+        var doc = new com.aspose.pdf.Document(pathSource);
         end = doc.Pages.Count;
     
         if(end > 1)
@@ -15,6 +14,6 @@ public class Split_PDF {
             end /= 2;
         }
     
-        pdfEditor.Extract(pathSource, beg, end, "./half.pdf");
+        pdfEditor.Extract(pathSource, beg, end, "half.pdf");
     }
 }

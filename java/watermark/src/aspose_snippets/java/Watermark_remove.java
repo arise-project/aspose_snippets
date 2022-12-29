@@ -2,15 +2,15 @@ package aspose_snippets.java;
 
 public class Watermark_remove {
     public static void Execute() {
-const string pathSource = "../../TestData/test_with_watermark.pdf";
-            var doc = new Aspose.Pdf.Document(pathSource);
+            String pathSource = "../../TestData/test_with_watermark.pdf";
+            var doc = new com.aspose.pdf.Document(pathSource);
 
-            if(doc.Pages[1].Artifacts[1].Subtype == Aspose.Pdf.Artifact.ArtifactSubtype.Watermark)
+            if(doc.getPages()[1].getArtifacts()[1].setSubtype(com.aspose.pdf.artifact.ArtifactSubtype.Watermark))
             {
-                doc.Pages[1].Artifacts.Delete(doc.Pages[1].Artifacts[1]);
+                doc.getPages()[1].getArtifacts().Delete(doc.getPages()[1].getArtifacts()[1]);
             }
 
             //save result pdf to file
-            doc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
+            doc.Save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
     }
 }
