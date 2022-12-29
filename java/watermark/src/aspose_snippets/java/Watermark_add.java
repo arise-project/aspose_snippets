@@ -7,16 +7,16 @@ public class Watermark_add {
             var doc = new com.aspose.pdf.Document(pathSource);
 
             var artifact = new com.aspose.pdf.WatermarkArtifact();
-            artifact.SetImage(new FileStream(watermarkSource, FileMode.Open));
+            artifact.setImage(watermarkSource);
 
-            artifact.set_ArtifactHorizontalAlignment(com.aspose.pdf.HorizontalAlignment.Center);
-            artifact.set_ArtifactVerticalAlignment(com.aspose.pdf.VerticalAlignment.Center);
-            artifact.set_Rotation(15);
-            artifact.set_Opacity(1);
-            artifact.set_IsBackground(true);
-            doc.getPages()[1].getArtifacts().Add(artifact);
+            artifact.setArtifactHorizontalAlignment(com.aspose.pdf.HorizontalAlignment.Center);
+            artifact.setArtifactVerticalAlignment(com.aspose.pdf.VerticalAlignment.Center);
+            artifact.setRotation(15);
+            artifact.setOpacity(1);
+            artifact.setBackground(true);
+            doc.getPages().get_Item(1).getArtifacts().add(artifact);
 
             //save result pdf to file
-            doc.Save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
+            doc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
     }
 }

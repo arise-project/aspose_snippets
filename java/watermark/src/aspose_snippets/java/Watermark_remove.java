@@ -5,12 +5,12 @@ public class Watermark_remove {
             String pathSource = "../../TestData/test_with_watermark.pdf";
             var doc = new com.aspose.pdf.Document(pathSource);
 
-            if(doc.getPages()[1].getArtifacts()[1].setSubtype(com.aspose.pdf.artifact.ArtifactSubtype.Watermark))
+            if(doc.getPages().get_Item(1).getArtifacts().get_Item(1).getSubtype() == com.aspose.pdf.Artifact.ArtifactSubtype.Watermark)
             {
-                doc.getPages()[1].getArtifacts().Delete(doc.getPages()[1].getArtifacts()[1]);
+                doc.getPages().get_Item(1).getArtifacts().delete(doc.getPages().get_Item(1).getArtifacts().get_Item(1));
             }
 
             //save result pdf to file
-            doc.Save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
+            doc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
     }
 }
