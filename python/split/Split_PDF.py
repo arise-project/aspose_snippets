@@ -15,20 +15,16 @@ class PDF(object):
     def exec():
 
         const string pathSource = "../../TestData/test.pdf";
-            var pdfEditor = new PdfFileEditor();
-            int beg = 1, end = 1;
+        var pdfEditor = new PdfFileEditor();
+        int beg = 1, end = 1;
 
-            using (var fs = new FileStream(pathSource, FileMode.Open, FileAccess.Read))
-            {
-                using (var doc = new Document(fs))
-                {
-                    end = doc.Pages.Count;
-                }
-            }
+        var fs = new FileStream(pathSource, FileMode.Open, FileAccess.Read);
+        var doc = new Document(fs);
+        end = doc.Pages.Count;
 
-            if(end > 1)
-            {
-                    end /= 2;
-            }
+        if(end > 1)
+        {
+            end /= 2;
+        }
 
-            pdfEditor.Extract(pathSource, beg, end, "./half.pdf");
+        pdfEditor.Extract(pathSource, beg, end, "./half.pdf");
