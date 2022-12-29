@@ -8,20 +8,21 @@ from aspose.pdf import (
 
 
 def TXT():
-    pathSource = "../../TestData/test.txt"
-    pdfEditor = PdfFileEditor()
+    path_source = "../../TestData/test.txt"
+    pdf_editor = PdfFileEditor()
 
-    doc = Document(pathSource, TxtLoadOptions())
-    #save input text to pdf to file
+    doc = Document(path_source, TxtLoadOptions())
+    # save input text to pdf to file
     doc.Save("test.pdf", SaveFormat.PDF)
 
-    pages = pdfEditor.SplitToPages("test.pdf")
+    pages = pdf_editor.SplitToPages("test.pdf")
     index = 1
     for ms in pages:
         page = Document(ms)
-        textAbsorber = TextAbsorber()
-        page.Pages.Accept(textAbsorber)
-        extractedText = textAbsorber.Text
-        File.WriteAllText("text_"+index+".txt", extractedText)
-        index++
+        text_absorber = TextAbsorber()
+        page.Pages.Accept(text_absorber)
+        extracted_text = text_absorber.Text
+        file = open("text_"+str(index)+".txt", "w+")
+        file.write(extracted_text)
+        index = index + 1
         
