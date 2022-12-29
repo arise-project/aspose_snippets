@@ -1,30 +1,21 @@
-import clr
+from aspose.pdf import (
+    PdfFileEditor,
+    Document
+)
 
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
 
-from aspose.pdf import Document
+def PDF():
 
-class PDF(object):
-    def __init__(self,licence_path):
-        self.dataDir = "../../TestData"
-        if licence_path:
-            self.licence_path = licence_path
-            self.aspose_license = License()
-            self.aspose_license.SetLicense(self.licence_path)
+    pathSource = "../../TestData/test.pdf"
+    pdfEditor = PdfFileEditor()
+    beg = 1
+    end = 1
 
-    def exec():
+    doc = Document(pathSource)
+    end = doc.Pages.Count
 
-        const string pathSource = "../../TestData/test.pdf";
-        var pdfEditor = new PdfFileEditor();
-        int beg = 1, end = 1;
+    if end > 1:
+        end /= 2
 
-        var fs = new FileStream(pathSource, FileMode.Open, FileAccess.Read);
-        var doc = new Document(fs);
-        end = doc.Pages.Count;
-
-        if(end > 1)
-        {
-            end /= 2;
-        }
-
-        pdfEditor.Extract(pathSource, beg, end, "./half.pdf");
+    pdfEditor.Extract(pathSource, beg, end, "./half.pdf")
+    
