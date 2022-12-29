@@ -5,7 +5,7 @@
 #include "Aspose.PDF.Cpp/PageCollection.h"
 #include "Aspose.PDF.Cpp/HtmlLoadOptions.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
-#include "Aspose.PDF.Cpp/PdfFileEditor.h"
+#include "Aspose.PDF.Cpp/Facades/PdfFileEditor.h"
 
 #include "system/string.h"
 #include "system/io/file.h"
@@ -21,9 +21,9 @@ void HTML()
     //save input html to pdf to file
     doc->Save(u"test.pdf", SaveFormat::Pdf);
 
-    auto pdfEditor = MakeObject<PdfFileEditor>();
+    auto pdfEditor = MakeObject<Aspose::Pdf::Facades::PdfFileEditor>();
     //slit first page
-    pdfEditor->SplitFromFirst(u"test.pdf", 1, "test.pdf");
+    pdfEditor->SplitFromFirst(u"test.pdf", 1, u"test.pdf");
     auto doc = MakeObject<Document>(u"test.pdf");
-    doc.Save("first_page.html", SaveFormat::Html);
+    doc->Save(u"first_page.html", SaveFormat::Html);
 }
