@@ -1,28 +1,30 @@
 package aspose_snippets.java;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
 public class Split_TXT {
-    public static void Execute() {
-		const string pathSource = "../../TestData/test.txt";
-            var pdfEditor = new PdfFileEditor();
+    public static void Execute() throws IOException {
+        String pathSource = "../../TestData/test.txt";
+        var pdfEditor = new com.aspose.pdf.facades.PdfFileEditor();
 
-            using (var doc = new Document(pathSource, new TxtLoadOptions()))
-            {
-                //save input text to pdf to file
-                doc.Save("test.pdf", SaveFormat.Pdf);
-            }
+        var doc = new com.aspose.pdf.Document(pathSource, new com.aspose.pdf.TxtLoadOptions());
+        //save input text to pdf to file
+        doc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
 
-            MemoryStream [] pages = pdfEditor.SplitToPages("test.pdf");
-            int index = 1;
-            foreach(var ms in pages)
-            {
-                using(var page = new Document(ms))
-                {
-                    var textAbsorber = new TextAbsorber();
-                    page.Pages.Accept(textAbsorber);
-                    string extractedText = textAbsorber.Text;
-                    File.WriteAllText("text_"+index+".txt", extractedText);
-                    index++;
-                }
-            }
+        ByteArrayInputStream[] pages = pdfEditor.splitToPages("test.pdf");
+        int index = 1;
+
+        for(var ms : pages)
+        {
+            var page = new com.aspose.pdf.Document(ms);
+            var textAbsorber = new com.aspose.pdf.TextAbsorber();
+            page.getPages().accept(textAbsorber);
+            String extractedText = textAbsorber.getText();
+            Files.writeString(Path.of("text_"+ Integer.toString(index)+".txt"), extractedText);
+            index++;
+        }
     }
 }

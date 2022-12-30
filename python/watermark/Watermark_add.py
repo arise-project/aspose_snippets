@@ -1,32 +1,27 @@
-import clr
+from aspose.pdf import (
+    WatermarkArtifact,
+    HorizontalAlignment,
+    VerticalAlignment,
+    Document,
+    SaveFormat
+)
 
-aspose_pdf = clr.AddReference("../../lib/Aspose.PDF.dll")
 
-from aspose.pdf import Document
+def add():
+    path_source = "../../TestData/test.pdf"
+    watermark_source = "../../TestData/test.jpg"
+    doc = Document(path_source)
 
-class add(object):
-    def __init__(self,licence_path):
-        self.dataDir = "../../TestData"
-        if licence_path:
-            self.licence_path = licence_path
-            self.aspose_license = License()
-            self.aspose_license.SetLicense(self.licence_path)
+    artifact = WatermarkArtifact()
+    artifact.SetImage(watermark_source)
 
-    def exec():
+    artifact.ArtifactHorizontalAlignment = HorizontalAlignment.Center
+    artifact.ArtifactVerticalAlignment = VerticalAlignment.Center
+    artifact.Rotation = 15
+    artifact.Opacity = 1
+    artifact.IsBackground = True
+    doc.Pages[1].Artifacts.Add(artifact)
 
-        const string pathSource = "../../TestData/test.pdf";
-            const string watermarkSource = "../../TestData/test.jpg";
-            var doc = new Aspose.Pdf.Document(pathSource);
-
-            var artifact = new Aspose.Pdf.WatermarkArtifact();
-            artifact.SetImage(new FileStream(watermarkSource, FileMode.Open));
-
-            artifact.ArtifactHorizontalAlignment = Aspose.Pdf.HorizontalAlignment.Center;
-            artifact.ArtifactVerticalAlignment = Aspose.Pdf.VerticalAlignment.Center;
-            artifact.Rotation = 15;
-            artifact.Opacity = 1;
-            artifact.IsBackground = true;
-            doc.Pages[1].Artifacts.Add(artifact);
-
-            //save result pdf to file
-            doc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
+    #save result pdf to file
+    doc.Save("test.pdf", SaveFormat.PDF)
+    

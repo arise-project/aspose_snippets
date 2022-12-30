@@ -28,4 +28,4 @@ def pdf_to_html():
         output_doc.pages.add(page)
 
     # save result pdf to file
-    output_doc.save("test.pdf", SaveFormat.HTML)
+    output_doc.save("Merger_pdf_html.pdf", SaveFormat.HTML)

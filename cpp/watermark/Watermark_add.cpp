@@ -1,45 +1,38 @@
 #include <iostream>
 
 #include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/PdfLicense.h"
-#include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
-#include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
-#include "Aspose.PDF.Cpp/Devices/BmpDevice.h"
-#include "Aspose.PDF.Cpp/Devices/EmfDevice.h"
-#include "Aspose.PDF.Cpp/Devices/JpegDevice.h"
-#include "Aspose.PDF.Cpp/Devices/PngDevice.h"
-#include "Aspose.PDF.Cpp/Devices/TextDevice.h"
-#include "Aspose.PDF.Cpp/Facades/PdfConverter.h"
-#include "Aspose.PDF.Cpp/Generator/Paragraphs.h"
-#include "Aspose.PDF.Cpp/Text/TextAbsorber.h"
-#include "Aspose.PDF.Cpp/Text/TextFragment.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
+#include "Aspose.PDF.Cpp/Artifacts/WatermarkArtifact.h"
+#include "Aspose.PDF.Cpp/Artifacts/ArtifactCollection.h"
+#include "Aspose.PDF.Cpp/HorizontalAlignment.h"
+#include "Aspose.PDF.Cpp/VerticalAlignment.h"
 
 #include "system/string.h"
 #include "system/io/file.h"
 #include "drawing/imaging/image_format.h"
+#include <Aspose.PDF.Cpp/Text/TextState.h>
 
 using namespace System;
 using namespace Aspose::Pdf;
 
 void add()
 {
-    const string pathSource = "../../TestData/test.pdf";
-            const string watermarkSource = "../../TestData/test.jpg";
-            var doc = new Aspose.Pdf.Document(pathSource);
+    String pathSource = u"../../TestData/test.pdf";
+    String watermarkSource = u"../../TestData/test.jpg";
+    auto doc = MakeObject<Document>(pathSource);
 
-            var artifact = new Aspose.Pdf.WatermarkArtifact();
-            artifact.SetImage(new FileStream(watermarkSource, FileMode.Open));
+    auto artifact = MakeObject<WatermarkArtifact>();
+    artifact->SetImage(watermarkSource);
 
-            artifact.ArtifactHorizontalAlignment = Aspose.Pdf.HorizontalAlignment.Center;
-            artifact.ArtifactVerticalAlignment = Aspose.Pdf.VerticalAlignment.Center;
-            artifact.Rotation = 15;
-            artifact.Opacity = 1;
-            artifact.IsBackground = true;
-            doc.Pages[1].Artifacts.Add(artifact);
+    artifact->set_ArtifactHorizontalAlignment(Aspose::Pdf::HorizontalAlignment::Center);
+    artifact->set_ArtifactVerticalAlignment(Aspose::Pdf::VerticalAlignment::Center);
+    artifact->set_Rotation(15);
+    artifact->set_Opacity(1);
+    artifact->set_IsBackground(true);
+    doc->get_Pages()->idx_get(1)->get_Artifacts()->Add(artifact);
 
-            //save result pdf to file
-            doc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
+    //save result pdf to file
+    doc->Save(u"test.pdf",SaveFormat::Pdf);
 }

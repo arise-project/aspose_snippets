@@ -1,21 +1,12 @@
 #include <iostream>
 
 #include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/PdfLicense.h"
-#include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
-#include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
-#include "Aspose.PDF.Cpp/Devices/BmpDevice.h"
-#include "Aspose.PDF.Cpp/Devices/EmfDevice.h"
-#include "Aspose.PDF.Cpp/Devices/JpegDevice.h"
-#include "Aspose.PDF.Cpp/Devices/PngDevice.h"
-#include "Aspose.PDF.Cpp/Devices/TextDevice.h"
-#include "Aspose.PDF.Cpp/Facades/PdfConverter.h"
-#include "Aspose.PDF.Cpp/Generator/Paragraphs.h"
-#include "Aspose.PDF.Cpp/Text/TextAbsorber.h"
-#include "Aspose.PDF.Cpp/Text/TextFragment.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
+#include "Aspose.PDF.Cpp/TxtLoadOptions.h"
+#include "Aspose.PDF.Cpp/Text/TextAbsorber.h"
+#include "Aspose.PDF.Cpp/Facades/PdfFileEditor.h"
 
 #include "system/string.h"
 #include "system/io/file.h"
@@ -26,26 +17,22 @@ using namespace Aspose::Pdf;
 
 void TXT()
 {
-    const string pathSource = "../../TestData/test.txt";
-            var pdfEditor = new PdfFileEditor();
+    String pathSource = u"../../TestData/test.txt";
+    auto pdfEditor = MakeObject<Aspose::Pdf::Facades::PdfFileEditor>();
 
-            using (var doc = new Document(pathSource, new TxtLoadOptions()))
-            {
-                //save input text to pdf to file
-                doc.Save("test.pdf", SaveFormat.Pdf);
-            }
+    auto doc = MakeObject<Document>(pathSource, MakeObject<TxtLoadOptions>());
+    //save input text to pdf to file
+    doc->Save(u"test.pdf", SaveFormat::Pdf);
 
-            MemoryStream [] pages = pdfEditor.SplitToPages("test.pdf");
-            int index = 1;
-            foreach(var ms in pages)
-            {
-                using(var page = new Document(ms))
-                {
-                    var textAbsorber = new TextAbsorber();
-                    page.Pages.Accept(textAbsorber);
-                    string extractedText = textAbsorber.Text;
-                    File.WriteAllText("text_"+index+".txt", extractedText);
-                    index++;
-                }
-            }
+    System::ArrayPtr<MemoryStreamPtr> pages =  pdfEditor->SplitToPages(u"test.pdf");
+    int index = 1;
+    for(auto ms : pages)
+    {
+        auto page = MakeObject<Document>(ms);
+        auto textAbsorber = MakeObject<Aspose::Pdf::Text::TextAbsorber>();
+        page->get_Pages()->Accept(textAbsorber);
+        String extractedText = textAbsorber->get_Text();
+        System::IO::File::WriteAllText(u"text_{index}.txt", extractedText);
+        index++;
+    }
 }

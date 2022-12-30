@@ -1,21 +1,11 @@
 #include <iostream>
 
 #include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/PdfLicense.h"
-#include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
-#include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
-#include "Aspose.PDF.Cpp/Devices/BmpDevice.h"
-#include "Aspose.PDF.Cpp/Devices/EmfDevice.h"
-#include "Aspose.PDF.Cpp/Devices/JpegDevice.h"
-#include "Aspose.PDF.Cpp/Devices/PngDevice.h"
-#include "Aspose.PDF.Cpp/Devices/TextDevice.h"
-#include "Aspose.PDF.Cpp/Facades/PdfConverter.h"
-#include "Aspose.PDF.Cpp/Generator/Paragraphs.h"
-#include "Aspose.PDF.Cpp/Text/TextAbsorber.h"
-#include "Aspose.PDF.Cpp/Text/TextFragment.h"
+#include "Aspose.PDF.Cpp/HtmlLoadOptions.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
+#include "Aspose.PDF.Cpp/Facades/PdfFileEditor.h"
 
 #include "system/string.h"
 #include "system/io/file.h"
@@ -26,17 +16,14 @@ using namespace Aspose::Pdf;
 
 void HTML()
 {
-    const string pathSource = "../../TestData/test.html";
-            using (var doc = new Document(pathSource, new HtmlLoadOptions()))
-            {
-                //save input html to pdf to file
-                doc.Save("test.pdf", SaveFormat.Pdf);
-            }
+    String pathSource = u"../../TestData/test.html";
+    auto doc = MakeObject<Document>(pathSource, MakeObject<HtmlLoadOptions>());
+    //save input html to pdf to file
+    doc->Save(u"test.pdf", SaveFormat::Pdf);
 
-            var pdfEditor = new PdfFileEditor();
-            pdfEditor.SplitFromFirst("test.pdf", 1, "test.pdf");
-            using (var doc = new Document("test.pdf"))
-            {
-                doc.Save("first_page.html", SaveFormat.Html);
-            }
+    auto pdfEditor = MakeObject<Aspose::Pdf::Facades::PdfFileEditor>();
+    //slit first page
+    pdfEditor->SplitFromFirst(u"test.pdf", 1, u"test.pdf");
+    auto doc = MakeObject<Document>(u"test.pdf");
+    doc->Save(u"first_page.html", SaveFormat::Html);
 }

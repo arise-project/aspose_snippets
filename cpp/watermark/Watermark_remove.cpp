@@ -1,21 +1,10 @@
 #include <iostream>
 
 #include "Aspose.PDF.Cpp/Document.h"
-#include "Aspose.PDF.Cpp/PdfLicense.h"
-#include "Aspose.PDF.Cpp/IO/ConvertStrategies/PdfFormat.h"
-#include "Aspose.PDF.Cpp/PdfFormatConversionOptions.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
-#include "Aspose.PDF.Cpp/Devices/BmpDevice.h"
-#include "Aspose.PDF.Cpp/Devices/EmfDevice.h"
-#include "Aspose.PDF.Cpp/Devices/JpegDevice.h"
-#include "Aspose.PDF.Cpp/Devices/PngDevice.h"
-#include "Aspose.PDF.Cpp/Devices/TextDevice.h"
-#include "Aspose.PDF.Cpp/Facades/PdfConverter.h"
-#include "Aspose.PDF.Cpp/Generator/Paragraphs.h"
-#include "Aspose.PDF.Cpp/Text/TextAbsorber.h"
-#include "Aspose.PDF.Cpp/Text/TextFragment.h"
 #include "Aspose.PDF.Cpp/SaveFormat.h"
+#include "Aspose.PDF.Cpp/Artifacts/ArtifactCollection.h"
 
 #include "system/string.h"
 #include "system/io/file.h"
@@ -26,14 +15,14 @@ using namespace Aspose::Pdf;
 
 void remove()
 {
-const string pathSource = "../../TestData/test_with_watermark.pdf";
-            var doc = new Aspose.Pdf.Document(pathSource);
+    String pathSource = u"../../TestData/test_with_watermark.pdf";
+    auto doc = MakeObject<Document>(pathSource);
 
-            if(doc.Pages[1].Artifacts[1].Subtype == Aspose.Pdf.Artifact.ArtifactSubtype.Watermark)
-            {
-                doc.Pages[1].Artifacts.Delete(doc.Pages[1].Artifacts[1]);
-            }
+    if(doc->get_Pages()->idx_get(1)->get_Artifacts()->idx_get(1)->get_Subtype() == Aspose::Pdf::Artifact::ArtifactSubtype::Watermark)
+    {
+        doc->get_Pages()->idx_get(1)->get_Artifacts()->Delete(doc->get_Pages()->idx_get(1)->get_Artifacts()->idx_get(1));
+    }
 
-            //save result pdf to file
-            doc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
+    //save result pdf to file
+    doc->Save(u"test.pdf", SaveFormat::Pdf);
 }

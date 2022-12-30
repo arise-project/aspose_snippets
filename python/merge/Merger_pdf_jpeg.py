@@ -46,5 +46,5 @@ def pdf_to_jpeg():
         new_image.paste(image, (offset, 0))
         offset = offset + image.width
 
-    new_image.save("test.jpg")
+    new_image.save("Merger_pdf_jpeg.jpg")
 

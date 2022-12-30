@@ -37,4 +37,4 @@ def svg_to_pdf():
         output_doc.pages.add(page)
 
     # save result pdf to file
-    output_doc.save("test.pdf", SaveFormat.PDF)
+    output_doc.save("Merger_svg_pdf.pdf", SaveFormat.PDF)

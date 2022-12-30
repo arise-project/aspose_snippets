@@ -31,4 +31,4 @@ def pdf_to_xps():
     opt1.save_transparent_texts = False
 
     # save xps document
-    output_doc.save("test.xps", opt1)
+    output_doc.save("Merger_pdf_xps.xps", opt1)

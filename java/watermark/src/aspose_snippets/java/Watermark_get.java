@@ -1,17 +1,21 @@
 package aspose_snippets.java;
 
-public class Watermark_get {
-    public static void Execute() {
-const string pathSource = "../../TestData/test_with_watermark.pdf";
-            var doc = new Aspose.Pdf.Document(pathSource);
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 
-            if(doc.Pages[1].Artifacts[1].Subtype == Aspose.Pdf.Artifact.ArtifactSubtype.Watermark)
+public class Watermark_get {
+    public static void Execute() throws IOException {
+            String pathSource = "../../TestData/test_with_watermark.pdf";
+            var doc = new com.aspose.pdf.Document(pathSource);
+
+            if(doc.getPages().get_Item(1).getArtifacts().get_Item(1).getSubtype() == com.aspose.pdf.Artifact.ArtifactSubtype.Watermark)
             {
-                using(var fs = new FileStream("test.jpg",FileMode.Create))
-                {
-                    doc.Pages[1].Artifacts[1].Image.Save(fs);
-                    fs.Flush();
-                }
+                var fs = new FileOutputStream("test.jpg");
+                doc.getPages().get_Item(1).getArtifacts().get_Item(1).getImage().save(fs);
+                fs.flush();
+                fs.close();
             }
     }
 }

@@ -37,6 +37,6 @@ def pdf_to_tiff():
             first_size = img.size  # So use this one
         frames.append(img)  # Add it to our frames list
 
-    with tifffile.TiffWriter("test.tiff") as tiff:
+    with tifffile.TiffWriter("Merger_pdf_tiff.tiff") as tiff:
         for img in frames:
             tiff.write(numpy.array(img.getdata(), numpy.uint8).reshape(img.size[1], img.size[0], 3))

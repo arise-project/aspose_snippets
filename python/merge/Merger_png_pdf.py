@@ -37,4 +37,4 @@ def png_to_pdf():
         page.addImage(fs, rect)
 
     # save result pdf to file
-    doc.save("test.pdf", SaveFormat.PDF)
+    doc.save("Merger_png_pdf.pdf", SaveFormat.PDF)

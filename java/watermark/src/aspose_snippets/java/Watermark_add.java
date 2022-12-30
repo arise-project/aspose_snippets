@@ -2,21 +2,21 @@ package aspose_snippets.java;
 
 public class Watermark_add {
     public static void Execute() {
-		const string pathSource = "../../TestData/test.pdf";
-            const string watermarkSource = "../../TestData/test.jpg";
-            var doc = new Aspose.Pdf.Document(pathSource);
+		        String pathSource = "../../TestData/test.pdf";
+            String watermarkSource = "../../TestData/test.jpg";
+            var doc = new com.aspose.pdf.Document(pathSource);
 
-            var artifact = new Aspose.Pdf.WatermarkArtifact();
-            artifact.SetImage(new FileStream(watermarkSource, FileMode.Open));
+            var artifact = new com.aspose.pdf.WatermarkArtifact();
+            artifact.setImage(watermarkSource);
 
-            artifact.ArtifactHorizontalAlignment = Aspose.Pdf.HorizontalAlignment.Center;
-            artifact.ArtifactVerticalAlignment = Aspose.Pdf.VerticalAlignment.Center;
-            artifact.Rotation = 15;
-            artifact.Opacity = 1;
-            artifact.IsBackground = true;
-            doc.Pages[1].Artifacts.Add(artifact);
+            artifact.setArtifactHorizontalAlignment(com.aspose.pdf.HorizontalAlignment.Center);
+            artifact.setArtifactVerticalAlignment(com.aspose.pdf.VerticalAlignment.Center);
+            artifact.setRotation(15);
+            artifact.setOpacity(1);
+            artifact.setBackground(true);
+            doc.getPages().get_Item(1).getArtifacts().add(artifact);
 
             //save result pdf to file
-            doc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
+            doc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
     }
 }

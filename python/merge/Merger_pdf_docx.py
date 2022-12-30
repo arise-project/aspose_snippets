@@ -33,4 +33,4 @@ def pdf_to_docx():
     opt1.Mode = DocSaveOptions.RecognitionMode.ENHANCED_FLOW
 
     # save pdf to Microsoft Word docx format
-    output_doc.save("test.docx", opt1)
+    output_doc.save("Merger_pdf_docx.docx", opt1)

@@ -46,5 +46,5 @@ def pdf_to_bmp():
         new_image.paste(image, (offset, 0))
         offset = offset + image.width
 
-    new_image.save("test.bmp")
+    new_image.save("Merger_pdf_bmp.bmp")
 

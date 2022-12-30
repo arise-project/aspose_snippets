@@ -31,4 +31,4 @@ def pdf_to_tex():
     opt1.out_directory_path = "./test"
 
     # save pdf to TeX document
-    output_doc.save("test.tex", opt1)
+    output_doc.save("Merger_pdf_tex.tex", opt1)
