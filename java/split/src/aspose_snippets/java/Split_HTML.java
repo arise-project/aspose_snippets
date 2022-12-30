@@ -10,7 +10,7 @@ public class Split_HTML {
         var pdfEditor = new com.aspose.pdf.facades.PdfFileEditor();
         //slit first page
         pdfEditor.splitFromFirst("test.pdf", 1, "test.pdf");
-        var outputDoc = new com.aspose.pdf.Document("test.pdf");
+        var outputDoc = new com.aspose.pdf.Document();
         outputDoc.save("first_page.html", com.aspose.pdf.SaveFormat.Html);
     }
 }

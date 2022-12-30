@@ -24,7 +24,7 @@ namespace aspose_snippets.net
                     end /= 2;
             }
 
-            pdfEditor.Extract(pathSource, beg, end, "./half.pdf");
+            pdfEditor.Extract(pathSource, beg, end, "pdf_half.pdf");
         }
     }
 }

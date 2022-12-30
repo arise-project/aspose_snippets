@@ -18,7 +18,7 @@ namespace aspose_snippets.net
             pdfEditor.SplitFromFirst("test.pdf", 1, "test.pdf");
             using (var doc = new Document("test.pdf"))
             {
-                doc.Save("first_page.html", SaveFormat.Html);
+                doc.Save("html_first.html", SaveFormat.Html);
             }
         }
     }

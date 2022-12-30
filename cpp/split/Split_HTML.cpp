@@ -25,5 +25,5 @@ void HTML()
     //slit first page
     pdfEditor->SplitFromFirst(u"test.pdf", 1, u"test.pdf");
     auto doc = MakeObject<Document>(u"test.pdf");
-    doc->Save(u"first_page.html", SaveFormat::Html);
+    doc->Save(u"html_first.html", SaveFormat::Html);
 }

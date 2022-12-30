@@ -17,5 +17,5 @@ def PDF():
     if end > 1:
         end /= 2
 
-    pdf_editor.Extract(path_source, beg, end, "./half.pdf")
+    pdf_editor.Extract(path_source, beg, end, "pdf_half.pdf")
     

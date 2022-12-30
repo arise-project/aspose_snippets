@@ -16,4 +16,4 @@ def HTML():
     # slit first page
     pdf_editor.SplitFromFirst("test.pdf", 1, "test.pdf");
     doc = Document("test.pdf");
-    doc.Save("first_page.html", SaveFormat.HTML);
+    doc.Save("html_first.html", SaveFormat.HTML);

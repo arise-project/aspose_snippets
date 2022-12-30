@@ -14,6 +14,6 @@ public class Split_PDF {
             end /= 2;
         }
     
-        pdfEditor.extract(pathSource, beg, end, "half.pdf");
+        pdfEditor.extract(pathSource, beg, end, "pdf_half.pdf");
     }
 }

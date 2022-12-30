@@ -29,5 +29,5 @@ void PDF()
         end /= 2;
     }
 
-    pdfEditor->Extract(pathSource, beg, end, u"half.pdf");
+    pdfEditor->Extract(pathSource, beg, end, u"pdf_half.pdf");
 }
