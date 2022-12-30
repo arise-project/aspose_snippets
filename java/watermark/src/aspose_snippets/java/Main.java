@@ -4,9 +4,26 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        System.out.println("Hello world!");
-        new Watermark_add().Execute();
-        new Watermark_get().Execute();
-        new Watermark_remove().Execute();
+        
+        try {
+			new Watermark_add().Execute();
+    	}
+    	catch (Expection ex) {
+    		System.err.println(ex.toString());
+    	}
+
+        try {
+			new Watermark_get().Execute();
+    	}
+    	catch (Expection ex) {
+    		System.err.println(ex.toString());
+    	}
+
+        try {
+			new Watermark_remove().Execute();
+    	}
+    	catch (Expection ex) {
+    		System.err.println(ex.toString());
+    	}
     }
 }

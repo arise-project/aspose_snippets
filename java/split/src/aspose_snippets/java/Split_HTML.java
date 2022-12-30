@@ -1,7 +1,7 @@
 package aspose_snippets.java;
 
 public class Split_HTML {
-    public static void Execute() {
+    public void Execute() {
         String pathSource = "../../TestData/test.html";
         var doc = new com.aspose.pdf.Document(pathSource, new com.aspose.pdf.HtmlLoadOptions());
         //save input html to pdf to file
