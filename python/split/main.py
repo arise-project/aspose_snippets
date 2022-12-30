@@ -2,6 +2,7 @@ from aspose.pdf import (
     License
 )
 
+import sys
 from Split_HTML import *
 from Split_PDF import *
 from Split_TXT import *
@@ -18,9 +19,17 @@ def set_license():
     license = License()
     license.SetLicense(license_file)
 
-    HTML()
-    PDF()
-    TXT()
+    try:
+        HTML()
+    except Exception as e: sys.stderr.write(str(e))
+
+    try:
+        PDF()
+    except Exception as e: sys.stderr.write(str(e))
+
+    try:
+        TXT()
+    except Exception as e: sys.stderr.write(str(e))
     
 if __name__ == '__main__':
     main()
