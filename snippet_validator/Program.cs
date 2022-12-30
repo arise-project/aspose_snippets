@@ -46,7 +46,49 @@ namespace snippet_validator
         	
         	foreach(var opt in runnerOpts)
         	{
-        		
+        		var args = new Dictionary<string, string> {
+				{ "-p", "title"},
+				{ "-l", "games"},
+				...
+				};
+
+				var arguments = string.Join(" ", args.Select((k) => string.Format("{0} {1}", k.Key, "\"" + k.Value + "\"")));
+
+				var dllPath = @"C:\Users\xyz\Documents\Visual Studio 2017\myConsole\bin\Debug\netcoreapp2.1\myConsole.dll";
+				ProcessStartInfo procStartInfo = new ProcessStartInfo();
+				procStartInfo.FileName = "C:\....\cmd.exe";
+				procStartInfo.Arguments = $"dotnet \"{dllPath}\" {arguments}";
+				procStartInfo.UseShellExecute = false;
+				procStartInfo.CreateNoWindow = false;
+				procStartInfo.RedirectStandardOutput = true;
+				procStartInfo.RedirectStandardError = true;
+
+				StringBuilder sb = new StringBuilder();
+				Process pr = new Process();
+				pr.StartInfo = procStartInfo;
+
+				pr.OutputDataReceived += (s, ev) =>
+				{
+					if (string.IsNullOrWhiteSpace(ev.Data))
+					{
+						return;
+					}
+
+					string[] split = ev.Data.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+					int.TryParse(split[split.Length - 1], out output);
+				};
+
+				pr.ErrorDataReceived += (s, err) =>
+				{
+					// do stuff here
+				};
+
+				pr.EnableRaisingEvents = true;
+				pr.Start();
+				pr.BeginOutputReadLine();
+				pr.BeginErrorReadLine();
+
+				pr.WaitForExit();
         	}
         	
             Console.WriteLine("Hello World!");
