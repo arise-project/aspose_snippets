@@ -41,9 +41,19 @@ int main()
     {
         pdf_to_tiff();    
     }
+    catch (const System::Exception &ex)
+    {
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
     catch (const Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -51,9 +61,14 @@ int main()
     {
         tiff_to_pdf();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -61,9 +76,14 @@ int main()
     {
         bmp_to_pdf();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -71,9 +91,14 @@ int main()
     {
         jpg_to_docx();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -81,9 +106,14 @@ int main()
     {
         jpg_to_pdf();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -91,9 +121,14 @@ int main()
     {
         png_to_pdf();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -101,9 +136,14 @@ int main()
     {
         cgm_to_pdf();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -111,9 +151,14 @@ int main()
     {
         eps_to_pdf();   
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -121,9 +166,14 @@ int main()
     {
         epub_to_pdf();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -131,9 +181,14 @@ int main()
     {
         html_to_pdf();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -141,9 +196,14 @@ int main()
     {
         md_to_pdf();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -151,9 +211,14 @@ int main()
     {
         mht_to_pdf();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -161,9 +226,14 @@ int main()
     {
         pcl_to_pdf();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -171,9 +241,14 @@ int main()
     {
         pdf_to_doc();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -181,9 +256,14 @@ int main()
     {
         pdf_to_docx();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -191,9 +271,14 @@ int main()
     {
         pdf_to_epub();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -201,9 +286,14 @@ int main()
     {
         pdf_to_html();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
     
@@ -211,19 +301,29 @@ int main()
     {
         pdf_to_pdfa();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
         return false;
-    }	
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+        return false;
+    }
 	
 	try
     {
         pdf_to_pptx();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
     
@@ -231,9 +331,14 @@ int main()
     {
         pdf_to_svg();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
     
@@ -241,9 +346,14 @@ int main()
     {
         pdf_to_tex();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
     
@@ -251,9 +361,14 @@ int main()
     {
         pdf_to_text();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
     
@@ -261,9 +376,14 @@ int main()
     {
         pdf_to_xls();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
     
@@ -271,9 +391,14 @@ int main()
     {
         pdf_to_xps();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
     
@@ -281,9 +406,14 @@ int main()
     {
         ps_to_pdf();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
     
@@ -292,9 +422,14 @@ int main()
     {
         svg_to_pdf();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
     
@@ -302,9 +437,14 @@ int main()
     {
         tex_to_pdf();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 	
@@ -312,12 +452,16 @@ int main()
     {
         xps_to_pdf();    
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
         return false;
     }
-    
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+        return false;
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

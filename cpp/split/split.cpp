@@ -17,9 +17,14 @@ int main()
     {
         HTML();
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 
@@ -27,9 +32,14 @@ int main()
     {
         PDF();
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
     
@@ -37,9 +47,14 @@ int main()
     {
         TXT();
     }
-    catch (const Exception &ex)
+    catch (const System::Exception &ex)
     {
-        std::cout << ex->get_Message() << std::endl;
+        std::cerr << ex->get_Message() << std::endl;
+        return false;
+    }
+    catch (const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
         return false;
     }
 }
