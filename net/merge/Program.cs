@@ -1,3 +1,5 @@
+using System;
+
 namespace aspose_snippets.net.merger
 {
     static class Program
@@ -5,39 +7,303 @@ namespace aspose_snippets.net.merger
         static void Main()
         {
             LicenseProvider.License();
-            Merger.jpg_to_pdf();
-            Merger.jpg_to_docx();
-            Merger.pdf_to_doc();
-            Merger.pdf_to_docx();
-            Merger.pdf_to_html();
-            Merger.pdf_to_xps();
-            Merger.pdf_to_tex();
-            Merger.pdf_to_svg();
-            Merger.pdf_to_xls();
-            Merger.pdf_to_epub();
-            Merger.pdf_to_pptx();
-            Merger.pdf_to_bmp();
-            Merger.pdf_to_emf();
-            Merger.pdf_to_jpeg();
-            Merger.pdf_to_png();
-            Merger.pdf_to_tiff();
-            Merger.pdf_to_pdfa();
-            Merger.pdf_to_text();
-            Merger.epub_to_pdf();
-            Merger.html_to_pdf();
-            Merger.xps_to_pdf();
-            Merger.pcl_to_pdf();
-            Merger.tex_to_pdf();
-            Merger.svg_to_pdf();
-            Merger.mht_to_pdf();
-            Merger.ps_to_pdf();
-            Merger.eps_to_pdf();
-            Merger.md_to_pdf();
-            Merger.bmp_to_pdf();
-            Merger.png_to_pdf();
-            Merger.tiff_to_pdf();
-            Merger.epub_to_pdf();
-            Merger.cgm_to_pdf();
+            try
+            {
+                Merger.jpg_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.jpg_to_docx();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_doc();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_docx();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_html();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_xps();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_tex();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_svg();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_xls();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_epub();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_pptx();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_bmp();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_emf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_jpeg();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_png();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_tiff();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_pdfa();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pdf_to_text();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.epub_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.html_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.xps_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.pcl_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.tex_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.svg_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.mht_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.ps_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.eps_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.md_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.bmp_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.png_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.tiff_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.epub_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
+            try
+            {
+                Merger.cgm_to_pdf();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+            
         }
     }
 }

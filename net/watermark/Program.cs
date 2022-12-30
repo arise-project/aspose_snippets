@@ -1,3 +1,5 @@
+using System;
+
 namespace aspose_snippets.net.watermark
 {
     static class Program
@@ -5,9 +7,33 @@ namespace aspose_snippets.net.watermark
         static void Main()
         {
             LicenseProvider.License();
-            Watermark.add();
-            Watermark.get();
-            Watermark.remove();
+
+            try
+            {
+                Watermark.add();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+
+            try
+            {
+                Watermark.get();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
+
+            try
+            {
+                Watermark.remove();
+            }
+            catch(Exception ex)
+            {
+                Console.Error.WriteLine(ex.ToString());
+            }
         }
     }
 }
