@@ -3,6 +3,13 @@ package aspose_snippets.java;
 public class Main {
     public static void main(String[] args)
     {
+    	try {
+    		
+    	}
+    	catch (Expection ex) {
+    		
+    	}
+    	
         Merger_bmp_pdf.Execute();
 		Merger_cgm_pdf.Execute();
 		Merger_eps_pdf.Execute();

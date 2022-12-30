@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+
 #include "Merger_cgm_pdf.cpp"
 #include "Merger_eps_pdf.cpp"
 #include "Merger_epub_pdf.cpp"
@@ -31,38 +32,292 @@
 #include "Merger_jpg_pdf.cpp"
 #include "Merger_png_pdf.cpp"
 
+using namesapace std;
+using namesapce System;
+
 int main()
 {
-	std::cout << "Hello World!\n";
-
-	pdf_to_tiff();
-	tiff_to_pdf();
-	bmp_to_pdf();
-	jpg_to_docx();
-	jpg_to_pdf();
-	png_to_pdf();
-	cgm_to_pdf();
-	eps_to_pdf();
-	epub_to_pdf();
-	html_to_pdf();
-	md_to_pdf();
-	mht_to_pdf();
-	pcl_to_pdf();
-	pdf_to_doc();
-	pdf_to_docx();
-	pdf_to_epub();
-	pdf_to_html();
-	pdf_to_pdfa();
-	pdf_to_pptx();
-	pdf_to_svg();
-	pdf_to_tex();
-	pdf_to_text();
-	pdf_to_xls();
-	pdf_to_xps();
-	ps_to_pdf();
-	svg_to_pdf();
-	tex_to_pdf();
-	xps_to_pdf();
+    try
+    {
+        pdf_to_tiff();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        tiff_to_pdf();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        bmp_to_pdf();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        jpg_to_docx();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        jpg_to_pdf();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        png_to_pdf();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        cgm_to_pdf();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        eps_to_pdf();   
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        epub_to_pdf();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        html_to_pdf();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        md_to_pdf();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        mht_to_pdf();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        pcl_to_pdf();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        pdf_to_doc();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        pdf_to_docx();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        pdf_to_epub();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        pdf_to_html();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+    
+    try
+    {
+        pdf_to_pdfa();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }	
+	
+	try
+    {
+        pdf_to_pptx();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+    
+	try
+    {
+        pdf_to_svg();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+    
+	try
+    {
+        pdf_to_tex();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+    
+	try
+    {
+        pdf_to_text();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+    
+	try
+    {
+        pdf_to_xls();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+    
+	try
+    {
+        pdf_to_xps();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+    
+	try
+    {
+        ps_to_pdf();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+    
+	
+	try
+    {
+        svg_to_pdf();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+    
+	try
+    {
+        tex_to_pdf();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+	
+	try
+    {
+        xps_to_pdf();    
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

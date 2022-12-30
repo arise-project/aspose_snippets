@@ -2,17 +2,46 @@
 //
 
 #include <iostream>
+
 #include "Split_HTML.cpp"
 #include "Split_PDF.cpp"
 #include "Split_TXT.cpp"
 #include "Split_WORD.cpp"
-    
+
+using namesapace std;
+using namesapce System;
+
 int main()
-{
-    std::cout << "Hello World!\n";
-    HTML();
-    PDF();
-    TXT();
+{    
+    try
+    {
+        HTML();
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+
+    try
+    {
+        PDF();
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+    
+    try
+    {
+        TXT();
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

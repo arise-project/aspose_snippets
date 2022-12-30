@@ -6,13 +6,42 @@
 #include "Watermark_add.cpp"
 #include "Watermark_get.cpp"
 #include "Watermark_remove.cpp"
-    
+
+using namesapace std;
+using namesapce System;
+
+
 int main()
 {
-    std::cout << "Hello World!\n";
-    add();
-    get();
-    remove();
+    try
+    {
+        add();
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+    
+    try
+    {
+        get();
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
+    
+    try
+    {
+        remove();
+    }
+    catch (const Exception &ex)
+    {
+        std::cout << ex->get_Message() << std::endl;
+        return false;
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
