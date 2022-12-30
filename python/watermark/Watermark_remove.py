@@ -15,5 +15,5 @@ def remove():
         doc.Pages[1].Artifacts.Delete(doc.Pages[1].Artifacts[1])
 
     #save result pdf to file
-    doc.Save("test.pdf", SaveFormat.PDF)
+    doc.Save("remove_watermark.pdf", SaveFormat.PDF)
         

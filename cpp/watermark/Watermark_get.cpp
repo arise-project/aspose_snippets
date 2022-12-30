@@ -21,7 +21,7 @@ void get()
 
     if(doc->get_Pages()->idx_get(1)->get_Artifacts()->idx_get(1)->get_Subtype() == Aspose::Pdf::Artifact::ArtifactSubtype::Watermark)
     {
-        auto fs = System::IO::File::OpenRead(u"test.jpg");
+        auto fs = System::IO::File::OpenWrite(u"get_watermark.jpg");
         doc->get_Pages()->idx_get(1)->get_Artifacts()->idx_get(1)->get_Image()->Save(fs);
         fs->Flush();
         fs->Close();

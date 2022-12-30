@@ -11,6 +11,6 @@ public class Watermark_remove {
             }
 
             //save result pdf to file
-            doc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
+            doc.save("remove_watermark.pdf", com.aspose.pdf.SaveFormat.Pdf);
     }
 }

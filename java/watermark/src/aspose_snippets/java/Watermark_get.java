@@ -12,7 +12,7 @@ public class Watermark_get {
 
             if(doc.getPages().get_Item(1).getArtifacts().get_Item(1).getSubtype() == com.aspose.pdf.Artifact.ArtifactSubtype.Watermark)
             {
-                var fs = new FileOutputStream("test.jpg");
+                var fs = new FileOutputStream("get_watermark.jpg");
                 doc.getPages().get_Item(1).getArtifacts().get_Item(1).getImage().save(fs);
                 fs.flush();
                 fs.close();

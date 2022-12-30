@@ -9,7 +9,7 @@ namespace aspose_snippets.net
 
             if(doc.Pages[1].Artifacts[1].Subtype == Aspose.Pdf.Artifact.ArtifactSubtype.Watermark)
             {
-                using(var fs = new FileStream("test.jpg",FileMode.Create))
+                using(var fs = new FileStream("get_watermark.jpg",FileMode.OpenOrCreate))
                 {
                     doc.Pages[1].Artifacts[1].Image.Save(fs);
                     fs.Flush();

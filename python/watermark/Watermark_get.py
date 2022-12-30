@@ -11,7 +11,7 @@ def get():
     doc = Document(path_source)
 
     if doc.Pages[1].Artifacts[1].Subtype == Artifact.ArtifactSubtype.Watermark:
-        fs = open("test.jpg", 'w')
+        fs = open("get_watermark.jpg", 'wc')
         doc.Pages[1].Artifacts[1].Image.Save(fs)
         fs.flush()
         fs.close();

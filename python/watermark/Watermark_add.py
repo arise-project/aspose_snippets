@@ -23,5 +23,5 @@ def add():
     doc.Pages[1].Artifacts.Add(artifact)
 
     #save result pdf to file
-    doc.Save("test.pdf", SaveFormat.PDF)
+    doc.Save("add_watermark.pdf", SaveFormat.PDF)
     

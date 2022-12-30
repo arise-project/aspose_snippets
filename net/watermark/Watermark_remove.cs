@@ -13,7 +13,7 @@ namespace aspose_snippets.net
             }
 
             //save result pdf to file
-            doc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
+            doc.Save("remove_watermark.pdf", Aspose.Pdf.SaveFormat.Pdf);
         }
     }
 }

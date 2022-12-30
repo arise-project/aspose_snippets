@@ -34,5 +34,5 @@ void add()
     doc->get_Pages()->idx_get(1)->get_Artifacts()->Add(artifact);
 
     //save result pdf to file
-    doc->Save(u"test.pdf",SaveFormat::Pdf);
+    doc->Save(u"add_watermark.pdf",SaveFormat::Pdf);
 }

@@ -24,5 +24,5 @@ void remove()
     }
 
     //save result pdf to file
-    doc->Save(u"test.pdf", SaveFormat::Pdf);
+    doc->Save(u"remove_watermark.pdf", SaveFormat::Pdf);
 }

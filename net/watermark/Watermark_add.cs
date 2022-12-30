@@ -19,7 +19,7 @@ namespace aspose_snippets.net
             doc.Pages[1].Artifacts.Add(artifact);
 
             //save result pdf to file
-            doc.Save("test.pdf", Aspose.Pdf.SaveFormat.Pdf);
+            doc.Save("add_watermark.pdf", Aspose.Pdf.SaveFormat.Pdf);
         }
     }
 }

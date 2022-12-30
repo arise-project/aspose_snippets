@@ -17,6 +17,6 @@ public class Watermark_add {
             doc.getPages().get_Item(1).getArtifacts().add(artifact);
 
             //save result pdf to file
-            doc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
+            doc.save("add_watermark.pdf", com.aspose.pdf.SaveFormat.Pdf);
     }
 }
