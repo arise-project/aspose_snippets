@@ -1,0 +1,61 @@
+   • 1:1s
+
+   • project or program (in the sense of both code type programs and long term direction programs) planning or status
+     meetings with various stakeholders, especially POs, PMs, and execs
+
+   • digging into particularly difficult or odd code or set up issue that's lead to it being escalated
+
+   • meetings with vendors and doing a write up of their product's potential and costs
+
+   • creating rough project or program outlines with rough budget estimates for execs
+
+   • creating design documents on projects or programs that have a bit of traction
+
+   • meeting with other architects to collaborate on wider designs or just share items of interest
+
+   • going on HN to tell strangers about my day-to-day life
+
+   • create fully functional POCs or reference implementations
+
+   • doing post-mortems
+
+   • examining code from a potential acquisition or quizzing their engineers
+
+   • getting on meetings with clients or potential clients to give them a warm fuzzy that a tech person with an
+     impressive sounding title is listening to show we're taking something Very Sersiously and find them to be Very
+     Important.
+
+   • regular Open Office Hours for anyone in the company to drop by and chat about anything (lots of good stuff
+     comes from these -- highly recommend)
+
+   • fielding various requests and questions from Security and Ops other teams and whatnot.
+
+   • Having What-If meetings with sales or execs (danger! There be dragons here! But, with Sales especially, a really
+     good way to figure out what customers are clamoring for)
+
+   • Preparing talks and technical outreach
+
+   • Exploring New Shiny Things (though I tend to do this more on off-hours just because there are fewer interruptions
+     and urgencies).
+
+In terms of microservices in particular, I tend to ask a lot of questions about data and work flow, how someone has
+defined a domain or domains, making sure they're not falling into the myriad anti-patterns, making sure what they're
+doing is going to be visible, tractable, and play nice with the rest of our services including following our common
+patterns and idioms (and when I run into idioms that they might not know about I document them and make them easy to
+find) and not create any unpleasant surprises down the road, and that they have given appropriate thought to evolution of
+the service and forward and backward compatibility during that process.
+
+Martin Fowler is by far my most influential resource on microservice architectures and doing domain driven design well.
+But I would strongly suggest literally reading everything you can find on the subject. Mostly because it's many subjects
+in a trenchcoat. Seeing it all from a few different angles will better arm you for whatever comes your way.
+
+reply
+
+cratermoon 17 hours ago | prev | next [–]
+
+If you flex the title "architect" to include "staff engineer", https://lethain.com/what-do-staff-engineers-actually-do/ By the
+way, I highly recommend his book Staff Engineer if you're interested in delving deeper.
+
+reply
+
+throw1234651234 18 hours ago | prev | next [–]

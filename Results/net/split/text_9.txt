@@ -1,0 +1,61 @@
+lexx 14 hours ago | root | parent | next [–]
+
+Here are some of my current material:
+
+   • I have a great time listening to "Software Unscripted" podcast.
+
+   • On youtube the channel "code opinion". Although I don't like or use DDD and C#, I think that it has high quality
+     and rewarding content.
+
+   • I am currently finishing "A Philosophy of Software Design" by John Ousterhout.
+
+   • Regarding articles, I read stuff related to my day's obsession or problem. I can't point you out to one. I mean, what
+     do you need to evaluate/learn?
+
+If you need something more specific topic-wise I am glad to share with you
+
+reply
+
+moris_borris 17 hours ago | root | parent | prev | next [–]
+
+     "Trying to persuade people to avoid technical debt at all costs" - put in a linter and concrete rules (even if a
+     rule is loose, note that in writing) or devs will get upset and think you are singling them out. I went from a
+     company with no linter or style guidelines and PRs were an absolute nightmare. Eight devs, eight
+     completely different styles, each insisting theirs was right. I wasn't able to turn stones into loaves (i.e. I
+     wasn't a Senior Dev at the time), so my style was categorically incorrect. I switched to a company with an
+     aggressive linter, and all that superfluous debate over tiny patterns and "personal preference" went out the
+     window. I no longer dreaded PRs.
+
+reply
+
+throw1234651234 14 hours ago | root | parent | next [–]
+
+I think that's the main benefit by far - avoid useless debate. The icing on the cake is that I can write code in my style
+(tabs instead of double spaces, parens on new line, whatever) and then have my IDE or a CLI command refactor to the
+team style before putting up a PR, so it's really not an issue. I usually default to some large company's style guide so it's
+difficult to argue against. For example, for .NET we use Microsoft's style guide for React we use Facebook's, etc.
+
+reply
+
+mickeyp 17 hours ago | prev | next [–]
+
+My view as a "full stack" architect and developer. Depends on the size of the firm. Very, very large ones will see you
+write little code -- generally to the detriment of the company, the architect, and the teams they interact with.
+
+Good architects are hands-on. They write proofs of concept implementations before recommending a tool or technology.
+
+Bad architects dream up nothing but gormless and inscrutable charts and diagrams that, like crap ink on vellum, slowly
+fade into illegibility in a remote Sharepoint server.
+
+Good architects clarify and explain. Their job is to assist teams in melding disparate technical viewpoints with that of the
+business -- who themselves often lack focus. A good architect facilitates that: they'll rarely look at lines of code, per se,
+but more the general trend and direction.
+
+Bad architects dream up complications that serve no one but their own ego. I once worked with an "architect" who spent
+most of his time mapping out some data, represented in JSON, using eBNF -- a tool used for specifying formal grammar
+for computer languages. It could've been solved with an example + some data typing in the margins. Don't be like that
+dude; people struggled to make sense of the trivially simple data we had to store. For larger things use a schema-like
+structure; for smaller things, trust that people and teams are not stupid.
+
+Good architects are skilled at everything. They've hacked up CI systems in batch or bash files, before the current tooling
+even existed. They've built all manner of systems, in a range of environments and possibly languages. They're pragmatic,

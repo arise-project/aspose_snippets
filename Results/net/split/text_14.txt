@@ -1,0 +1,61 @@
+ I'm an influencer. I have no formal power in the sense that people are not supposed to do what I say, so I have to be
+ convincing, and influence others behaviors to make the software better.
+
+ This implies analysis and compromise, having meetings, mentoring engineers, and quite a bit of coding and research.
+
+ My work is less guided that when I was a junior engineer, in the sense that I'm meant to discover opportunities for
+ improvement and give guidelines. This leaves time to pick what I should be doing next, where I'm adding the most value.
+
+ This changes from time to time, it may be figuring out a new architecture, fixing a bug, getting involved in product
+ development or handling an incident.
+
+ An important part of the job is getting involved in production incidents, this helps grasp where are we struggling and
+ opens the opportunity to guide development to a state where customers are happier and operational costs are lower.
+
+You also start to be more conscious about company finances (how much it costs to keep the lights running) and start
+ thinking in ways to get more from the same resources.
+
+ Even if I have no formal power, people tend to pay attention to what I say and suggest, so I need to be careful, because
+ an off-hand comment can have a lot of impact.
+
+ Architectural roles live and die by their word. We lead by influence, so be cognizant of perception and careful when you
+ communicate with others in every interaction.
+
+ reply
+
+ ryandrake 13 hours ago | parent | next [–]
+
+ I think "influencing/leading people who do not report to you" is one of the hardest, most underrated part of mid-level
+ people's jobs. When you're a low-level Individual Contributor, it's easy: You're not expected to lead anything or influence
+ people. Take your ticket, do a great job at it, then take the next ticket. You're given a task, design it, and implement it,
+ and job well done. On the opposite end, if you're a director or senior manager with a big org of people who report to you,
+ it's also easy (or seems easy from my vantage point): You simply say "we must do this thing" and people do it. In the
+ middle, we don't have direct reports, and nobody has to listen to us, yet our job is to convince people to do the right
+ thing. Very difficult. You need to be political, cognizant of perception as you say, you need to gather favors and then call
+ them in, prioritize and horse trade for things that are important, and so on. Difficult job. reply
+
+ gorgoiler 11 hours ago | prev | next [–]
+
+ First up: having total visibility of the org is really important. We have a hundred engineers and I see everyone’s changes
+ at the point they make them public (in whatever form they are called today: pull requests, merge requests, diffs, eh.)
+ Unless I engage then that’s the first and last time I see their stuff but it’s enough to stay on top of everything everyone is
+ up to. It’s a surprisingly low volume / high value channel of information. Leave the code review to the experts in each
+ codebase — most changes will be on point and need only a small or large amount of alignment before they can land. (By
+ contrast, very few things need to have the brakes put on them.)
+
+ Some changes though will correlate with other problems across the codebase and this is where you should be stepping in
+ to spot future patterns or current anti patterns and providing solutions and directions forward, or at worst, road blocks.
+
+ Once you have enough of these under your belt you can start proactively spotting hot spots in the eng org that need
+ focused effort. More mypy typing for a core library. Two libraries that should be one. One library that should be two.
+Vertical slices of functionality in two products that should be horizontal slices pulled into a separate service (or, my
+ preference, library.)
+
+ Processes are important too. You’ll see what people are repeating and or finding hard, and which could benefit from
+ some love. Build infra. A testbed for debugging a process that is otherwise too heavyweight with production data. Teams
+ that don’t talk enough pre-PR. Managers that need help managing consistent poor performers.
+
+ I think many people wanting to go into an architect career think it is highbrow design work. In reality, I’ve found you
+ end up doing much more support / boiler room / janitorial work. It’s very satisfying, and very much reminds me of my
+ career sidetrack as a school teacher. Above all, you are there to help people and teams reach their potential and get the
+ most from their jobs.
