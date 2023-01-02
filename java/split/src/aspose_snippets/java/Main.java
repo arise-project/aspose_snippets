@@ -2,8 +2,6 @@ package aspose_snippets.java;
 
 import com.aspose.pdf.License;
 
-import java.io.IOException;
-
 public class Main {
     public static void main(String[] args) throws Exception {
         new License().setLicense("../../test.lic");
