@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include "Aspose.PDF.Cpp/PdfLicense.h"
 
 #include "merger.h"
 #include <system/exception.h>
@@ -9,8 +10,12 @@
 using namespace std;
 using namespace System;
 
+using namespace Aspose::Pdf;
+
 int main()
 {
+    auto lic = MakeObject<License>();
+    lic->SetLicense(u"../../test.lic");
     try
     {
         //pdf_to_tiff();    
