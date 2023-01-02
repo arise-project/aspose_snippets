@@ -18,9 +18,6 @@
     <ClCompile Include="split.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Split_HTML.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -36,5 +33,10 @@
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="$(MSBuildThisFileDirectory)tools\aspose_types.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="split.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

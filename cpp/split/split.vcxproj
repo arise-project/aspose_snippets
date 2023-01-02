@@ -131,10 +131,12 @@
     <ClCompile Include="Split_HTML.cpp" />
     <ClCompile Include="Split_PDF.cpp" />
     <ClCompile Include="Split_TXT.cpp" />
-    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="split.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

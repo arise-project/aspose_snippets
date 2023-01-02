@@ -20,8 +20,7 @@ void PDF()
     int beg = 1;
     int end = 1;
 
-    auto stream = System::IO::File::Create(pathSource);
-    auto doc = MakeObject<Document>(stream);
+    auto doc = MakeObject<Document>(pathSource);
     end = doc->get_Pages()->get_Count();
 
     if(end > 1)

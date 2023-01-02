@@ -3,13 +3,11 @@
 
 #include <iostream>
 
-#include "Split_HTML.cpp"
-#include "Split_PDF.cpp"
-#include "Split_TXT.cpp"
-#include "Split_WORD.cpp"
+#include "split.h"
+#include <system/exception.h>
 
-using namesapace std;
-using namesapce System;
+using namespace std;
+using namespace System;
 
 int main()
 {    

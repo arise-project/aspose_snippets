@@ -24,6 +24,6 @@ void HTML()
     auto pdfEditor = MakeObject<Aspose::Pdf::Facades::PdfFileEditor>();
     //slit first page
     pdfEditor->SplitFromFirst(u"test.pdf", 1, u"test.pdf");
-    auto doc = MakeObject<Document>(u"test.pdf");
-    doc->Save(u"html_first.html", SaveFormat::Html);
+    auto outputDoc = MakeObject<Document>(u"test.pdf");
+    outputDoc->Save(u"html_first.html", SaveFormat::Html);
 }

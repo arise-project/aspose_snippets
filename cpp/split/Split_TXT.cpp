@@ -10,6 +10,7 @@
 
 #include "system/string.h"
 #include "system/io/file.h"
+#include "system/io/memory_stream.h"
 #include "drawing/imaging/image_format.h"
 
 using namespace System;
@@ -24,7 +25,7 @@ void TXT()
     //save input text to pdf to file
     doc->Save(u"test.pdf", SaveFormat::Pdf);
 
-    System::ArrayPtr<MemoryStreamPtr> pages =  pdfEditor->SplitToPages(u"test.pdf");
+    System::ArrayPtr<System::SharedPtr<System::IO::MemoryStream>> pages =  pdfEditor->SplitToPages(u"test.pdf");
     int index = 1;
     for(auto ms : pages)
     {
@@ -32,7 +33,7 @@ void TXT()
         auto textAbsorber = MakeObject<Aspose::Pdf::Text::TextAbsorber>();
         page->get_Pages()->Accept(textAbsorber);
         String extractedText = textAbsorber->get_Text();
-        System::IO::File::WriteAllText(u"text_{index}.txt", extractedText);
+        System::IO::File::WriteAllText(String::Format(u"text_{0}.txt", index), extractedText);
         index++;
     }
 }
