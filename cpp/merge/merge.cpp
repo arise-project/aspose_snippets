@@ -3,37 +3,11 @@
 
 #include <iostream>
 
-#include "Merger_cgm_pdf.cpp"
-#include "Merger_eps_pdf.cpp"
-#include "Merger_epub_pdf.cpp"
-#include "Merger_html_pdf.cpp"
-#include "Merger_md_pdf.cpp"
-#include "Merger_mht_pdf.cpp"
-#include "Merger_pcl_pdf.cpp"
-#include "Merger_pdf_doc.cpp"
-#include "Merger_pdf_epub.cpp"
-#include "Merger_pdf_docx.cpp"
-#include "Merger_pdf_html.cpp"
-#include "Merger_pdf_pptx.cpp"
-#include "Merger_pdf_pdfa.cpp"
-#include "Merger_pdf_svg.cpp"
-#include "Merger_pdf_tex.cpp"
-#include "Merger_pdf_text.cpp"
-#include "Merger_pdf_xls.cpp"
-#include "Merger_pdf_xps.cpp"
-#include "Merger_ps_pdf.cpp"
-#include "Merger_svg_pdf.cpp"
-#include "Merger_tex_pdf.cpp"
-#include "Merger_xps_pdf.cpp"
-#include "Merger_pdf_tiff.cpp"
-#include "Merger_tiff_pdf.cpp"
-#include "Merger_bmp_pdf.cpp"
-#include "Merger_jpg_docx.cpp"
-#include "Merger_jpg_pdf.cpp"
-#include "Merger_png_pdf.cpp"
+#include "merger.h"
+#include <system/exception.h>
 
-using namesapace std;
-using namesapce System;
+using namespace std;
+using namespace System;
 
 int main()
 {
@@ -42,11 +16,6 @@ int main()
         pdf_to_tiff();    
     }
     catch (const System::Exception &ex)
-    {
-        std::cerr << ex->get_Message() << std::endl;
-        return false;
-    }
-    catch (const Exception &ex)
     {
         std::cerr << ex->get_Message() << std::endl;
         return false;

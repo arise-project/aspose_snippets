@@ -1,0 +1,9 @@
+namespace merge
+{
+    [default_interface]
+    runtimeclass merger : Windows.UI.Xaml.Controls.Page
+    {
+        merger();
+        Int32 MyProperty;
+    }
+}

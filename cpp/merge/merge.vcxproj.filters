@@ -118,4 +118,9 @@
   <ItemGroup>
     <Natvis Include="$(MSBuildThisFileDirectory)tools\aspose_types.natvis" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="merger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
