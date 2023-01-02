@@ -2,8 +2,8 @@ package aspose_snippets.java;
 
 public class Merger_epub_pdf {
     public static void Execute() {
-        String pathSource1 = "../../../../TestData/test.epub";
-        String pathSource2 = "../../../../TestData/Second/test.epub";
+        String pathSource1 = "../../TestData/test.epub";
+        String pathSource2 = "../../TestData/Second/test.epub";
 
         com.aspose.pdf.EpubLoadOptions opt1 = new com.aspose.pdf.EpubLoadOptions();
         //use algorithm to prevent content to be truncated

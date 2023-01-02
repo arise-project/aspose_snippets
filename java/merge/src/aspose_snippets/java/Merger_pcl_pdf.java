@@ -2,8 +2,8 @@ package aspose_snippets.java;
 
 public class Merger_pcl_pdf {
     public static void Execute() {
-        String pathSource1 = "../../../../TestData/test.pcl";
-        String pathSource2 = "../../../../TestData/Second/test.pcl";
+        String pathSource1 = "../../TestData/test.pcl";
+        String pathSource2 = "../../TestData/Second/test.pcl";
 
         com.aspose.pdf.PclLoadOptions opt1 = new com.aspose.pdf.PclLoadOptions();
         //suspend not critical errors

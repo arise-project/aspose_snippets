@@ -2,8 +2,8 @@ package aspose_snippets.java;
 
 public class Merger_cgm_pdf {
     public static void Execute() {
-        String pathSource1 = "../../../../TestData/test.cgm";
-        String pathSource2 = "../../../../TestData/Second/test.cgm";
+        String pathSource1 = "../../TestData/test.cgm";
+        String pathSource2 = "../../TestData/Second/test.cgm";
 
         //cgm files can be parsed and loaded as Aspose Document
         com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1,

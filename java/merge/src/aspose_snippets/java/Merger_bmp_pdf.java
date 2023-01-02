@@ -6,8 +6,8 @@ import java.util.List;
 
 public class Merger_bmp_pdf {
     public static void Execute() throws FileNotFoundException {
-        String pathSource1 = "../../../../TestData/test.bmp";
-        String pathSource2 = "../../../../TestData/Second/test.bmp";
+        String pathSource1 = "../../TestData/test.bmp";
+        String pathSource2 = "../../TestData/Second/test.bmp";
 
         //create empty pdf document
         com.aspose.pdf.Document doc = new com.aspose.pdf.Document();

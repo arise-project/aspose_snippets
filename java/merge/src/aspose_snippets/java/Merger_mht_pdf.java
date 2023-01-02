@@ -2,8 +2,8 @@ package aspose_snippets.java;
 
 public class Merger_mht_pdf {
     public static void Execute() {
-        String pathSource1 = "../../../../TestData/test.mht";
-        String pathSource2 = "../../../../TestData/Second/test.mht";
+        String pathSource1 = "../../TestData/test.mht";
+        String pathSource2 = "../../TestData/Second/test.mht";
 
         //mht files can be parsed and loaded as Aspose Document
         com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1, new com.aspose.pdf.MhtLoadOptions());

@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Merger_jpg_docx {
     public static void Execute() {
-        String pathSource1 = "../../../../TestData/test.jpg";
-        String pathSource2 = "../../../../TestData/Second/test.jpg";
+        String pathSource1 = "../../TestData/test.jpg";
+        String pathSource2 = "../../TestData/Second/test.jpg";
 
         //create empty pdf document
         com.aspose.pdf.Document doc = new com.aspose.pdf.Document();
