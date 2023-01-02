@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"

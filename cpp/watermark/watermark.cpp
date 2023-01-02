@@ -3,12 +3,11 @@
 
 #include <iostream>
 
-#include "Watermark_add.cpp"
-#include "Watermark_get.cpp"
-#include "Watermark_remove.cpp"
+#include "Watermark.h"
+#include <system/exception.h>
 
-using namesapace std;
-using namesapce System;
+using namespace std;
+using namespace System;
 
 
 int main()

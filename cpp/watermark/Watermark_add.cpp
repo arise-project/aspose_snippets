@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/PageCollection.h"
@@ -8,11 +6,12 @@
 #include "Aspose.PDF.Cpp/Artifacts/ArtifactCollection.h"
 #include "Aspose.PDF.Cpp/HorizontalAlignment.h"
 #include "Aspose.PDF.Cpp/VerticalAlignment.h"
+#include "Aspose.PDF.Cpp/Text/TextState.h"
 
 #include "system/string.h"
 #include "system/io/file.h"
 #include "drawing/imaging/image_format.h"
-#include <Aspose.PDF.Cpp/Text/TextState.h>
+
 
 using namespace System;
 using namespace Aspose::Pdf;
