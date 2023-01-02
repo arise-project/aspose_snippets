@@ -58,7 +58,7 @@ int main()
 	
 	try
     {
-        jpg_to_docx();    
+        //jpg_to_docx();    
     }
     catch (const System::Exception &ex)
     {

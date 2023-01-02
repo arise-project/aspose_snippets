@@ -87,7 +87,7 @@
     <ClCompile Include="Merger_bmp_pdf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Merger_jpg_docx.cpp">
+    <ClCompile Include="_Merger_jpg_docx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Merger_jpg_pdf.cpp">

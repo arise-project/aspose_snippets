@@ -22,9 +22,8 @@ void bmp_to_pdf()
 	// make list of files with images to merge
 	String images[] = { pathSource1, pathSource2 };
 
-	for (int i = 1; i < sizeof(images); i++)
+	for (String fs : images)
 	{
-		auto fs = images[i];
 		// add new page to pdf
 		auto page = doc->get_Pages()->Add();
 

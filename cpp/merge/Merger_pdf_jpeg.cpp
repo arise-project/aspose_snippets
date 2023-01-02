@@ -25,7 +25,8 @@ void pdf_to_jpeg()
 	System::SharedPtr<Document> doc = MakeObject<Document>(pathSource);
 
 	// make list of path to temporary images
-	String* images = new String[doc->get_Pages()->get_Count()];
+	int imageCount = doc->get_Pages()->get_Count();
+	String* images = new String[imageCount];
 
 	int newWidth = 0;
 	int newHeight = 0;
@@ -51,7 +52,7 @@ void pdf_to_jpeg()
 		pageCount++;
 	}
 
-	for (int i = 0; i < sizeof(images); i++)
+	for (int i = 0; i < imageCount; i++)
 	{
 		String path = images[i];
 		// load image from file, it supports a lot of formats
@@ -67,10 +68,9 @@ void pdf_to_jpeg()
 	auto canvas = System::Drawing::Graphics::FromImage(newImage);
 	canvas->set_InterpolationMode(System::Drawing::Drawing2D::InterpolationMode::HighQualityBicubic);
 	int stitchedWidth = 0;
-	for (int i = 0; i < sizeof(images); i++)
+	for (int i = 0; i < imageCount; i++)
 	{
-		auto fs = images[i];
-
+		String fs = images[i];
 		// load image from file, it supports a lot of formats
 		auto image = System::Drawing::Image::FromFile(fs);
 		canvas->DrawImage(image, stitchedWidth, 0);
