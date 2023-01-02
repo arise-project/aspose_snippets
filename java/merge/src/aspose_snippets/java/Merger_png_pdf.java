@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Merger_png_pdf {
     public static void Execute() {
-        var pathSource1 = "../../TestData/test.png";
-        var pathSource2 = "../../TestData/Second/test.png";
+        String pathSource1 = "../../TestData/test.png";
+        String pathSource2 = "../../TestData/Second/test.png";
 
         //create empty pdf document
-        var doc = new com.aspose.pdf.Document();
+        com.aspose.pdf.Document doc = new com.aspose.pdf.Document();
 
         //set less memory usage with unload instead of fast performance
         doc.setEnableObjectUnload(true);
@@ -17,7 +17,7 @@ public class Merger_png_pdf {
         //make list of files with images to merge
         List<String> images = Arrays.asList(new String[]{pathSource1, pathSource2});
 
-        for (var fs : images) {
+        for (String fs : images) {
             //add new page to pdf
             com.aspose.pdf.Page page = doc.getPages().add();
 

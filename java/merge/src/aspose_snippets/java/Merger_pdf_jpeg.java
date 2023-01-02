@@ -28,7 +28,7 @@ public class Merger_pdf_jpeg {
 
         //make list pf parsed image sizes
         ArrayList<com.aspose.imaging.Size> imageSizes = new ArrayList<>();
-        for (var path : images) {
+        for (String path : images) {
             //load image from file, it supports a lot of formats
             com.aspose.imaging.RasterImage image = (com.aspose.imaging.RasterImage) com.aspose.imaging.Image.load(path);
             imageSizes.add(image.getSize());
@@ -55,7 +55,7 @@ public class Merger_pdf_jpeg {
         com.aspose.imaging.fileformats.jpeg.JpegImage newImage = (com.aspose.imaging.fileformats.jpeg.JpegImage) com.aspose.imaging.Image.create(options, newWidth, newHeight);
         int stitchedWidth = 0;
         for (String imagePath : images) {
-            var image = (com.aspose.imaging.RasterImage) com.aspose.imaging.Image.load(imagePath);
+            com.aspose.imaging.RasterImage image = (com.aspose.imaging.RasterImage) com.aspose.imaging.Image.load(imagePath);
             //create bounds to insert small image into large
             com.aspose.imaging.Rectangle bounds = new com.aspose.imaging.Rectangle(
                     stitchedWidth,

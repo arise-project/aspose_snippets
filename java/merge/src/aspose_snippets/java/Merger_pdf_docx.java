@@ -15,17 +15,17 @@ public class Merger_pdf_docx {
         //set less memory usage with unload instead of fast performance
         outputDoc.setEnableObjectUnload(true);
 
-        for (var page : firstDoc.getPages()) {
+        for (com.aspose.pdf.Page page : firstDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
 
-        for (var page : secondDoc.getPages()) {
+        for (com.aspose.pdf.Page page : secondDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
 
-        var opt1 = new com.aspose.pdf.DocSaveOptions();
+        com.aspose.pdf.DocSaveOptions opt1 = new com.aspose.pdf.DocSaveOptions();
         //use docx format
         opt1.setFormat(com.aspose.pdf.DocSaveOptions.DocFormat.DocX);
         //make document editable flow and recognize of tables

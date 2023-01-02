@@ -15,21 +15,21 @@ public class Merger_pdf_html {
         //set less memory usage with unload instead of fast performance
         outputDoc.setEnableObjectUnload(true);
 
-        for (var page : firstDoc.getPages()) {
+        for (com.aspose.pdf.Page page : firstDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
 
-        for (var page : secondDoc.getPages()) {
+        for (com.aspose.pdf.Page page : secondDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
 
-        var opt1 = new com.aspose.pdf.HtmlSaveOptions();
+        com.aspose.pdf.HtmlSaveOptions opt1 = new com.aspose.pdf.HtmlSaveOptions();
         //embed css into a page
-        opt1.setPartsembedingMode(com.aspose.pdf.HtmlSaveOptions.PartsembedingModes.EmbedAllIntoHtml);
+        opt1.setPartsEmbeddingMode(com.aspose.pdf.HtmlSaveOptions.PartsEmbeddingModes.EmbedAllIntoHtml);
         //embed images into a page
-        opt1.setRasterImagesSavingMode(com.aspose.pdf.HtmlSaveOptions.RasterImagesSavingModes.AsembededPartsOfPngPageBackground);
+        opt1.setRasterImagesSavingMode(com.aspose.pdf.HtmlSaveOptions.RasterImagesSavingModes.AsEmbeddedPartsOfPngPageBackground);
         //enhance conversion of documents with backgrounds
         opt1.setAntialiasingProcessing(com.aspose.pdf.HtmlSaveOptions.AntialiasingProcessingType.TryCorrectResultHtml);
         //use fixed layout render

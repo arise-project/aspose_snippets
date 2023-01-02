@@ -15,12 +15,12 @@ public class Merger_pdf_epub {
         //set less memory usage with unload instead of fast performance
         outputDoc.setEnableObjectUnload(true);
 
-        for (var page : firstDoc.getPages()) {
+        for (com.aspose.pdf.Page page : firstDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
 
-        for (var page : secondDoc.getPages()) {
+        for (com.aspose.pdf.Page page : secondDoc.getPages()) {
             //add page from one document to another directly
             outputDoc.getPages().add(page);
         }
