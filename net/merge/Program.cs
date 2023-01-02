@@ -117,7 +117,7 @@ namespace aspose_snippets.net.merger
             
             try
             {
-                Merger.pdf_to_emf();
+                //Merger.pdf_to_emf();
             }
             catch(Exception ex)
             {
