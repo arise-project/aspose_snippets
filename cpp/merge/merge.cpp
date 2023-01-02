@@ -103,7 +103,7 @@ int main()
 	
 	try
     {
-        cgm_to_pdf();    
+        //cgm_to_pdf();    
     }
     catch (const System::Exception &ex)
     {
@@ -118,7 +118,7 @@ int main()
 	
 	try
     {
-        eps_to_pdf();   
+        //eps_to_pdf();   
     }
     catch (const System::Exception &ex)
     {
@@ -133,7 +133,7 @@ int main()
 	
 	try
     {
-        epub_to_pdf();    
+        //epub_to_pdf();    
     }
     catch (const System::Exception &ex)
     {
@@ -148,7 +148,7 @@ int main()
 	
 	try
     {
-        html_to_pdf();    
+        //html_to_pdf();    
     }
     catch (const System::Exception &ex)
     {
@@ -163,7 +163,7 @@ int main()
 	
 	try
     {
-        md_to_pdf();    
+        //md_to_pdf();    
     }
     catch (const System::Exception &ex)
     {
@@ -178,7 +178,7 @@ int main()
 	
 	try
     {
-        mht_to_pdf();    
+        //mht_to_pdf();    
     }
     catch (const System::Exception &ex)
     {
@@ -193,7 +193,7 @@ int main()
 	
 	try
     {
-        pcl_to_pdf();    
+        //pcl_to_pdf();    
     }
     catch (const System::Exception &ex)
     {
@@ -208,7 +208,7 @@ int main()
 	
 	try
     {
-        pdf_to_doc();    
+        //pdf_to_doc();    
     }
     catch (const System::Exception &ex)
     {
@@ -223,7 +223,8 @@ int main()
 	
 	try
     {
-        pdf_to_docx();    
+        //todo: docx
+        //pdf_to_docx();    
     }
     catch (const System::Exception &ex)
     {
@@ -238,7 +239,8 @@ int main()
 	
 	try
     {
-        pdf_to_epub();    
+        //todo: error
+        //pdf_to_epub();    
     }
     catch (const System::Exception &ex)
     {
@@ -253,7 +255,8 @@ int main()
 	
 	try
     {
-        pdf_to_html();    
+        //todo: error
+        //pdf_to_html();    
     }
     catch (const System::Exception &ex)
     {
@@ -268,7 +271,8 @@ int main()
     
     try
     {
-        pdf_to_pdfa();    
+        //todo: error
+        //pdf_to_pdfa();    
     }
     catch (const System::Exception &ex)
     {
@@ -283,7 +287,8 @@ int main()
 	
 	try
     {
-        pdf_to_pptx();    
+        //todo: error
+        //pdf_to_pptx();    
     }
     catch (const System::Exception &ex)
     {
@@ -298,7 +303,7 @@ int main()
     
 	try
     {
-        pdf_to_svg();    
+        //pdf_to_svg();    
     }
     catch (const System::Exception &ex)
     {
@@ -313,7 +318,7 @@ int main()
     
 	try
     {
-        pdf_to_tex();    
+        //pdf_to_tex();    
     }
     catch (const System::Exception &ex)
     {
@@ -343,7 +348,8 @@ int main()
     
 	try
     {
-        pdf_to_xls();    
+        //todo: error
+        //pdf_to_xls();    
     }
     catch (const System::Exception &ex)
     {
@@ -358,7 +364,8 @@ int main()
     
 	try
     {
-        pdf_to_xps();    
+        //error
+        //pdf_to_xps();    
     }
     catch (const System::Exception &ex)
     {
@@ -373,7 +380,7 @@ int main()
     
 	try
     {
-        ps_to_pdf();    
+        //ps_to_pdf();    
     }
     catch (const System::Exception &ex)
     {
@@ -389,7 +396,8 @@ int main()
 	
 	try
     {
-        svg_to_pdf();    
+        //error
+        //svg_to_pdf();    
     }
     catch (const System::Exception &ex)
     {
@@ -404,7 +412,8 @@ int main()
     
 	try
     {
-        tex_to_pdf();    
+        //error
+        //tex_to_pdf();    
     }
     catch (const System::Exception &ex)
     {
@@ -419,7 +428,7 @@ int main()
 	
 	try
     {
-        xps_to_pdf();    
+        //xps_to_pdf();    
     }
     catch (const System::Exception &ex)
     {
