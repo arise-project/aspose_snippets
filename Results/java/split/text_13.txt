@@ -1,0 +1,50 @@
+Seems like a lot of ongoing o&m and sustainment of an existing product, similar to any other day-to-day. Do you have
+insight on what the proposal, design review, and first commits look like when architecting a brand new project? Like
+what do the first 30-60-90 days look like from product idea up to those o&m and sustainment activities?
+
+reply
+
+diarrhea 14 hours ago | parent | prev | next [–]
+
+What’s Docker hell? reply
+
+daigoba66 18 hours ago | parent | prev | next [–]
+
+This is basically my own experience as well. reply
+
+Rabidgremlin 10 hours ago | prev | next [–]
+
+I've had an "architect" job in some form or another for 20+ years, so have learnt plenty of things that would have greatly
+surprised my younger self... My day job is basically to be a "force multiplier" and it boils down to:
+
+   • cat herding = meetings, discussions, negotiation, "shoulder to cry on" = way more soft skills then I ever thought I'd
+     need
+
+   • Big picture stuff = "town planning" for tech, second order thinking, pulling together cohesive plans/strategies,
+     principles, constraints = way harder to effectively communicate this stuff than my younger stuff would have
+     thought
+
+   • rapid altitude changes = dropping from the 10000ft view down to helping a team troubleshoot some production
+     issue, helping a junior dev with a code issue, solving a dispute between devs, hands on evaluation of some new
+     tech, then jumping back up to talk to a leadership team about some new grand strategy, or to planning out a multi
+     year program of work = a ton of skills that my younger self would have never have guessed at, finance, budgets,
+     "business" language, operating models along with keeping my technical skills sharp
+
+In terms of resources:
+
+   • Anything around learning to story tell and communicate effectively
+
+   • The "97 Things Every Software Architect Should Know" essays
+
+   • Your tech skills - write PoC apps, side-projects, try out new tech, learn to quickly grok strengths & weaknesses of
+     tech
+
+reply
+
+marifjeren 17 hours ago | prev | next [–]
+
+Noticing a theme already.. architects are fun killers! “Good architects prefer plain, old working tools.”
+https://news.ycombinator.com/item?id=33880398
+
+“Fight the urge to use ‘latest and coolest’ technology. (…) Stick to what works. Even when it's boring.”
+https://news.ycombinator.com/item?id=33880978

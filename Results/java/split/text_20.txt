@@ -1,0 +1,48 @@
+   5. In 1:1s with other engineers or team leads
+
+   6. In miscellaneous recurring meetings like our "Architects Chat" or "Leadership Meetings" Writing code is by far
+     the largest place I allocate my time and also what I would recommend to other engineers who wish to stay on an
+     "individual contributor" track. IMO, if you aren't writing code, you are slowly getting worse at writing code which
+     damages your ability to make recommendations to others. There is no replacement for real experience. Reviewing
+     code is a close second. I review roughly 50 PRs every week which is about 2x what our closest "non-architect"
+     engineers review (usually Engineering Managers). Many of my impromptu meetings and Slack feedback comes
+     from what I see in code reviews. If I leave anything beyond a trivial comment, I like to have time to discuss with
+     the individual to make sure I'm understanding correctly and actually providing useful feedback. Since other people
+     are working in my code-bases, its also important to see that "the ideas are coming together". If PRs into our
+     Circuits code are frequently breaking patterns, its likely a problem with my patterns rather than other engineers.
+
+I don't have documentation on the list as it isn't something I write in an ongoing way. Instead, I prefer to write
+documentation at the beginning and end of large projects. I don't make a ton of edits as I go because the code is in flux so
+it can be a waste of time to update both code and documentation. Instead I like to:
+
+   1. Start a project with a plan of how everything fits together
+
+a. Planning takes anywhere from 1 week to 2 months depending on the size of the project
+
+   2. Get approval on the plan
+
+   3. Write code... if it has to contradict the plan, so be it
+
+   4. Update the documentation at the very end so other engineers can use it as a nice reference for the current "state of
+     the world" If anyone is interesting in joining Rec Room, we are hiring :) https://recroom.com/careers?
+     gh_jid=5382144003
+
+reply
+
+FpUser 16 hours ago | prev | next [–]
+
+I was a software architect at the end of the 90s before becoming CTO and then going on my own so it is a bit rusty. Most
+of my time was spent on high level design of complex business and B2B products and making sure that managers,
+business analysts and programmers do their jobs. Also selecting technologies etc. I still had about 50% of my time left
+for actual work so I would always pick some particular chunk and create design documents with diagrams given to
+programmers and would also code some chunk. I could have avoided doing any "productive" stuff but I did not want to
+loose touch. Being converted to a pure manager was not in my nature.
+
+reply
+
+clavalle 17 hours ago | prev | next [–]
+
+   • First thing in the morning, standups followed by coaching sessions (basically pair programming or code review)
+     for sticky problems Then it varies.
+
+   • 1:1s

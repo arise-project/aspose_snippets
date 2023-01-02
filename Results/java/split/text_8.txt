@@ -1,0 +1,55 @@
+of Software Architecture" is 95% fluff. So is "Clean Architecture". Most patterns like CQRS, DDD, fully event-driven
+etc are complete overkill and a sign of a BAD architect unless there is a real cause for it. 90% of the job is NOT
+overcomplicating.
+
+"Trying to persuade people to avoid technical debt at all costs" - put in a linter and concrete rules (even if a rule is loose,
+note that in writing) or devs will get upset and think you are singling them out.
+
+reply
+
+nrawe 13 hours ago | root | parent | next [–]
+
+Those approaches are not “fluff” or overly complicated if the problem-space warrants them. There are of course limits. If
+you want to write a script for use once or twice, worrying about coupling and cohesion is probably not worth your time.
+If you are building a system to last 2-5 years out, it absolutely is worthwhile.
+
+If you have a dead simple CRUD problem with very little business rules/operations then DDD isn’t right either. But if
+you have a complex set of interactions, state, and policies it’s the right call. (The big red book of ddd has a great table on
+exactly this)
+
+But there are problems out there that are suitable to those approaches. The devil is in the detail; unfortunately a lot of
+strategic design goes by the wayside to cargo-cult zeal.
+
+But the same can be said for the other way of thinking. I’ve worked/work with engineers who think any form of
+abstraction is abhorrent and that they don’t need to care about quality because they’ll delete it all and start again (they’ve
+not tended to care about the opportunity cost of that to their employer, either). Any database interaction looks like
+ActiveRecord and all technology choices are immutable.
+
+The key in all things is balance. What is simple vs overwrought is almost entirely down to what the framing of the
+problem is.
+
+reply
+
+lexx 17 hours ago | root | parent | prev | next [–]
+
+Also, I agree with you about over-complicating with all those patterns. But before I am able to dismiss a solution, I have
+to understand it. Trying to keep it simple is hard reply
+
+sidmitra 17 hours ago | root | parent | next [–]
+
+@lexx, i think most of the things you put in your answer were very reasonable and non-controversial and probably what
+most good senior-ish engineers do. I think the parent comment is slightly in his "local minima" and he's generalizing his
+experience to everyone else
+
+     "Trying to persuade people to avoid technical debt at all costs" - put in a linter
+
+This for example does not make sense to me. This would mean all tech debt is just static analysis. There is no linter for
+figuring out the correct abstraction and using them correctly. Eg. no linter yet will tell you "hey you should have used a
+state machine here!"
+
+You need a width range of experience before you can develop "better" taste in what's good and bad in different
+scenarios. Some of it can be gained from years of experience, and some from exposure to books/code.
+
+reply
+
+throw1234651234 17 hours ago | root | parent | next [–]

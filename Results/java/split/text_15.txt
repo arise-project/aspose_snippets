@@ -1,0 +1,59 @@
+     on other things, mostly related to DevOps, Platform Engineering and overall developer workflows. [shameless
+     plug] That's one of the reasons I founded https://stacktape.com - AWS-focused "internal developer platform" that
+     allows developers to do this sort of stuff on their own, without involvment of architects, DevOps or others.
+
+reply
+
+pelagicAustral 17 hours ago | prev | next [–]
+
+Well I work for a small government and my responsibilities tend to be a little less structured or more fluid in nature. I
+have to adapt at times and crunch code just as much as I scope requirements and write technical documents. Meetings
+here and there, lot's of talking to people and lots of reading. Currently I'm working on a digital transformation strategy
+and I can definitely see myself writing a whole lot in the next few months to gather traction on the implementations that
+are needed.
+
+I would say that at least for me, becoming a Software Architect has meant that I need to split my time between
+groundwork and strategising with an added layer of complexity that stems from the fact that I work for government, so
+there are a number of policies and internal bureaucratic barriers to get used to.
+
+reply
+
+jslakro 15 hours ago | prev | next [–]
+
+Other related and recent question with useful comments https://news.ycombinator.com/item?id=33713075 reply
+
+juancn 14 hours ago | prev | next [–]
+
+I'm an influencer. I have no formal power in the sense that people are not supposed to do what I say, so I have to be
+convincing, and influence others behaviors to make the software better.
+
+This implies analysis and compromise, having meetings, mentoring engineers, and quite a bit of coding and research.
+
+My work is less guided that when I was a junior engineer, in the sense that I'm meant to discover opportunities for
+improvement and give guidelines. This leaves time to pick what I should be doing next, where I'm adding the most value.
+
+This changes from time to time, it may be figuring out a new architecture, fixing a bug, getting involved in product
+development or handling an incident.
+
+An important part of the job is getting involved in production incidents, this helps grasp where are we struggling and
+opens the opportunity to guide development to a state where customers are happier and operational costs are lower.
+
+You also start to be more conscious about company finances (how much it costs to keep the lights running) and start
+thinking in ways to get more from the same resources.
+
+Even if I have no formal power, people tend to pay attention to what I say and suggest, so I need to be careful, because
+an off-hand comment can have a lot of impact.
+
+Architectural roles live and die by their word. We lead by influence, so be cognizant of perception and careful when you
+communicate with others in every interaction.
+
+reply
+
+ryandrake 13 hours ago | parent | next [–]
+
+I think "influencing/leading people who do not report to you" is one of the hardest, most underrated part of mid-level
+people's jobs. When you're a low-level Individual Contributor, it's easy: You're not expected to lead anything or
+influence people. Take your ticket, do a great job at it, then take the next ticket. You're given a task, design it, and
+implement it, and job well done. On the opposite end, if you're a director or senior manager with a big org of people who
+report to you, it's also easy (or seems easy from my vantage point): You simply say "we must do this thing" and people
+do it. In the middle, we don't have direct reports, and nobody has to listen to us, yet our job is to convince people to do

@@ -1,0 +1,52 @@
+reply
+
+jslakro 8 hours ago | root | parent | next [–]
+
+Training sphere also reflects this trend and nowadays is less common to find content focused on "Software Architecture"
+roles. It seems more like a thing from the past. Agile, horizontal teams and even distributed systems are motivating that
+specific role to disapear reply
+
+danielmarkbruce 10 hours ago | parent | prev | next [–]
+
+Is there any modern (let's define it as "started in the past 10-15 years") product company that has this "architect" role? I
+was under the impression it's antiquated. reply
+
+lexx 18 hours ago | prev | next [–]
+
+   • Always on a state of mind of redesigning and simplifying everything
+
+   • Spending a lot of time trying to figure out the business better
+
+   • Studying a lot of books, articles, codebases and discussions on software architecture
+
+   • Inspire the team and younger devs to avoid complex tools and solutions and stick to the basics
+
+   • Balancing everyday and urgent business needs while leading towards a more simple, boring and maintainable
+     system.
+
+   • Trying to persuade people to avoid technical debt at all costs
+
+reply
+
+dimgl 16 hours ago | parent | next [–]
+
+        • Inspire the team and younger devs to avoid complex tools and solutions and stick to the basics
+        • Balancing everyday and urgent business needs while leading towards a more simple, boring and
+          maintainable system.
+
+        • Trying to persuade people to avoid technical debt at all costs
+
+This is literally my job everyday now as a principal. I enjoy it, but it's quite grueling, tbh.
+
+reply
+
+discussDev 14 hours ago | parent | prev | next [–]
+
+This is what an architect should be doing. Too often people are made architects that never had to maintain a system more
+then a few years if that and aligning new tech for every problem until you end up with an unworkable, inconsistant, mess
+that can't be easily estimated. reply
+
+throw1234651234 17 hours ago | parent | prev | next [–]
+
+"Studying a lot of books, articles, codebases and discussions on software architecture" - like what? 90% of it is "write
+clean code", "put in a cache", "normalize your db", "use a queue if the service is really spotty/unreliable". "Fundamentals

@@ -1,0 +1,46 @@
+find) and not create any unpleasant surprises down the road, and that they have given appropriate thought to evolution of
+the service and forward and backward compatibility during that process.
+
+Martin Fowler is by far my most influential resource on microservice architectures and doing domain driven design well.
+But I would strongly suggest literally reading everything you can find on the subject. Mostly because it's many subjects
+in a trenchcoat. Seeing it all from a few different angles will better arm you for whatever comes your way.
+
+reply
+
+cratermoon 17 hours ago | prev | next [–]
+
+If you flex the title "architect" to include "staff engineer", https://lethain.com/what-do-staff-engineers-actually-do/ By the
+way, I highly recommend his book Staff Engineer if you're interested in delving deeper.
+
+reply
+
+throw1234651234 18 hours ago | prev | next [–]
+
+I end up doing all the BA / PO / Scrum work and go to a lot of high-level meetings where POs give me some vague
+requirements they wrote down in 15 minutes between taking their kids to school and soccer practice. Then I cover for the
+scrum master who takes off on critical release days. Then I go to meetings and track down people to clarify requirements
+and do an architecture diagram or two and write stories from it and get it "approved" by the PO.
+
+I also pick up stories the team doesn't want, since I feel responsible for them not being clear / easy / broken up enough. In
+the evenings, I study for cloud exams.
+
+Resources I have found useful is really understanding flowcharts, and the difference between flowcharts and high-level
+architecture diagrams.
+
+reply
+
+nathias 15 hours ago | prev | next [–]
+
+meetings I imagine reply
+
+johnea 14 hours ago | prev | next [–]
+
+Writing powerpoint with the intention of fucking up the actual developers of S/W... reply
+
+oxff 17 hours ago | prev [–]
+
+Feed stuff to chatgpt, feed it to build pipeline reply
+
+Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact
+
+Search:

@@ -1,28 +1,31 @@
 package aspose_snippets.java;
 
+import com.aspose.pdf.License;
+
 import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        
+    public static void main(String[] args) throws Exception {
+        new License().setLicense("../../test.lic");
+
         try {
 			new Split_HTML().Execute();
     	}
-    	catch (Expection ex) {
+    	catch (Exception ex) {
     		System.err.println(ex.toString());
     	}
 
         try {
 			new Split_PDF().Execute();
     	}
-    	catch (Expection ex) {
+    	catch (Exception ex) {
     		System.err.println(ex.toString());
     	}
 
         try {
 			new Split_TXT().Execute();
     	}
-    	catch (Expection ex) {
+    	catch (Exception ex) {
     		System.err.println(ex.toString());
     	}
     }

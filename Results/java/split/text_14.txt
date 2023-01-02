@@ -1,0 +1,55 @@
+"Inspire the team and younger devs to avoid complex tools and solutions and stick to the basics”
+https://news.ycombinator.com/item?id=33880224
+
+reply
+
+zerkten 16 hours ago | parent | next [–]
+
+          architects are fun killers! I strongly disagree with this. Fun killers are working late nights to
+          remedy poor planning, or getting paged multiple times every night because people didn't make
+          informed choices. It kills the fun for the employees as well as others they interact with.
+
+A good architect includes someone who understands the needs of the people in terms of growth and satisfaction. They'll
+push back on schemes that introduce toil and try to align around good bets that contribute to your skill set. That may
+involve blocking use of technology X which has Y long term consequences. The consequences of that long-term choice
+need to have counters to keep the people engaged, so the good architect considers how to manage that. They don't always
+get that right and we have some less well-rounded architects, but we should aspire to doing this.
+
+reply
+
+gardenhedge 17 hours ago | parent | prev | next [–]
+
+Most likely because they are:
+
+   • Experienced devs who have "seen it all"
+
+   • Have to deal with the consequences and have more responsibility
+
+reply
+
+rr888 16 hours ago | parent | prev | next [–]
+
+That is what it should be. From what I've seen most architects aren't like this, they play with whatever is cool then move
+on to the next company while the rest of us try to untangle the mess. reply
+
+djmips 15 hours ago | root | parent | next [–]
+
+Let's say 'Good architects are fun killers' - but really there is still a lot of fun to be had - and if not maybe one should
+move to a more mentally challenging job haha. reply
+
+matus_congrady 17 hours ago | prev | next [–]
+
+I believe that the job description differs a lot from company to company. From my experience, the best architects spent
+most of their time focusing on these things:
+
+   1. Always understand what the current business priorities are.
+   2. Design the overall system architecture so it covers all of the business needs, and nothing more. Always focus on
+     keeping it as simple as possible. Even when people argue "lets do this some other way, because we might need it
+     in the future".
+   3. Fight the urge to use "latest and coolest" technology. Don't listen to consultants selling you unnecessary tech. Stick
+     to what works. Even when it's boring. Explain it properly to your team.
+   4. Maintain proper documentation. Focus on making it as simple as possible, easy to adjust and up to date. Otherwise
+     its value will be close to 0.
+   5. Use UML diagrams. Think about where the complexity of the given system is, and use only the most relevant
+     ones. For example, if the complexity lies in complex workflows, use sequence diagrams or state diagrams. If the
+     complexity lies in complex datamodel, use ERD diagrams. But more often than not, architects also have to focus

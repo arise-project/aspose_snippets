@@ -1,0 +1,57 @@
+reply
+
+thrashh 13 hours ago | root | parent | next [–]
+
+It wasn’t a change in web browser tech It was that someone put in the time to write a JS preprocessor that went along
+with their framework. That was React’s novel addition
+
+Without a preprocessor, users of your framework either use plain JS to generate HTML (i.e. jQuery) or you use
+templates.
+
+Both of them always looked really ugly on frontend
+
+With React’s JSX preprocessor, you can write HTML by… writing HTML. And you can mix custom components
+without doing some weird and ugly syntax
+
+Does React use a shadow DOM? Yes, but so could have jQuery or Handlebars.js too, and it wouldn’t have mattered.
+People don’t care how it works as long as it works. As far as libraries go, what gets adopted is what looks and feels the
+nicest — as it should be
+
+reply
+
+azangru 9 hours ago | root | parent | next [–]
+
+     Does React use a shadow DOM? Yes No. You must be confusing it with virtual DOM.
+
+As for React, what we are currently observing is that 1) it's a fairly large library in itself (~50kB of minified gzipped
+javascript); 2) it has a relatively slow DOM update mechanism; 3) it rerenders too eagerly, making it too easy to further
+degrade performance; 4) it's a lock-in into a non-standard jsx syntax, forever tying you to preprocessors.
+
+What conclusions an architect would make looking at all this, I do not know.
+
+reply
+
+Too 12 hours ago | root | parent | prev | next [–]
+
+Jquery got squashed from two directions. One being react and other data binding frameworks, the other side being
+browser tech modernizing and aligning, such that bare js could be used, without a thick compatibility layer in between.
+reply
+
+bcrosby95 15 hours ago | root | parent | prev | next [–]
+
+jQuery has existed for a long time, still gets updates, is still used in greenfield projects, and has a large body of expertise
+around it. The concern is abandoned projects that no one knows how to use, not that something is a bit old. React is
+beyond that point. It's not just the tech junkies hopping from the latest fad using it. There's been enough widespread
+adoption that there will still be React projects in 20 years.
+
+reply
+
+ARandomerDude 16 hours ago | root | parent | prev | next [–]
+
+Nevertheless the point is the same. Some technologies are more stable and broadly adopted than others. A slice of the
+total risk management pie entails selecting a tech stack that is less likely to die soon than its competitors. reply
+
+jupp0r 17 hours ago | root | parent | prev | next [–]
+
+A great mentor once told me about the poker analogy method of coping with situations you describe. Let's say you are a
+great poker player. When you get dealt a good hand, you play it and end up loosing - does that make you a worse player?

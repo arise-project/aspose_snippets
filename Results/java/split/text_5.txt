@@ -1,0 +1,53 @@
+Realize that most technology choices actually have very little impact on the business. If one uses A or B, it does not
+matter much to do whatever it is your company does. Very few tech choices have the potential to kill the
+company/unit/product.
+
+Realize that once a choice has been made, worrying about it does not help anyone.
+
+So the goals are not perfection. Not anywhere close. Just something that:
+
+   1. lets us move forward now (avoid decision paralysis)
+
+   2. not worse than before (if so, just stick with what you got)
+
+   3. good enough to deliver the needed business value
+
+   4. does not paint ourselves into a corner. Then we can always fix and improve things later
+
+reply
+
+0xbadcafebee 11 hours ago | root | parent | prev | next [–]
+
+     I am constantly agonising over choices I'm about to make You cannot predict the future. It is impossible
+     know which choice will result in better outcomes. Whatever you choose has probably about equal chance of
+     success or failure. So just make a choice, with a general idea of what you will do when the choice fails. Most
+     choices are not make-or-break, so you should really not be agonizing over most choices.
+
+reply
+
+ycombobreaker 6 hours ago | root | parent | next [–]
+
+     It is impossible know which choice will result in better outcomes. Whatever you choose has probably about
+     equal chance of success or failure. It's a common fallacy to assign 50/50 probability to unknown
+     distributions. Furthermore, many choices are not binary, or may not be as simple as right/wrong in hindsight.
+
+But I agree with the idea of amortizing your perspective over many choices.
+
+reply
+
+gardenhedge 17 hours ago | parent | prev | next [–]
+
+How do you personally deal with designing solutions where you haven't been able to convince people to do the right
+thing? For example where there are limitations imposed on you or someone higher up makes a call that doesn't sit well
+with you reply
+
+azalex 15 hours ago | root | parent | next [–]
+
+It does happen, quite often, to be honest. The single most important thing in this case is to understand why it happened.
+A typical example is when we come up with a design proposal that I think is a good one, but turns out to be that the
+estimated cost of building and running it outweighs the projected revenue the product will generate. Another example
+would be when I want to have a particular design implemented by an engineering team but they don't have enough
+capacity (people, time, etc) to deliver it the way it was intended. There have been cases when it was all about politics
+(sadly, I must add, but it does happen), i.e. someone in higher places of power want to push their own agenda and you
+get overruled. These are cases when the previously mentioned 'professional negotiator' role gets really important. These
+are the cases when you need to go to the people involved and try to understand their priorities and their constraints. Once

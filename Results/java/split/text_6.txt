@@ -1,0 +1,58 @@
+you have the information necessary, most of the times you'll be able to come up with an alternative solution that is
+acceptable for everyone. Sometimes you can convince others to give way, sometimes you'll need to.
+
+And then there are times when you just can't do anything because, for example, you get overruled by an overzealous
+CTO. In these cases, as sho_hn also pointed out, the best you can do is to make them understand the implications and
+brace yourself for damage control, because the fallout is going to be on you anyway :)
+
+reply
+
+sho_hn 16 hours ago | root | parent | prev | next [–]
+
+Make sure you negotiate the responsibilities of your role so that you can say "I'm not able to sign off on this". You may
+get overridden anyway, but the consequences must be known. And if you got people to agree that you should be able to
+say this, they usually understand the gravity of you having to invoke it and will live by it. reply
+
+stronglikedan 12 hours ago | root | parent | prev | next [–]
+
+CYA. Send an email to the higher up stating the negative impact that their decision will impose, and ask them to confirm
+that they would still like to proceed. Then don't do anything related to that decision until they respond. reply
+
+weard_beard 9 hours ago | parent | prev | next [–]
+
+Same. This is a great depiction of a healthy practice. reply
+
+angarg12 14 hours ago | prev | next [–]
+
+A little offtopic, but some people might find it interesting. My company doesn't have a "Software Architect" job title.
+Instead the closest thing is "Staff+ Engineer", which does pretty much the same things. However there are some key
+differences.
+
+First, these aren't "Ivory tower" architects. They still write code (although in practice not much) and stay connected to
+implementation details, mostly via code and design reviews.
+
+Second, architecture is every dev's responsibility, at different levels. So Staff engineers might oversee the architecture of
+entire systems spanning a whole org, while senior engineers oversee a single team. A mid level dev might design the
+"architecture" of a small service integrated in a larger system.
+
+Staff+ engineers usually report to senior leaders and aren't part of a team. They might hold office hours and break
+disagreements within or between teams.
+
+I'm not one myself but in a conversation a Staff eng. told me this was the first job where no one tells him what to do.
+Instead he spends his time proactively looking to solve business problem. This might be top down (e.g. take a business
+problem and try to find how to solve it) or bottom up (e.g. take some new tech or tool and figure out how it can be used
+to achieve some business goals). Often problems can also be solved without tech at all (e.g. aligning stakeholders).
+
+Lastly at this level engineers are expected to be leaders as well. Mentoring, sponsoring, etc. is pretty much a requirement.
+They should be force multipliers, making other engineers around them better. They might also scale themselves by
+producing content, such as tutorials, talks, training, etc.
+
+reply
+
+DoingIsLearning 11 hours ago | parent | next [–]
+
+     My company doesn't have a "Software Architect" job title. Instead the closest thing is "Staff+ Engineer" Not
+     off-topic at all, this is aligned with what I see. In older or 'regulated industry' companies the role and career
+     path of Architect still exists. But more and more I just see senior roles that are flavours of
+     Principal/Staff/Fellow and they still have normal Engineering duties but then in early greenfield stages of
+     projects act as Architects, just not as a full time role.

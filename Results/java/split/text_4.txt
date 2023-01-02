@@ -1,0 +1,56 @@
+Turns out even the best of all players loose quite frequently. What distinguishes them from others is that they make the
+best choices with the limited information they have at the time. They later go back and learn from any mistakes they
+have made and move forward.
+
+reply
+
+anon7725 14 hours ago | root | parent | next [–]
+
+I ran into an interesting point about poker in a recent episode of EconTalk[0]. Really good players play slightly more
+hands than they should (ie on a tournament table with 9 seats, a good player might play 15-20% of hands). Amateurs
+play way more hands than they should - like 50% or so. Translating to this thread, I’d map “playing a hand” to
+committing real resources to a project (switching tech stacks, etc). Pros will be somewhat conservative and only take that
+bet when they have a higher expectation of success. [0] https://www.econtalk.org/annie-duke-on-the-power-of-quitting...
+
+reply
+
+ElevenLathe 10 hours ago | root | parent | next [–]
+
+In other words, you gotta know when to hold 'em, know when to fold 'em, know when to walk away, and when to run.
+reply
+
+comprev 16 hours ago | root | parent | prev | next [–]
+
+Similar to management roles in the armed forces - those on the ground have to make split second decisions based on the
+latest information they have to hand. Getting it wrong usually has fatal consequences and it takes a certain personality
+trait to continue making those decisions. reply
+
+e12e 14 hours ago | root | parent | prev | next [–]
+
+Many good responses here already - but I'd say that eg choosing between react and vue or svelte isn't an architectural
+decision. But choosing between server rendered php and react is (is this a series of web "pages" with some forms, or is it
+an "app"?). Choosing between mysql, sqlite and postgresql may be (do we need row level security? Would mysql
+multimaster benefit us? Do we expect to deploy many, small instances where the simplicity of sqlite will shine) etc.
+
+There are many decisions to make building a solution - the architecture part has to do with fulfilling the requirements.
+
+The tech-lead/senior developer/team lead part has to do with implenting the architecture - our team knows vue, so we go
+with that to implement the app. We're invested in ms sql so we prefer that to postgres - but sqlite would be a poor fit.
+
+reply
+
+gautamdivgi 12 hours ago | root | parent | next [–]
+
+My personal take is I would go a level higher and define data consistency and availability requirements. Provide them to
+dev teams and if the teams need help meeting them I provide recommendations. I generally try to keep design out of
+architecture. It’s what you need to satisfy product or service needs. The technology gets into how you want to
+implement. I try to leave that to the tech lead for the team.
+
+reply
+
+jononor 10 hours ago | root | parent | prev | next [–]
+
+Realize that a perfect solution is not feasible (it does not exist). Not even an optimal solution for your particular problem
+is feasible (too many unknowns about both the problem and potential solutions, impossible to uncover and analyze them
+before hand). Realize that if you had chosen another solution, you would have other issues. Not "no issues". Probably not
+even "fewer issues" or "less severe" issues - just as high a chance

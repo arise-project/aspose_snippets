@@ -1,0 +1,57 @@
+decided that we're not ready for it yet. That was one example of project that I did myself because we didn't have
+necessary expertise.
+
+Right now I'm adapting our projects to work with Kubernetes, improving builds, adding health checks, writing yams, etc.
+
+I also made a foundation for some important core projects which I couldn't trust others to design. Then people continued
+my work. It seems to work fine so far, I oversee those projects to keep them in a good condition.
+
+Also I chat a lot with developers who stumble upon hard issues and struggle to resolve those or they can't make some
+decision.
+
+And I have some vision how our system as a whole should look like in an ideal world. We don't have resource to
+implement that vision and probably never will, but I consider it a good direction so I'm trying to point important
+decisions to that direction.
+
+Also I sometimes walk over repositories and fix stuff I don't like. Usually devops stuff, like bad dockerfiles, missing
+dockerignores, outdated dependencies.
+
+Sometimes I feel like a janitor, LoL.
+
+reply
+
+doctor_eval 12 hours ago | parent | next [–]
+
+The thing is that in computing, the “janitor” stuff is the hardest, and needs to be done by the best people. Keeping things
+clean is really tough, and only people who understand what “clean and simple” means, can do it. Outside of actual
+system design and writing code, I have spent a huge amount of my time over the last few years doing things like setting
+up CI/CD, E2E testing, writing templates, etc. Because it’s really hard to get this right, to have a vision for how things
+should be.
+
+My point is that it sounds like you’re doing an awesome job. I’m sure you qualify as a software architect.
+
+reply
+
+ilikerashers 16 hours ago | prev | next [–]
+
+Usually have differing work depending on which phase of project lifecycle. Early stage days are estimating + research.
+Often sitting with users and figuring out system complexity (from a usage and implementation perspective). Most
+important part of any project/transformation. Can never know enough. This is usually 2-3 hours meetings per day with
+users/technical groups, 3-4 hours documentation pieces.
+
+Later stage projects are process heavy. 3-4 hours with support, incident managers, networking, testers, devs, SLA stuff,
+NFRs all that fun stuff. Rest of the day writing.
+
+Overall it can be busy with long presentation prep and discovery/planning work or it can be quiet (something gets
+delayed) where I just go play with some new tech for a few days!
+
+reply
+
+chasd00 14 hours ago | prev | next [–]
+
+A lot of meetings across many teams and a lot of powerpoint for those meetings. It's not unusual for an entire week to be
+completely booked back to back with meetings. The upside is I get to meet and work with lots of different people
+regularly so I learn a ton as well as contribute. The downside is lots of powerpoint. I'm also the last point of escalation
+for a handful of dev teams. That's the fun part, getting to work on problems, mentor, and help out. I really enjoy
+mentoring and watching inexperienced people blossom and start mentoring others and passing on what they've learned.
+It's very fulfilling.

@@ -1,0 +1,58 @@
+the right thing. Very difficult. You need to be political, cognizant of perception as you say, you need to gather favors and
+then call them in, prioritize and horse trade for things that are important, and so on. Difficult job. reply
+
+gorgoiler 11 hours ago | prev | next [–]
+
+First up: having total visibility of the org is really important. We have a hundred engineers and I see everyone’s changes
+at the point they make them public (in whatever form they are called today: pull requests, merge requests, diffs, eh.)
+Unless I engage then that’s the first and last time I see their stuff but it’s enough to stay on top of everything everyone is
+up to. It’s a surprisingly low volume / high value channel of information. Leave the code review to the experts in each
+codebase — most changes will be on point and need only a small or large amount of alignment before they can land. (By
+contrast, very few things need to have the brakes put on them.)
+
+Some changes though will correlate with other problems across the codebase and this is where you should be stepping in
+to spot future patterns or current anti patterns and providing solutions and directions forward, or at worst, road blocks.
+
+Once you have enough of these under your belt you can start proactively spotting hot spots in the eng org that need
+focused effort. More mypy typing for a core library. Two libraries that should be one. One library that should be two.
+Vertical slices of functionality in two products that should be horizontal slices pulled into a separate service (or, my
+preference, library.)
+
+Processes are important too. You’ll see what people are repeating and or finding hard, and which could benefit from
+some love. Build infra. A testbed for debugging a process that is otherwise too heavyweight with production data. Teams
+that don’t talk enough pre-PR. Managers that need help managing consistent poor performers.
+
+I think many people wanting to go into an architect career think it is highbrow design work. In reality, I’ve found you
+end up doing much more support / boiler room / janitorial work. It’s very satisfying, and very much reminds me of my
+career sidetrack as a school teacher. Above all, you are there to help people and teams reach their potential and get the
+most from their jobs.
+
+reply
+
+awesomegoat_com 18 hours ago | prev | next [–]
+
+I am architect on the sales side. That's little bit crazier, I would guess. In the morning I look over our github/mail/slack
+queue to see whether someone needs urgent help.
+
+Then, if there are customer meetings scheduled on that day, I frenetically try to re-create customer's infra in our lab (be it
+Anthos Cluster, AWS Systems Manager, Azure Arc, or istio). If there are no customer meetings I try to improve our stuff
+on github. Sometimes, I publish new blueprint, kubernetes operator, or a terraform module, or try to create new CFT
+resource.
+
+reply
+
+vbezhenar 16 hours ago | prev | next [–]
+
+I'm not sure that I'd qualify as a software architect. I work in a small software company and basically I do all important
+IT decisions. I'm kind of architect and full stack developer and devops at the same time. So sometimes we do some
+design meetings. I suggest how to better design database, etc. I'm trying not to dictate everything but rather catch
+mistakes which are obvious from my experience. Avoiding mistake early is very important IMO.
+
+Recent months I designed Kubernetes cluster. We have plenty of small and medium services and environments thrown
+around in a few dedicated servers. It's a giant mess. I dread when I need to untangle it. So it was unavoidable to redesign
+devops from the scratch and I decided to go with Kubernetes. I basically tried few approaches, some turned out to be too
+complex, e.g. I built a complete automation on terraform, shell scripts and flux and ditched it out, because nobody but
+me would understand it and I don't need that kind of job security. I ended up with a simplest setup possible. Terraform
+provisions servers (we use hoster with OpenStack), then I manually run kubeadm with prepared configs, then I run few
+shell scripts to install important stuff with helm, then I install our services with kustomize. I think it was very nice
+outcome. Simple and approachable for everyone who knows basics of Kubernetes. Not full-fledged GitOps, but I

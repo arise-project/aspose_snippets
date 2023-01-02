@@ -1,0 +1,58 @@
+reply
+
+FourthProtocol 16 hours ago | prev | next [–]
+
+I've been doing architecture since 2003 and I've written down the things I do regularly as an architect -
+https://www.wittenburg.co.uk/work
+
+reply
+
+stcroixx 13 hours ago | prev | next [–]
+
+Doing non architecture stuff. Reviewing designs, troubleshooting issues nobody else could solve, mentoring juniors. I
+wouldn’t say there are any particular resources I consult when thinking about architecture, but being well versed in
+design patterns and knowing how to make standard diagrams is key - it’s all about communicating ideas and outside text,
+those are the tools. reply
+
+gryf 13 hours ago | prev | next [–]
+
+Sitting on Zoom with a permanent facepalm wondering how the outsourcers delivered a monkey when we carefully
+specified a lion. reply
+
+comprev 16 hours ago | prev | next [–]
+
+There is much diplomacy involved as the wider the scope of the project, more teams are involved, resulting in even more
+"right" ways to do X. Although I'm not an "architect" by title, things I build do impact many teams as we move towards
+standardising how to do X.
+
+reply
+
+onion2k 18 hours ago | prev | next [–]
+
+I'm not an architect at the moment but when I have been I spent most of my time negotiating with stakeholders to work
+out what they really need rather than just planning what ridiculous nonsense they believed they wanted. reply
+
+bravetraveler 16 hours ago | prev | next [–]
+
+I'm responsible for both hardware and software to a degree Most of my time is meeting. Either other teams or my own.
+
+Between these, I'm either building proofs or managing services we never found owners for with a reorg
+
+reply
+
+WhitneyLand 17 hours ago | prev | next [–]
+
+Maintaining time for a good amount of coding. Good architects write code or become more disconnected and more
+similar to management.
+
+reply
+
+motohagiography 17 hours ago | prev | next [–]
+
+When I was an architect, my job was to scale my knowledge and save others time. Not 10 minutes of googling, but
+several weeks or more for a team who would need to sound out a solution. An example would be spending an afternoon
+designing a slide that represented the main transactions we were building for as an M/M/1 queue (or other queue) so that
+devops could decide in a couple of seconds how many VM instances we were going to need, and the likely compute
+costs - instead of scheduling several meetings where they needed to sort out their internal power struggles of who was
+right to move the decision forward. I might spend several days (or more) going through code and interviewing
+developers about how they implemented an authentication protocol so that I can draw it in BAN logic on a slide, which

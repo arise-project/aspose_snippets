@@ -1,0 +1,57 @@
+Good architects prefer plain, old working tools. That usually involves a RDBMS. Sometimes many; and often times you
+need to make existing ones talk to other things. Bad architects thing old means bad. XML is not bad; what people did
+with it was, for example.
+
+reply
+
+P5fRxh5kUvp2th 15 hours ago | parent | next [–]
+
+hard agree with everything you've said here. At my current company it's actually a fight as it's not necessarily the
+architects themselves that want to shit out diagrams all day.
+
+It's a part of the job, for sure, I'm just pointing out it's not always the architect.
+
+but your points about hands-on, respect simple, and having a wide base of experience is 100% spot-on imo. I do agree
+with your point about the diagrams, just wanted to point out that's sometimes due to pressures rather than wants.
+
+reply
+
+mickeyp 14 hours ago | root | parent | next [–]
+
+Agreed with the diagrams. But, if your job is to convey information, and non-techies prefer that method, then... well, you
+abide. And charts are useful for sure. reply
+
+ftkftk 10 hours ago | root | parent | next [–]
+
+In my experience a few boxes and sticks usually communicate more effectively to more constituents (both technical and
+not) than the most well-written document. The trick is to know how much detail is necessary to include at the time. reply
+
+dr_kiszonka 5 hours ago | root | parent | next [–]
+
+Not having this skill is the bane of my existence! There is always a person who complains* that I provide too little detail
+("you need to be more rigorous/specific/careful how you define") or too much of it ("we are getting too much into the
+weeds here" or they just tune out). I asked a much more senior person for feedback and it is always too much or too little
+when go from one revision to another.
+
+   • Yes, it is better that they articulate what they don't like than just completely ignore it and leave me in the dark.
+
+reply
+
+f1shy 17 hours ago | prev | next [–]
+
+In my current employer "architect" are people that do (exclusively) drawing. The preferred tool is IBM Rhapsody. Once
+somebody suggested to use PlantUML, he was directly laugh at his face; and they explained how much better Rhapsody
+is. To be fair, they had some good points... But once I suggested they should do some back and forth with the people
+actually writing code... they told me "I cannot understand code, and it is all right so. I do not need to. I'm the architect,
+not the carpenter"
+
+Another time I asked the chief architect --we were working in an embeded system-- "I have to program this function,
+what is my RAM, ROM and CPU budget for it?" His reply shocked me: "I'm architect here, I do not care about that little
+things, I do only the architecture, look here" and he proceeded to show me lots of boxes connected with lines. Then he
+added "that here is what is important, the real architecture is here".
+
+Needless to say, those projects failed miserably, with no hope for recovery...
+
+reply
+
+reacharavindh 17 hours ago | prev | next [–]

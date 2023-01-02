@@ -1,0 +1,53 @@
+other projects can use to integrate their code with, and our certification/accreditation/infosec people can reason about so
+the project doesn't get spike stripped at the production gate and delayed a quarter while a post-hoc security analysis gets
+done on it.
+
+I would meet with our vendors and tech service providers and establish whether they in fact provide the services they
+said they would, and what that physically means. A great example is whether an o365 tenant supports OAuth2 federated
+logins with non MSFT tenants or not, and how we are going to enroll users based on the amount of friction the
+realization of this feature causes(or not). Another one would be pushing standards down into development so nobody
+would roll their own protocols, and so I could have a short answer to what we implemented. You might see it as ticking a
+box, but an enterprise is like an airport, and some people get to fly while others don't. The ones who don't are usually
+stewing over some counterfactual.
+
+I would meet with external consultants, often security and regulatory people, and provide them with the technical details
+and assurances that would keep them from taking a pound of flesh from the project in the form of a 6 week analysis
+engagement.
+
+What makes an architect something different is they recognize that when there is direction or demand for a tech project,
+that creates opportunity for a lot of other very sophisticated technical people to inject themselves into the critical path of
+the project and use their leverage to extract money, management authority, and other concessions from it. As an
+architect, you see these people coming, and make sure they do not derail your tech.
+
+I enjoy it because it's solving problems at a higher level of abstraction. I also like doing product, but the architecture urge
+sabotages that, as in product, solutioning comes at the cost of listening and scaling your listening out to architects to
+solution stuff.
+
+reply
+
+deedubaya 14 hours ago | prev | next [–]
+
+20% hands on code 20% mentoring
+
+60% facilitating consensus between teams/orgs
+
+reply
+
+loloquwowndueo 12 hours ago | prev | next [–]
+
+Meetings. Endless meetings. reply
+
+tyleo 14 hours ago | prev | next [–]
+
+I'm the software architect for Circuits at Rec Room. Rec Room is a multi-billion dollar UGC-driven online game.
+Circuits is our in-game programming language. On Monday, Wednesday, and Friday I have large no meeting blocks in
+my calendar to discourage recurring or pre-planned meetings. Most of this time is spent:
+
+   1. Writing code
+
+   2. Reviewing code
+
+   3. Responding to feedback in our Slack channels
+
+   4. Impromptu meetings to help other Engineers get "unstuck" On Tuesday and Thursday I'm open for recurring
+     meetings. Most of this time is spent:
