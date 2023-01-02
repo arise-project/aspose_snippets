@@ -13,7 +13,7 @@ int main()
 {
     try
     {
-        pdf_to_tiff();    
+        //pdf_to_tiff();    
     }
     catch (const System::Exception &ex)
     {
@@ -28,7 +28,7 @@ int main()
 	
 	try
     {
-        tiff_to_pdf();    
+        //tiff_to_pdf();    
     }
     catch (const System::Exception &ex)
     {

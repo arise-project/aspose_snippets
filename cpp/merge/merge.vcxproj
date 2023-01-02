@@ -157,9 +157,7 @@
     <ClCompile Include="Merger_pdf_bmp.cpp" />
     <ClCompile Include="Merger_pdf_jpeg.cpp" />
     <ClCompile Include="Merger_pdf_png.cpp" />
-    <ClCompile Include="Merger_pdf_tiff.cpp" />
     <ClCompile Include="Merger_png_pdf.cpp" />
-    <ClCompile Include="Merger_tiff_pdf.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

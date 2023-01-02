@@ -102,13 +102,7 @@
     <ClCompile Include="Merger_pdf_png.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Merger_pdf_tiff.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Merger_png_pdf.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Merger_tiff_pdf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
