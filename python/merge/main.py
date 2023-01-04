@@ -140,7 +140,8 @@ def main():
         sys.stderr.write(str(e))
 
     try:
-        mht_to_pdf()
+        print("bad file sample mht")
+        # mht_to_pdf()
     except Exception as e:
         sys.stderr.write(str(e))
 

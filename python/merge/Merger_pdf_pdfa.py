@@ -1,5 +1,6 @@
 from aspose.pdf import (
     PdfFormat,
+    ConvertErrorAction,
     Document
 )
 
@@ -27,4 +28,7 @@ def pdf_to_pdfa():
         output_doc.pages.add(page)
 
     # save document as specific pdf standard PDFA 3Y
-    output_doc.convert("Merger_pdf_pdfa.pdf", PdfFormat.PDF_A_3U)
+    output_log = "convert_pdf_to_pdfa.log"
+    output_doc.convert(output_log, PdfFormat.PDF_A_1B, ConvertErrorAction.DELETE)
+    # Save output document
+    output_doc.save("Merger_pdf_pdfa.pdf")

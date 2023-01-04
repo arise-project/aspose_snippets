@@ -28,7 +28,7 @@ def pdf_to_xls():
 
     opt1 = ExcelSaveOptions()
     # set Microsoft document type
-    opt1.Format = ExcelSaveOptions.ExcelFormat.XMLSpreadSheet2003
+    opt1.format = ExcelSaveOptions.ExcelFormat.XML_SPREAD_SHEET2003
 
     # save Excel document
     output_doc.save("Merger_pdf_xls.xls", opt1)
