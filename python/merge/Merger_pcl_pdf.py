@@ -14,7 +14,7 @@ def pcl_to_pdf():
     opt1.supress_errors = True
 
     # pcl files can be parsed and loaded as Aspose Document
-    first_doc = Document(path_source1)
+    first_doc = Document(path_source1, opt1)
 
     # suspend not critical errors
     opt2 = PclLoadOptions()

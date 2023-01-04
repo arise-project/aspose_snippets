@@ -48,11 +48,13 @@ def main():
         sys.stderr.write(str(e))
 
     try:
+        # done
         ps_to_pdf()
     except Exception as e:
         sys.stderr.write(str(e))
 
     try:
+        # done
         eps_to_pdf()
     except Exception as e:
         sys.stderr.write(str(e))
@@ -75,6 +77,7 @@ def main():
         sys.stderr.write(str(e))
 
     try:
+        # done
         epub_to_pdf()
     except Exception as e:
         sys.stderr.write(str(e))
@@ -119,6 +122,7 @@ def main():
         sys.stderr.write(str(e))
 
     try:
+        # done
         md_to_pdf()
     except Exception as e:
         sys.stderr.write(str(e))

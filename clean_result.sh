@@ -19,3 +19,4 @@ rm python/merge/Merger_eps_pdf.pdf
 rm python/merge/Merger_epub_pdf.pdf
 rm python/merge/Merger_md_pdf.pdf
 rm python/merge/Merger_ps_pdf.pdf
+rm python/merge/Merger_pcl_pdf.pdf
