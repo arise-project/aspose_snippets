@@ -28,9 +28,9 @@ def pdf_to_doc():
 
     opt1 = DocSaveOptions()
     # use doc format
-    opt1.Format = DocSaveOptions.DocFormat.Doc,
+    opt1.format = DocSaveOptions.DocFormat.DOC
     # This mode is fast and good for maximally preserving original look
-    opt1.Mode = DocSaveOptions.RecognitionMode.Textbox
+    opt1.mode = DocSaveOptions.RecognitionMode.TEXTBOX
 
     # save pdf to Microsoft Word doc format
     output_doc.save("Merger_pdf_doc.doc", opt1)
