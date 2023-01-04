@@ -41,10 +41,11 @@ rm python/merge/Merger_pdf_bmp.bmp
 rm python/merge/test_1.bmp
 
 rm python/merge/Merger_pdf_html.pdf
-rm python/merge/Merger_pdf_html_files/
+rm -rf python/merge/Merger_pdf_html_files/
 rm python/merge/Merger_pdf_jpeg.jpg
 rm python/merge/Merger_pdf_png.png
 rm python/merge/Merger_pdf_tiff.tiff
 rm python/merge/test_1.jpg
 rm python/merge/test_1.png
+rm python/merge/Merger_png_pdf.pdf
 
