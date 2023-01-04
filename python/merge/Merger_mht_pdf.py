@@ -10,8 +10,8 @@ def mht_to_pdf():
     path_source2 = "../../TestData/Second/test.mht"
 
     # mht files can be parsed and loaded as Aspose Document
-    first_doc = Document(path_source1, MhtLoadOptions)
-    second_doc = Document(path_source2,  MhtLoadOptions)
+    first_doc = Document(path_source1, MhtLoadOptions())
+    second_doc = Document(path_source2,  MhtLoadOptions())
 
     # create empty pdf document
     output_doc = Document()

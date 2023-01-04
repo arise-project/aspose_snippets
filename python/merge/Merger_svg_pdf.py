@@ -10,7 +10,7 @@ def svg_to_pdf():
     path_source2 = "../../TestData/Second/test.svg"
 
     opt1 = SvgLoadOptions()
-    # Adust pdf page size to svg size
+    # Adjust pdf page size to svg size
     opt1.adjust_page_size = True
 
     # SVG files can be parsed and loaded as Aspose Document

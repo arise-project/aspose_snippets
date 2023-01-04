@@ -9,6 +9,7 @@ from PIL import Image
 import tifffile
 import io
 
+
 def tiff_to_pdf():
     path_source1 = "../../TestData/test.tiff"
     path_source2 = "../../TestData/Second/test.tiff"
@@ -20,7 +21,7 @@ def tiff_to_pdf():
     images = [multi_image1, multi_image2]
 
     # create empty pdf document
-    output_doc = Document
+    output_doc = Document()
 
     for multiImage in images:
         # iterate through tiff frames
@@ -30,7 +31,6 @@ def tiff_to_pdf():
             fp = io.BytesIO()
             format = Image.registered_extensions()['.' + "jpg"]
             multiImage.save(fp, format)
-
 
             # add new page to document
             page = output_doc.pages.add()

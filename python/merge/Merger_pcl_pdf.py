@@ -17,7 +17,7 @@ def pcl_to_pdf():
     first_doc = Document(path_source1, opt1)
 
     # suspend not critical errors
-    opt2 = PclLoadOptions
+    opt2 = PclLoadOptions()
     opt2.supress_errors = True
     second_doc = Document(path_source2, opt2)
 

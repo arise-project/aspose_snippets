@@ -26,7 +26,7 @@ def pdf_to_doc():
         # add page from one document to another directly
         output_doc.pages.add(page)
 
-    opt1 = DocSaveOptions
+    opt1 = DocSaveOptions()
     # use doc format
     opt1.Format = DocSaveOptions.DocFormat.Doc,
     # This mode is fast and good for maximally preserving original look

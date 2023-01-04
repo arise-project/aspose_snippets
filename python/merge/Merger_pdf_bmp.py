@@ -1,5 +1,7 @@
-from aspose.pdf import Document
 from PIL import Image
+from aspose.pdf import (
+    Document
+)
 
 
 def pdf_to_bmp():

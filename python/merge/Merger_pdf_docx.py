@@ -26,7 +26,7 @@ def pdf_to_docx():
         # add page from one document to another directly
         output_doc.pages.add(page)
 
-    opt1 = DocSaveOptions
+    opt1 = DocSaveOptions()
     # use docx format
     opt1.Format = DocSaveOptions.DocFormat.DOC_X,
     # make document editable flow and recognize of tables

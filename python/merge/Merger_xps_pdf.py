@@ -10,8 +10,8 @@ def xps_to_pdf():
     path_source2 = "../../TestData/Second/test.xps"
 
     # xps files can be parsed and loaded as Aspose Document
-    first_doc = Document(path_source1, XpsLoadOptions)
-    second_doc = Document(path_source2, XpsLoadOptions)
+    first_doc = Document(path_source1, XpsLoadOptions())
+    second_doc = Document(path_source2, XpsLoadOptions())
 
     # create empty pdf document
     output_doc = Document()

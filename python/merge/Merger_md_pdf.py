@@ -10,8 +10,8 @@ def md_to_pdf():
     path_source2 = "../../TestData/Second/test.md"
 
     # Markdown files can be parsed and loaded as Aspose Document
-    first_doc = Document(path_source1, MdLoadOptions)
-    second_doc = Document(path_source2, MdLoadOptions)
+    first_doc = Document(path_source1, MdLoadOptions())
+    second_doc = Document(path_source2, MdLoadOptions())
 
     # create empty pdf document
     output_doc = Document()
