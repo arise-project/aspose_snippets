@@ -31,6 +31,7 @@ def main():
     set_license()
 
     try:
+        # done
         cgm_to_pdf()
     except Exception as e:
         sys.stderr.write(str(e))
@@ -41,6 +42,7 @@ def main():
         sys.stderr.write(str(e))
 
     try:
+        # done
         pdf_to_pptx()
     except Exception as e:
         sys.stderr.write(str(e))
@@ -61,11 +63,13 @@ def main():
         sys.stderr.write(str(e))
 
     try:
+        # done
         pdf_to_svg()
     except Exception as e:
         sys.stderr.write(str(e))
 
     try:
+        # done
         svg_to_pdf()
     except Exception as e:
         sys.stderr.write(str(e))
@@ -81,11 +85,13 @@ def main():
         sys.stderr.write(str(e))
 
     try:
+        # done
         pdf_to_tex()
     except Exception as e:
         sys.stderr.write(str(e))
 
     try:
+        # done
         tex_to_pdf()
     except Exception as e:
         sys.stderr.write(str(e))
@@ -96,6 +102,7 @@ def main():
         sys.stderr.write(str(e))
 
     try:
+        # done
         pdf_to_emf()
     except Exception as e:
         sys.stderr.write(str(e))
@@ -106,6 +113,7 @@ def main():
         sys.stderr.write(str(e))
 
     try:
+        # done
         xps_to_pdf()
     except Exception as e:
         sys.stderr.write(str(e))
@@ -136,6 +144,7 @@ def main():
         sys.stderr.write(str(e))
 
     try:
+        # done
         pdf_to_xps()
     except Exception as e:
         sys.stderr.write(str(e))

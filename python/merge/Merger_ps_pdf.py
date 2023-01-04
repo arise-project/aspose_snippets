@@ -10,8 +10,8 @@ def ps_to_pdf():
     path_source2 = "../../TestData/Second/test.ps"
 
     # PostScript files can be parsed and loaded as Aspose Document
-    first_doc = Document(path_source1, PsLoadOptions)
-    second_doc = Document(path_source2, PsLoadOptions)
+    first_doc = Document(path_source1, PsLoadOptions())
+    second_doc = Document(path_source2, PsLoadOptions())
 
     # create empty pdf document
     output_doc = Document()

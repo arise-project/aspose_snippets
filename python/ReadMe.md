@@ -1,5 +1,10 @@
 https://pypi.org/project/aspose-pdf/
 
+#fonts
+
+sudo apt update && sudo apt install ttf-mscorefonts-installer
+
+
 #basic packages
 
 Python < 3.10
