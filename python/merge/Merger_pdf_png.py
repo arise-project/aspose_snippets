@@ -47,4 +47,3 @@ def pdf_to_png():
         offset = offset + image.width
 
     new_image.save("Merger_pdf_png.png")
-

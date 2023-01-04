@@ -35,4 +35,3 @@ def bmp_to_pdf():
 
     # save result pdf to file
     doc.save("Merger_bmp_pdf.pdf", SaveFormat.PDF)
-

@@ -156,6 +156,7 @@ def main():
     except Exception as e:
         sys.stderr.write(str(e))
 
+
 def set_license():
     """Sets license to fully work with Aspose.PDF"""
 
@@ -163,6 +164,7 @@ def set_license():
 
     license = License()
     license.set_license(license_file)
+
 
 if __name__ == '__main__':
     main()
