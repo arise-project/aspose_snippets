@@ -61,6 +61,7 @@ def main():
         sys.stderr.write(str(e))
 
     try:
+        # done
         pdf_to_doc()
     except Exception as e:
         sys.stderr.write(str(e))

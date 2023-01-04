@@ -11,7 +11,7 @@ def html_to_pdf():
 
     opt1 = HtmlLoadOptions()
     # set html encoding
-    opt1.input_encoding = "UTF-8",
+    opt1.input_encoding = "UTF-8"
     # render all html to single large pdf page
     opt1.is_render_to_single_page = True
 
@@ -20,7 +20,7 @@ def html_to_pdf():
 
     opt2 = HtmlLoadOptions()
     # set html encoding
-    opt2.input_encoding = "UTF-8",
+    opt2.input_encoding = "UTF-8"
     # split html content to pdf pages
     opt2.is_render_to_single_page = False
 

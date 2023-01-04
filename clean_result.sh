@@ -22,3 +22,8 @@ rm python/merge/Merger_ps_pdf.pdf
 
 rm python/merge/Merger_pcl_pdf.pdf
 rm python/merge/Merger_pdf_doc.doc
+
+rm python/merge/Merger_html_pdf.pdf
+rm python/merge/Merger_pdf_docx.docx
+rm python/merge/Merger_pdf_text.txt
+

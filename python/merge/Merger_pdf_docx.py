@@ -28,9 +28,9 @@ def pdf_to_docx():
 
     opt1 = DocSaveOptions()
     # use docx format
-    opt1.Format = DocSaveOptions.DocFormat.DOC_X,
+    opt1.format = DocSaveOptions.DocFormat.DOC_X
     # make document editable flow and recognize of tables
-    opt1.Mode = DocSaveOptions.RecognitionMode.ENHANCED_FLOW
+    opt1.mode = DocSaveOptions.RecognitionMode.ENHANCED_FLOW
 
     # save pdf to Microsoft Word docx format
     output_doc.save("Merger_pdf_docx.docx", opt1)
