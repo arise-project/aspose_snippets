@@ -13,6 +13,9 @@ python.exe .\get-pip.py
 pip3 install launchpadlib
 pip3 install -r .\requirements.txt
 pip3 install aspose-pdf
+pip3 install imagecodecs
+sudo ln /usr/bin/pip3 /usr/bin/pip3.8
+python3 -m pip install -U imagecodecs[all]
 
 # for images
 

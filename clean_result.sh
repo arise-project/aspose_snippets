@@ -49,3 +49,10 @@ rm python/merge/test_1.jpg
 rm python/merge/test_1.png
 rm python/merge/Merger_png_pdf.pdf
 
+
+rm hon/merge/Merger_tiff_pdf.pdf
+rm python/merge/tmp.jpg
+rm python/merge/tmp.png
+rm python/merge/tmp.tiff
+rm python/merge/tmp.tiff.npy
+
