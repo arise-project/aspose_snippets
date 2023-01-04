@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:h="http://www.w3.org/TR/REC-html40">
+<Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+    <Alignment ss:Vertical="Top"/><Borders/>
+    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size ="11" ss:Color ="#000000"/>
+    <Interior/>
+    <NumberFormat/>
+    <Protection/>
+  </Style>
+  <Style ss:ID="wrap">
+    <Alignment ss:Vertical="Top" ss:WrapText="1"/>
+  </Style>
+</Styles>
+<Worksheet ss:Name="page 1">
+<Table>
+  <Column ss:AutoFitWidth="0" ss:Width="492"/>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="9"><h:B>Дорогие Друзья!</h:B></h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="9"><h:B>Вас приветствует 8-я математическая Олимпиада имени С.Н.Олехника!</h:B></h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11"><h:B>Заочный тур</h:B></h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11"><h:B>2-3 класс</h:B></h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">1. Алексей ходит в библиотеку один раз в три дня, Михаил – один раз в четыре дня,</h:Font>
+&#10;<h:Font h:Size="11">Андрей – один раз в пять дней. В понедельник они встретились в библиотеке все вместе.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">Подсчитав, через сколько минимально дней они встретятся в библиотеке снова,</h:Font>
+&#10;<h:Font h:Size="11">определите, какой это будет день недели. В ответ запишите номер правильного ответа.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">1) Понедельник</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">2) Вторник</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">3) Среда</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">4) Четверг</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">5) Пятница</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">6) Суббота</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">7) Воскресенье</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">2. Ответьте на вопрос. В ответ запишите только число.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">Гуляли по аллейке Куриные семейки.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">У каждой мамы-квочки три сына и две дочки.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">Сколько всех цыплят, мы спросим,</h:Font>
+&#10;<h:Font h:Size="11">Если квочек – тридцать восемь?</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">3. У Ивана-Царевича был ковер-самолет прямоугольной формы. Но злые разбойники</h:Font>
+<h:Font h:Size="11">отрезали от него кусок. Василиса Премудрая, перекроив его, сшила его волшебными</h:Font>
+<h:Font h:Size="11">нитками так, что он не потерял своих волшебных свойств. Известно, что ковер-самолет</h:Font>
+<h:Font h:Size="11">при этом приобрел форму квадрата. Изначально длина ковра-самолета составляла 450 см,</h:Font>
+<h:Font h:Size="11">а стала составлять на 50 см меньше. Василиса решила обшить этот ковер бахромой по</h:Font>
+<h:Font h:Size="11">всему его периметру. Определите, хватит ли ей 17 м бахромы. Если бахромы хватит, то в</h:Font>
+&#10;<h:Font h:Size="11">ответ запишите, сколько останется метров. Если не хватит, то в ответ поставьте 0.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">4. В поезде в одном купе ехали трое сотрудников: Андрей, Иван и Алексей. Андрей взял в</h:Font>
+&#10;<h:Font h:Size="11">дорогу 3 пакета с продуктами, Иван - 4 таких же пакета. Петр купить продукты не успел.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">Выходя из вагона, Петр оставил за питание 700 рублей. Подсчитав, какое количество</h:Font>
+<h:Font h:Size="11">денег должен был получить каждый из пассажиров за продукты, определите, сколько</h:Font>
+&#10;<h:Font h:Size="11">денег должен получить Андрей.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">5. Алексей и Михаил очень любят заниматься спортивным ориентированием. Известно,</h:Font>
+<h:Font h:Size="11">что они прошли круговой маршрут из пункта А через пункты С, Д, и Е, вернувшись</h:Font>
+<h:Font h:Size="11">обратно в пункт А. Определите длину маршрута, если от пункта А до пункта С они</h:Font>
+<h:Font h:Size="11">прошли 200 м, затем от пункта С до пункта Д они прошли половину того пути, который</h:Font>
+&#10;<h:Font h:Size="11">они прошли от пункта А до пункта С. От пункта Д до пункта Е они прошли столько же,</h:Font></Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+<Worksheet ss:Name="page 2">
+<Table>
+  <Column ss:AutoFitWidth="0" ss:Width="492"/>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">сколько от пункта С до пункта Д, а, возвращаясь обратно в пункт А, они прошли половину</h:Font>
+&#10;<h:Font h:Size="11">суммы расстояний от пункта С до пункта Д и от пункта Д до пункта Е.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">6. Число уменьшили на половину от его величины. Затем остаток уменьшили на самое</h:Font>
+<h:Font h:Size="11">маленькое трехзначное число, результат сложили с суммой всех однозначных чисел. В</h:Font>
+&#10;<h:Font h:Size="11">результате получили число 55. Найдите исходное число.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">7. В школьной столовой 36 табуреток. Одни из них с тремя ножками, а другие – с</h:Font>
+&#10;<h:Font h:Size="11">четырьмя. Есть еще одна сломанная табуретка, у которой остались лишь две ножки.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">Сколько в столовой табуреток с четырьмя ножками, если всего 130 ножек?</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">8. Два ученика 8 класса участвовали в конкурсе на звание лучшего знатока биологии.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">Конкурс состоял из двенадцати туров. За победу в одном туре ученик получал три балла,</h:Font>
+<h:Font h:Size="11">за ничью – 2 балла, за поражение -1 балл. Один ученик набрал 27 баллов. Стал ли он</h:Font>
+&#10;<h:Font h:Size="11">победителем? Ответ обоснуйте. В ответ запишите, сколько баллов набрал второй.</h:Font></Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+<Worksheet ss:Name="page 3">
+<Table>
+  <Column ss:AutoFitWidth="0" ss:Width="492"/>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="9"><h:B>Дорогие Друзья!</h:B></h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="9"><h:B>Вас приветствует 8-я математическая Олимпиада имени С.Н.Олехника!</h:B></h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11"><h:B>Заочный тур</h:B></h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11"><h:B>2-3 класс</h:B></h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">1. Алексей ходит в библиотеку один раз в три дня, Михаил – один раз в четыре дня,</h:Font>
+&#10;<h:Font h:Size="11">Андрей – один раз в пять дней. В понедельник они встретились в библиотеке все вместе.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">Подсчитав, через сколько минимально дней они встретятся в библиотеке снова,</h:Font>
+&#10;<h:Font h:Size="11">определите, какой это будет день недели. В ответ запишите номер правильного ответа.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">1) Понедельник</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">2) Вторник</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">3) Среда</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">4) Четверг</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">5) Пятница</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">6) Суббота</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">7) Воскресенье</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">2. Ответьте на вопрос. В ответ запишите только число.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">Гуляли по аллейке Куриные семейки.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">У каждой мамы-квочки три сына и две дочки.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">Сколько всех цыплят, мы спросим,</h:Font>
+&#10;<h:Font h:Size="11">Если квочек – тридцать восемь?</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">3. У Ивана-Царевича был ковер-самолет прямоугольной формы. Но злые разбойники</h:Font>
+<h:Font h:Size="11">отрезали от него кусок. Василиса Премудрая, перекроив его, сшила его волшебными</h:Font>
+<h:Font h:Size="11">нитками так, что он не потерял своих волшебных свойств. Известно, что ковер-самолет</h:Font>
+<h:Font h:Size="11">при этом приобрел форму квадрата. Изначально длина ковра-самолета составляла 450 см,</h:Font>
+<h:Font h:Size="11">а стала составлять на 50 см меньше. Василиса решила обшить этот ковер бахромой по</h:Font>
+<h:Font h:Size="11">всему его периметру. Определите, хватит ли ей 17 м бахромы. Если бахромы хватит, то в</h:Font>
+&#10;<h:Font h:Size="11">ответ запишите, сколько останется метров. Если не хватит, то в ответ поставьте 0.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">4. В поезде в одном купе ехали трое сотрудников: Андрей, Иван и Алексей. Андрей взял в</h:Font>
+&#10;<h:Font h:Size="11">дорогу 3 пакета с продуктами, Иван - 4 таких же пакета. Петр купить продукты не успел.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">Выходя из вагона, Петр оставил за питание 700 рублей. Подсчитав, какое количество</h:Font>
+<h:Font h:Size="11">денег должен был получить каждый из пассажиров за продукты, определите, сколько</h:Font>
+&#10;<h:Font h:Size="11">денег должен получить Андрей.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">5. Алексей и Михаил очень любят заниматься спортивным ориентированием. Известно,</h:Font>
+<h:Font h:Size="11">что они прошли круговой маршрут из пункта А через пункты С, Д, и Е, вернувшись</h:Font>
+<h:Font h:Size="11">обратно в пункт А. Определите длину маршрута, если от пункта А до пункта С они</h:Font>
+<h:Font h:Size="11">прошли 200 м, затем от пункта С до пункта Д они прошли половину того пути, который</h:Font>
+&#10;<h:Font h:Size="11">они прошли от пункта А до пункта С. От пункта Д до пункта Е они прошли столько же,</h:Font></Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+<Worksheet ss:Name="page 4">
+<Table>
+  <Column ss:AutoFitWidth="0" ss:Width="492"/>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">сколько от пункта С до пункта Д, а, возвращаясь обратно в пункт А, они прошли половину</h:Font>
+&#10;<h:Font h:Size="11">суммы расстояний от пункта С до пункта Д и от пункта Д до пункта Е.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">6. Число уменьшили на половину от его величины. Затем остаток уменьшили на самое</h:Font>
+<h:Font h:Size="11">маленькое трехзначное число, результат сложили с суммой всех однозначных чисел. В</h:Font>
+&#10;<h:Font h:Size="11">результате получили число 55. Найдите исходное число.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">7. В школьной столовой 36 табуреток. Одни из них с тремя ножками, а другие – с</h:Font>
+&#10;<h:Font h:Size="11">четырьмя. Есть еще одна сломанная табуретка, у которой остались лишь две ножки.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">Сколько в столовой табуреток с четырьмя ножками, если всего 130 ножек?</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell><Data ss:Type="String"><h:Font h:Size="11">8. Два ученика 8 класса участвовали в конкурсе на звание лучшего знатока биологии.</h:Font></Data></Cell>
+</Row>
+ <Row>
+  <Cell ss:StyleID="wrap"><Data ss:Type="String"><h:Font h:Size="11">Конкурс состоял из двенадцати туров. За победу в одном туре ученик получал три балла,</h:Font>
+<h:Font h:Size="11">за ничью – 2 балла, за поражение -1 балл. Один ученик набрал 27 баллов. Стал ли он</h:Font>
+&#10;<h:Font h:Size="11">победителем? Ответ обоснуйте. В ответ запишите, сколько баллов набрал второй.</h:Font></Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+</Workbook>
