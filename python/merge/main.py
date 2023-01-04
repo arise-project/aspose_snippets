@@ -30,100 +30,123 @@ from Merger_pdf_xps import *
 def main():
     set_license()
 
+    try:
+        cgm_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        pcl_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        pdf_to_pptx()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        ps_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        eps_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        pdf_to_doc()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        pdf_to_svg()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        svg_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        epub_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        pdf_to_docx()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        pdf_to_tex()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        tex_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        html_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        pdf_to_emf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        pdf_to_text()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        xps_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        md_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        pdf_to_epub()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        pdf_to_xls()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        mht_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        pdf_to_pdfa()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        pdf_to_xps()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
 def set_license():
     """Sets license to fully work with Aspose.PDF"""
 
     license_file = "../../test.lic"
 
     license = License()
-    license.SetLicense(license_file)
-    try:
-        cgm_to_pdf()
-    except Exception as e: sys.stderr.write(str(e))
-
-    try:
-        pcl_to_pdf()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        pdf_to_pptx()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        ps_to_pdf()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        eps_to_pdf()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        pdf_to_doc()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        pdf_to_svg()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        svg_to_pdf()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        epub_to_pdf()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        pdf_to_docx()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        pdf_to_tex()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        tex_to_pdf()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        html_to_pdf()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        pdf_to_emf()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        pdf_to_text()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        xps_to_pdf()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        md_to_pdf()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        pdf_to_epub()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        pdf_to_xls()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        mht_to_pdf()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        pdf_to_pdfa()
-    except Exception as e: sys.stderr.write(str(e))
-    
-    try:
-        pdf_to_xps()
-    except Exception as e: sys.stderr.write(str(e))
+    license.set_license(license_file)
 
 if __name__ == '__main__':
     main()

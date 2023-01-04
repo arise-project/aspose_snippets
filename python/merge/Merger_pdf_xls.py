@@ -1,4 +1,3 @@
-import aspose.pdf.ExcelSaveOptions as ExcelSaveOptions
 from aspose.pdf import (
     ExcelSaveOptions,
     Document

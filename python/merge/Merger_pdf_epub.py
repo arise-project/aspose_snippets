@@ -1,5 +1,3 @@
-import aspose.pdf.HtmlSaveOptions as HtmlSaveOptions
-
 from aspose.pdf import (
     HtmlSaveOptions,
     Document
