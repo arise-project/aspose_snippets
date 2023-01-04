@@ -1,6 +1,11 @@
 from aspose.pdf import Document
 from PIL import Image
 
+from aspose.pdf.devices import (
+    Resolution,
+    PngDevice
+)
+
 
 def pdf_to_png():
     path_source = "../../TestData/test.pdf"
@@ -12,18 +17,18 @@ def pdf_to_png():
     images = []
 
     # pages in pdf counted from 1 to n
-    for pageCount in range(1, doc.pages.Count):
+    for pageCount in range(1, len(doc.pages)):
         # setup default resolution to pdf documents 72dpi
-        resolution = aspose.pdf.devices.Resolution(72)
+        resolution = Resolution(72)
 
         # create image device to save document as image with page dimensions and resolution
-        image_device = aspose.pdf.devices.PngDevice(
-            doc.pages[pageCount].PageInfo.width, doc.pages[pageCount].PageInfo.height, resolution)
+        image_device = PngDevice(
+            doc.pages[pageCount].page_info.width, doc.pages[pageCount].page_info.height, resolution)
 
         out_path = "test_" + str(pageCount) + ".png"
 
         # process document page to image
-        image_device.Process(doc.pages[pageCount], out_path)
+        image_device.process(doc.pages[pageCount], out_path)
         images.append(out_path)
 
     # make list pf parsed image sizes

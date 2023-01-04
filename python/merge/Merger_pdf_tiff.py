@@ -2,6 +2,11 @@ from aspose.pdf import (
     Document
 )
 
+from aspose.pdf.devices import (
+    Resolution,
+    JpegDevice
+)
+
 from PIL import Image
 import tifffile
 import numpy
@@ -19,13 +24,13 @@ def pdf_to_tiff():
     first_size = None  # I am going to say that the first file is the right size
 
     # pdf document count pages from 1 to n
-    for pageCount in range(1, doc.pages.Length):
+    for pageCount in range(1, len(doc.pages)):
         # setup default resolution to pdf documents 72dpi
-        resolution = aspose.pdf.devices.Resolution(72)
+        resolution = Resolution(72)
 
         # create image device to save document as image with page dimensions and resolution
-        image_device = aspose.pdf.devices.JpegDevice(
-            doc.pages[pageCount].PageInfo.width, doc.pages[pageCount].PageInfo.height, resolution)
+        image_device = JpegDevice(
+            doc.pages[pageCount].page_info.width, doc.pages[pageCount].page_info.height, resolution)
 
         out_path = "test_" + str(pageCount) + ".jpg"
 
