@@ -26,6 +26,18 @@ from Merger_mht_pdf import *
 from Merger_pdf_pdfa import *
 from Merger_pdf_xps import *
 
+from Merger_bmp_pdf import *
+from Merger_jpg_docx import *
+from Merger_jpg_pdf import *
+from Merger_mht_pdf import *
+from Merger_pdf_bmp import *
+from Merger_pdf_html import *
+from Merger_pdf_jpeg import *
+from Merger_pdf_png import *
+from Merger_pdf_tiff import *
+from Merger_png_pdf import *
+from Merger_tiff_pdf import *
+
 
 def main():
     set_license()
@@ -153,6 +165,73 @@ def main():
     try:
         # done
         pdf_to_xps()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        # done
+        bmp_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        # done
+        jpg_to_docx()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        # done
+        jpg_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        # done
+        print("bad file mht")
+        # mht_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        # done
+        pdf_to_bmp()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        # done
+        pdf_to_html()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        # done
+        pdf_to_jpeg()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        # done
+        pdf_to_png()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        # done
+        pdf_to_tiff()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        # done
+        png_to_pdf()
+    except Exception as e:
+        sys.stderr.write(str(e))
+
+    try:
+        # done
+        tiff_to_pdf()
     except Exception as e:
         sys.stderr.write(str(e))
 

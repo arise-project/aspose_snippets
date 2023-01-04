@@ -31,3 +31,8 @@ rm python/merge/Merger_pdf_epub.html
 rm python/merge/Merger_pdf_pdfa.pdf
 rm python/merge/Merger_pdf_xls.xls
 rm python/merge/convert_pdf_to_pdfa.log
+
+
+rm python/merge/Merger_bmp_pdf.pdf
+rm python/merge/Merger_jpg_docx.docx
+rm python/merge/Merger_jpg_pdf.pdf

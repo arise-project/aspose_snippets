@@ -9,8 +9,8 @@ from PIL import Image
 
 
 def jpg_to_pdf():
-    path_source1 = "../../../../TestData/test.jpg"
-    path_source2 = "../../../../TestData/Second/test.jpg"
+    path_source1 = "../../TestData/test.jpg"
+    path_source2 = "../../TestData/Second/test.jpg"
 
     # create empty pdf document
     doc = Document()
@@ -26,15 +26,15 @@ def jpg_to_pdf():
         page = doc.pages.add()
 
         # setup page size to be A4
-        page.setPageSize(PageSize.a4.width, PageSize.a4.height)
+        page.set_page_size(PageSize.a4.width, PageSize.a4.height)
 
         # load image from stream, it supports a lot of formats
         image = Image.open(fs)
         # read image dimensions to pdf page rectangle
-        rect = Rectangle(0, 0, image.width - 1, image.height - 1)
+        rect = Rectangle(0, 0, image.width - 1, image.height - 1, True)
 
         # add image to new pdf page
-        page.addImage(fs, rect)
+        page.add_image(fs, rect)
 
     # save result pdf to file
     doc.save("Merger_jpg_pdf.pdf", SaveFormat.PDF)

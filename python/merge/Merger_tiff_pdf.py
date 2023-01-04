@@ -1,7 +1,5 @@
 from aspose.pdf import (
     SaveFormat,
-    PdfImage,
-    PdfImage,
     Document
 )
 
@@ -43,7 +41,7 @@ def tiff_to_pdf():
             page.page_info.height = multiImage.height
 
             # create new image into document
-            image = PdfImage
+            image = aspose.pdf.Image()
             # set image source to memory stream
             image.image_stream = fp
 

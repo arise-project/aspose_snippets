@@ -26,14 +26,14 @@ def jpg_to_docx():
         page = doc.pages.add()
 
         # setup page size to be A4
-        page.SetPageSize(PageSize.a4.width, PageSize.a4.height)
+        page.set_page_size(PageSize.a4.width, PageSize.a4.height)
 
         # load image from stream, it supports a lot of formats
         image = Image.open(fs)
         # read image dimensions to pdf page rectangle
-        rect = Rectangle(0, 0, image.width - 1, image.height - 1)
+        rect = Rectangle(0, 0, image.width - 1, image.height - 1, True)
 
         # add image to new pdf page
-        page.addImage(fs, rect)
+        page.add_image(fs, rect)
 
     doc.save("Merger_jpg_docx.docx", SaveFormat.DOC_X)
