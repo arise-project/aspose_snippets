@@ -17,18 +17,18 @@ def pdf_to_bmp():
     images = []
 
     # pages in pdf counted from 1 to n
-    for pageCount in range(1, doc.pages.count):
+    for pageCount in range(1, len(doc.pages)):
         # setup default resolution to pdf documents 72dpi
         resolution = Resolution(72)
 
         # create image device to save document as image with page dimensions and resolution
         image_device = BmpDevice(
-            doc.pages[pageCount].PageInfo.width, doc.pages[pageCount].PageInfo.height, resolution)
+            doc.pages[pageCount].page_info.width, doc.pages[pageCount].page_info.height, resolution)
 
         out_path = "test_" + str(pageCount) + ".bmp"
 
         # process document page to image
-        image_device.Process(doc.pages[pageCount], out_path)
+        image_device.process(doc.pages[pageCount], out_path)
         images.append(out_path)
 
     # make list pf parsed image sizes

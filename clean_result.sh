@@ -36,3 +36,6 @@ rm python/merge/convert_pdf_to_pdfa.log
 rm python/merge/Merger_bmp_pdf.pdf
 rm python/merge/Merger_jpg_docx.docx
 rm python/merge/Merger_jpg_pdf.pdf
+
+rm python/merge/Merger_pdf_bmp.bmp
+rm python/merge/test_1.bmp
