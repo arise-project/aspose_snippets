@@ -1,0 +1,60 @@
+reply
+
+awesomegoat_com 18 hours ago | prev | next [–]
+
+I am architect on the sales side. That's little bit crazier, I would guess. In the morning I look over our github/mail/slack
+queue to see whether someone needs urgent help.
+
+Then, if there are customer meetings scheduled on that day, I frenetically try to re-create customer's infra in our lab (be it
+Anthos Cluster, AWS Systems Manager, Azure Arc, or istio). If there are no customer meetings I try to improve our stuff
+on github. Sometimes, I publish new blueprint, kubernetes operator, or a terraform module, or try to create new CFT
+resource.
+
+reply
+
+vbezhenar 16 hours ago | prev | next [–]
+
+I'm not sure that I'd qualify as a software architect. I work in a small software company and basically I do all important
+IT decisions. I'm kind of architect and full stack developer and devops at the same time. So sometimes we do some
+design meetings. I suggest how to better design database, etc. I'm trying not to dictate everything but rather catch
+mistakes which are obvious from my experience. Avoiding mistake early is very important IMO.
+
+Recent months I designed Kubernetes cluster. We have plenty of small and medium services and environments thrown
+around in a few dedicated servers. It's a giant mess. I dread when I need to untangle it. So it was unavoidable to redesign
+devops from the scratch and I decided to go with Kubernetes. I basically tried few approaches, some turned out to be too
+complex, e.g. I built a complete automation on terraform, shell scripts and flux and ditched it out, because nobody but
+me would understand it and I don't need that kind of job security. I ended up with a simplest setup possible. Terraform
+provisions servers (we use hoster with OpenStack), then I manually run kubeadm with prepared configs, then I run few
+shell scripts to install important stuff with helm, then I install our services with kustomize. I think it was very nice
+outcome. Simple and approachable for everyone who knows basics of Kubernetes. Not full-fledged GitOps, but I
+decided that we're not ready for it yet. That was one example of project that I did myself because we didn't have
+necessary expertise.
+
+Right now I'm adapting our projects to work with Kubernetes, improving builds, adding health checks, writing yams, etc.
+
+I also made a foundation for some important core projects which I couldn't trust others to design. Then people continued
+my work. It seems to work fine so far, I oversee those projects to keep them in a good condition.
+
+Also I chat a lot with developers who stumble upon hard issues and struggle to resolve those or they can't make some
+decision.
+
+And I have some vision how our system as a whole should look like in an ideal world. We don't have resource to
+implement that vision and probably never will, but I consider it a good direction so I'm trying to point important
+decisions to that direction.
+
+Also I sometimes walk over repositories and fix stuff I don't like. Usually devops stuff, like bad dockerfiles, missing
+dockerignores, outdated dependencies.
+
+Sometimes I feel like a janitor, LoL.
+
+reply
+
+doctor_eval 12 hours ago | parent | next [–]
+
+The thing is that in computing, the “janitor” stuff is the hardest, and needs to be done by the best people. Keeping things
+clean is really tough, and only people who understand what “clean and simple” means, can do it. Outside of actual
+system design and writing code, I have spent a huge amount of my time over the last few years doing things like setting
+up CI/CD, E2E testing, writing templates, etc. Because it’s really hard to get this right, to have a vision for how things
+should be.
+
+My point is that it sounds like you’re doing an awesome job. I’m sure you qualify as a software architect.

@@ -1,8 +1,10 @@
 from aspose.pdf import (
-    PdfFileEditor,
     Document
 )
 
+from aspose.pdf.facades import (
+    PdfFileEditor
+)
 
 def PDF():
 
@@ -12,10 +14,10 @@ def PDF():
     end = 1
 
     doc = Document(path_source)
-    end = doc.Pages.Count
+    end = len(doc.pages)
 
     if end > 1:
         end /= 2
 
-    pdf_editor.Extract(path_source, beg, end, "pdf_half.pdf")
+    pdf_editor.extract(path_source, beg, end, "pdf_half.pdf")
     

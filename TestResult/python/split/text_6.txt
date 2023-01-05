@@ -1,0 +1,61 @@
+ reply
+
+ ilikerashers 16 hours ago | prev | next [–]
+
+ Usually have differing work depending on which phase of project lifecycle. Early stage days are estimating + research.
+ Often sitting with users and figuring out system complexity (from a usage and implementation perspective). Most
+ important part of any project/transformation. Can never know enough. This is usually 2-3 hours meetings per day with
+ users/technical groups, 3-4 hours documentation pieces.
+
+ Later stage projects are process heavy. 3-4 hours with support, incident managers, networking, testers, devs, SLA stuff,
+ NFRs all that fun stuff. Rest of the day writing.
+
+ Overall it can be busy with long presentation prep and discovery/planning work or it can be quiet (something gets
+ delayed) where I just go play with some new tech for a few days!
+
+ reply
+
+ chasd00 14 hours ago | prev | next [–]
+
+A lot of meetings across many teams and a lot of powerpoint for those meetings. It's not unusual for an entire week to be
+ completely booked back to back with meetings. The upside is I get to meet and work with lots of different people
+ regularly so I learn a ton as well as contribute. The downside is lots of powerpoint. I'm also the last point of escalation
+ for a handful of dev teams. That's the fun part, getting to work on problems, mentor, and help out. I really enjoy
+ mentoring and watching inexperienced people blossom and start mentoring others and passing on what they've learned.
+ It's very fulfilling.
+
+ reply
+
+ FourthProtocol 16 hours ago | prev | next [–]
+
+ I've been doing architecture since 2003 and I've written down the things I do regularly as an architect -
+ https://www.wittenburg.co.uk/work
+
+ reply
+
+ stcroixx 13 hours ago | prev | next [–]
+
+ Doing non architecture stuff. Reviewing designs, troubleshooting issues nobody else could solve, mentoring juniors. I
+ wouldn’t say there are any particular resources I consult when thinking about architecture, but being well versed in
+ design patterns and knowing how to make standard diagrams is key - it’s all about communicating ideas and outside text,
+ those are the tools. reply
+
+ gryf 13 hours ago | prev | next [–]
+
+ Sitting on Zoom with a permanent facepalm wondering how the outsourcers delivered a monkey when we carefully
+ specified a lion. reply
+
+ comprev 16 hours ago | prev | next [–]
+
+ There is much diplomacy involved as the wider the scope of the project, more teams are involved, resulting in even more
+ "right" ways to do X. Although I'm not an "architect" by title, things I build do impact many teams as we move towards
+ standardising how to do X.
+
+ reply
+
+ onion2k 18 hours ago | prev | next [–]
+
+ I'm not an architect at the moment but when I have been I spent most of my time negotiating with stakeholders to work
+ out what they really need rather than just planning what ridiculous nonsense they believed they wanted. reply
+
+ bravetraveler 16 hours ago | prev | next [–]

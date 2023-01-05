@@ -1,0 +1,60 @@
+reply
+
+ElevenLathe 10 hours ago | root | parent | next [–]
+
+In other words, you gotta know when to hold 'em, know when to fold 'em, know when to walk away, and when to run.
+reply
+
+comprev 16 hours ago | root | parent | prev | next [–]
+
+Similar to management roles in the armed forces - those on the ground have to make split second decisions based on the
+latest information they have to hand. Getting it wrong usually has fatal consequences and it takes a certain personality
+trait to continue making those decisions. reply
+
+e12e 14 hours ago | root | parent | prev | next [–]
+
+Many good responses here already - but I'd say that eg choosing between react and vue or svelte isn't an architectural
+decision. But choosing between server rendered php and react is (is this a series of web "pages" with some forms, or is it
+an "app"?). Choosing between mysql, sqlite and postgresql may be (do we need row level security? Would mysql
+multimaster benefit us? Do we expect to deploy many, small instances where the simplicity of sqlite will shine) etc.
+
+There are many decisions to make building a solution - the architecture part has to do with fulfilling the requirements.
+
+The tech-lead/senior developer/team lead part has to do with implenting the architecture - our team knows vue, so we go
+with that to implement the app. We're invested in ms sql so we prefer that to postgres - but sqlite would be a poor fit.
+
+reply
+
+gautamdivgi 12 hours ago | root | parent | next [–]
+
+My personal take is I would go a level higher and define data consistency and availability requirements. Provide them to
+dev teams and if the teams need help meeting them I provide recommendations. I generally try to keep design out of
+architecture. It’s what you need to satisfy product or service needs. The technology gets into how you want to implement.
+I try to leave that to the tech lead for the team.
+
+reply
+
+jononor 10 hours ago | root | parent | prev | next [–]
+
+Realize that a perfect solution is not feasible (it does not exist). Not even an optimal solution for your particular problem
+is feasible (too many unknowns about both the problem and potential solutions, impossible to uncover and analyze them
+before hand). Realize that if you had chosen another solution, you would have other issues. Not "no issues". Probably not
+even "fewer issues" or "less severe" issues - just as high a chance
+
+Realize that most technology choices actually have very little impact on the business. If one uses A or B, it does not
+matter much to do whatever it is your company does. Very few tech choices have the potential to kill the
+company/unit/product.
+
+Realize that once a choice has been made, worrying about it does not help anyone.
+
+So the goals are not perfection. Not anywhere close. Just something that:
+
+  1. lets us move forward now (avoid decision paralysis)
+
+  2. not worse than before (if so, just stick with what you got)
+
+  3. good enough to deliver the needed business value
+
+  4. does not paint ourselves into a corner. Then we can always fix and improve things later
+
+reply

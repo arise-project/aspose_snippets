@@ -29,7 +29,6 @@ from Merger_pdf_xps import *
 from Merger_bmp_pdf import *
 from Merger_jpg_docx import *
 from Merger_jpg_pdf import *
-from Merger_mht_pdf import *
 from Merger_pdf_bmp import *
 from Merger_pdf_html import *
 from Merger_pdf_jpeg import *

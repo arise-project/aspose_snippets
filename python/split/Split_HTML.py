@@ -1,19 +1,21 @@
 from aspose.pdf import (
     SaveFormat,
-    PdfFileEditor,
     HtmlLoadOptions,
     Document
 )
 
+from aspose.pdf.facades import (
+    PdfFileEditor
+)
 
 def HTML():
     path_source = "../../TestData/test.html";
-    doc = Document(path_source, HtmlLoadOptions);
+    doc = Document(path_source, HtmlLoadOptions())
     # save input html to pdf to file
-    doc.Save("test.pdf", SaveFormat.PDF);
+    doc.save("test.pdf", SaveFormat.PDF)
 
-    pdf_editor = PdfFileEditor();
+    pdf_editor = PdfFileEditor()
     # slit first page
-    pdf_editor.SplitFromFirst("test.pdf", 1, "test.pdf");
-    doc = Document("test.pdf");
-    doc.Save("html_first.html", SaveFormat.HTML);
+    pdf_editor.split_from_first("test.pdf", 1, "test.pdf")
+    doc = Document("test.pdf")
+    doc.save("html_first.html", SaveFormat.HTML)

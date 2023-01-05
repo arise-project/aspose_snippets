@@ -9,4 +9,4 @@ x64/
 *.user
 .vs/
 target/
-/python/merge/__pycache__
+__pycache__

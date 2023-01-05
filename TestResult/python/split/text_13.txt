@@ -1,0 +1,60 @@
+I'm responsible for both hardware and software to a degree Most of my time is meeting. Either other teams or my own.
+
+Between these, I'm either building proofs or managing services we never found owners for with a reorg
+
+reply
+
+WhitneyLand 17 hours ago | prev | next [–]
+
+Maintaining time for a good amount of coding. Good architects write code or become more disconnected and more
+similar to management.
+
+reply
+
+motohagiography 17 hours ago | prev | next [–]
+
+When I was an architect, my job was to scale my knowledge and save others time. Not 10 minutes of googling, but
+several weeks or more for a team who would need to sound out a solution. An example would be spending an afternoon
+designing a slide that represented the main transactions we were building for as an M/M/1 queue (or other queue) so that
+devops could decide in a couple of seconds how many VM instances we were going to need, and the likely compute
+costs - instead of scheduling several meetings where they needed to sort out their internal power struggles of who was
+right to move the decision forward. I might spend several days (or more) going through code and interviewing
+developers about how they implemented an authentication protocol so that I can draw it in BAN logic on a slide, which
+other projects can use to integrate their code with, and our certification/accreditation/infosec people can reason about so
+the project doesn't get spike stripped at the production gate and delayed a quarter while a post-hoc security analysis gets
+done on it.
+
+I would meet with our vendors and tech service providers and establish whether they in fact provide the services they
+said they would, and what that physically means. A great example is whether an o365 tenant supports OAuth2 federated
+logins with non MSFT tenants or not, and how we are going to enroll users based on the amount of friction the
+realization of this feature causes(or not). Another one would be pushing standards down into development so nobody
+would roll their own protocols, and so I could have a short answer to what we implemented. You might see it as ticking a
+box, but an enterprise is like an airport, and some people get to fly while others don't. The ones who don't are usually
+stewing over some counterfactual.
+
+I would meet with external consultants, often security and regulatory people, and provide them with the technical details
+and assurances that would keep them from taking a pound of flesh from the project in the form of a 6 week analysis
+engagement.
+
+What makes an architect something different is they recognize that when there is direction or demand for a tech project,
+that creates opportunity for a lot of other very sophisticated technical people to inject themselves into the critical path of
+the project and use their leverage to extract money, management authority, and other concessions from it. As an architect,
+you see these people coming, and make sure they do not derail your tech.
+
+I enjoy it because it's solving problems at a higher level of abstraction. I also like doing product, but the architecture urge
+sabotages that, as in product, solutioning comes at the cost of listening and scaling your listening out to architects to
+solution stuff.
+
+reply
+
+deedubaya 14 hours ago | prev | next [–]
+
+20% hands on code 20% mentoring
+
+60% facilitating consensus between teams/orgs
+
+reply
+
+loloquwowndueo 12 hours ago | prev | next [–]
+
+Meetings. Endless meetings. reply

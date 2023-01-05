@@ -1,0 +1,60 @@
+reacharavindh 17 hours ago | prev | next [–]
+
+I’m not an architect, but used to closely work with one and it was a pleasure. The key role that our architect played that
+brought immense value to us was being the integrator of teams. Teams had a high level of autonomy when it comes to
+implementation details which meant there could easily be “reinventions”, incompatibilities, and even narrow minded
+choices. Our Architect always had the big picture view across teams, almost always sat in our feature grooming sessions
+with valuable inputs, worked closely with product owners who bring in feature requests that may need integration of
+multiple services etc.
+
+Above all, he was very active, and approachable to all teams instead of hiding behind barriers and occasionally bringing
+out UML diagrams. Several times, when we were debating which technical choice to make, held chime in with valuable
+points about what would be better if we were to integrate with another service, or something like “that team did this
+because blah, which might be relevant to you”.
+
+reply
+
+FlacoJones 18 hours ago | prev | next [–]
+
+   • It's typically a journey up and down the stack in terms of frontend, backend, and DevOps, and a journey in and out
+     of solving inherently complex problems (where the seams of your services are, authentication) and incidentally
+     complex problems (frameworks, machine-specific issues, Docker hell etc.)
+
+   • 80% what needs to be done today/what fires need putting out, and 20% planning for the future and seeing how the
+     bleeding edge can legitimately help us (e.g. WASM coming soon...). This is part of the general keeping up with
+     advances in industry
+
+   • Mentoring, jumping on pair programming calls to unblock other teammates.
+
+reply
+
+croo 18 hours ago | parent | next [–]
+
+This reflects my experience as well. Roadmap plannings and API designing between systems, communicating and
+enforcing best practices within the time constraints, meetings with different service developers/designers to solve the
+upcoming features... Less coding, more meeting and reviewing, overall clear view of the big picture is a must.
+
+reply
+
+mrweasel 18 hours ago | parent | prev | next [–]
+
+It sounds like you're very good at what you do. Sadly I've seen "architects" being more focused on drawings, crude
+prototypes and fluffy ideas. Basically dreaming up ideas and concepts, throwing them over the wall to developers and
+SREs to pick up. A previous boss of mine had to callback a candidate for a job, telling him, that despite us hiring pretty
+much anyone, we had no need for someone who thought of software architecture as a desk exercise.
+
+reply
+
+ryanlitalien 13 hours ago | root | parent | next [–]
+
+These fluff and idea types are typically called "Ivory Tower" architects (from my experience). reply
+
+rlyshw 18 hours ago | parent | prev | next [–]
+
+Seems like a lot of ongoing o&m and sustainment of an existing product, similar to any other day-to-day. Do you have
+insight on what the proposal, design review, and first commits look like when architecting a brand new project? Like
+what do the first 30-60-90 days look like from product idea up to those o&m and sustainment activities?
+
+reply
+
+diarrhea 14 hours ago | parent | prev | next [–]

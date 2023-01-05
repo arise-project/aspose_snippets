@@ -1,0 +1,61 @@
+ sidmitra 17 hours ago | root | parent | next [–]
+
+ @lexx, i think most of the things you put in your answer were very reasonable and non-controversial and probably what
+ most good senior-ish engineers do. I think the parent comment is slightly in his "local minima" and he's generalizing his
+ experience to everyone else
+
+      "Trying to persuade people to avoid technical debt at all costs" - put in a linter
+
+ This for example does not make sense to me. This would mean all tech debt is just static analysis. There is no linter for
+ figuring out the correct abstraction and using them correctly. Eg. no linter yet will tell you "hey you should have used a
+ state machine here!"
+
+You need a width range of experience before you can develop "better" taste in what's good and bad in different scenarios.
+ Some of it can be gained from years of experience, and some from exposure to books/code.
+
+ reply
+
+ throw1234651234 17 hours ago | root | parent | next [–]
+
+ Definitely nothing against what Lexx said. I did want to call out that most architects over-complicate in my experience.
+ What we do just isn't as profound as people make it out to be unless you are genuinely working on some latest ML for
+ billions of revenue or stabilizing SpaceX's landing thrusters, sequencing DNA, etc. reply
+
+ SgtBastard 11 hours ago | root | parent | next [–]
+
+ Having a broad and deep understanding of a range of design patterns in an otherwise banal enterprise environment is
+ critical when the existing technologies you work with are numerous, decades old and have built up like layers of
+ sedimentary rock.
+
+      in my experience
+
+ Friend, you're making it clear that you don't have much.
+
+ reply
+
+ doctor_eval 12 hours ago | root | parent | prev | next [–]
+
+      90% of the job is NOT overcomplicating. I totally agree with this, but
+
+      Most patterns like CQRS, DDD, fully event-driven etc are complete overkill and a sign of a BAD architect
+      unless there is a real cause for it.
+
+ Once your application gets to a certain size, DDD, CQRS, and events will make your life far simpler.
+
+Avoiding these patterns is a bit like saying that the solution to moving a piano is to get a bigger bicycle.
+
+ reply
+
+ lexx 17 hours ago | root | parent | prev | next [–]
+
+ Apart from those best seller books, the are great podcasts and articles that people discuss their experiences in depth. It
+ helps me a lot, to compose a more holistic thinking. Technical debt does not increase only for technological reasons but
+ also from business expectations. You can't just "build" a new garden and leave it be. You have to maintain it also.
+ Keeping the system clean and well oiled before building more is important. But these concepts need to be reminded
+ everyday to survive
+
+ reply
+
+ nateee 16 hours ago | root | parent | next [–]
+
+ Can you list some recommendations? For podcasts and some articles/authors to follow. reply

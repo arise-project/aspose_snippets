@@ -1,0 +1,61 @@
+ gardenhedge 17 hours ago | parent | prev | next [–]
+
+ Most likely because they are:
+
+    • Experienced devs who have "seen it all"
+
+    • Have to deal with the consequences and have more responsibility
+
+ reply
+
+ rr888 16 hours ago | parent | prev | next [–]
+
+ That is what it should be. From what I've seen most architects aren't like this, they play with whatever is cool then move
+ on to the next company while the rest of us try to untangle the mess. reply
+
+ djmips 15 hours ago | root | parent | next [–]
+
+ Let's say 'Good architects are fun killers' - but really there is still a lot of fun to be had - and if not maybe one should
+ move to a more mentally challenging job haha. reply
+
+ matus_congrady 17 hours ago | prev | next [–]
+
+ I believe that the job description differs a lot from company to company. From my experience, the best architects spent
+ most of their time focusing on these things:
+
+   1. Always understand what the current business priorities are.
+   2. Design the overall system architecture so it covers all of the business needs, and nothing more. Always focus on
+      keeping it as simple as possible. Even when people argue "lets do this some other way, because we might need it in
+      the future".
+   3. Fight the urge to use "latest and coolest" technology. Don't listen to consultants selling you unnecessary tech. Stick
+      to what works. Even when it's boring. Explain it properly to your team.
+   4. Maintain proper documentation. Focus on making it as simple as possible, easy to adjust and up to date. Otherwise
+      its value will be close to 0.
+   5. Use UML diagrams. Think about where the complexity of the given system is, and use only the most relevant
+      ones. For example, if the complexity lies in complex workflows, use sequence diagrams or state diagrams. If the
+      complexity lies in complex datamodel, use ERD diagrams. But more often than not, architects also have to focus
+      on other things, mostly related to DevOps, Platform Engineering and overall developer workflows. [shameless
+      plug] That's one of the reasons I founded https://stacktape.com - AWS-focused "internal developer platform" that
+      allows developers to do this sort of stuff on their own, without involvment of architects, DevOps or others.
+
+ reply
+
+ pelagicAustral 17 hours ago | prev | next [–]
+
+Well I work for a small government and my responsibilities tend to be a little less structured or more fluid in nature. I
+ have to adapt at times and crunch code just as much as I scope requirements and write technical documents. Meetings
+ here and there, lot's of talking to people and lots of reading. Currently I'm working on a digital transformation strategy
+ and I can definitely see myself writing a whole lot in the next few months to gather traction on the implementations that
+ are needed.
+
+ I would say that at least for me, becoming a Software Architect has meant that I need to split my time between
+ groundwork and strategising with an added layer of complexity that stems from the fact that I work for government, so
+ there are a number of policies and internal bureaucratic barriers to get used to.
+
+ reply
+
+ jslakro 15 hours ago | prev | next [–]
+
+ Other related and recent question with useful comments https://news.ycombinator.com/item?id=33713075 reply
+
+ juancn 14 hours ago | prev | next [–]
