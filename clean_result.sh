@@ -61,7 +61,7 @@ rm python/merge/tmp.tiff.npy
 
 
 rm python/split/html_first.html
-rm python/split/html_first_files/
+rm -rf python/split/html_first_files/
 rm python/split/p_1.pdf
 rm python/split/p_10.pdf
 rm python/split/p_11.pdf
