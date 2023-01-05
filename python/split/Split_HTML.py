@@ -8,6 +8,7 @@ from aspose.pdf.facades import (
     PdfFileEditor
 )
 
+
 def HTML():
     path_source = "../../TestData/test.html";
     doc = Document(path_source, HtmlLoadOptions())

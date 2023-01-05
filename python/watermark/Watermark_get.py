@@ -6,8 +6,8 @@ from aspose.pdf import (
 
 import io
 
+
 def get():
-    
     path_source = "../../TestData/test_with_watermark.pdf"
     doc = Document(path_source)
 

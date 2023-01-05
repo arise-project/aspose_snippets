@@ -6,8 +6,8 @@ from aspose.pdf.facades import (
     PdfFileEditor
 )
 
-def PDF():
 
+def PDF():
     path_source = "../../TestData/test.pdf"
     pdf_editor = PdfFileEditor()
     beg = 1
@@ -20,4 +20,3 @@ def PDF():
         end /= 2
 
     pdf_editor.extract(path_source, beg, end, "pdf_half.pdf")
-    

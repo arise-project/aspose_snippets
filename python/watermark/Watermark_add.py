@@ -27,4 +27,3 @@ def add():
 
     # save result pdf to file
     doc.save("add_watermark.pdf", SaveFormat.PDF)
-    

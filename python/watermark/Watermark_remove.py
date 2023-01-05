@@ -15,4 +15,3 @@ def remove():
 
     # save result pdf to file
     doc.save("remove_watermark.pdf", SaveFormat.PDF)
-        

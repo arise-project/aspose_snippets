@@ -6,6 +6,7 @@ from aspose.pdf.devices import (
     JpegDevice
 )
 
+
 def pdf_to_jpeg():
     path_source = "../../TestData/test.pdf"
 

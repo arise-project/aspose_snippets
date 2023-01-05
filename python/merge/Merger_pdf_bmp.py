@@ -2,10 +2,11 @@ from PIL import Image
 from aspose.pdf import (
     Document
 )
-from  aspose.pdf.devices import(
+from aspose.pdf.devices import (
     Resolution,
     BmpDevice
 )
+
 
 def pdf_to_bmp():
     path_source = "../../TestData/test.pdf"

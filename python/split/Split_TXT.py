@@ -14,6 +14,7 @@ from aspose.pdf.text import (
 
 from pathlib import Path
 
+
 def TXT():
     path_source = "../../TestData/test.txt"
     pdf_editor = PdfFileEditor()
@@ -31,7 +32,6 @@ def TXT():
         text_absorber = TextAbsorber()
         page.pages.accept(text_absorber)
         extracted_text = text_absorber.text
-        file = open("text_"+str(index)+".txt", "w+")
+        file = open("text_" + str(index) + ".txt", "w+")
         file.write(extracted_text)
         index = index + 1
-        
