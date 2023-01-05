@@ -130,4 +130,4 @@ rm python/split/text_9.txt
 rm python/watermark/add_watermark.pdf
 rm python/watermark/get_watermark.jpg
 
-
+rm python/watermark/remove_watermark.pdf

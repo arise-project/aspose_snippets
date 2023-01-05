@@ -76,3 +76,4 @@ mv python/watermark/add_watermark.pdf TestResult/python/watermark/add_watermark.
 mv python/watermark/get_watermark.jpg TestResult/python/watermark/get_watermark.jpg
 
 
+mv python/watermark/remove_watermark.pdf TestResult/python/watermark/remove_watermark.pdf
