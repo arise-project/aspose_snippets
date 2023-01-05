@@ -70,3 +70,9 @@ mv python/split/text_6.txt TestResult/python/split/text_6.txt
 mv python/split/text_7.txt TestResult/python/split/text_7.txt
 mv python/split/text_8.txt TestResult/python/split/text_8.txt
 mv python/split/text_9.txt TestResult/python/split/text_9.txt
+
+
+mv python/watermark/add_watermark.pdf TestResult/python/watermark/add_watermark.pdf
+mv python/watermark/get_watermark.jpg TestResult/python/watermark/get_watermark.jpg
+
+

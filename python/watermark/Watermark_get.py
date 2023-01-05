@@ -4,14 +4,17 @@ from aspose.pdf import (
     Document
 )
 
+import io
 
 def get():
     
     path_source = "../../TestData/test_with_watermark.pdf"
     doc = Document(path_source)
 
-    if doc.Pages[1].Artifacts[1].Subtype == Artifact.ArtifactSubtype.Watermark:
-        fs = open("get_watermark.jpg", 'wc')
-        doc.Pages[1].Artifacts[1].Image.Save(fs)
-        fs.flush()
-        fs.close();
+    if doc.pages[1].artifacts[1].subtype == Artifact.ArtifactSubtype.WATERMARK:
+        image_stream = io.FileIO(
+            "get_watermark.jpg", 'x'
+        )
+        doc.pages[1].artifacts[1].image.save(image_stream)
+        # fs.flush()
+        # fs.close()

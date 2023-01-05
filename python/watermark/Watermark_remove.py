@@ -10,9 +10,9 @@ def remove():
     path_source = "../../TestData/test_with_watermark.pdf"
     doc = Document(path_source)
 
-    if doc.Pages[1].Artifacts[1].Subtype == Artifact.ArtifactSubtype.Watermark:
-        doc.Pages[1].Artifacts.Delete(doc.Pages[1].Artifacts[1])
+    if doc.pages[1].artifacts[1].subtype == Artifact.ArtifactSubtype.Watermark:
+        doc.pages[1].artifacts.delete(doc.pages[1].artifacts[1])
 
-    #save result pdf to file
-    doc.Save("remove_watermark.pdf", SaveFormat.PDF)
+    # save result pdf to file
+    doc.save("remove_watermark.pdf", SaveFormat.PDF)
         

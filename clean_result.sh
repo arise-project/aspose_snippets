@@ -124,3 +124,10 @@ rm python/split/text_6.txt
 rm python/split/text_7.txt
 rm python/split/text_8.txt
 rm python/split/text_9.txt
+
+
+
+rm python/watermark/add_watermark.pdf
+rm python/watermark/get_watermark.jpg
+
+

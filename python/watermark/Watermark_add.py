@@ -1,3 +1,5 @@
+from pprint import pprint
+
 from aspose.pdf import (
     WatermarkArtifact,
     HorizontalAlignment,
@@ -13,15 +15,16 @@ def add():
     doc = Document(path_source)
 
     artifact = WatermarkArtifact()
-    artifact.SetImage(watermark_source)
+    artifact.set_image(watermark_source)
 
-    artifact.ArtifactHorizontalAlignment = HorizontalAlignment.Center
-    artifact.ArtifactVerticalAlignment = VerticalAlignment.Center
-    artifact.Rotation = 15
-    artifact.Opacity = 1
-    artifact.IsBackground = True
-    doc.Pages[1].Artifacts.Add(artifact)
+    artifact.artifact_horizontal_alignment = HorizontalAlignment.CENTER
+    artifact.artifact_vertical_alignment = VerticalAlignment.CENTER
+    artifact.rotation = 15
+    artifact.opacity = 1
+    artifact.is_background = True
 
-    #save result pdf to file
-    doc.Save("add_watermark.pdf", SaveFormat.PDF)
+    doc.pages[1].artifacts.append(artifact)
+
+    # save result pdf to file
+    doc.save("add_watermark.pdf", SaveFormat.PDF)
     
