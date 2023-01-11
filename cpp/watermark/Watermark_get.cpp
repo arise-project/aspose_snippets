@@ -17,11 +17,16 @@ void get()
     String pathSource = u"../../TestData/test_with_watermark.pdf";
     auto doc = MakeObject<Document>(pathSource);
 
-    if(doc->get_Pages()->idx_get(1)->get_Artifacts()->idx_get(1)->get_Subtype() == Aspose::Pdf::Artifact::ArtifactSubtype::Watermark)
+    auto artifacts = doc->get_Pages()->idx_get(1)->get_Artifacts();
+    if (artifacts != nullptr && artifacts->get_Count() > 0)
     {
-        auto fs = System::IO::File::OpenWrite(u"get_watermark.jpg");
-        doc->get_Pages()->idx_get(1)->get_Artifacts()->idx_get(1)->get_Image()->Save(fs);
-        fs->Flush();
-        fs->Close();
+        auto artifact = artifacts->idx_get(1);
+        if (artifact != nullptr && artifact->get_Subtype() == Aspose::Pdf::Artifact::ArtifactSubtype::Watermark)
+        {
+            auto fs = System::IO::File::OpenWrite(u"get_watermark.jpg");
+            artifact->get_Image()->Save(fs);
+            fs->Flush();
+            fs->Close();
+        }
     }
 }
