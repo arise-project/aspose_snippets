@@ -131,10 +131,6 @@
     <ClCompile Include="merge.cpp" />
     <ClCompile Include="Merger_cgm_pdf.cpp" />
     <ClCompile Include="Merger_eps_pdf.cpp" />
-    <ClCompile Include="Merger_epub_pdf.cpp" />
-    <ClCompile Include="Merger_html_pdf.cpp" />
-    <ClCompile Include="Merger_md_pdf.cpp" />
-    <ClCompile Include="Merger_mht_pdf.cpp" />
     <ClCompile Include="Merger_pcl_pdf.cpp" />
     <ClCompile Include="Merger_pdf_doc.cpp" />
     <ClCompile Include="Merger_pdf_docx.cpp" />
