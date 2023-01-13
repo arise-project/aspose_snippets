@@ -16,9 +16,14 @@ void remove()
     String pathSource = u"../../TestData/test_with_watermark.pdf";
     auto doc = MakeObject<Document>(pathSource);
 
-    if(doc->get_Pages()->idx_get(1)->get_Artifacts()->idx_get(1)->get_Subtype() == Aspose::Pdf::Artifact::ArtifactSubtype::Watermark)
+    auto artifacts = doc->get_Pages()->idx_get(1)->get_Artifacts();
+    if (artifacts != nullptr && artifacts->get_Count() > 0)
     {
-        doc->get_Pages()->idx_get(1)->get_Artifacts()->Delete(doc->get_Pages()->idx_get(1)->get_Artifacts()->idx_get(1));
+        auto artifact = artifacts->idx_get(1);
+        if (artifact != nullptr && artifact->get_Subtype() == Aspose::Pdf::Artifact::ArtifactSubtype::Watermark)
+        {
+            artifacts->Delete(artifact);
+        }
     }
 
     //save result pdf to file

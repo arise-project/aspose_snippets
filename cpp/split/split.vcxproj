@@ -130,7 +130,6 @@
     <ClCompile Include="split.cpp" />
     <ClCompile Include="Split_HTML.cpp" />
     <ClCompile Include="Split_PDF.cpp" />
-    <ClCompile Include="Split_TXT.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
