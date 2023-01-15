@@ -13,21 +13,6 @@ int main()
 {    
     try
     {
-        HTML();
-    }
-    catch (const System::Exception &ex)
-    {
-        std::cerr << ex->get_Message() << std::endl;
-        return false;
-    }
-    catch (const std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
-        return false;
-    }
-
-    try
-    {
         PDF();
     }
     catch (const System::Exception &ex)
@@ -40,19 +25,9 @@ int main()
         std::cerr << e.what() << std::endl;
         return false;
     }
-    
-    try
+    catch (...)
     {
-        TXT();
-    }
-    catch (const System::Exception &ex)
-    {
-        std::cerr << ex->get_Message() << std::endl;
-        return false;
-    }
-    catch (const std::exception& e)
-    {
-        std::cerr << e.what() << std::endl;
+        std::cerr << "Unknown error" << std::endl;
         return false;
     }
 }
