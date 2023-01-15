@@ -1,35 +1,21 @@
-package aspose_snippets.java;
 
-public class Merger_pdf_pdfa {
-    public static void Execute() {
-        String pathSource1 = "../../TestData/test.pdf";
-        String pathSource2 = "../../TestData/Second/test.pdf";
+//1. create empty pdf document
+com.aspose.pdf.Document outputDoc = new com.aspose.pdf.Document();
 
-        //read pdf file to Aspose Document
-        com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1);
-        com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2);
+//2. read pdf file to Aspose Document
+com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document("1.pdf");
+com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document("2.pdf");
 
-        //create empty pdf document
-        com.aspose.pdf.Document outputDoc = new com.aspose.pdf.Document();
+//3. add page from one document to another directly
+for (com.aspose.pdf.Page page : firstDoc.getPages())
+    outputDoc.getPages().add(page);
 
-        //set less memory usage with unload instead of fast performance
-        outputDoc.setEnableObjectUnload(true);
+for (com.aspose.pdf.Page page : secondDoc.getPages())
+    outputDoc.getPages().add(page);
 
-        for (com.aspose.pdf.Page page : firstDoc.getPages()) {
-            //add page from one document to another directly
-            outputDoc.getPages().add(page);
-        }
-
-        for (com.aspose.pdf.Page page : secondDoc.getPages()) {
-            //add page from one document to another directly
-            outputDoc.getPages().add(page);
-        }
-
-        //save document as specific pdf standard PDFA 3Y
-        outputDoc.convert(
-                "Merger_pdf_pdfa.pdf",
-                com.aspose.pdf.PdfFormat.PDF_A_3U,
-                //delete objects that impossible to convert
-                com.aspose.pdf.ConvertErrorAction.Delete);
-    }
-}
+//4. save document as specific pdf standard PDFA 3Y
+//delete objects that impossible to convert
+outputDoc.convert(
+        "Merger_pdf_pdfa.pdf",
+        com.aspose.pdf.PdfFormat.PDF_A_3U,
+        com.aspose.pdf.ConvertErrorAction.Delete);

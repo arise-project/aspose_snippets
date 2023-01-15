@@ -23,7 +23,7 @@ for (int pageCount = 1; pageCount <= doc.getPages().size(); pageCount++) {
         String outPath = "test_" + pageCount + ".bmp";
         imageDevice.process(doc.getPages().get_Item(pageCount), outPath);
 
-        com.aspose.imaging.RasterImage image = (com.aspose.imaging.RasterImage) com.aspose.imaging.Image.load(imagePath);
+        com.aspose.imaging.RasterImage image = (com.aspose.imaging.RasterImage) com.aspose.imaging.Image.load(outPath);
         com.aspose.imaging.Rectangle bounds = new com.aspose.imaging.Rectangle(
                     stitchedWidth,
                     0,
