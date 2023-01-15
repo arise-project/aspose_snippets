@@ -1,36 +1,21 @@
-package aspose_snippets.java;
 
-public class Merger_pdf_docx {
-    public static void Execute() {
-        String pathSource1 = "../../TestData/test.pdf";
-        String pathSource2 = "../../TestData/Second/test.pdf";
+//1. create empty pdf document
+com.aspose.pdf.Document outputDoc = new com.aspose.pdf.Document();
 
-        //read pdf file to Aspose Document
-        com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1);
-        com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2);
+//2. read pdf file to Aspose Document
+com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document("1.pdf");
+com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document("2.pdf");
 
-        //create empty pdf document
-        com.aspose.pdf.Document outputDoc = new com.aspose.pdf.Document();
+//3. add page from one document to another directly
+for (com.aspose.pdf.Page page : firstDoc.getPages())
+    outputDoc.getPages().add(page);
+for (com.aspose.pdf.Page page : secondDoc.getPages())
+    outputDoc.getPages().add(page);
 
-        //set less memory usage with unload instead of fast performance
-        outputDoc.setEnableObjectUnload(true);
-
-        for (com.aspose.pdf.Page page : firstDoc.getPages()) {
-            //add page from one document to another directly
-            outputDoc.getPages().add(page);
-        }
-
-        for (com.aspose.pdf.Page page : secondDoc.getPages()) {
-            //add page from one document to another directly
-            outputDoc.getPages().add(page);
-        }
-
-        com.aspose.pdf.DocSaveOptions opt1 = new com.aspose.pdf.DocSaveOptions();
-        //use docx format
-        opt1.setFormat(com.aspose.pdf.DocSaveOptions.DocFormat.DocX);
-        //make document editable flow and recognize of tables
-        opt1.setMode(com.aspose.pdf.DocSaveOptions.RecognitionMode.EnhancedFlow);
-
-        outputDoc.save("Merger_pdf_docx.docx", opt1);
-    }
-}
+//4. save result DOCX to file
+//use docx format
+//make document editable flow and recognize of tables
+com.aspose.pdf.DocSaveOptions opt1 = new com.aspose.pdf.DocSaveOptions();
+opt1.setFormat(com.aspose.pdf.DocSaveOptions.DocFormat.DocX);
+opt1.setMode(com.aspose.pdf.DocSaveOptions.RecognitionMode.EnhancedFlow);
+outputDoc.save("Merger_pdf_docx.docx", opt1);
