@@ -1,32 +1,19 @@
 
-	String pathSource1 = u"../../TestData/test.pdf";
-	String pathSource2 = u"../../TestData/Second/test.pdf";
+//1. create empty pdf document
+auto outputDoc = MakeObject<Document>();
 
-	// read pdf file to Aspose Document
-	System::SharedPtr<Document> firstDoc = MakeObject<Document>(pathSource1);
-	auto secondDoc = MakeObject<Document>(pathSource2);
+//2. read pdf file to Aspose Document
+System::SharedPtr<Document> firstDoc = MakeObject<Document>(u"1.pdf");
+auto secondDoc = MakeObject<Document>(u"2.pdf");
 
-	// create empty pdf document
-	auto outputDoc = MakeObject<Document>();
-
-	// set less memory usage with unload instead of fast performance
-	outputDoc->set_EnableObjectUnload(true);
-
-	for (auto const& page : firstDoc->get_Pages())
-	{
-		// add page from one document to another directly
+//3. add page from one document to another directly
+for (auto const& page : firstDoc->get_Pages())
 		outputDoc->get_Pages()->CopyPage(page);
-	}
+for (auto const& page : secondDoc->get_Pages())
+	outputDoc->get_Pages()->CopyPage(page);
 
-	for (auto const& page : secondDoc->get_Pages())
-	{
-		// add page from one document to another directly
-		outputDoc->get_Pages()->CopyPage(page);
-	}
-
-	auto opt1 = MakeObject<ExcelSaveOptions>();
-
-	// set Microsoft document type
-	opt1->set_Format(Aspose::Pdf::ExcelSaveOptions::ExcelFormat::XMLSpreadSheet2003);
-	// save Excel document
-	outputDoc->Save(u"Merger_pdf_xls.xls", opt1);
+//4. save Excel document
+// set Microsoft document type
+auto opt1 = MakeObject<ExcelSaveOptions>();
+opt1->set_Format(Aspose::Pdf::ExcelSaveOptions::ExcelFormat::XMLSpreadSheet2003);
+outputDoc->Save(u"Merger_pdf_xls.xls", opt1);
