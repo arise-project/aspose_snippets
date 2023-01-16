@@ -1,10 +1,10 @@
 
 //1. create empty pdf document
-com.aspose.pdf.Document outputDoc = new com.aspose.pdf.Document();
+outputDoc = new com.aspose.pdf.Document();
 
 //2. read pdf file to Aspose Document
-com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document(pathSource1);
-com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document(pathSource2);
+firstDoc = new com.aspose.pdf.Document(pathSource1);
+secondDoc = new com.aspose.pdf.Document(pathSource2);
 
 //3. add page from one document to another directly
 for (com.aspose.pdf.Page page : firstDoc.getPages())
@@ -14,6 +14,6 @@ for (com.aspose.pdf.Page page : secondDoc.getPages())
 
 //4. save result SVG to file
 //scale the output document from typographic points to pixels
-com.aspose.pdf.SvgSaveOptions opt1 = new com.aspose.pdf.SvgSaveOptions();
+opt1 = new com.aspose.pdf.SvgSaveOptions();
 opt1.setScaleToPixels(true);
 outputDoc.save("Merger_pdf_svg.svg", opt1);

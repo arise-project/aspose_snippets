@@ -2,14 +2,14 @@
 //1. create empty image with calculated width and hight
 //use file system as source for save image
 //the best quality for jpg
-com.aspose.imaging.Source fileSource = new com.aspose.imaging.sources.FileCreateSource("Merger_pdf_jpeg.jpg",false);
-com.aspose.imaging.imageoptions.JpegOptions options = new com.aspose.imaging.imageoptions.JpegOptions();
+fileSource = new com.aspose.imaging.sources.FileCreateSource("Merger_pdf_jpeg.jpg",false);
+options = new com.aspose.imaging.imageoptions.JpegOptions();
 options.setSource(fileSource);
 options.setQuality(100);
-com.aspose.imaging.fileformats.jpeg.JpegImage newImage = (com.aspose.imaging.fileformats.jpeg.JpegImage) com.aspose.imaging.Image.create(options, 700, 1000);
+newImage = (com.aspose.imaging.fileformats.jpeg.JpegImage) com.aspose.imaging.Image.create(options, 700, 1000);
 
 //2. read pdf file to Aspose Document
-com.aspose.pdf.Document doc = new com.aspose.pdf.Document("1.pdf");
+doc = new com.aspose.pdf.Document("1.pdf");
 int stitchedWidth = 0;
 
 //3. combining images into new one horisontally
@@ -18,14 +18,11 @@ int stitchedWidth = 0;
 //process document page to image
 //create bounds to insert small image into large
 for (int pageCount = 1; pageCount <= doc.getPages().size(); pageCount++) {
-    com.aspose.pdf.devices.JpegDevice imageDevice = new com.aspose.pdf.devices.JpegDevice((int) doc.getPages().get_Item(pageCount).getPageInfo().getWidth(), (int) doc.getPages().get_Item(pageCount).getPageInfo().getHeight(), new com.aspose.pdf.devices.Resolution(72));
+    imageDevice = new com.aspose.pdf.devices.JpegDevice((int) doc.getPages().get_Item(pageCount).getPageInfo().getWidth(), (int) doc.getPages().get_Item(pageCount).getPageInfo().getHeight(), new com.aspose.pdf.devices.Resolution(72));
     String outPath = "test_" + pageCount + ".jpg";
     imageDevice.process(doc.getPages().get_Item(pageCount), outPath);
-    com.aspose.imaging.RasterImage image = (com.aspose.imaging.RasterImage) com.aspose.imaging.Image.load(outPath);
-    com.aspose.imaging.Rectangle bounds = new com.aspose.imaging.Rectangle(
-                    stitchedWidth,
-                    0,
-                    image.getWidth(), image.getHeight());
+    image = (com.aspose.imaging.RasterImage) com.aspose.imaging.Image.load(outPath);
+    bounds = new com.aspose.imaging.Rectangle(stitchedWidth,0,image.getWidth(), image.getHeight());
         
     newImage.saveArgb32Pixels(bounds, image.loadArgb32Pixels(image.getBounds()))
     stitchedWidth += image.getWidth();

@@ -1,13 +1,13 @@
 
 //1. create empty pdf document
-com.aspose.pdf.Document outputDoc = new com.aspose.pdf.Document();
+outputDoc = new com.aspose.pdf.Document();
 
 //2. suspend not critical errors
 //pcl files can be parsed and loaded as Aspose Document
-com.aspose.pdf.PclLoadOptions opt1 = new com.aspose.pdf.PclLoadOptions();
+opt1 = new com.aspose.pdf.PclLoadOptions();
 opt1.setSupressErrors(true);
-com.aspose.pdf.Document firstDoc = new com.aspose.pdf.Document("1.pcl", opt1);
-com.aspose.pdf.Document secondDoc = new com.aspose.pdf.Document("2.pcl", opt1);
+firstDoc = new com.aspose.pdf.Document("1.pcl", opt1);
+secondDoc = new com.aspose.pdf.Document("2.pcl", opt1);
 
 //3. add page from one document to another directly
 for (com.aspose.pdf.Page page : firstDoc.getPages())

@@ -16,8 +16,8 @@ int index = 1;
 //5. save each page to text file
 //extract text from page
 for(var ms : pages) {
-    var page = new com.aspose.pdf.Document(ms);
-    var textAbsorber = new com.aspose.pdf.TextAbsorber();
+    page = new com.aspose.pdf.Document(ms);
+    textAbsorber = new com.aspose.pdf.TextAbsorber();
     page.getPages().accept(textAbsorber);
     String extractedText = textAbsorber.getText();
     Files.writeString(Path.of("text_"+ Integer.toString(index)+".txt"), extractedText);
