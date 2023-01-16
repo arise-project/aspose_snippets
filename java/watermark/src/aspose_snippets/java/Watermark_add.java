@@ -1,13 +1,8 @@
-package aspose_snippets.java;
 
-public class Watermark_add {
-    public static void Execute() {
-		        String pathSource = "../../TestData/test.pdf";
-            String watermarkSource = "../../TestData/test.jpg";
-            var doc = new com.aspose.pdf.Document(pathSource);
+            var doc = new com.aspose.pdf.Document("1.pdf");
 
             var artifact = new com.aspose.pdf.WatermarkArtifact();
-            artifact.setImage(watermarkSource);
+            artifact.setImage("1.jpg");
 
             artifact.setArtifactHorizontalAlignment(com.aspose.pdf.HorizontalAlignment.Center);
             artifact.setArtifactVerticalAlignment(com.aspose.pdf.VerticalAlignment.Center);
