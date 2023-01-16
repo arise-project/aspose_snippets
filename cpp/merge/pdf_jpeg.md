@@ -1,3 +1,4 @@
+
 //1. Create blank image with calculated width and height
 auto newImage = new System::Drawing::Bitmap(newWidth, newHeight);
 auto canvas = System::Drawing::Graphics::FromImage(newImage);
@@ -10,22 +11,22 @@ System::SharedPtr<Document> doc = MakeObject<Document>(u"1.pdf");
 //3. setup default resolution to pdf documents 72dpi
 // create image device to save document as image with page dimensions and resolution
 // process document page to image
-// load image from file, it supports a lot of formats
 for (auto const& page : doc->get_Pages()) {
-	auto imageDevice = MakeObject<Devices::PngDevice>(
+	auto imageDevice = MakeObject<Devices::JpegDevice>(
 		page->get_PageInfo()->get_Width(),
 		page->get_PageInfo()->get_Height(),
 		MakeObject<Devices::Resolution>(72));
-	
-	String outPath = String::Format(u"{0}_test.png", pageCount);
-	auto stream = System::IO::File::Create(outPath);
-	imageDevice->Process(page, stream);
 
-	auto image = System::Drawing::Image::FromFile(fs);
+		
+	String outPath = String::Format(u"{0}_test.jpg", pageCount++);
+	auto stream = System::IO::File::Create(outPath);
+	imageDevice->Process(page, stream);	
+
+	auto image = System::Drawing::Image::FromFile(outPath);
 	canvas->DrawImage(image, stitchedWidth, 0);
 	stitchedWidth += image->get_Width();
 }
-
+	
 //4. save created image to disk
 canvas->Save();
-newImage->Save(u"Merger_pdf_png.png", System::Drawing::Imaging::ImageFormat::get_Png());
+newImage->Save(u"Merger_pdf_jpeg.jpg", System::Drawing::Imaging::ImageFormat::get_Jpeg());
