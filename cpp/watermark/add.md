@@ -1,10 +1,10 @@
 
 
 //1. Read pdf file to Aspose Document
-auto doc = MakeObject<Document>(u"1.pdf");
+doc = MakeObject<Document>(u"1.pdf");
 
 //2. Create artifact with image
-auto artifact = MakeObject<WatermarkArtifact>();
+artifact = MakeObject<WatermarkArtifact>();
 artifact->SetImage(u"watermark.jpg");
 
 //3. Set artifact position and rotation

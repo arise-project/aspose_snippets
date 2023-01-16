@@ -3,7 +3,7 @@
 auto outputDoc = MakeObject<Document>();
 
 //2. read pdf file to Aspose Document
-System::SharedPtr<Document> firstDoc = MakeObject<Document>(u"1.pdf");
+firstDoc = MakeObject<Document>(u"1.pdf");
 auto secondDoc = MakeObject<Document>(u"2.pdf");
 
 //3. add page from one document to another directly

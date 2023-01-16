@@ -1,10 +1,10 @@
 
 //1. create empty pdf document
-auto outputDoc = MakeObject<Document>();
+outputDoc = MakeObject<Document>();
 
 //2. xps files can be parsed and loaded as Aspose Document
-System::SharedPtr<Document> firstDoc = MakeObject<Document>(u"1.xps", MakeObject<XpsLoadOptions>());
-auto secondDoc = MakeObject<Document>(u"2.xps", MakeObject<XpsLoadOptions>());
+firstDoc = MakeObject<Document>(u"1.xps", MakeObject<XpsLoadOptions>());
+secondDoc = MakeObject<Document>(u"2.xps", MakeObject<XpsLoadOptions>());
 
 //3. add page from one document to another directly
 for (auto const& page : firstDoc->get_Pages())

@@ -1,13 +1,13 @@
 
 //1. create empty pdf document
-auto outputDoc = MakeObject<Document>();
+outputDoc = MakeObject<Document>();
 
 //2. SVG files can be parsed and loaded as Aspose Document
 // Adust pdf page size to svg size
-auto opt1 = MakeObject<SvgLoadOptions>();
+opt1 = MakeObject<SvgLoadOptions>();
 opt1->set_AdjustPageSize(true);
-System::SharedPtr<Document> firstDoc = MakeObject<Document>(u"1.svg", opt1);
-auto secondDoc = MakeObject<Document>(u"1.svg", opt1);
+firstDoc = MakeObject<Document>(u"1.svg", opt1);
+secondDoc = MakeObject<Document>(u"1.svg", opt1);
 
 //3. add page from one document to another directly
 for (auto const& page : firstDoc->get_Pages())

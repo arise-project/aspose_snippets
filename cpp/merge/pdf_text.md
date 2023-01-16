@@ -1,10 +1,10 @@
 
 //1. create empty pdf document
-auto outputDoc = MakeObject<Document>();
+outputDoc = MakeObject<Document>();
 
 //2. read pdf file to Aspose Document
-System::SharedPtr<Document> firstDoc = MakeObject<Document>(u"1.pdf");
-auto secondDoc = MakeObject<Document>(u"2.pdf");
+firstDoc = MakeObject<Document>(u"1.pdf");
+secondDoc = MakeObject<Document>(u"2.pdf");
 
 //3. add page from one document to another directly
 for (auto const& page : firstDoc->get_Pages())
@@ -13,9 +13,9 @@ for (auto const& page : secondDoc->get_Pages())
 	outputDoc->get_Pages()->CopyPage(page);
 
 //4. create text absorber for extract text
-auto textAbsorber = MakeObject<Aspose::Pdf::Text::TextAbsorber>();
+textAbsorber = MakeObject<Aspose::Pdf::Text::TextAbsorber>();
 outputDoc->get_Pages()->Accept(textAbsorber);
-auto extractedText = textAbsorber->get_Text();
+extractedText = textAbsorber->get_Text();
 
 //5. save result text to file 
 fstream file;
