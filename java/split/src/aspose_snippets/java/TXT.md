@@ -1,30 +1,25 @@
-package aspose_snippets.java;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+//1. Read the source TXT file to Aspose Document
+doc = new com.aspose.pdf.Document(pathSource, new com.aspose.pdf.TxtLoadOptions());
 
-public class Split_TXT {
-    public static void Execute() throws IOException {
-        String pathSource = "../../TestData/test.txt";
-        var pdfEditor = new com.aspose.pdf.facades.PdfFileEditor();
+//2. Instantiate PdfFileEditor object
+pdfEditor = new com.aspose.pdf.facades.PdfFileEditor();
 
-        var doc = new com.aspose.pdf.Document(pathSource, new com.aspose.pdf.TxtLoadOptions());
-        //save input text to pdf to file
-        doc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
 
-        ByteArrayInputStream[] pages = pdfEditor.splitToPages("test.pdf");
-        int index = 1;
+//3. save input text to pdf to file
+doc.save("test.pdf", com.aspose.pdf.SaveFormat.Pdf);
 
-        for(var ms : pages)
-        {
-            var page = new com.aspose.pdf.Document(ms);
-            var textAbsorber = new com.aspose.pdf.TextAbsorber();
-            page.getPages().accept(textAbsorber);
-            String extractedText = textAbsorber.getText();
-            Files.writeString(Path.of("text_"+ Integer.toString(index)+".txt"), extractedText);
-            index++;
-        }
-    }
+//4. split pdf to pages
+ByteArrayInputStream[] pages = pdfEditor.splitToPages("test.pdf");
+int index = 1;
+
+//5. save each page to text file
+//extract text from page
+for(var ms : pages) {
+    var page = new com.aspose.pdf.Document(ms);
+    var textAbsorber = new com.aspose.pdf.TextAbsorber();
+    page.getPages().accept(textAbsorber);
+    String extractedText = textAbsorber.getText();
+    Files.writeString(Path.of("text_"+ Integer.toString(index)+".txt"), extractedText);
+    index++;
 }

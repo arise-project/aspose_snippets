@@ -1,19 +1,8 @@
-package aspose_snippets.java;
 
-public class Split_PDF {
-    public static void Execute() {
-        String pathSource = "../../TestData/test.pdf";
-        var pdfEditor = new com.aspose.pdf.facades.PdfFileEditor();
-        int beg = 1, end = 1;
-    
-        var doc = new com.aspose.pdf.Document(pathSource);
-        end = doc.getPages().size();
-    
-        if(end > 1)
-        {
-            end /= 2;
-        }
-    
-        pdfEditor.extract(pathSource, beg, end, "pdf_half.pdf");
-    }
-}
+//1. Read the source PDF file
+var doc = new com.aspose.pdf.Document("1.pdf");
+//2. Instantiate PdfFileEditor object
+var pdfEditor = new com.aspose.pdf.facades.PdfFileEditor();
+
+//3. Split the PDF file into two halves    
+pdfEditor.extract(pathSource, 1, doc.getPages().size() / 2, "pdf_half.pdf");
