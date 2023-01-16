@@ -1,6 +1,6 @@
 
 //1. create empty pdf document
-com.aspose.pdf.Document doc = new com.aspose.pdf.Document();
+doc = new com.aspose.pdf.Document();
 
 //2. add image to new pdf page        
 //make list of files with images to merge

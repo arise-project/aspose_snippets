@@ -1,6 +1,6 @@
 
 //1. create empty pdf document
-com.aspose.pdf.Document doc = new com.aspose.pdf.Document();
+doc = new com.aspose.pdf.Document();
 
 //2. add new page to pdf
 //add image to new pdf page
@@ -8,7 +8,7 @@ com.aspose.pdf.Document doc = new com.aspose.pdf.Document();
 //read image dimensions to pdf page rectangle
 List<String> images = Arrays.asList(new String[]{"1.bmp", "2.bmp"});
 for (String fs : images) {
-    com.aspose.pdf.Page page = doc.getPages().add();
+    page = doc.getPages().add();
     page.addImage(fs, new com.aspose.pdf.Rectangle(0, 0, 700, 1000));
 }
 
