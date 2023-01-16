@@ -1,10 +1,10 @@
 	
 //1. create empty pdf document
-auto outputDoc = MakeObject<Document>();
+outputDoc = MakeObject<Document>();
 
 //2. cgm files can be parsed and loaded as Aspose Document
-System::SharedPtr<Document> firstDoc = MakeObject<Document>(u"1.cgm", MakeObject<CgmLoadOptions>());
-auto secondDoc = MakeObject<Document>(u"1.cgm", MakeObject<CgmLoadOptions>());
+firstDoc = MakeObject<Document>(u"1.cgm", MakeObject<CgmLoadOptions>());
+secondDoc = MakeObject<Document>(u"1.cgm", MakeObject<CgmLoadOptions>());
 
 //3. add page from one document to another directly
 for (auto const& page : firstDoc->get_Pages())

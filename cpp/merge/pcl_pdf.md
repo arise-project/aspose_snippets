@@ -1,13 +1,13 @@
 
 //1. create empty pdf document
-auto outputDoc = MakeObject<Document>();
+outputDoc = MakeObject<Document>();
 
 //2. pcl files can be parsed and loaded as Aspose Document
 // suspend not critical errors
-auto opt1 = MakeObject<PclLoadOptions>();
+opt1 = MakeObject<PclLoadOptions>();
 opt1->SupressErrors = true;
-System::SharedPtr<Document> firstDoc = MakeObject<Document>(u"1.pcl", opt1);
-auto secondDoc = MakeObject<Document>(u"2.pcl", opt1);
+firstDoc = MakeObject<Document>(u"1.pcl", opt1);
+secondDoc = MakeObject<Document>(u"2.pcl", opt1);
 
 //3. add page from one document to another directly
 for (auto const& page : firstDoc->get_Pages())
