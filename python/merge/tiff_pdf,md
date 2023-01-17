@@ -1,4 +1,4 @@
-from aspose.pdf import (
+2from aspose.pdf import (
     SaveFormat,
     PdfImage,
     PdfImage,

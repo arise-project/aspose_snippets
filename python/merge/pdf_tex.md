@@ -1,34 +1,19 @@
-from aspose.pdf import (
-    TeXSaveOptions,
-    Document
-)
 
+# create empty pdf document
+output_doc = aspose.pdf.Document()
 
-def pdf_to_tex():
-    path_source1 = "../../TestData/test.pdf"
-    path_source2 = "../../TestData/Second/test.pdf"
+# read pdf file to Aspose Document
+first_doc = aspose.pdf.Document("1.pdf")
+second_doc = aspose.pdf.Document("2.pdf")
 
-    # read pdf file to Aspose Document
-    first_doc = Document(path_source1)
-    second_doc = Document(path_source2)
+# add page from one document to another directly
+for page in first_doc.pages:
+	output_doc.pages.add(page)
+for page in second_doc.pages:
+	output_doc.pages.add(page)
 
-    # create empty pdf document
-    output_doc = Document()
-
-    # set less memory usage with unload instead of fast performance
-    output_doc.enable_object_unload = True
-
-    for page in first_doc.pages:
-        # add page from one document to another directly
-        output_doc.pages.add(page)
-
-    for page in second_doc.pages:
-        # add page from one document to another directly
-        output_doc.pages.add(page)
-
-    opt1 = TeXSaveOptions()
-    # save parsed artifacts, for example images to a directory
-    opt1.out_directory_path = "./test"
-
-    # save pdf to TeX document
-    output_doc.save("Merger_pdf_tex.tex", opt1)
+# save pdf to TeX document
+# save parsed artifacts, for example images to a directory
+opt1 = aspose.pdf.TeXSaveOptions()
+opt1.out_directory_path = "./test"
+output_doc.save("Merger_pdf_tex.tex", opt1)

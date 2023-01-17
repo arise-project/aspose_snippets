@@ -1,19 +1,8 @@
-from aspose.pdf import (
-    WatermarkArtifact,
-    Artifact,
-    ArtifactSubtype,
-    Document,
-    SaveFormat
-)
 
+doc = aspose.pdf.Document("1.pdf")
 
-def remove():
-    path_source = "../../TestData/test_with_watermark.pdf"
-    doc = Document(path_source)
+if doc.Pages[1].Artifacts[1].Subtype == aspose.pdf.ArtifactSubtype.Watermark:
+	doc.Pages[1].Artifacts.Delete(doc.Pages[1].Artifacts[1])
 
-    if doc.Pages[1].Artifacts[1].Subtype == ArtifactSubtype.Watermark:
-        doc.Pages[1].Artifacts.Delete(doc.Pages[1].Artifacts[1])
-
-    #save result pdf to file
-    doc.Save("remove_watermark.pdf", SaveFormat.PDF)
-        
+#save result pdf to file
+doc.Save("remove_watermark.pdf", aspose.pdf.SaveFormat.PDF)

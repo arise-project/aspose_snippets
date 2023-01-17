@@ -1,42 +1,25 @@
-import aspose.pdf.HtmlSaveOptions as HtmlSaveOptions
 
-from aspose.pdf import (
-    HtmlSaveOptions,
-    Document
-)
+# create empty pdf document
+output_doc = aspose.pdf.Document()
 
+# read pdf file to Aspose Document
+first_doc = aspose.pdf.Document("1.pdf")
+second_doc = aspose.pdf.Document("2.pdf")
 
-def pdf_to_epub():
-    path_source1 = "../../TestData/test.pdf"
-    path_source2 = "../../TestData/Second/test.pdf"
+# add page from one document to another directly        
+for page in first_doc.pages:
+	output_doc.pages.add(page)
+for page in second_doc.pages:
+	output_doc.pages.add(page)
 
-    # read pdf file to Aspose Document
-    first_doc = Document(path_source1)
-    second_doc = Document(path_source2)
-
-    # create empty pdf document
-    output_doc = Document()
-
-    # set less memory usage with unload instead of fast performance
-    output_doc.enable_object_unload = True
-
-    for page in first_doc.pages:
-        # add page from one document to another directly
-        output_doc.pages.add(page)
-
-    for page in second_doc.pages:
-        # add page from one document to another directly
-        output_doc.pages.add(page)
-
-    opt1 = HtmlSaveOptions()
-    # embed css into a page
-    opt1.parts_embeding_mode = HtmlSaveOptions.PartsEmbeddingModes.EMBED_ALL_INTO_HTML
-    # embed images into a page
-    opt1.raster_images_saving_mode = HtmlSaveOptions.RasterImagesSavingModes.AS_embedED_PARTS_OF_PNG_PAGE_BACKGROUND
-    # enhance conversion of documents with backgrounds
-    opt1.antialiasing_processing = HtmlSaveOptions.AntialiasingProcessingType.TRY_CORRECT_RESULT_HTML
-    # use fixed layout render
-    opt1.fixed_layout = True
-
-    # save pdf to html page
-    output_doc.save("Merger_pdf_epub.html", opt1)
+# save pdf to html page
+# embed css into a page
+# embed images into a page
+# enhance conversion of documents with backgrounds
+# use fixed layout render
+opt1 = aspose.pdf.HtmlSaveOptions()
+opt1.parts_embeding_mode = aspose.pdf.HtmlSaveOptions.PartsEmbeddingModes.EMBED_ALL_INTO_HTML
+opt1.raster_images_saving_mode = aspose.pdf.HtmlSaveOptions.RasterImagesSavingModes.AS_embedED_PARTS_OF_PNG_PAGE_BACKGROUND
+opt1.antialiasing_processing = aspose.pdf.HtmlSaveOptions.AntialiasingProcessingType.TRY_CORRECT_RESULT_HTML
+opt1.fixed_layout = True
+output_doc.save("Merger_pdf_epub.html", opt1)

@@ -1,50 +1,27 @@
-from aspose.pdf import Document
-from PIL import Image
 
+new_image = PIL.Image.new('RGB', (new_width, new_height), (250, 250, 250))
 
-def pdf_to_bmp():
-    path_source = "../../TestData/test.pdf"
+# read pdf file to Aspose Document
+doc = aspose.pdf.Document("1.pdf")
 
-    # read pdf file to Aspose Document
-    doc = Document(path_source)
+# pages in pdf counted from 1 to n
+# setup default resolution to pdf documents 72dpi
+# create image device to save document as image with page dimensions and resolution
+# process document page to image
+for pageCount in range(1, doc.pages.Count):
+	image_device = aspose.pdf.devices.BmpDevice(
+ 		doc.pages[pageCount].PageInfo.width, 
+   		doc.pages[pageCount].PageInfo.height, 
+     	aspose.pdf.devices.Resolution(72))
 
-    # make list of path to temporary images
-    images = []
+	out_path = "test_" + str(pageCount) + ".bmp"
+ 	image_device.Process(doc.pages[pageCount], out_path)
 
-    # pages in pdf counted from 1 to n
-    for pageCount in range(1, doc.pages.Count):
-        # setup default resolution to pdf documents 72dpi
-        resolution = aspose.pdf.devices.Resolution(72)
+offset = 0
+for path in images:
+	image = PIL.Image.open(path)
+ 	new_image.paste(image, (offset, 0))
+  	offset = offset + image.width
 
-        # create image device to save document as image with page dimensions and resolution
-        image_device = aspose.pdf.devices.BmpDevice(
-            doc.pages[pageCount].PageInfo.width, doc.pages[pageCount].PageInfo.height, resolution)
-
-        out_path = "test_" + str(pageCount) + ".bmp"
-
-        # process document page to image
-        image_device.Process(doc.pages[pageCount], out_path)
-        images.append(out_path)
-
-    # make list pf parsed image sizes
-    new_width = 0
-    new_height = 0
-    for path in images:
-        # load image from file, it supports a lot of formats
-        image = Image.open(path)
-        new_width += image.width
-        if new_height < image.height:
-            new_height = image.height
-        else:
-            new_height = new_height
-
-    new_image = Image.new('RGB', (new_width, new_height), (250, 250, 250))
-
-    offset = 0
-    for path in images:
-        image = Image.open(path)
-        new_image.paste(image, (offset, 0))
-        offset = offset + image.width
-
-    new_image.save("Merger_pdf_bmp.bmp")
+new_image.save("Merger_pdf_bmp.bmp")
 

@@ -1,19 +1,11 @@
-from aspose.pdf import (
-    SaveFormat,
-    PdfFileEditor,
-    HtmlLoadOptions,
-    Document
-)
 
+doc = aspose.pdf.Document("test.pdf");
 
-def HTML():
-    path_source = "../../TestData/test.html";
-    doc = Document(path_source, HtmlLoadOptions);
-    # save input html to pdf to file
-    doc.Save("test.pdf", SaveFormat.PDF);
+# save input html to pdf to file
+doc = aspose.pdf.Document("1.html", HtmlLoadOptions);
+doc.Save("test.pdf", SaveFormat.PDF);
 
-    pdf_editor = PdfFileEditor();
-    # slit first page
-    pdf_editor.SplitFromFirst("test.pdf", 1, "test.pdf");
-    doc = Document("test.pdf");
-    doc.Save("html_first.html", SaveFormat.HTML);
+# slit first page
+pdf_editor = aspose.pdf.PdfFileEditor();
+pdf_editor.SplitFromFirst("test.pdf", 1, "test.pdf");
+doc.Save("html_first.html", SaveFormat.HTML);

@@ -1,36 +1,21 @@
-from aspose.pdf import (
-    DocSaveOptions,
-    Document
-)
 
+# create empty pdf document
+output_doc = aspose.pdf.Document()
 
-def pdf_to_docx():
-    path_source1 = "../../TestData/test.pdf"
-    path_source2 = "../../TestData/Second/test.pdf"
+# read pdf file to Aspose Document
+first_doc = aspose.pdf.Document("1.pdf")
+second_doc = aspose.pdf.Document("2.pdf")
 
-    # read pdf file to Aspose Document
-    first_doc = Document(path_source1)
-    second_doc = Document(path_source2)
+# add page from one document to another directly
+for page in first_doc.pages:
+	output_doc.pages.add(page)
+for page in second_doc.pages:
+	output_doc.pages.add(page)
 
-    # create empty pdf document
-    output_doc = Document()
-
-    # set less memory usage with unload instead of fast performance
-    output_doc.enable_object_unload = True
-
-    for page in first_doc.pages:
-        # add page from one document to another directly
-        output_doc.pages.add(page)
-
-    for page in second_doc.pages:
-        # add page from one document to another directly
-        output_doc.pages.add(page)
-
-    opt1 = DocSaveOptions
-    # use docx format
-    opt1.Format = DocSaveOptions.DocFormat.DOC_X,
-    # make document editable flow and recognize of tables
-    opt1.Mode = DocSaveOptions.RecognitionMode.ENHANCED_FLOW
-
-    # save pdf to Microsoft Word docx format
-    output_doc.save("Merger_pdf_docx.docx", opt1)
+# save pdf to Microsoft Word docx format
+# use docx format
+# make document editable flow and recognize of tables
+opt1 = DocSaveOptions
+opt1.Format = DocSaveOptions.DocFormat.DOC_X,
+opt1.Mode = DocSaveOptions.RecognitionMode.ENHANCED_FLOW
+output_doc.save("Merger_pdf_docx.docx", opt1)

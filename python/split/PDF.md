@@ -1,21 +1,5 @@
-from aspose.pdf import (
-    PdfFileEditor,
-    Document
-)
 
+doc = aspose.pdf.Document("1.pdf")
 
-def PDF():
-
-    path_source = "../../TestData/test.pdf"
-    pdf_editor = PdfFileEditor()
-    beg = 1
-    end = 1
-
-    doc = Document(path_source)
-    end = doc.Pages.Count
-
-    if end > 1:
-        end /= 2
-
-    pdf_editor.Extract(path_source, beg, end, "pdf_half.pdf")
-    
+pdf_editor = aspose.pdf.PdfFileEditor()
+pdf_editor.Extract(path_source, 1, doc.Pages.Count / 2, "pdf_half.pdf")
