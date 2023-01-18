@@ -1,3 +1,4 @@
+```cpp
 
 //1. create empty pdf document
 outputDoc = MakeObject<Document>();
@@ -14,3 +15,5 @@ for (auto const& page : secondDoc->get_Pages())
 
 //4. save result pdf to file
 outputDoc->Save(u"Merger_xps_pdf.pdf", SaveFormat::Pdf);
+
+```

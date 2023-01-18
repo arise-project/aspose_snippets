@@ -1,3 +1,4 @@
+```cpp
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/Page.h"
 #include "Aspose.PDF.Cpp/Generator/PageInfo.h"
@@ -67,3 +68,5 @@ void tiff_to_pdf()
     // save result pdf to file
     outputDoc->Save(u"Merger_tiff_pdf.pdf", Aspose::Pdf::SaveFormat::Pdf);
 }
+
+```

@@ -1,3 +1,4 @@
+```cpp
 
 //1. create empty pdf document
 auto outputDoc = MakeObject<Document>();
@@ -17,3 +18,5 @@ for (auto const& page : secondDoc->get_Pages())
 auto opt1 = MakeObject<PptxSaveOptions>();
 opt1->set_SlidesAsImages(true);
 outputDoc->Save(u"Merger_pdf_pptx.pptx", opt1);
+
+```

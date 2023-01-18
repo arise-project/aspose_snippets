@@ -1,3 +1,4 @@
+```cpp
 
 //1. create empty pdf document
 outputDoc = MakeObject<Document>();
@@ -17,3 +18,4 @@ for (auto const& page : secondDoc->get_Pages())
 opt1 = MakeObject<ExcelSaveOptions>();
 opt1->set_Format(Aspose::Pdf::ExcelSaveOptions::ExcelFormat::XMLSpreadSheet2003);
 outputDoc->Save(u"Merger_pdf_xls.xls", opt1);
+```

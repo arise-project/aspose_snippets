@@ -1,3 +1,4 @@
+```cpp
 
 //1. create empty pdf document
 outputDoc = MakeObject<Document>();
@@ -22,3 +23,5 @@ fstream file;
 file.open("Merger_pdf_text.txt", ios::out);
 file << extractedText;
 file.close();
+
+```

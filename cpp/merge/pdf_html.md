@@ -1,3 +1,4 @@
+```cpp
 
 //1. create empty pdf document
 outputDoc = MakeObject<Document>();
@@ -23,3 +24,5 @@ opt1->RasterImagesSavingMode = Aspose::Pdf::HtmlSaveOptions::RasterImagesSavingM
 opt1->AntialiasingProcessing = Aspose::Pdf::HtmlSaveOptions::AntialiasingProcessingType::TryCorrectResultHtml;
 opt1->set_FixedLayout(true);
 outputDoc->Save(u"Merger_pdf_html.html", opt1);
+
+```

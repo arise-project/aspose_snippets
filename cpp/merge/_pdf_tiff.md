@@ -1,3 +1,4 @@
+```cpp
 #include "Aspose.PDF.Cpp/Document.h"
 #include "Aspose.PDF.Cpp/Devices/Resolution.h"
 #include "Aspose.PDF.Cpp/Devices/Device.h"
@@ -98,3 +99,5 @@ void pdf_to_tiff()
 		delete page2;
 		GdiplusShutdown(gdiplusToken);
 }
+
+```

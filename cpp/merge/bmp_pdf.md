@@ -1,3 +1,4 @@
+```cpp
 
 //1. create empty pdf document
 doc = MakeObject<Document>();
@@ -15,3 +16,5 @@ for (String fs : images) {
 
 //4. save result pdf to file
 doc->Save(u"Merger_bmp_pdf.pdf", SaveFormat::Pdf);
+
+```

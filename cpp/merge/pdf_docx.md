@@ -1,3 +1,4 @@
+```cpp
 
 //1. create empty pdf document
 outputDoc = MakeObject<Document>();
@@ -20,3 +21,5 @@ opt1 = MakeObject<DocSaveOptions>();
 opt1->set_Format(Aspose::Pdf::DocSaveOptions::DocFormat::DocX);
 opt1->set_Mode(Aspose::Pdf::DocSaveOptions::RecognitionMode::EnhancedFlow);
 outputDoc->Save(u"Merger_pdf_docx.docx", opt1);
+
+```

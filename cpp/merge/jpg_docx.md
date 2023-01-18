@@ -1,3 +1,4 @@
+```cpp
 
 //1. create empty pdf document
 outputDoc = MakeObject<Document>();
@@ -15,3 +16,5 @@ for (String fs : images) {
 
 //4. save result docx to file
 outputDoc->Save(u"Merger_jpg_docx.docx", SaveFormat::DocX);
+
+```

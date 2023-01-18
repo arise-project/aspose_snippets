@@ -1,3 +1,4 @@
+```cpp
 
 //1. create empty pdf document
 outputDoc = MakeObject<Document>();
@@ -17,3 +18,5 @@ for (auto const& page : secondDoc->get_Pages())
 opt1 = MakeObject<TeXSaveOptions>();
 opt1->set_OutDirectoryPath(u"./test");
 outputDoc->Save(u"Merger_pdf_tex.tex", opt1);
+
+```

@@ -1,3 +1,4 @@
+```cpp
 
 //1. Create blank image with calculated width and height
 newImage = new System::Drawing::Bitmap(newWidth, newHeight);
@@ -25,3 +26,4 @@ for (auto const& page : doc->get_Pages()) {
 //4. save created image to disk
 canvas->Save();
 newImage->Save(u"Merger_pdf_jpeg.jpg", System::Drawing::Imaging::ImageFormat::get_Jpeg());
+```
