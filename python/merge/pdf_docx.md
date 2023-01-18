@@ -1,3 +1,4 @@
+```python
 
 # create empty pdf document
 output_doc = aspose.pdf.Document()
@@ -19,3 +20,5 @@ opt1 = DocSaveOptions
 opt1.Format = DocSaveOptions.DocFormat.DOC_X,
 opt1.Mode = DocSaveOptions.RecognitionMode.ENHANCED_FLOW
 output_doc.save("Merger_pdf_docx.docx", opt1)
+
+```

@@ -1,3 +1,4 @@
+```python
 
 new_image = PIL.Image.new('RGB', (new_width, new_height), (250, 250, 250))
 
@@ -25,3 +26,5 @@ for path in images:
 
 new_image.save("Merger_pdf_bmp.bmp")
 
+
+```

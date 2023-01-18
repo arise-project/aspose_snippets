@@ -1,3 +1,4 @@
+```python
 
 # read pdf file to Aspose Document
 first_doc = aspose.pdf.Document("1.pdf")
@@ -17,3 +18,5 @@ for page in second_doc.pages:
 opt1 = aspose.pdf.XpsSaveOptions()
 opt1.save_transparent_texts = False
 output_doc.save("Merger_pdf_xps.xps", opt1)
+
+```

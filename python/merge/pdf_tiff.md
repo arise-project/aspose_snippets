@@ -1,3 +1,4 @@
+```python
 from aspose.pdf import (
     Document
 )
@@ -40,3 +41,5 @@ def pdf_to_tiff():
     with tifffile.TiffWriter("Merger_pdf_tiff.tiff") as tiff:
         for img in frames:
             tiff.write(numpy.array(img.getdata(), numpy.uint8).reshape(img.size[1], img.size[0], 3))
+
+```

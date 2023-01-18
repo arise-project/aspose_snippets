@@ -1,3 +1,4 @@
+```python
 
 # save input text to pdf to file
 doc = aspose.pdf.Document("1.txt", TxtLoadOptions())
@@ -15,3 +16,4 @@ for ms in pages:
     file = open("text_"+str(index)+".txt", "w+")
     file.write(extracted_text)
     index = index + 1
+```

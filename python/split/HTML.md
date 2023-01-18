@@ -1,3 +1,4 @@
+```python
 
 doc = aspose.pdf.Document("test.pdf");
 
@@ -9,3 +10,4 @@ doc.Save("test.pdf", SaveFormat.PDF);
 pdf_editor = aspose.pdf.PdfFileEditor();
 pdf_editor.SplitFromFirst("test.pdf", 1, "test.pdf");
 doc.Save("html_first.html", SaveFormat.HTML);
+```

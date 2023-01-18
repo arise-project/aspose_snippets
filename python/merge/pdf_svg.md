@@ -1,3 +1,4 @@
+```python
 
 # create empty pdf document
 output_doc = aspose.pdf.Document()
@@ -17,3 +18,5 @@ for page in second_doc.pages:
 opt1 = aspose.pdf.SvgSaveOptions()
 opt1.scale_to_pixels = True
 output_doc.save("Merger_pdf_svg.svg", opt1)
+
+```

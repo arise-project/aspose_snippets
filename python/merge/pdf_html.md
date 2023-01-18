@@ -1,3 +1,4 @@
+```python
 
 # create empty pdf document
 output_doc = aspose.pdf.Document()
@@ -14,3 +15,5 @@ for page in second_doc.pages:
 
 # save result pdf to file
 output_doc.save("Merger_pdf_html.pdf", aspose.pdf.SaveFormat.HTML)
+
+```

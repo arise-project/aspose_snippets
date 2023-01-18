@@ -1,3 +1,4 @@
+```python
 
 
 # create empty pdf document
@@ -20,3 +21,5 @@ output_doc.pages.Accept(text_absorber)
 extracted_text = text_absorber.Text
 with open("Merger_pdf_text.txt", "w") as f:
 	f.write(extracted_text)
+
+```

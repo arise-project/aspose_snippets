@@ -1,3 +1,4 @@
+```python
 
 # create empty pdf document
 doc = aspose.pdf.Document()
@@ -9,3 +10,5 @@ for fs in ["1.jpg", "2.jpg"]:
 	page.addImage(fs, aspose.pdf.Rectangle(0, 0, 700, 1000))
 
 doc.save("Merger_jpg_docx.docx", aspose.pdf.SaveFormat.DOC_X)
+
+```

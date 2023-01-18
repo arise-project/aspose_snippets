@@ -1,3 +1,4 @@
+```python
 
 # create empty pdf document
 doc = aspose.pdf.Document()
@@ -10,3 +11,5 @@ for fs in ["1.jpg", "2.jpg"]:
 
 # save result pdf to file
 doc.save("Merger_jpg_pdf.pdf", aspose.pdf.SaveFormat.PDF)
+
+```

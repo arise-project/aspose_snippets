@@ -1,3 +1,4 @@
+```python
 
 # create empty pdf document
 output_doc = aspose.pdf.Document()
@@ -17,3 +18,5 @@ for page in second_doc.pages:
 opt1 = aspose.pdf.TeXSaveOptions()
 opt1.out_directory_path = "./test"
 output_doc.save("Merger_pdf_tex.tex", opt1)
+
+```

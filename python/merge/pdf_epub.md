@@ -1,3 +1,4 @@
+```python
 
 # create empty pdf document
 output_doc = aspose.pdf.Document()
@@ -23,3 +24,5 @@ opt1.raster_images_saving_mode = aspose.pdf.HtmlSaveOptions.RasterImagesSavingMo
 opt1.antialiasing_processing = aspose.pdf.HtmlSaveOptions.AntialiasingProcessingType.TRY_CORRECT_RESULT_HTML
 opt1.fixed_layout = True
 output_doc.save("Merger_pdf_epub.html", opt1)
+
+```

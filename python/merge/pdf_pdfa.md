@@ -1,3 +1,4 @@
+```python
 
 # read pdf file to Aspose Document
 first_doc = aspose.pdf.Document("1.pdf")
@@ -14,3 +15,5 @@ for page in second_doc.pages:
 
 # save document as specific pdf standard PDFA 3Y
 output_doc.convert("Merger_pdf_pdfa.pdf", aspose.pdf.PdfFormat.PDF_A_3U)
+
+```

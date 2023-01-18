@@ -1,3 +1,4 @@
+```python
 # 1. create empty pdf document
 doc = aspose.pdf.Document()
 
@@ -9,3 +10,4 @@ for fs in ["1.bmp", "2.bmp"]:
 
 # 3. save result pdf to file
 doc.save("Merger_bmp_pdf.pdf", aspose.pdf.SaveFormat.PDF)
+```

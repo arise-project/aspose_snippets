@@ -1,3 +1,4 @@
+```python
 
 # create empty pdf document
 output_doc = aspose.pdf.Document()
@@ -17,3 +18,5 @@ for page in second_doc.pages:
 opt1 = aspose.pdf.EpubSaveOptions()
 opt1.content_recognition_mode = aspose.pdf.EpubSaveOptions.RecognitionMode.PDF_FLOW
 output_doc.save("Merger_pdf_emf.epub", opt1)
+
+```

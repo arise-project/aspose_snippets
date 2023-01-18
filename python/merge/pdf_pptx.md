@@ -1,3 +1,4 @@
+```python
 
 output_doc = aspose.pdf.Document()
 
@@ -16,3 +17,5 @@ for page in second_doc.pages:
 opt1 = PptxSaveOptions()
 opt1.slides_as_images = True
 output_doc.save("Merger_pdf_pptx.pptx", opt1)
+
+```

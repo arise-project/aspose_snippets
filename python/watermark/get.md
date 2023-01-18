@@ -1,3 +1,4 @@
+```python
 
 doc = aspose.pdf.Document("1.pdf")
 
@@ -6,3 +7,4 @@ if doc.Pages[1].Artifacts[1].Subtype == aspose.pdf.Artifact.ArtifactSubtype.Wate
  	doc.Pages[1].Artifacts[1].Image.Save(fs)
   	fs.flush()
    	fs.close()
+```

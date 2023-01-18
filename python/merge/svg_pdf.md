@@ -1,3 +1,4 @@
+```python
 
 # create empty pdf document
 output_doc = aspose.pdf.Document()
@@ -17,3 +18,5 @@ for page in second_doc.pages:
 
 # save result pdf to file
 output_doc.save("Merger_svg_pdf.pdf", aspose.pdf.SaveFormat.PDF)
+
+```

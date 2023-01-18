@@ -1,3 +1,4 @@
+```python
 
 new_image = PIL.Image.new('RGB', (new_width, new_height), (250, 250, 250))
 offset = 0
@@ -24,3 +25,5 @@ for pageCount in range(1, doc.pages.Count):
 
 new_image.save("Merger_pdf_png.png")
 
+
+```

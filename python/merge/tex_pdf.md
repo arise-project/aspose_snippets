@@ -1,3 +1,4 @@
+```python
 
 output_doc = aspose.pdf.Document()
 
@@ -20,3 +21,5 @@ for page in second_doc.pages:
 
 # save result pdf to file
 output_doc.save("Merger_tex_pdf.pdf", aspose.pdf.SaveFormat.PDF)
+
+```
