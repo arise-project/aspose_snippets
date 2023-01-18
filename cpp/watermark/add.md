@@ -1,3 +1,4 @@
+```cpp
 
 
 //1. Read pdf file to Aspose Document
@@ -19,3 +20,5 @@ doc->get_Pages()->idx_get(1)->get_Artifacts()->Add(artifact);
 
 //5. save result pdf to file
 doc->Save(u"add_watermark.pdf",SaveFormat::Pdf);
+
+```

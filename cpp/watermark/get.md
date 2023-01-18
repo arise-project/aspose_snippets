@@ -1,3 +1,4 @@
+```cpp
 
 //1. Read a PDF file
 doc = MakeObject<Document>(u"1.pdf");
@@ -12,3 +13,5 @@ if (artifact != nullptr && artifact->get_Subtype() == Aspose::Pdf::Artifact::Art
 //4. Get image from watermark artifact
 fs = System::IO::File::OpenWrite(u"get_watermark.jpg");
 artifact->get_Image()->Save(fs);
+
+```

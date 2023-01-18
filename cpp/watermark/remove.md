@@ -1,3 +1,4 @@
+```cpp
 
 //1. Read a PDF file
 doc = MakeObject<Document>(u"1.pdf");
@@ -12,3 +13,4 @@ if (artifact != nullptr && artifact->get_Subtype() == Aspose::Pdf::Artifact::Art
 
 //4. save result pdf to file
 doc->Save(u"remove_watermark.pdf", SaveFormat::Pdf);
+```
