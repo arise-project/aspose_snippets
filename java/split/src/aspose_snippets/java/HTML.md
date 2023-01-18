@@ -1,3 +1,4 @@
+```java
 
 //1. Read the source HTML file
 doc = new com.aspose.pdf.Document(pathSource, new com.aspose.pdf.HtmlLoadOptions());
@@ -14,3 +15,5 @@ pdfEditor.splitFromFirst("test.pdf", 1, "test.pdf");
 //5. Convert first pdf page to html
 outputDoc = new com.aspose.pdf.Document("test.pdf");
 outputDoc.save("first_page.html", com.aspose.pdf.SaveFormat.Html);
+
+```

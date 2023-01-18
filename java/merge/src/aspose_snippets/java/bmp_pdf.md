@@ -1,3 +1,4 @@
+```java
 
 //1. create empty pdf document
 doc = new com.aspose.pdf.Document();
@@ -14,3 +15,4 @@ for (String fs : images) {
 
 //3. save result pdf to file
 doc.save("Merger_bmp_pdf.pdf", com.aspose.pdf.SaveFormat.Pdf);
+```

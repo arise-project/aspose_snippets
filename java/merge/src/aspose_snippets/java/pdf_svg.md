@@ -1,3 +1,4 @@
+```java
 
 //1. create empty pdf document
 outputDoc = new com.aspose.pdf.Document();
@@ -17,3 +18,5 @@ for (com.aspose.pdf.Page page : secondDoc.getPages())
 opt1 = new com.aspose.pdf.SvgSaveOptions();
 opt1.setScaleToPixels(true);
 outputDoc.save("Merger_pdf_svg.svg", opt1);
+
+```

@@ -1,3 +1,4 @@
+```java
 
 //1. create empty pdf document
 outputDoc = new com.aspose.pdf.Document();
@@ -19,3 +20,5 @@ opt1 = new com.aspose.pdf.DocSaveOptions();
 opt1.setFormat(com.aspose.pdf.DocSaveOptions.DocFormat.DocX);
 opt1.setMode(com.aspose.pdf.DocSaveOptions.RecognitionMode.EnhancedFlow);
 outputDoc.save("Merger_pdf_docx.docx", opt1);
+
+```

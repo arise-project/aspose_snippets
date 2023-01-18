@@ -1,3 +1,4 @@
+```java
 
 //1. Create output document
 outputDoc = new com.aspose.pdf.Document();
@@ -21,3 +22,5 @@ for (com.aspose.pdf.Page page : secondDoc.getPages())
 
 //4. save result pdf to file
 outputDoc.save("Merger_tex_pdf.pdf", com.aspose.pdf.SaveFormat.Pdf);
+
+```

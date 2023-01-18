@@ -1,3 +1,4 @@
+```java
 
 //1. create empty pdf document
 outputDoc = new com.aspose.pdf.Document();
@@ -23,3 +24,4 @@ opt1.setRasterImagesSavingMode(com.aspose.pdf.HtmlSaveOptions.RasterImagesSaving
 opt1.setAntialiasingProcessing(com.aspose.pdf.HtmlSaveOptions.AntialiasingProcessingType.TryCorrectResultHtml);
 opt1.setFixedLayout(true);
 outputDoc.save("Merger_pdf_html.html", opt1);
+```

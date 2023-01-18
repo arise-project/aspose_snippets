@@ -1,3 +1,4 @@
+```java
 
 //1. create empty image with calculated width and hight
 //use file system as source for save image
@@ -39,3 +40,5 @@ for (int pageCount = 1; pageCount <= doc.getPages().size(); pageCount++) {
 
 //4. save created image to disk
 newImage.save();
+
+```

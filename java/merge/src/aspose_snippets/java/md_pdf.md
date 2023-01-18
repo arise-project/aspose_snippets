@@ -1,3 +1,4 @@
+```java
 package aspose_snippets.java;
 
 public class Merger_md_pdf {
@@ -31,3 +32,5 @@ public class Merger_md_pdf {
         outputDoc.save("Merger_md_pdf.pdf", com.aspose.pdf.SaveFormat.Pdf);
     }
 }
+
+```

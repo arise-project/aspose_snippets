@@ -1,3 +1,4 @@
+```java
 package aspose_snippets.java;
 
 import java.io.FileInputStream;
@@ -70,3 +71,5 @@ public class Merger_tiff_pdf {
         outputDoc.save("Merger_tiff_pdf.pdf", com.aspose.pdf.SaveFormat.Pdf);
     }
 }
+
+```

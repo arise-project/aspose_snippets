@@ -1,3 +1,4 @@
+```java
 
 //1. create empty pdf document
 outputDoc = new com.aspose.pdf.Document();
@@ -17,3 +18,5 @@ for (com.aspose.pdf.Page page : secondDoc.getPages())
 opt1 = new com.aspose.pdf.TeXSaveOptions();
 opt1.setOutDirectoryPath("./test");
 outputDoc.save("Merger_pdf_tex.tex", opt1);
+
+```

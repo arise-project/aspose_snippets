@@ -1,3 +1,4 @@
+```java
 
 //1. create empty pdf document
 outputDoc = new com.aspose.pdf.Document();
@@ -14,3 +15,5 @@ for (com.aspose.pdf.Page page : secondDoc.getPages())
 
 //4. save result pdf to file
 outputDoc.save("Merger_ps_pdf.pdf", com.aspose.pdf.SaveFormat.Pdf);
+
+```

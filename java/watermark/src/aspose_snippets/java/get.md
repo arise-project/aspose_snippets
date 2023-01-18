@@ -1,3 +1,4 @@
+```java
 
 doc = new com.aspose.pdf.Document("1.pdf");
 
@@ -8,3 +9,5 @@ if(doc.getPages().get_Item(1).getArtifacts().get_Item(1).getSubtype() == com.asp
     fs.flush();
     fs.close();
 }
+
+```

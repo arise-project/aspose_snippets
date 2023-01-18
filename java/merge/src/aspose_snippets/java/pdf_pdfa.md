@@ -1,3 +1,4 @@
+```java
 
 //1. create empty pdf document
 outputDoc = new com.aspose.pdf.Document();
@@ -19,3 +20,5 @@ outputDoc.convert(
         "Merger_pdf_pdfa.pdf",
         com.aspose.pdf.PdfFormat.PDF_A_3U,
         com.aspose.pdf.ConvertErrorAction.Delete);
+
+```

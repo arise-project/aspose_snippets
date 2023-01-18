@@ -1,3 +1,4 @@
+```java
 
 //1. create empty pdf document
 outputDoc = new com.aspose.pdf.Document();
@@ -17,3 +18,5 @@ textAbsorber = new com.aspose.pdf.TextAbsorber();
 outputDoc.getPages().accept(textAbsorber);
 String extractedText = textAbsorber.getText();
 
+
+```

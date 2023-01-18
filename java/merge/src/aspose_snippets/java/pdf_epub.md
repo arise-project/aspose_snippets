@@ -1,3 +1,4 @@
+```java
 
 //1. create empty pdf document
 outputDoc = new com.aspose.pdf.Document();
@@ -17,3 +18,5 @@ for (com.aspose.pdf.Page page : secondDoc.getPages())
 opt1 = new com.aspose.pdf.EpubSaveOptions();
 opt1.setContentRecognitionMode(com.aspose.pdf.EpubSaveOptions.RecognitionMode.PdfFlow);
 outputDoc.save("Merger_pdf_epub.epub", opt1);
+
+```

@@ -1,3 +1,4 @@
+```java
 
 //1. Read the source TXT file to Aspose Document
 doc = new com.aspose.pdf.Document(pathSource, new com.aspose.pdf.TxtLoadOptions());
@@ -23,3 +24,5 @@ for(var ms : pages) {
     Files.writeString(Path.of("text_"+ Integer.toString(index)+".txt"), extractedText);
     index++;
 }
+
+```

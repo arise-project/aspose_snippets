@@ -1,3 +1,4 @@
+```java
 
 doc = new com.aspose.pdf.Document("1.pdf");
 
@@ -13,3 +14,5 @@ doc.getPages().get_Item(1).getArtifacts().add(artifact);
 
 //save result pdf to file
 doc.save("add_watermark.pdf", com.aspose.pdf.SaveFormat.Pdf);
+
+```

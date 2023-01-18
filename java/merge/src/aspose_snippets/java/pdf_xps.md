@@ -1,3 +1,4 @@
+```java
 
 //1. read pdf file to Aspose Document
 firstDoc = new com.aspose.pdf.Document("1.pdf");
@@ -17,3 +18,5 @@ for (com.aspose.pdf.Page page : secondDoc.getPages())
 opt1 = new com.aspose.pdf.XpsSaveOptions();
 opt1.setSaveTransparentTexts(false);
 outputDoc.save("Merger_pdf_xps.xps", opt1);
+
+```

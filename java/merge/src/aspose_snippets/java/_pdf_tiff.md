@@ -1,3 +1,4 @@
+```java
 package aspose_snippets.java;
 
 public class Merger_pdf_tiff {
@@ -52,3 +53,5 @@ public class Merger_pdf_tiff {
         tiffImage.save("Merger_pdf_tiff.tiff", createOptions);
     }
 }
+
+```

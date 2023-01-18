@@ -1,3 +1,4 @@
+```java
 
 //1. create empty pdf document
 outputDoc = new com.aspose.pdf.Document();
@@ -17,3 +18,5 @@ for (com.aspose.pdf.Page page : secondDoc.getPages())
 opt1 = new com.aspose.pdf.ExcelSaveOptions();
 opt1.setFormat(com.aspose.pdf.ExcelSaveOptions.ExcelFormat.XMLSpreadSheet2003);
 outputDoc.save("Merger_pdf_xls.xls", opt1);
+
+```
