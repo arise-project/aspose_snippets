@@ -1,3 +1,4 @@
+```cs
 
 
 //1. create empty pdf document
@@ -20,3 +21,5 @@ opt1 = new Aspose.Pdf.SvgSaveOptions
     ScaleToPixels = true
 };
 outputDoc.Save("Merger_pdf_svg.svg",opt1);
+
+```

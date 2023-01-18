@@ -1,3 +1,4 @@
+```cs
 
 //save input text to pdf to file
 pdfEditor = new PdfFileEditor();
@@ -16,3 +17,5 @@ foreach(var ms in pages)
     File.WriteAllText("text_"+index+".txt", extractedText);
     index++;
 }
+
+```

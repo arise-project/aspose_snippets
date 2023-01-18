@@ -1,3 +1,4 @@
+```cs
 
 //use file system as source for save image
 //The default tiff format is no compression with B/W 1 bit per pixel only format. 
@@ -39,3 +40,4 @@ for (int pageCount = 1; pageCount <= doc.Pages.Count; pageCount++)
 
 //save tiff file
 tiffImage.Save("Merger_pdf_tiff.tiff", createOptions);
+```

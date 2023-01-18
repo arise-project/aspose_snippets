@@ -1,3 +1,4 @@
+```cs
 
 //1. create empty pdf document
 outputDoc = new Aspose.Pdf.Document();
@@ -15,3 +16,4 @@ foreach (var page in secondDoc.Pages)
 
 //4. save result pdf to file
 outputDoc.Save("Merger_xps_pdf.pdf", Aspose.Pdf.SaveFormat.Pdf);
+```

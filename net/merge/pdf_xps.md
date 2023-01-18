@@ -1,3 +1,4 @@
+```cs
 
 //1. read pdf file to Aspose Document
 firstDoc = new Aspose.Pdf.Document("1.pdf");
@@ -19,3 +20,4 @@ opt1 = new Aspose.Pdf.XpsSaveOptions
     SaveTransparentTexts = false
 };
 outputDoc.Save("Merger_pdf_xps.xps",op1);
+```

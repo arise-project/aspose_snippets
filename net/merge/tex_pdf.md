@@ -1,3 +1,4 @@
+```cs
 
 outputDoc = new Aspose.Pdf.Document();
 
@@ -22,3 +23,4 @@ foreach (var page in secondDoc.Pages)
 
 //save result pdf to file
 outputDoc.Save("Merger_tex_pdf.pdf", Aspose.Pdf.SaveFormat.Pdf);
+```

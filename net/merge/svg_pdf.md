@@ -1,3 +1,4 @@
+```cs
 
 //1. SVG files can be parsed and loaded as Aspose Document
 //Adust pdf page size to svg size
@@ -15,3 +16,4 @@ foreach (var page in secondDoc.Pages)
 
 //4. save result pdf to file
 outputDoc.Save("Merger_svg_pdf.pdf", Aspose.Pdf.SaveFormat.Pdf);
+```

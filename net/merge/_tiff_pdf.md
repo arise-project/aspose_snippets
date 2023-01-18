@@ -1,3 +1,4 @@
+```cs
 namespace aspose_snippets.net
 {
     public static partial class Merger
@@ -75,3 +76,5 @@ namespace aspose_snippets.net
         }
     }
 }
+
+```

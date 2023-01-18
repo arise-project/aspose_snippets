@@ -1,3 +1,4 @@
+```cs
 
 //1. create empty pdf document
 outputDoc = new Aspose.Pdf.Document();
@@ -19,3 +20,4 @@ opt1 = new Aspose.Pdf.EpubSaveOptions
     ContentRecognitionMode = Aspose.Pdf.EpubSaveOptions.RecognitionMode.PdfFlow
 };
 outputDoc.Save("Merger_pdf_epub.epub",opt1);
+```

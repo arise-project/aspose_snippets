@@ -1,3 +1,4 @@
+```cs
 
 //1. epub files can be parsed and loaded as Aspose Document
 //use algorithm to prevent content to be truncated
@@ -22,3 +23,5 @@ foreach (var page in secondDoc.Pages)
 
 //4. save result pdf to file
 outputDoc.Save("Merger_epub_pdf.pdf", Aspose.Pdf.SaveFormat.Pdf);
+
+```

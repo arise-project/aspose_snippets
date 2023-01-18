@@ -1,3 +1,4 @@
+```cs
 
 //create empty pdf document
 outputDoc = new Aspose.Pdf.Document();
@@ -22,3 +23,5 @@ opt1 = new Aspose.Pdf.DocSaveOptions
 };
 
 outputDoc.Save("Merger_pdf_docx.docx", opt1);
+
+```

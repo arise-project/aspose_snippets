@@ -1,3 +1,4 @@
+```cs
 
 
 //1. create empty pdf document
@@ -16,3 +17,5 @@ foreach (var page in secondDoc.Pages)
 
 //4. save result pdf to file
 outputDoc.Save("Merger_pcl_pdf.pdf", Aspose.Pdf.SaveFormat.Pdf);
+
+```

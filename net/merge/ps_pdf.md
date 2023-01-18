@@ -1,3 +1,4 @@
+```cs
 
 //1. PostScript files can be parsed and loaded as Aspose Document
 firstDoc = new Aspose.Pdf.Document("1.ps", new Aspose.Pdf.PsLoadOptions());
@@ -14,3 +15,4 @@ foreach (var page in secondDoc.Pages)
 
 //4. save result pdf to file
 outputDoc.Save("Merger_ps_pdf.pdf", Aspose.Pdf.SaveFormat.Pdf);
+```

@@ -1,3 +1,4 @@
+```cs
 
 doc = new Aspose.Pdf.Document("1.pdf");
 
@@ -13,3 +14,5 @@ doc.Pages[1].Artifacts.Add(artifact);
 
 //save result pdf to file
 doc.Save("add_watermark.pdf", Aspose.Pdf.SaveFormat.Pdf);
+
+```

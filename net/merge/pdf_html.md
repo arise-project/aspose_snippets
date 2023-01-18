@@ -1,3 +1,4 @@
+```cs
 
 //1. create empty pdf document
 outputDoc = new Aspose.Pdf.Document();
@@ -26,3 +27,5 @@ var opt1 = new Aspose.Pdf.HtmlSaveOptions
     FixedLayout = true
 };
 outputDoc.Save("Merger_pdf_html.html",opt1);
+
+```

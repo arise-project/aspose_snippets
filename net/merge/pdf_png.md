@@ -1,3 +1,4 @@
+```cs
 
 //1. use file system as source for save image
 //create empty image with calculated width and hight
@@ -30,3 +31,5 @@ for (int pageCount = 1; pageCount <= doc.Pages.Count; pageCount++)
 
 //4. save created image to disk
 newImage.Save();
+
+```

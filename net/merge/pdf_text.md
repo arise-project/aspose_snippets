@@ -1,3 +1,4 @@
+```cs
 
 //1. create empty pdf document
 outputDoc = new Aspose.Pdf.Document();
@@ -18,3 +19,4 @@ textAbsorber = new Aspose.Pdf.Text.TextAbsorber();
 outputDoc.Pages.Accept(textAbsorber);
 string extractedText = textAbsorber.Text;
 File.WriteAllText("Merger_pdf_text.txt", extractedText);
+```

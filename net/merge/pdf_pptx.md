@@ -1,3 +1,4 @@
+```cs
 
 outputDoc = new Aspose.Pdf.Document();
 
@@ -18,3 +19,4 @@ opt1 = new Aspose.Pdf.PptxSaveOptions
     lidesAsImages = true
 };
 outputDoc.Save("Merger_pdf_pptx.pptx",opt1);
+```

@@ -1,3 +1,4 @@
+```cs
 
 //create empty pdf document
 using var doc = new Aspose.Pdf.Document();
@@ -15,3 +16,5 @@ foreach (var fs in streams)
 
 //save result pdf to file
 doc.Save("Merger_jpg_pdf.pdf", Aspose.Pdf.SaveFormat.Pdf);
+
+```
